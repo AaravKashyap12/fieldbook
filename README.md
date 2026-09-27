@@ -106,7 +106,7 @@ Open [localhost:4173](http://127.0.0.1:4173). Generated files go into `dist/`, w
 | `assets/` | Styles, progressive interactions, optional interface sounds, fonts and social preview. |
 | `.github/` | Submission template and daily update workflow. |
 
-[DESIGN.md](DESIGN.md) documents the design system. [SECURITY-VERIFICATION.md](SECURITY-VERIFICATION.md) records security checks and remaining work.
+[SEO.md](SEO.md) documents search metadata, social previews and indexing maintenance. [DESIGN.md](DESIGN.md) documents the design system. [SECURITY-VERIFICATION.md](SECURITY-VERIFICATION.md) records security checks and remaining work.
 
 ## Publishing and daily updates
 

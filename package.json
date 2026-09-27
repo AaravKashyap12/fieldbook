@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build.mjs",
-    "check": "node scripts/security-check.mjs && node scripts/check.mjs",
+    "check": "node scripts/security-check.mjs && node scripts/check.mjs && node scripts/seo-check.mjs",
     "start": "node scripts/serve.mjs",
     "sync": "node scripts/sync-stats.mjs",
     "review": "node scripts/review.mjs",

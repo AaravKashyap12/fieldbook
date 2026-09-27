@@ -1,0 +1,55 @@
+name: Submit a skill
+description: Suggest an agent skill for the Fieldbook directory. Every submission is read and answered.
+title: "Skill submission"
+labels: ["submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fieldbook lists skills that make coding agents do better engineering. Read [how we review](https://fieldbook.tech/review/) before submitting. We reply here either way. Submissions are public GitHub issues; do not include secrets, credentials or private data.
+  - type: input
+    id: repository
+    attributes:
+      label: GitHub repository
+      description: The public repository that holds the skill, as owner/repo or a GitHub link.
+      placeholder: owner/repo
+    validations:
+      required: true
+  - type: input
+    id: skill
+    attributes:
+      label: Skill folder
+      description: The folder containing SKILL.md, as the Skills CLI's --skill flag expects.
+      placeholder: my-skill
+    validations:
+      required: true
+  - type: input
+    id: category
+    attributes:
+      label: Stage of the work
+      description: Plan & design, Build, Test & debug, Review, Security, Performance, Ship & operate, Cloud & infrastructure, Databases & data, Languages & frameworks, or Agent workflow.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it makes agents engineer better
+      description: A task where it changed the result is the best evidence.
+    validations:
+      required: true
+  - type: input
+    id: relation
+    attributes:
+      label: You are
+      description: The author, or a user of the skill.
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before you send
+      options:
+        - label: The repository is public and has a licence file.
+          required: true
+        - label: The skill installs with `npx skills add owner/repo --skill name`.
+          required: true

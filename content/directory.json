@@ -8,7 +8,11 @@
     "access": [],
     "summary": "Interviews you round by round until a plan or decision has no loose ends.",
     "note": "Asks each round of questions with its own recommended answers, so you can agree fast or push back. Pure conversation: it changes nothing in your repo.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "plan-feature"
+    ],
+    "stack": []
   },
   {
     "id": "mattpocock/skills/to-spec",
@@ -22,7 +26,11 @@
     ],
     "summary": "Turns the conversation so far into a written spec and files it in your issue tracker.",
     "note": "No new interview: it synthesises what you already discussed. It publishes to your tracker, so check which one it will use before running it.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "plan-feature"
+    ],
+    "stack": []
   },
   {
     "id": "mattpocock/skills/domain-modeling",
@@ -35,7 +43,12 @@
     ],
     "summary": "Builds a shared glossary for your codebase and records decisions as they come up.",
     "note": "Keeps a CONTEXT.md in step with the conversation and offers ADRs sparingly. Useful before a large feature, when names in the code have drifted.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "design-system",
+      "docs"
+    ],
+    "stack": []
   },
   {
     "id": "mattpocock/skills/improve-codebase-architecture",
@@ -49,7 +62,12 @@
     ],
     "summary": "Finds modules worth deepening, shows them as an HTML report, then grills one with you.",
     "note": "An exploration pass followed by a focused design conversation. It proposes; you choose what to change.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "design-system",
+      "plan-feature"
+    ],
+    "stack": []
   },
   {
     "id": "obra/superpowers/brainstorming",
@@ -62,7 +80,11 @@
     ],
     "summary": "Agrees intent, requirements and a design with you before any code is written.",
     "note": "Deliberately strict: it treats even small features as needing an approved design. Its optional visual companion needs extra setup.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "plan-feature"
+    ],
+    "stack": []
   },
   {
     "id": "obra/superpowers/writing-plans",
@@ -75,7 +97,11 @@
     ],
     "summary": "Turns a spec into a step-by-step plan with exact files, tests and checks.",
     "note": "Plans are written for an engineer with no context, which makes them good handoffs to another agent or a teammate.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "plan-feature"
+    ],
+    "stack": []
   },
   {
     "id": "addyosmani/agent-skills/planning-and-task-breakdown",
@@ -88,7 +114,11 @@
     ],
     "summary": "Breaks a spec into small, ordered tasks with checkpoints between them.",
     "note": "Vertical slices and explicit dependencies. A good companion to incremental implementation from the same author.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "plan-feature"
+    ],
+    "stack": []
   },
   {
     "id": "addyosmani/agent-skills/api-and-interface-design",
@@ -99,7 +129,12 @@
     "access": [],
     "summary": "Contract-first guidance for APIs and module boundaries: errors, validation and versioning.",
     "note": "Reference guidance rather than a procedure. Covers Hyrum's Law, idempotency keys and additive change.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "design-system",
+      "backend"
+    ],
+    "stack": []
   },
   {
     "id": "addyosmani/agent-skills/documentation-and-adrs",
@@ -112,7 +147,12 @@
     ],
     "summary": "Records architecture decisions and the reasoning future engineers and agents will need.",
     "note": "Matches your repo's existing ADR convention before introducing its own template.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "docs",
+      "design-system"
+    ],
+    "stack": []
   },
   {
     "id": "mattpocock/skills/tdd",
@@ -126,7 +166,12 @@
     ],
     "summary": "A red-green loop with firm rules on what makes a test worth keeping.",
     "note": "Agrees the seams under test with you before writing any test, which keeps effort on the paths that matter.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "write-tests",
+      "implement"
+    ],
+    "stack": []
   },
   {
     "id": "obra/superpowers/test-driven-development",
@@ -140,7 +185,13 @@
     ],
     "summary": "Strict test-first discipline: watch it fail, make it pass, then refactor.",
     "note": "The most uncompromising TDD skill here. It will push back on writing code before a failing test exists.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "write-tests",
+      "implement",
+      "fix-bug"
+    ],
+    "stack": []
   },
   {
     "id": "addyosmani/agent-skills/incremental-implementation",
@@ -154,7 +205,12 @@
     ],
     "summary": "Lands a change in thin, verifiable slices instead of one large diff.",
     "note": "Covers vertical, contract-first and risk-first slicing, plus scope discipline for agents that wander.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "implement",
+      "plan-feature"
+    ],
+    "stack": []
   },
   {
     "id": "addyosmani/agent-skills/code-simplification",
@@ -167,7 +223,11 @@
     ],
     "summary": "Simplifies working code for clarity without changing what it does.",
     "note": "Starts from Chesterton's fence: understand why code exists before removing it. Scoped to what changed.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "refactor"
+    ],
+    "stack": []
   },
   {
     "id": "mattpocock/skills/diagnosing-bugs",
@@ -181,7 +241,11 @@
     ],
     "summary": "Builds a fast failing feedback loop first, then narrows to the cause.",
     "note": "Treats a reproducible loop as the finish line of phase one. Includes advice for flaky and non-deterministic bugs.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "fix-bug"
+    ],
+    "stack": []
   },
   {
     "id": "obra/superpowers/systematic-debugging",
@@ -194,7 +258,11 @@
     ],
     "summary": "Root cause before fixes, in four phases with clear stop signs.",
     "note": "Lists the rationalisations agents use to skip investigation, and tells it to stop when it catches itself.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "fix-bug"
+    ],
+    "stack": []
   },
   {
     "id": "obra/superpowers/verification-before-completion",
@@ -207,7 +275,11 @@
     ],
     "summary": "No claim of done until the checks have run and the output has been read.",
     "note": "Small and broadly useful. It targets the most common agent failure: reporting success without evidence.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "fix-bug"
+    ],
+    "stack": []
   },
   {
     "id": "addyosmani/agent-skills/debugging-and-error-recovery",
@@ -221,7 +293,12 @@
     ],
     "summary": "A triage checklist: reproduce, localise, fix, then guard against the regression.",
     "note": "Includes a stop-the-line rule and git bisect for finding the commit that broke things.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "fix-bug",
+      "git"
+    ],
+    "stack": []
   },
   {
     "id": "addyosmani/agent-skills/browser-testing-with-devtools",
@@ -239,7 +316,15 @@
     "cleared": {
       "hidden-instruction": "Quotes a prompt-injection phrase as an example of page content the agent must treat as data, not follow."
     },
-    "clearedSha256": "4e3aacd6a380cd25bc6c2d67fdd1c926a9b22535b8a62109ecd33cefd909e3d9"
+    "clearedSha256": "4e3aacd6a380cd25bc6c2d67fdd1c926a9b22535b8a62109ecd33cefd909e3d9",
+    "tasks": [
+      "fix-bug",
+      "frontend",
+      "write-tests"
+    ],
+    "stack": [
+      "browser"
+    ]
   },
   {
     "id": "anthropics/skills/webapp-testing",
@@ -253,7 +338,14 @@
     ],
     "summary": "Tests local web apps with Playwright scripts: screenshots, logs and UI checks.",
     "note": "Ships helper scripts for starting your server during a test run. Needs Python and Playwright installed.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "write-tests",
+      "frontend"
+    ],
+    "stack": [
+      "browser"
+    ]
   },
   {
     "id": "mattpocock/skills/code-review",
@@ -267,7 +359,11 @@
     ],
     "summary": "Reviews a diff twice in parallel: against your repo's standards and against the spec.",
     "note": "Separating standards from intent catches changes that are tidy but wrong. Runs two subagents.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "review-code"
+    ],
+    "stack": []
   },
   {
     "id": "obra/superpowers/requesting-code-review",
@@ -281,7 +377,11 @@
     ],
     "summary": "Sends finished work to a reviewer subagent before merging.",
     "note": "Pairs with receiving code review from the same set. Review happens before merge, not after.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "review-code"
+    ],
+    "stack": []
   },
   {
     "id": "obra/superpowers/receiving-code-review",
@@ -294,7 +394,11 @@
     ],
     "summary": "Handles review feedback with verification instead of automatic agreement.",
     "note": "Tells the agent when to push back, and to check a suggestion is actually right before applying it.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "review-code"
+    ],
+    "stack": []
   },
   {
     "id": "addyosmani/agent-skills/code-review-and-quality",
@@ -305,7 +409,12 @@
     "access": [],
     "summary": "A five-axis review: correctness, readability, architecture, security and performance.",
     "note": "Also covers change sizing and change descriptions. Works on pasted diffs too.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "review-code",
+      "refactor"
+    ],
+    "stack": []
   },
   {
     "id": "getsentry/skills/code-review",
@@ -316,7 +425,11 @@
     "access": [],
     "summary": "Sentry's engineering review checklist, with concrete patterns to flag.",
     "note": "Its examples lean towards Python and Django, but the checklist on design, tests and long-term impact is general.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "review-code"
+    ],
+    "stack": []
   },
   {
     "id": "addyosmani/agent-skills/security-and-hardening",
@@ -329,7 +442,12 @@
     ],
     "summary": "Threat model first, then hardening across input, auth, sessions and headers.",
     "note": "Its three-tier boundary (always, ask first, never) is a sensible way to keep an agent's security changes reviewable.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "secure-app",
+      "backend"
+    ],
+    "stack": []
   },
   {
     "id": "openai/skills/security-threat-model",
@@ -342,7 +460,12 @@
     ],
     "summary": "Writes a threat model grounded in your repo: trust boundaries, assets and abuse paths.",
     "note": "Only runs when you ask for a threat model by name, so it will not fire on ordinary work.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "secure-app",
+      "design-system"
+    ],
+    "stack": []
   },
   {
     "id": "trailofbits/skills/audit-context-building",
@@ -355,7 +478,12 @@
     ],
     "summary": "Maps what each function assumes, guarantees and depends on before a security review.",
     "note": "From a security firm's own audit practice. Use it before hunting for bugs in code you do not know yet.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "secure-app",
+      "review-code"
+    ],
+    "stack": []
   },
   {
     "id": "addyosmani/agent-skills/performance-optimization",
@@ -369,7 +497,13 @@
     ],
     "summary": "Measure, find the bottleneck, fix it, and guard against regressions.",
     "note": "Spans Core Web Vitals, backend response times and N+1 queries, always starting from a measurement.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "speed-up",
+      "frontend",
+      "backend"
+    ],
+    "stack": []
   },
   {
     "id": "cloudflare/skills/web-perf",
@@ -383,7 +517,14 @@
     ],
     "summary": "Audits Core Web Vitals from a real performance trace, then maps fixes to your code.",
     "note": "Checks that the browser MCP tools are available before it starts, which saves a confusing failure.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "speed-up",
+      "frontend"
+    ],
+    "stack": [
+      "browser"
+    ]
   },
   {
     "id": "addyosmani/agent-skills/ci-cd-and-automation",
@@ -397,7 +538,14 @@
     ],
     "summary": "Sets up CI quality gates and deployment strategies in GitHub Actions.",
     "note": "Includes feeding CI failures back to the agent, and preview deployments.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "ci-cd",
+      "ship-release"
+    ],
+    "stack": [
+      "github"
+    ]
   },
   {
     "id": "addyosmani/agent-skills/git-workflow-and-versioning",
@@ -410,7 +558,11 @@
     ],
     "summary": "Atomic commits, clear messages and a clean branch strategy.",
     "note": "Can split a messy working tree into clean commits. Recommends trunk-based development.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "git"
+    ],
+    "stack": []
   },
   {
     "id": "addyosmani/agent-skills/shipping-and-launch",
@@ -423,7 +575,12 @@
     ],
     "summary": "A pre-launch checklist with feature flags, staged rollout and a rollback plan.",
     "note": "Broad rather than deep. Pair it with a dedicated security pass for anything holding user data.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "ship-release",
+      "operate"
+    ],
+    "stack": []
   },
   {
     "id": "mattpocock/skills/setup-pre-commit",
@@ -438,7 +595,15 @@
     ],
     "summary": "Adds Husky, lint-staged, type checks and tests as a pre-commit hook.",
     "note": "Installs dev dependencies and makes a commit at the end. JavaScript and TypeScript projects only.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "git",
+      "ci-cd"
+    ],
+    "stack": [
+      "javascript",
+      "typescript"
+    ]
   },
   {
     "id": "mattpocock/skills/git-guardrails-claude-code",
@@ -456,7 +621,11 @@
     "cleared": {
       "git-force": "Lists force-push as one of the commands its hook blocks."
     },
-    "clearedSha256": "69b291d655626a01602b998a1836fcb93c058ede68dfafddfd71e87f17074764"
+    "clearedSha256": "69b291d655626a01602b998a1836fcb93c058ede68dfafddfd71e87f17074764",
+    "tasks": [
+      "git"
+    ],
+    "stack": []
   },
   {
     "id": "mattpocock/skills/resolving-merge-conflicts",
@@ -471,7 +640,11 @@
     ],
     "summary": "Resolves an in-progress merge or rebase by recovering each side's intent.",
     "note": "Short and direct. It always finishes the merge and commits, and never aborts, so review the result before you push.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "git"
+    ],
+    "stack": []
   },
   {
     "id": "obra/superpowers/using-git-worktrees",
@@ -485,7 +658,11 @@
     ],
     "summary": "Creates an isolated worktree for feature work and sets the project up inside it.",
     "note": "Prefers your agent's native worktree tools and falls back to git, with setup steps per language.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "git"
+    ],
+    "stack": []
   },
   {
     "id": "warpdotdev/common-skills/diagnose-ci-failures",
@@ -500,7 +677,14 @@
     ],
     "summary": "Pulls a pull request's CI logs with the GitHub CLI and plans the fixes.",
     "note": "Needs the GitHub CLI signed in. It diagnoses and plans; applying the fix is up to you.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "ci-cd",
+      "fix-bug"
+    ],
+    "stack": [
+      "github"
+    ]
   },
   {
     "id": "obra/superpowers/dispatching-parallel-agents",
@@ -513,7 +697,11 @@
     ],
     "summary": "Splits independent problems across parallel subagents and merges the results.",
     "note": "Clear about when not to parallelise: shared state and sequential work stay with one agent.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "agents"
+    ],
+    "stack": []
   },
   {
     "id": "addyosmani/agent-skills/context-engineering",
@@ -526,7 +714,12 @@
     ],
     "summary": "Sets up rules files and project context so agent quality holds across sessions.",
     "note": "A practical template for rules files, plus when to reach for specs and architecture docs.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "agents",
+      "docs"
+    ],
+    "stack": []
   },
   {
     "id": "anthropics/skills/skill-creator",
@@ -541,7 +734,11 @@
     ],
     "summary": "Creates, tests and tunes skills, including evals and trigger checks.",
     "note": "The most complete skill-authoring workflow available, with an eval viewer. Heavy for a quick skill.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "agents"
+    ],
+    "stack": []
   },
   {
     "id": "anthropics/skills/mcp-builder",
@@ -556,7 +753,15 @@
     ],
     "summary": "A phased guide to building good MCP servers in Python or TypeScript, with evaluations.",
     "note": "Research, build, review, then evaluate. Loads protocol docs from the web as it goes.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "agents",
+      "backend"
+    ],
+    "stack": [
+      "typescript",
+      "python"
+    ]
   },
   {
     "id": "supabase/agent-skills/supabase-postgres-best-practices",
@@ -567,7 +772,16 @@
     "access": [],
     "summary": "Schema, index, migration and row-level security guidance for any Postgres, from Supabase.",
     "note": "Useful even without Supabase. Load it before changing tables, policies or migrations.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "database",
+      "secure-app",
+      "speed-up"
+    ],
+    "stack": [
+      "postgres",
+      "supabase"
+    ]
   },
   {
     "id": "AvdLee/SwiftUI-Agent-Skill/swiftui-expert-skill",
@@ -581,7 +795,14 @@
     ],
     "summary": "Write, review, refactor, and profile SwiftUI across data flow, layout, performance, and APIs.",
     "note": "Can edit SwiftUI source and run bundled scripts plus Apple Instruments tooling to record or analyze `.trace` files. Trace capture requires Xcode tooling and a suitable Mac, simulator, or connected Apple device; code is changed only when requested.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "frontend",
+      "speed-up"
+    ],
+    "stack": [
+      "swift"
+    ]
   },
   {
     "id": "Kotlin/kotlin-agent-skills/kotlin-backend-jpa-entity-mapping",
@@ -594,7 +815,14 @@
     ],
     "summary": "Models Kotlin JPA entities with safe identity, relationships, indexes, and fetch plans.",
     "note": "Creates or reviews Spring Data JPA and Hibernate mappings while avoiding data-class identity failures, lazy-loading traps, and race-prone uniqueness checks. Schema constraints and bulk persistence changes affect database behavior, so fetch and lifecycle choices are tied to observed query patterns.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "database",
+      "backend"
+    ],
+    "stack": [
+      "java-kotlin"
+    ]
   },
   {
     "id": "Kotlin/kotlin-agent-skills/kotlin-tooling-java-to-kotlin",
@@ -609,7 +837,14 @@
     ],
     "summary": "Converts Java files to idiomatic Kotlin with framework-aware compatibility checks.",
     "note": "Detects frameworks, writes matching .kt files, updates references, compiles, tests, and handles batches in dependency order. In Git repositories it mandates a two-commit git mv workflow to preserve blame history; otherwise it deletes the original .java file after conversion.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "upgrade",
+      "refactor"
+    ],
+    "stack": [
+      "java-kotlin"
+    ]
   },
   {
     "id": "Kotlin/kotlin-agent-skills/kotlin-tooling-kotlin-toolchain",
@@ -624,7 +859,14 @@
     ],
     "summary": "Build and configure Kotlin or Java projects with JetBrains' YAML-based Kotlin Toolchain.",
     "note": "Scaffolds projects, edits Toolchain YAML and plugins, and runs the project wrapper for builds, tests, packaging, and lint checks; wrappers may download the CLI, JDK, and dependencies. This is a Claude Code-targeted skill for Toolchain projects, with companion migration skills required for Gradle-to-Toolchain conversions and plugin rewrites.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "ci-cd",
+      "upgrade"
+    ],
+    "stack": [
+      "java-kotlin"
+    ]
   },
   {
     "id": "Kotlin/kotlin-agent-skills/kotlin-tooling-native-build-performance",
@@ -638,7 +880,14 @@
     ],
     "summary": "Measure and reduce slow Kotlin/Native iOS compilation, linking, generation, and CI setup.",
     "note": "Runs a bundled audit plus Gradle builds or profiling, edits cache, target, export, or KSP configuration one change at a time, and compares equivalent warm builds. Full dynamic verification requires macOS and Xcode; otherwise it analyzes logs or scans statically.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "speed-up"
+    ],
+    "stack": [
+      "java-kotlin",
+      "swift"
+    ]
   },
   {
     "id": "addyosmani/agent-skills/deprecation-and-migration",
@@ -653,7 +902,12 @@
     ],
     "summary": "Plans staged deprecation and zero-downtime migrations from replacement through safe removal.",
     "note": "Uses advisory or compulsory deprecation, then incremental consumer migration and expand/backfill/contract for schemas. It requires production usage evidence, migration tooling, and reversible database migrations, and guards destructive drops until no code references the old shape.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "upgrade",
+      "plan-feature"
+    ],
+    "stack": []
   },
   {
     "id": "affaan-m/everything-claude-code/security-review",
@@ -667,7 +921,12 @@
     ],
     "summary": "Checks application code against a practical security checklist before production work.",
     "note": "Covers secrets, input validation, auth, injection and deployment checks. It includes ecosystem-specific examples, so findings need project context.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "secure-app",
+      "review-code"
+    ],
+    "stack": []
   },
   {
     "id": "affaan-m/everything-claude-code/tdd-workflow",
@@ -682,7 +941,12 @@
     ],
     "summary": "Runs a test-first development loop across unit, integration, and browser coverage.",
     "note": "Detects the package manager and actual test runner before writing user journeys and failing tests, then implements, refactors, and checks coverage. Examples center on JS/TS tooling, with separate Jest/Vitest, Bun, and Playwright patterns.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "write-tests",
+      "implement"
+    ],
+    "stack": []
   },
   {
     "id": "affaan-m/everything-claude-code/verification-loop",
@@ -697,7 +961,12 @@
     ],
     "summary": "Runs build, type, lint, test, security, and diff gates before a change is called complete.",
     "note": "Checks build, types, lint, coverage, simple secret/debug patterns, and the Git diff in sequence, stopping on build failure. Its command examples assume common JavaScript or Python toolchains and an existing project test setup.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "write-tests",
+      "implement"
+    ],
+    "stack": []
   },
   {
     "id": "affaan-m/everything-claude-code/e2e-testing",
@@ -712,7 +981,14 @@
     ],
     "summary": "Structures Playwright end-to-end suites with page objects, CI artifacts, and flake controls.",
     "note": "Builds Playwright page objects, specs, configuration, and CI reporting, then diagnoses flakiness with repeated runs and condition-based waits. It expects a Node project and can cover Chromium, Firefox, WebKit, mobile profiles, wallet mocks, and guarded financial flows.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "write-tests",
+      "frontend"
+    ],
+    "stack": [
+      "browser"
+    ]
   },
   {
     "id": "affaan-m/everything-claude-code/ai-regression-testing",
@@ -726,7 +1002,12 @@
     ],
     "summary": "Adds targeted regression tests for recurring blind spots in AI-assisted code changes.",
     "note": "Uses fast sandbox-mode API tests to lock response contracts and parity between mock and production paths after a bug is found. The worked setup targets Next.js App Router with Vitest and specifically catches omitted fields, stale error state, and failed optimistic rollbacks.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "write-tests",
+      "fix-bug"
+    ],
+    "stack": []
   },
   {
     "id": "affaan-m/everything-claude-code/mcp-server-patterns",
@@ -741,7 +1022,13 @@
     ],
     "summary": "Applies reusable design patterns for robust, secure MCP server implementations.",
     "note": "It covers source changes and local validation; deployment and secrets remain environment-specific.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "agents",
+      "backend",
+      "design-system"
+    ],
+    "stack": []
   },
   {
     "id": "alirezarezvani/claude-skills/spec-driven-workflow",
@@ -757,7 +1044,12 @@
     ],
     "summary": "Turns requirements into an approved, traceable spec, tests, and scope-controlled implementation.",
     "note": "Moves from requirements through a nine-section spec, validator, generated failing tests, incremental implementation, and a traceability review. It relies on bundled Python scripts and referenced templates, and treats breaking, security, performance, or cross-team ambiguity as an escalation point.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "plan-feature",
+      "write-tests"
+    ],
+    "stack": []
   },
   {
     "id": "alirezarezvani/claude-skills/spec-to-repo",
@@ -772,7 +1064,12 @@
     ],
     "summary": "Converts a natural-language app brief into a validated, runnable starter repository.",
     "note": "Interprets the brief, infers or confirms the stack, designs the tree and contracts, generates real code plus tests and CI, then runs a project validator. It spans web, API, mobile, CLI, data, Go, Rust, and Python starters, but stack-specific SaaS scaffolding is routed elsewhere.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "plan-feature",
+      "implement"
+    ],
+    "stack": []
   },
   {
     "id": "alirezarezvani/claude-skills/api-test-suite-builder",
@@ -786,7 +1083,12 @@
     ],
     "summary": "Scans API routes and generates contract-focused tests for auth, validation, and failure paths.",
     "note": "Maps handlers, reads their schemas and business rules, and writes one focused suite per route group with fixtures and response-shape assertions. Route discovery covers Next.js, Express, FastAPI, and Django REST, while generated tests target Vitest/Supertest or Pytest/httpx.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "write-tests",
+      "backend"
+    ],
+    "stack": []
   },
   {
     "id": "alirezarezvani/claude-skills/pr-review-expert",
@@ -801,7 +1103,12 @@
     ],
     "summary": "Reviews pull requests for blast radius, security, breaking changes, coverage, and performance.",
     "note": "Fetches PR or MR metadata and diffs, traces dependents, scans risky patterns, compares test coverage, and emits prioritized findings. It expects authenticated gh or glab plus shell tools such as grep and jq; ticket verification may also require Jira or Linear credentials.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "review-code",
+      "git"
+    ],
+    "stack": []
   },
   {
     "id": "alirezarezvani/claude-skills/skill-tester",
@@ -815,7 +1122,13 @@
     ],
     "summary": "Validates skill structure, exercises Python helpers, and scores quality against a target gate.",
     "note": "Runs four stdlib-only Python tools from the repository root, then applies the highest-priority scoring feedback and repeats all gates. Its tier line-count rubric is for legacy skills; new skills follow the separate write-a-skill standard.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "agents"
+    ],
+    "stack": [
+      "python"
+    ]
   },
   {
     "id": "antfu/skills/antfu",
@@ -830,7 +1143,15 @@
     ],
     "summary": "Apply Anthony Fu's TypeScript conventions, pnpm tooling, linting, monorepos, and publishing setup.",
     "note": "Edits project structure, TypeScript and ESLint configuration, workspace catalogs, hooks, and related tooling, then runs lint fixes. Its `ni` command family and `fast-npm-meta` lookup can install, remove, upgrade, or query packages through external registries.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "refactor",
+      "ship-release"
+    ],
+    "stack": [
+      "typescript",
+      "javascript"
+    ]
   },
   {
     "id": "antfu/skills/vue",
@@ -841,7 +1162,13 @@
     "access": [],
     "summary": "Write Vue 3.5 components with typed script setup, reactivity, lifecycle, and built-ins.",
     "note": "Reference guidance favors the Composition API, TypeScript, shallow reactivity where suitable, and Vue's current macros and built-in components. It has no required companion tool or external service.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "frontend"
+    ],
+    "stack": [
+      "vue"
+    ]
   },
   {
     "id": "antfu/skills/vite",
@@ -852,7 +1179,15 @@
     "access": [],
     "summary": "Configure Vite builds, plugins, SSR, multi-environment APIs, and Vite 8 Rolldown migration.",
     "note": "Reference guidance covers TypeScript ESM configuration, the plugin API, library and SSR builds, and CLI usage. Its versioned guidance is based on the Vite 8 beta and should be matched to the project's installed Vite release.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "frontend",
+      "upgrade"
+    ],
+    "stack": [
+      "javascript",
+      "typescript"
+    ]
   },
   {
     "id": "antfu/skills/nuxt",
@@ -863,7 +1198,14 @@
     "access": [],
     "summary": "Reference guide for Nuxt 4 structure, routing, rendering, data, modules, and deployment.",
     "note": "Routes Nuxt questions to focused references for the app directory, configuration, CLI, SSR, server routes, composables, layers, hooks, and module authoring. It is guidance based on Nuxt 4.x and does not itself require a companion tool or external service.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "frontend",
+      "backend"
+    ],
+    "stack": [
+      "vue"
+    ]
   },
   {
     "id": "anthropics/skills/claude-api",
@@ -882,7 +1224,12 @@
     ],
     "summary": "Builds Claude API and Managed Agent integrations with current SDK and tool-use patterns.",
     "note": "Routes work by language and chooses a single Messages API call, a tool loop, or Anthropic-hosted Managed Agents. It depends on official Anthropic SDKs and API credentials and can invoke paid model calls, hosted web or code tools, MCP, files, and managed sessions; migrations confirm scope before edits.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "agents",
+      "backend"
+    ],
+    "stack": []
   },
   {
     "id": "aws-samples/sample-apex-skills/ecs-build",
@@ -898,7 +1245,15 @@
     ],
     "summary": "Builds apply-ready Terraform for ECS clusters, services, networking, and scaling.",
     "note": "Generates and validates production ECS Terraform across Fargate, EC2, and Managed Instances, with deployment, IAM, networking, and autoscaling rules. It requires the companion terraform-skill, Terraform and AWS access, and live version research; applying the output can create, change, or remove AWS resources.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure",
+      "ship-release"
+    ],
+    "stack": [
+      "aws",
+      "terraform"
+    ]
   },
   {
     "id": "aws-samples/sample-apex-skills/ecs-modernize",
@@ -915,7 +1270,15 @@
     ],
     "summary": "Assess legacy apps and carry an approved replatform or rearchitecture onto Amazon ECS.",
     "note": "Scores source-only container fit, writes one external modernization report, and gates every migration action behind explicit approval. Execution can create branches, transform code, build and push images to ECR, generate or apply Terraform, and change AWS resources; rearchitecture IaC requires the companion `ecs-build` skill.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure",
+      "upgrade",
+      "design-system"
+    ],
+    "stack": [
+      "aws"
+    ]
   },
   {
     "id": "aws-samples/sample-apex-skills/ecs-observability",
@@ -926,7 +1289,15 @@
     "access": [],
     "summary": "Design ECS logging, metrics, tracing, alerting, and live-debug access by launch type.",
     "note": "Selects among CloudWatch, Container Insights, ADOT, Prometheus/Grafana, FireLens, and third-party stacks while surfacing log-loss and cost tradeoffs. It is a reference-driven advisory skill and does not run deployment or audit workflows.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure",
+      "operate",
+      "ship-release"
+    ],
+    "stack": [
+      "aws"
+    ]
   },
   {
     "id": "aws-samples/sample-apex-skills/eks-best-practices",
@@ -937,7 +1308,16 @@
     "access": [],
     "summary": "Choose EKS compute, networking, security, scaling, resilience, and hybrid deployment patterns.",
     "note": "Provides architecture guidance and Terraform-module examples across Standard, Auto Mode, Fargate, Hybrid Nodes, Anywhere, and Outposts. It is advisory; design documents and production Terraform are delegated to companion EKS skills.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure",
+      "design-system",
+      "ship-release"
+    ],
+    "stack": [
+      "aws",
+      "kubernetes"
+    ]
   },
   {
     "id": "aws-samples/sample-apex-skills/eks-build",
@@ -953,7 +1333,17 @@
     ],
     "summary": "Generate deployable EKS Terraform projects with optional ArgoCD and Kubernetes-native AWS control.",
     "note": "Scaffolds cluster modules, configuration, GitOps artifacts, validation checklists, and apply commands, with mandatory web research for current versions. It requires the companion `terraform-skill`; applying the output provisions AWS and Kubernetes resources and may include destructive cleanup commands.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure",
+      "ship-release",
+      "design-system"
+    ],
+    "stack": [
+      "aws",
+      "terraform",
+      "kubernetes"
+    ]
   },
   {
     "id": "aws-samples/sample-apex-skills/terraform-skill",
@@ -968,7 +1358,15 @@
     ],
     "summary": "Diagnose and improve Terraform or OpenTofu modules, tests, CI, state, and migrations.",
     "note": "Generates HCL and CI changes, validates them with Terraform/OpenTofu and scanners, and may use Terraform MCP for schemas. State-changing or destructive work requires reviewed plans and approval; `terraform-ls` is optional, with a separate code-intelligence companion recommended.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure",
+      "ci-cd"
+    ],
+    "stack": [
+      "terraform",
+      "aws"
+    ]
   },
   {
     "id": "cloudflare/skills/durable-objects",
@@ -983,7 +1381,15 @@
     ],
     "summary": "Build and review Cloudflare Durable Objects for persistent state, coordination, and WebSockets.",
     "note": "Edits Worker code, bindings, migrations, storage schemas, alarms, and tests after fetching current Cloudflare documentation. Durable Object storage and alarms persist remotely when deployed, and access inherits the implementing Worker's Cloudflare permissions.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure",
+      "backend",
+      "database"
+    ],
+    "stack": [
+      "cloudflare"
+    ]
   },
   {
     "id": "cloudflare/skills/workers-best-practices",
@@ -998,7 +1404,15 @@
     ],
     "summary": "Write and review production Cloudflare Workers against current runtime and configuration behavior.",
     "note": "Retrieves current Cloudflare docs, edits Worker code or configuration, and runs existing type checks or runtime tests for affected behavior. Durable Objects and Wrangler command work require their dedicated companion skills.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure",
+      "backend",
+      "review-code"
+    ],
+    "stack": [
+      "cloudflare"
+    ]
   },
   {
     "id": "cloudflare/skills/wrangler",
@@ -1014,7 +1428,14 @@
     ],
     "summary": "Configure and run Wrangler for local Workers development, previews, deployment, and resources.",
     "note": "Reads the project-local Wrangler version, edits source configuration, consults Cloudflare docs through MCP or the web, and runs build, type, preview, deploy, secret, or resource commands. Remote operations can deploy code, provision or alter Cloudflare resources, expose public previews, and delete named previews.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure",
+      "ship-release"
+    ],
+    "stack": [
+      "cloudflare"
+    ]
   },
   {
     "id": "dotnet/skills/csharp-refactoring",
@@ -1029,7 +1450,13 @@
     ],
     "summary": "Performs binding-aware C# refactors while preserving behavior and public contracts.",
     "note": "Classifies requests before editing, uses semantic tooling where available, and verifies the narrowest relevant builds, tests, analyzers, and target frameworks. It works only in the current Git repository and may retain compatibility shims rather than remove shipped APIs.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "refactor"
+    ],
+    "stack": [
+      "dotnet"
+    ]
   },
   {
     "id": "dotnet/skills/dotnet-webapi",
@@ -1044,7 +1471,13 @@
     ],
     "summary": "Builds ASP.NET Core API endpoints with typed DTOs, OpenAPI, and Problem Details.",
     "note": "Edits controller or minimal-API projects, adds service layers and .http examples, and verifies builds plus running endpoint behavior. It requires the .NET CLI and a runnable ASP.NET Core app; local verification starts the server and exercises its OpenAPI and HTTP routes.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "backend"
+    ],
+    "stack": [
+      "dotnet"
+    ]
   },
   {
     "id": "dotnet/skills/maui-data-binding",
@@ -1057,7 +1490,13 @@
     ],
     "summary": "Implement type-safe .NET MAUI bindings, change notification, converters, and MVVM data flow.",
     "note": "Edits XAML, view models, converters, and project warning settings for compiled, AOT-safe bindings. Collection views, Shell navigation, and dependency injection are routed to dedicated companion skills.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "frontend"
+    ],
+    "stack": [
+      "dotnet"
+    ]
   },
   {
     "id": "evanca/flutter-ai-rules/bloc",
@@ -1070,7 +1509,15 @@
     ],
     "summary": "Implement and test Flutter state management with Cubit, Bloc, repositories, and bloc widgets.",
     "note": "Creates or refactors Dart state, events, UI wiring, repository boundaries, and `bloc_test` coverage. It expects the `bloc`, `flutter_bloc`, `bloc_test`, and `mocktail` packages where their respective patterns are used.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "frontend",
+      "design-system"
+    ],
+    "stack": [
+      "dart",
+      "flutter"
+    ]
   },
   {
     "id": "expo/skills/expo-router",
@@ -1085,7 +1532,13 @@
     ],
     "summary": "Build file-based Expo navigation with routes, native stacks, tabs, sheets, headers, and search.",
     "note": "Creates and restructures route files, removing obsolete routes when navigation moves, and can submit specific upstream feedback with an npx command. Visual UI and motion are delegated to the `expo-native-ui` and `expo-animation` companion skills.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "frontend"
+    ],
+    "stack": [
+      "react-native"
+    ]
   },
   {
     "id": "expo/skills/expo-ui",
@@ -1100,7 +1553,14 @@
     ],
     "summary": "Build native Expo interfaces with universal or platform-specific SwiftUI and Compose components.",
     "note": "Edits React Native component trees, installs `@expo/ui`, and may run the bundled component inventory or submit actionable feedback. Universal components require Expo SDK 56+, while platform-specific trees must be split or guarded to avoid cross-platform runtime crashes.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "frontend"
+    ],
+    "stack": [
+      "swift",
+      "react-native"
+    ]
   },
   {
     "id": "expo/skills/expo-module",
@@ -1115,7 +1575,13 @@
     ],
     "summary": "Scaffolds and implements Expo native modules and views for Apple, Android, and web.",
     "note": "Uses create-expo-module, then replaces examples with Swift, Kotlin, TypeScript, config-plugin, lifecycle, and autolinking code. Native build tooling and Expo packages are required; migrations to Expo Modules API 2.0 macros must use the companion expo-migrate-module skill instead.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "frontend"
+    ],
+    "stack": [
+      "react-native"
+    ]
   },
   {
     "id": "fastapi/fastapi/fastapi",
@@ -1129,7 +1595,14 @@
     ],
     "summary": "Writes current FastAPI routes, models, dependencies, streaming, and frontend serving code.",
     "note": "Applies official patterns for Annotated parameters, Pydantic validation, router organization, response filtering, async boundaries, SSE, and static frontends. It uses the FastAPI CLI for local development or production serving and may add supporting Python packages described by the relevant reference.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "backend"
+    ],
+    "stack": [
+      "python",
+      "fastapi"
+    ]
   },
   {
     "id": "firebase/agent-skills/firebase-firestore",
@@ -1145,7 +1618,14 @@
     ],
     "summary": "Provision and integrate Cloud Firestore databases, models, indexes, queries, and SDKs.",
     "note": "Uses Firebase CLI to inspect or create remote databases and edits application, index, and configuration files after selecting Standard or Enterprise guidance. Firestore rules must be authored by the named `firestore-rules-author` subagent when available, otherwise by the `firestore-rules-creation` companion skill.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "database",
+      "backend"
+    ],
+    "stack": [
+      "firebase"
+    ]
   },
   {
     "id": "firebase/agent-skills/firestore-rules-creation",
@@ -1162,7 +1642,14 @@
     ],
     "summary": "Authors and hardens Firestore rules from the app's data model and query patterns.",
     "note": "Scans the codebase, writes firestore.rules, documents its assumed schema, attacks the rules mentally, and validates them with the Firebase CLI. When delegation and the named firestore-rules-author subagent are available, that subagent must author the file; Firebase dry-run validation contacts the project service.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "secure-app",
+      "database"
+    ],
+    "stack": [
+      "firebase"
+    ]
   },
   {
     "id": "firebase/agent-skills/firebase-remote-config-basics",
@@ -1177,7 +1664,14 @@
     ],
     "summary": "Manage Firebase Remote Config templates, flags, SDK loading, versions, and deployments.",
     "note": "Uses Firebase CLI commands to download, edit, deploy, and verify remote templates, plus Android or iOS SDK guidance. The `firebase-basics` companion supplies project setup, and every live deployment must wait for user review of the local JSON template.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "ship-release",
+      "frontend"
+    ],
+    "stack": [
+      "firebase"
+    ]
   },
   {
     "id": "get-convex/templates/convex",
@@ -1191,7 +1685,14 @@
     ],
     "summary": "Routes Convex backend work to current capability-specific skills and served procedures.",
     "note": "Directs code, setup, review, migration, monitoring, and operations requests to the matching bundled Convex skill, preferring its live capability catalog when available. Convex service access and companion convex-* skills are required for execution, and tiered procedures that spend money require explicit confirmation.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "database",
+      "backend"
+    ],
+    "stack": [
+      "convex"
+    ]
   },
   {
     "id": "getsentry/skills/gha-security-review",
@@ -1205,7 +1706,14 @@
     ],
     "summary": "Traces exploitable GitHub Actions workflow paths instead of flagging generic CI patterns.",
     "note": "Limits findings to externally exploitable paths and requires a concrete attack scenario. It loads focused references for the workflow triggers it finds.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "secure-app",
+      "ci-cd"
+    ],
+    "stack": [
+      "github"
+    ]
   },
   {
     "id": "getsentry/skills/security-review",
@@ -1219,7 +1727,12 @@
     ],
     "summary": "Reviews code for confirmed security weaknesses with data-flow and framework context.",
     "note": "Reports high-confidence vulnerabilities only after checking input control and framework safeguards. It selectively loads language and infrastructure reference guides.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "secure-app",
+      "review-code"
+    ],
+    "stack": []
   },
   {
     "id": "getsentry/skills/iterate-pr",
@@ -1235,7 +1748,13 @@
     ],
     "summary": "Repairs an open pull request until actionable CI and high- or medium-priority feedback clear.",
     "note": "Uses bundled uv scripts and authenticated gh to classify feedback and checks, fix root causes, verify locally, commit, push, and monitor again. It stops for repeated failures, rebase needs, infrastructure problems, absent checks, drafts without checks, and human review gates.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "git",
+      "review-code",
+      "ci-cd"
+    ],
+    "stack": []
   },
   {
     "id": "getsentry/skills/django-perf-review",
@@ -1249,7 +1768,16 @@
     ],
     "summary": "Finds only validated Django ORM and request-path performance problems.",
     "note": "It requires tracing real data flow, volume, and hot paths before reporting an issue; zero findings are acceptable.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "speed-up",
+      "review-code",
+      "backend"
+    ],
+    "stack": [
+      "python",
+      "django"
+    ]
   },
   {
     "id": "getsentry/skills/commit",
@@ -1263,7 +1791,11 @@
     ],
     "summary": "Prepares focused commits with staged-diff checks and meaningful messages.",
     "note": "It runs Git commands and creates commits, so the selected changes must be reviewed before committing.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "git"
+    ],
+    "stack": []
   },
   {
     "id": "getsentry/skills/create-branch",
@@ -1277,7 +1809,11 @@
     ],
     "summary": "Creates a conventionally named Git branch for a scoped change.",
     "note": "It changes local Git state and checks existing branches before choosing the branch name.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "git"
+    ],
+    "stack": []
   },
   {
     "id": "google/skills/gcloud",
@@ -1292,7 +1828,13 @@
     ],
     "summary": "Validates and executes tightly scoped gcloud commands with destructive-action guardrails.",
     "note": "Uses leaf-command help as the sole syntax authority, reduces list output, and runs one project- and location-scoped command at a time through gcloud or the Cloud CLI MCP server. Live GCP access is required; IAM, billing, KMS, API enablement, delete, and infrastructure-apply operations need explicit authorization because they can change access, cost, or data.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure"
+    ],
+    "stack": [
+      "gcp"
+    ]
   },
   {
     "id": "google/skills/gke-basics",
@@ -1308,7 +1850,16 @@
     ],
     "summary": "Choose, provision, authenticate, and deploy workloads to GKE Autopilot or Standard clusters.",
     "note": "Uses GKE MCP, gcloud, kubectl, client libraries, or infrastructure-as-code to create clusters, fetch credentials, configure identity, and deploy workloads. These actions create or modify Google Cloud and Kubernetes resources; advanced networking, security, upgrades, and cluster architecture use separate companions.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure",
+      "ship-release",
+      "upgrade"
+    ],
+    "stack": [
+      "gcp",
+      "kubernetes"
+    ]
   },
   {
     "id": "hashicorp/agent-skills/azure-verified-modules",
@@ -1325,7 +1876,16 @@
     ],
     "summary": "Develops and reviews Azure Terraform modules against AVM certification rules.",
     "note": "Applies AVM structure, provider, testing, documentation, compatibility, and contribution requirements to module code. It depends on Terraform, terrafmt, Checkov, tflint, terraform-docs, and repository branch protection; changing module resources or defaults can create breaking infrastructure behavior.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure",
+      "design-system",
+      "docs"
+    ],
+    "stack": [
+      "azure",
+      "terraform"
+    ]
   },
   {
     "id": "hashicorp/agent-skills/terraform-policy",
@@ -1340,7 +1900,14 @@
     ],
     "summary": "Routes Terraform Policy authoring, Sentinel conversion, and policy-test debugging.",
     "note": "Checks the installed tfpolicy version, then delegates policy work to the companion tfpolicy-author or tfpolicy-test instructions with version-specific schema behavior. The tfpolicy CLI is required, and missing companion skills may be installed with npx before files are written or tested.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure",
+      "secure-app"
+    ],
+    "stack": [
+      "terraform"
+    ]
   },
   {
     "id": "hashicorp/agent-skills/terraform-stacks",
@@ -1357,7 +1924,13 @@
     ],
     "summary": "Creates and operates Terraform Stacks across environments, regions, and accounts.",
     "note": "Authors Stack component and deployment HCL, validates it with the Terraform Stacks CLI, commits provider locks, and uploads configurations to HCP Terraform. Terraform 1.13+ and HCP Terraform are required; uploads trigger runs, Premium-only features can cost extra, and destroy-marked deployments remove infrastructure after approval.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure"
+    ],
+    "stack": [
+      "terraform"
+    ]
   },
   {
     "id": "jeffallan/claude-skills/debugging-wizard",
@@ -1377,7 +1950,11 @@
     "cleared": {
       "hidden-instruction": "The matched HTML comment attributes a debugging reference to its MIT-licensed source; it gives no instruction."
     },
-    "clearedSha256": "82c442c0a4f87785adc0a5ad9f9968d7ceb83e03f937151f19f362c76267e2e7"
+    "clearedSha256": "82c442c0a4f87785adc0a5ad9f9968d7ceb83e03f937151f19f362c76267e2e7",
+    "tasks": [
+      "fix-bug"
+    ],
+    "stack": []
   },
   {
     "id": "jeffallan/claude-skills/code-reviewer",
@@ -1388,7 +1965,11 @@
     "access": [],
     "summary": "Produces a prioritized review of correctness, security, performance, architecture, and tests.",
     "note": "First establishes the change's intent, then inspects structure, implementation details, and tests before returning a verdict with actionable examples. It is read-only and routes detailed checks through references for the review context.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "review-code"
+    ],
+    "stack": []
   },
   {
     "id": "jeffallan/claude-skills/chaos-engineer",
@@ -1404,7 +1985,12 @@
     ],
     "summary": "Designs controlled resilience experiments and recovery checks for distributed systems.",
     "note": "It can exercise infrastructure and service behavior, so experiments require a defined environment and blast-radius controls.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "operate",
+      "infrastructure"
+    ],
+    "stack": []
   },
   {
     "id": "jeffallan/claude-skills/devops-engineer",
@@ -1420,7 +2006,13 @@
     ],
     "summary": "Builds and maintains CI, deployment, infrastructure, and operational automation.",
     "note": "It can modify pipeline and infrastructure files and may invoke provider or command-line tooling.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "ci-cd",
+      "infrastructure",
+      "ship-release"
+    ],
+    "stack": []
   },
   {
     "id": "jeffallan/claude-skills/mcp-developer",
@@ -1436,7 +2028,12 @@
     ],
     "summary": "Builds Model Context Protocol servers with tool, resource, and transport design guidance.",
     "note": "It writes server code and can run local development tooling; external service integration needs its own credentials.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "agents",
+      "backend"
+    ],
+    "stack": []
   },
   {
     "id": "jeffallan/claude-skills/secure-code-guardian",
@@ -1451,7 +2048,11 @@
     ],
     "summary": "Reviews and strengthens application code against common security weaknesses.",
     "note": "It can change source and run validation commands; remediation still needs the repository's actual threat model.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "secure-app"
+    ],
+    "stack": []
   },
   {
     "id": "jezweb/claude-skills/d1-drizzle-schema",
@@ -1467,7 +2068,16 @@
     ],
     "summary": "Generates D1-safe Drizzle schemas, migrations, types, and schema documentation.",
     "note": "This Claude Code-only skill writes schema and config files, package scripts, and DATABASE_SCHEMA.md around D1's enforced foreign keys, SQLite types, and 100-parameter limit. Wrangler and a Cloudflare D1 database are required, and it mandates applying migrations to both local and remote databases before testing, which changes hosted data structures.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "database",
+      "design-system"
+    ],
+    "stack": [
+      "sqlite",
+      "drizzle",
+      "cloudflare"
+    ]
   },
   {
     "id": "jezweb/claude-skills/react-patterns",
@@ -1478,7 +2088,15 @@
     "access": [],
     "summary": "Review React 19, Vite, and Cloudflare code for performance and composition problems.",
     "note": "Provides a prioritized read-only checklist for waterfalls, bundle size, component APIs, rerenders, and React 19 behavior. It is explicitly Claude Code-only and permits only file reading, globbing, and text search.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "frontend",
+      "design-system",
+      "speed-up"
+    ],
+    "stack": [
+      "react"
+    ]
   },
   {
     "id": "mblode/agent-skills/agent-ready",
@@ -1494,7 +2112,12 @@
     ],
     "summary": "Implements machine-readable discovery and documentation fixes from agent-readiness evidence.",
     "note": "Turns scorecards or server-side 404 traces into repository changes, tests, and verified HTTP responses across every public knowledge surface. Verification needs Bash and curl, scanners need Node and registry access, and DNS, deployment, or product-surface expansion stays outside the local repair loop.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "agents",
+      "docs"
+    ],
+    "stack": []
   },
   {
     "id": "mblode/agent-skills/scaffold-cli",
@@ -1511,7 +2134,15 @@
     ],
     "summary": "Scaffolds a publishable TypeScript CLI with pinned build, test, lint, CI, and release contracts.",
     "note": "Generates the package, source, docs, skill, changesets, and workflows from bundled templates, then installs and validates the full toolchain. It assumes Node 24, TypeScript 7, Git, npm access, and specific tsdown, Vitest, Ultracite, and Changesets conventions; remote bootstrap needs account authorization.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "implement",
+      "ci-cd",
+      "ship-release"
+    ],
+    "stack": [
+      "typescript"
+    ]
   },
   {
     "id": "mblode/agent-skills/tidy",
@@ -1527,7 +2158,11 @@
     ],
     "summary": "Reviews a diff with evidence-ranked findings and can apply bounded fixes and simplifications.",
     "note": "Report mode leaves the tree untouched; apply mode fixes confirmed issues, simplifies only where repository evidence supports it, and runs affected checks. It scopes work through Git diffs or an authenticated PR, and deliberately avoids commits, pushes, dependency changes, migrations, and broad rewrites.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "refactor"
+    ],
+    "stack": []
   },
   {
     "id": "mblode/agent-skills/ci-speedup",
@@ -1544,7 +2179,12 @@
     ],
     "summary": "Measures CI critical paths and shortens them with evidence-backed pipeline changes.",
     "note": "Requires GitHub CLI or MCP timing data and records before-and-after results in a repository ledger.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "speed-up",
+      "ci-cd"
+    ],
+    "stack": []
   },
   {
     "id": "microsoft/skills/azure-diagnostics",
@@ -1560,7 +2200,15 @@
     ],
     "summary": "Triages Azure production failures with health, logs, metrics, AppLens, and KQL.",
     "note": "Routes service incidents to focused guides and gathers evidence through Azure CLI, AppLens, Azure Monitor, and Resource Health MCP tools before documenting findings and remediation. It requires authenticated Azure telemetry access; service-specific remediation can change live resources, credentials, networking, or workloads.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure",
+      "operate",
+      "fix-bug"
+    ],
+    "stack": [
+      "azure"
+    ]
   },
   {
     "id": "microsoft/skills/azure-kubernetes",
@@ -1576,7 +2224,14 @@
     ],
     "summary": "Plans, provisions, and configures production-ready Azure Kubernetes Service clusters.",
     "note": "Uses the Azure AKS MCP surface first and Azure CLI or kubectl as fallback to choose and configure networking, identity, observability, upgrades, scaling, and cost controls. It requires authenticated Azure access; cluster creation and Day-0 choices incur cloud cost, while some networking corrections require cluster recreation.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure"
+    ],
+    "stack": [
+      "azure",
+      "kubernetes"
+    ]
   },
   {
     "id": "microsoft/skills/azure-reliability",
@@ -1593,7 +2248,15 @@
     ],
     "summary": "Assesses and remediates reliability gaps in Azure Functions and App Service.",
     "note": "Uses Azure Resource Graph, Azure MCP, and Azure CLI to assess zone redundancy, storage, probes, and failover, then patches IaC or live resources in staged deployments. Storage migration, app restarts, secondary-region compute, and Front Door can affect availability and cost, and each gated deployment changes Azure resources.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure",
+      "ship-release",
+      "operate"
+    ],
+    "stack": [
+      "azure"
+    ]
   },
   {
     "id": "microsoft/skills/azure-storage",
@@ -1608,7 +2271,14 @@
     ],
     "summary": "Works with Azure blobs, files, queues, tables, Data Lake, tiers, and redundancy.",
     "note": "Prefers Azure Storage MCP and falls back to Azure CLI for listing accounts, containers, and blobs or uploading and downloading content. Azure authentication and a storage account are required; uploads change remote content, while downloaded blobs write to local paths.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure",
+      "secure-app"
+    ],
+    "stack": [
+      "azure"
+    ]
   },
   {
     "id": "microsoft/skills/azure-quotas",
@@ -1622,7 +2292,14 @@
     ],
     "summary": "Checks Azure quota usage, compares regional capacity, and requests limit increases.",
     "note": "Discovers quota names with az quota, compares limits with current usage across regions, and can submit increase requests. It requires the Azure CLI quota extension and Azure permissions; quota updates change subscription limits, while the source states the allocation itself is free.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure",
+      "operate"
+    ],
+    "stack": [
+      "azure"
+    ]
   },
   {
     "id": "mongodb/agent-skills/mongodb-query-optimizer",
@@ -1636,7 +2313,15 @@
     ],
     "summary": "Diagnoses slow MongoDB queries and recommends high-impact index and query changes.",
     "note": "Uses MongoDB MCP explain, index, sample-document, and Atlas Performance Advisor data when configured, then ranks evidence-backed improvements. Atlas analysis needs API credentials and cluster access; index creation is withheld until the user approves because it changes database state and write overhead.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "database",
+      "speed-up",
+      "fix-bug"
+    ],
+    "stack": [
+      "mongodb"
+    ]
   },
   {
     "id": "mongodb/agent-skills/mongodb-schema-design",
@@ -1651,7 +2336,14 @@
     ],
     "summary": "Design and diagnose MongoDB schemas around real access patterns, growth, and index costs.",
     "note": "Uses code, workload descriptions, Atlas telemetry, or the MongoDB MCP server to inspect schemas and performance before recommending changes. MCP writes and destructive database operations require an exact preview and explicit approval; read-only mode is recommended.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "database",
+      "design-system"
+    ],
+    "stack": [
+      "mongodb"
+    ]
   },
   {
     "id": "neondatabase/agent-skills/neon-postgres",
@@ -1667,7 +2359,15 @@
     ],
     "summary": "Operate Neon Postgres connections, branches, migrations, diagnostics, scaling, and search.",
     "note": "Uses the Neon CLI or MCP server to inspect projects and databases, manage branches, fetch connection strings, and run guarded SQL; it may update `.env` and schema code. The parent `neon` skill is required first, with branch and generic Postgres companions used for deeper workflows.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "database",
+      "infrastructure"
+    ],
+    "stack": [
+      "postgres",
+      "neon"
+    ]
   },
   {
     "id": "neondatabase/agent-skills/neon-postgres-branches",
@@ -1683,7 +2383,15 @@
     ],
     "summary": "Creates normal or schema-only Neon branches for safe development and migration tests.",
     "note": "Defaults to Neon CLI, falls back to Neon MCP or REST, and can update local DATABASE_URL after creating a branch. The parent neon skill and Neon service authentication are required; reset-from-parent replaces child data, interrupts connections, and branch deletion or expiry removes environments.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "database",
+      "write-tests"
+    ],
+    "stack": [
+      "postgres",
+      "neon"
+    ]
   },
   {
     "id": "neondatabase/agent-skills/neon-postgres-egress-optimizer",
@@ -1698,7 +2406,15 @@
     ],
     "summary": "Find and fix query patterns that drive excessive Postgres network transfer and Neon cost.",
     "note": "Runs Postgres diagnostics, traces expensive queries into application code, edits queries or caching and pagination behavior, then remeasures under representative traffic. It requires the parent `neon` skill first; optional `neon.ts` changes and `neon config apply` modify remote branch compute policy.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "speed-up",
+      "database"
+    ],
+    "stack": [
+      "postgres",
+      "neon"
+    ]
   },
   {
     "id": "neondatabase/agent-skills/neon-object-storage",
@@ -1713,7 +2429,15 @@
     ],
     "summary": "Provisions branch-aware S3-compatible storage and wires upload and download flows.",
     "note": "Uses neon.ts, the Neon CLI, Files SDK, or AWS S3 clients to create buckets, pull credentials, and manage objects on Neon branches. The parent neon skill is required first, and Neon service access plus supported-region availability are required; bucket and object commands can expose public data or delete stored files.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "database",
+      "infrastructure"
+    ],
+    "stack": [
+      "neon",
+      "postgres"
+    ]
   },
   {
     "id": "obra/superpowers/finishing-a-development-branch",
@@ -1728,7 +2452,12 @@
     ],
     "summary": "Finishes a Git branch through verified tests, integration choice, and guarded cleanup.",
     "note": "Runs the full test suite, detects worktree state, confirms the base, then offers local merge, pull request, or preservation. It requires Git and project tests; pushing or merging touches shared state, while discard and force branch deletion require exact confirmation.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "git",
+      "ship-release"
+    ],
+    "stack": []
   },
   {
     "id": "obra/superpowers/subagent-driven-development",
@@ -1745,7 +2474,12 @@
     ],
     "summary": "Executes implementation plans with fresh agents, per-task reviews, and a durable progress ledger.",
     "note": "Uses one implementer at a time, task-level review and fix loops, a plan-specific ledger, then a whole-branch review. It depends on Git worktrees, shell scripts, commits, and subagent tooling; merge, push, and workspace deletion are deferred to a guarded finishing workflow.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "agents",
+      "implement"
+    ],
+    "stack": []
   },
   {
     "id": "openai/skills/security-best-practices",
@@ -1759,7 +2493,11 @@
     ],
     "summary": "Applies language and framework security guidance when a security review is explicitly requested.",
     "note": "Supports Python, JavaScript or TypeScript, and Go. It asks for a report review before beginning individual remediation work.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "secure-app"
+    ],
+    "stack": []
   },
   {
     "id": "openai/skills/playwright",
@@ -1774,7 +2512,14 @@
     ],
     "summary": "Drives real browser flows from the terminal with snapshot-based Playwright CLI commands.",
     "note": "Checks for npx, opens a page through the bundled wrapper, snapshots stable element references, interacts, and captures screenshots or traces. It is CLI-first rather than a test-authoring workflow, and browser references must be refreshed after navigation or major DOM changes.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "write-tests",
+      "frontend"
+    ],
+    "stack": [
+      "browser"
+    ]
   },
   {
     "id": "openai/skills/gh-address-comments",
@@ -1790,7 +2535,14 @@
     ],
     "summary": "Finds review threads on the current branch's pull request and applies the selected fixes.",
     "note": "Verifies authenticated gh access, runs the bundled comment fetcher, numbers the requested changes, and edits only the threads the user selects. GitHub commands require network access and may pause for gh re-authentication if scopes or rate limits fail.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "review-code",
+      "git"
+    ],
+    "stack": [
+      "github"
+    ]
   },
   {
     "id": "openai/skills/gh-fix-ci",
@@ -1806,7 +2558,14 @@
     ],
     "summary": "Investigates failed GitHub Actions checks and prepares a focused fix.",
     "note": "Requires GitHub CLI authentication and repository CI access to inspect failure evidence and apply changes.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "ci-cd",
+      "fix-bug"
+    ],
+    "stack": [
+      "github"
+    ]
   },
   {
     "id": "openai/skills/yeet",
@@ -1821,7 +2580,14 @@
     ],
     "summary": "Guides a controlled GitHub pull-request publishing workflow from a finished branch.",
     "note": "It uses GitHub and Git commands to publish branch work, so it has external repository effects.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "git",
+      "ship-release"
+    ],
+    "stack": [
+      "github"
+    ]
   },
   {
     "id": "openai/skills/security-ownership-map",
@@ -1835,7 +2601,12 @@
     ],
     "summary": "Maps repository security ownership, sensitive-code concentration, and maintenance risk.",
     "note": "It analyzes Git history and can emit CSV or JSON artifacts from the repository's commit data.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "secure-app",
+      "git"
+    ],
+    "stack": []
   },
   {
     "id": "planetscale/database-skills/mysql",
@@ -1849,7 +2620,15 @@
     ],
     "summary": "Designs and tunes MySQL schemas, indexes, queries, transactions, and operations.",
     "note": "Uses EXPLAIN, lock and connection metrics, rollout plans, and relevant references to make measurable InnoDB changes with rollback guidance. A MySQL environment is needed for validation; production DDL, index removal, drops, deletes, and truncates can lock tables or destroy data and require explicit approval.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "database",
+      "speed-up"
+    ],
+    "stack": [
+      "mysql",
+      "planetscale"
+    ]
   },
   {
     "id": "prisma/skills/prisma-cli",
@@ -1865,7 +2644,13 @@
     ],
     "summary": "Guides Prisma ORM setup, generation, migrations, database operations, and MCP use.",
     "note": "Runs the Prisma ORM CLI for schemas, clients, local databases, Studio, raw SQL, migration deployment, and its MCP server, distinct from the Prisma Platform CLI. Database access may be local or hosted; reset and forced data-loss commands erase data and require the user's exact fresh consent.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "database"
+    ],
+    "stack": [
+      "prisma"
+    ]
   },
   {
     "id": "prisma/skills/prisma-database-setup",
@@ -1880,7 +2665,14 @@
     ],
     "summary": "Configure Prisma schemas, datasource URLs, driver adapters, and generated clients by database.",
     "note": "Edits Prisma and TypeScript configuration, installs provider packages, and regenerates Prisma Client after schema changes. It requires Node.js 20.19+ and TypeScript 5.4+; MongoDB stays on Prisma 6.x and uses the dedicated MongoDB upgrade companion for version decisions.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "database",
+      "upgrade"
+    ],
+    "stack": [
+      "prisma"
+    ]
   },
   {
     "id": "redis/agent-skills/redis-core",
@@ -1891,7 +2683,14 @@
     "access": [],
     "summary": "Guides Redis data-structure selection and consistent colon-separated key design.",
     "note": "Matches Strings, Hashes, Lists, Sets, Sorted Sets, JSON, Streams, or Vector Sets to actual access patterns and reviews key naming. It is modeling guidance and does not itself connect to Redis or mutate a datastore.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "database",
+      "design-system"
+    ],
+    "stack": [
+      "redis"
+    ]
   },
   {
     "id": "redis/agent-skills/redis-search",
@@ -1902,7 +2701,14 @@
     "access": [],
     "summary": "Design Redis Search indexes and lexical, vector, hybrid, aggregate, and RAG queries.",
     "note": "Provides command and client patterns for schemas, query tuning, HNSW or FLAT selection, profiling, and alias-based index rollout. It is reference guidance and does not itself connect to Redis or execute the shown commands.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "database",
+      "speed-up"
+    ],
+    "stack": [
+      "redis"
+    ]
   },
   {
     "id": "st0012/ruby-skills/ruby-test-frameworks",
@@ -1915,7 +2721,14 @@
     ],
     "summary": "Distinguishes Minitest and test-unit assertions, hooks, filters, skips, and Rails behavior.",
     "note": "Provides framework-specific assertion, CLI, lifecycle, pending, and Rails compatibility rules. It depends on the project's Ruby test framework and runner and does not call an external service or prescribe destructive actions.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "write-tests"
+    ],
+    "stack": [
+      "ruby",
+      "rails"
+    ]
   },
   {
     "id": "sveltejs/ai-tools/svelte-code-writer",
@@ -1929,7 +2742,13 @@
     ],
     "summary": "Looks up current Svelte docs and analyzes components with the official MCP CLI.",
     "note": "Runs @sveltejs/mcp through npx to list documentation, fetch relevant sections, and autofix-check every Svelte component before finalizing it. The source recommends using the companion svelte-file-editor agent when available, and the CLI/package must be accessible.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "frontend"
+    ],
+    "stack": [
+      "svelte"
+    ]
   },
   {
     "id": "trailofbits/skills/supply-chain-risk-auditor",
@@ -1944,7 +2763,15 @@
     ],
     "summary": "Measures dependency and lockfile supply-chain risk for npm, PyPI and Go projects.",
     "note": "Writes its report outside the audited repository and distinguishes unassessable data from a clean result. Yarn, pnpm and Poetry lockfiles are not parsed.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "secure-app"
+    ],
+    "stack": [
+      "javascript",
+      "python",
+      "go"
+    ]
   },
   {
     "id": "trailofbits/skills/code-improver",
@@ -1960,7 +2787,12 @@
     ],
     "summary": "Runs a scoped reviewer-and-fixer loop until blocking findings clear or convergence fails.",
     "note": "Requires an existing target directory, a user-named installed reviewer, explicit writable globs, and the plugin's dynamic workflow. The workflow keeps a findings ledger, guards scope, uses reviewer and fixer agents, never commits, and stops on caps, repeated findings, unavailable reviewers, or finalization regressions.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "refactor",
+      "review-code"
+    ],
+    "stack": []
   },
   {
     "id": "trailofbits/skills/mutation-testing",
@@ -1974,7 +2806,11 @@
     ],
     "summary": "Configures mewt or muton campaigns and interprets surviving mutations as test gaps or equivalents.",
     "note": "Routes setup, optimization, bug hunting, and formal analysis to dedicated references, using the installed CLI's help as the authority. Examples target the mewt 4.x interface, muton is interchangeable by name, and severity ranks mutations rather than business risk.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "write-tests"
+    ],
+    "stack": []
   },
   {
     "id": "trailofbits/skills/post-patch-validation",
@@ -1991,7 +2827,12 @@
     ],
     "summary": "Validates a security patch with pinned baseline, exploit, variant, behavior, and regression evidence.",
     "note": "Uses a uv-driven Python runner and isolated Git worktrees to validate a structured plan, preserve logs, and distinguish findings from evidence gaps. It runs local code with the caller's privileges, rejects remote or production targets, requires execution authorization, and still leaves acceptance to human review.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "fix-bug",
+      "write-tests"
+    ],
+    "stack": []
   },
   {
     "id": "trailofbits/skills/agentic-actions-auditor",
@@ -2010,7 +2851,14 @@
       "safety-bypass": "The matched sandbox modes are named as unsafe audit findings, not requested execution modes.",
       "privilege": "The matched drop-sudo token is an audited safety-strategy option, not a request to execute sudo."
     },
-    "clearedSha256": "b2bdb88d559bc37e6c2c8314e28e7a2eb47e7cdd9da51e77da347d3517326dc0"
+    "clearedSha256": "b2bdb88d559bc37e6c2c8314e28e7a2eb47e7cdd9da51e77da347d3517326dc0",
+    "tasks": [
+      "secure-app",
+      "ci-cd"
+    ],
+    "stack": [
+      "github"
+    ]
   },
   {
     "id": "trailofbits/skills/codeql",
@@ -2025,7 +2873,13 @@
     ],
     "summary": "Runs and interprets CodeQL static analysis for security-focused code review.",
     "note": "Checks extraction quality and query-suite coverage before interpreting zero findings. Requires CodeQL, Bash/Python helpers and a suitable build toolchain for compiled languages.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "secure-app"
+    ],
+    "stack": [
+      "github"
+    ]
   },
   {
     "id": "vercel/next.js/next-dev-loop",
@@ -2042,7 +2896,16 @@
     ],
     "summary": "Verifies Next.js edits through framework diagnostics and a real browser session.",
     "note": "Cross-checks the running app through /_next/mcp and agent-browser for compilation, runtime, UI, and React behavior after edits. It requires a running Turbopack dev server, Next.js 16.3+, and agent-browser 0.31.1+; the browser session persists cookies and local storage for the checkout.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "frontend",
+      "fix-bug"
+    ],
+    "stack": [
+      "nextjs",
+      "react",
+      "browser"
+    ]
   },
   {
     "id": "wshobson/agents/secrets-management",
@@ -2057,7 +2920,12 @@
     ],
     "summary": "Guides secure credential storage, rotation and use in CI/CD environments.",
     "note": "Covers Vault, cloud secret managers and CI variables, with examples for GitHub Actions and GitLab. It assumes access to the chosen secret-management platform.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "secure-app",
+      "ci-cd"
+    ],
+    "stack": []
   },
   {
     "id": "wshobson/agents/go-concurrency-patterns",
@@ -2068,7 +2936,14 @@
     "access": [],
     "summary": "Design safe Go concurrency with goroutines, channels, synchronization, context, and shutdown.",
     "note": "Provides reference patterns for worker pools, pipelines, cancellation, channel ownership, and race avoidance. It does not prescribe an external tool or service requirement.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "design-system",
+      "backend"
+    ],
+    "stack": [
+      "go"
+    ]
   },
   {
     "id": "wshobson/agents/rust-async-patterns",
@@ -2079,7 +2954,14 @@
     "access": [],
     "summary": "Reference patterns for reliable async Rust with Tokio, tasks, channels, and cancellation.",
     "note": "Explains futures, runtimes, bounded concurrency, tracing, error propagation, lock safety, and task management, with deeper examples in its companion reference. It is implementation guidance and does not itself run Cargo or contact a service.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "design-system",
+      "backend"
+    ],
+    "stack": [
+      "rust"
+    ]
   },
   {
     "id": "wshobson/agents/sql-optimization-patterns",
@@ -2093,7 +2975,12 @@
     ],
     "summary": "Improves SQL query shapes, indexes, execution plans, and database access patterns.",
     "note": "It uses database inspection and query commands; confirm the target environment before gathering evidence or changing indexes.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "speed-up",
+      "database"
+    ],
+    "stack": []
   },
   {
     "id": "wshobson/agents/turborepo-caching",
@@ -2107,7 +2994,15 @@
     ],
     "summary": "Configures Turborepo task caching and explains cache misses in monorepos.",
     "note": "It changes build configuration and uses local task commands to validate cache behavior.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "speed-up",
+      "ci-cd"
+    ],
+    "stack": [
+      "javascript",
+      "vercel"
+    ]
   },
   {
     "id": "wshobson/agents/task-coordination-strategies",
@@ -2120,7 +3015,12 @@
     ],
     "summary": "Coordinates multiple agents through task decomposition, ownership, and communication patterns.",
     "note": "It directs subagent work and is intended for tasks whose dependencies benefit from explicit coordination.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "agents",
+      "design-system"
+    ],
+    "stack": []
   },
   {
     "id": "alirezarezvani/claude-skills/senior-security",
@@ -2135,7 +3035,12 @@
     ],
     "summary": "Builds STRIDE threat models, scores risk with DREAD, scans secrets, and routes specialist work.",
     "note": "Scopes data-flow elements, generates scored threats, scans for secrets, and routes other security lanes to sibling skills. It depends on bundled Python scripts and sibling references; high findings call for credential rotation, while red-team or cloud actions stay in their specialist workflows.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "secure-app",
+      "design-system"
+    ],
+    "stack": []
   },
   {
     "id": "microsoft/skills/azure-cloud-migrate",
@@ -2151,7 +3056,16 @@
     ],
     "summary": "Assesses and converts supported AWS, Google Cloud, Heroku, Kubernetes, and Spring workloads for Azure.",
     "note": "Generates a scenario-specific assessment before converting code and configuration into a separate Azure output directory. It depends on Azure documentation and best-practice MCP tools plus bundled migration references; deployment is handed to azure-prepare, and destructive actions require user approval.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "infrastructure",
+      "upgrade"
+    ],
+    "stack": [
+      "azure",
+      "aws",
+      "gcp"
+    ]
   },
   {
     "id": "mblode/agent-skills/pr-creator",
@@ -2167,7 +3081,13 @@
     ],
     "summary": "Prepares GitHub pull requests using repository templates and reviewer-focused descriptions.",
     "note": "Needs authenticated GitHub CLI and Git, and can push commits or update PR metadata. Code fixes and later CI monitoring are delegated to separate companion skills.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "git"
+    ],
+    "stack": [
+      "github"
+    ]
   },
   {
     "id": "dotnet/skills/author-component",
@@ -2180,6 +3100,12 @@
     ],
     "summary": "Shapes Blazor parameters, callbacks, rendering and async cleanup without JavaScript interop.",
     "note": "Focuses on component architecture and asynchronous lifetimes in Razor files. JavaScript interop, forms, data fetching and new projects are routed to separate companion skills.",
-    "addedAt": "2026-09-27"
+    "addedAt": "2026-09-27",
+    "tasks": [
+      "frontend"
+    ],
+    "stack": [
+      "dotnet"
+    ]
   }
 ]

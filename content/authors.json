@@ -19,31 +19,38 @@
   },
   "anthropics": {
     "name": "Anthropic",
-    "url": "https://github.com/anthropics"
+    "url": "https://github.com/anthropics",
+    "official": true
   },
   "getsentry": {
     "name": "Sentry",
-    "url": "https://github.com/getsentry"
+    "url": "https://github.com/getsentry",
+    "official": true
   },
   "warpdotdev": {
     "name": "Warp",
-    "url": "https://github.com/warpdotdev"
+    "url": "https://github.com/warpdotdev",
+    "official": true
   },
   "openai": {
     "name": "OpenAI",
-    "url": "https://github.com/openai"
+    "url": "https://github.com/openai",
+    "official": true
   },
   "trailofbits": {
     "name": "Trail of Bits",
-    "url": "https://github.com/trailofbits"
+    "url": "https://github.com/trailofbits",
+    "official": true
   },
   "cloudflare": {
     "name": "Cloudflare",
-    "url": "https://github.com/cloudflare"
+    "url": "https://github.com/cloudflare",
+    "official": true
   },
   "supabase": {
     "name": "Supabase",
-    "url": "https://github.com/supabase"
+    "url": "https://github.com/supabase",
+    "official": true
   },
   "AvdLee": {
     "name": "Antoine van der Lee",
@@ -51,7 +58,8 @@
   },
   "Kotlin": {
     "name": "Kotlin",
-    "url": "https://github.com/Kotlin"
+    "url": "https://github.com/Kotlin",
+    "official": true
   },
   "affaan-m": {
     "name": "Affaan Mustafa",
@@ -67,11 +75,13 @@
   },
   "aws-samples": {
     "name": "AWS Samples",
-    "url": "https://github.com/aws-samples"
+    "url": "https://github.com/aws-samples",
+    "official": true
   },
   "dotnet": {
     "name": ".NET Platform",
-    "url": "https://github.com/dotnet"
+    "url": "https://github.com/dotnet",
+    "official": true
   },
   "evanca": {
     "name": "Ivanna",
@@ -79,27 +89,33 @@
   },
   "expo": {
     "name": "Expo",
-    "url": "https://github.com/expo"
+    "url": "https://github.com/expo",
+    "official": true
   },
   "fastapi": {
     "name": "FastAPI",
-    "url": "https://github.com/fastapi"
+    "url": "https://github.com/fastapi",
+    "official": true
   },
   "firebase": {
     "name": "Firebase",
-    "url": "https://github.com/firebase"
+    "url": "https://github.com/firebase",
+    "official": true
   },
   "get-convex": {
     "name": "Convex",
-    "url": "https://github.com/get-convex"
+    "url": "https://github.com/get-convex",
+    "official": true
   },
   "google": {
     "name": "Google",
-    "url": "https://github.com/google"
+    "url": "https://github.com/google",
+    "official": true
   },
   "hashicorp": {
     "name": "HashiCorp",
-    "url": "https://github.com/hashicorp"
+    "url": "https://github.com/hashicorp",
+    "official": true
   },
   "jeffallan": {
     "name": "Jeff Smolinski",
@@ -115,27 +131,33 @@
   },
   "microsoft": {
     "name": "Microsoft",
-    "url": "https://github.com/microsoft"
+    "url": "https://github.com/microsoft",
+    "official": true
   },
   "mongodb": {
     "name": "MongoDB",
-    "url": "https://github.com/mongodb"
+    "url": "https://github.com/mongodb",
+    "official": true
   },
   "neondatabase": {
     "name": "Neon",
-    "url": "https://github.com/neondatabase"
+    "url": "https://github.com/neondatabase",
+    "official": true
   },
   "planetscale": {
     "name": "PlanetScale",
-    "url": "https://github.com/planetscale"
+    "url": "https://github.com/planetscale",
+    "official": true
   },
   "prisma": {
     "name": "Prisma",
-    "url": "https://github.com/prisma"
+    "url": "https://github.com/prisma",
+    "official": true
   },
   "redis": {
     "name": "Redis",
-    "url": "https://github.com/redis"
+    "url": "https://github.com/redis",
+    "official": true
   },
   "st0012": {
     "name": "Stan Lo",
@@ -143,11 +165,13 @@
   },
   "sveltejs": {
     "name": "Svelte",
-    "url": "https://github.com/sveltejs"
+    "url": "https://github.com/sveltejs",
+    "official": true
   },
   "vercel": {
     "name": "Vercel",
-    "url": "https://github.com/vercel"
+    "url": "https://github.com/vercel",
+    "official": true
   },
   "wshobson": {
     "name": "Seth Hobson",

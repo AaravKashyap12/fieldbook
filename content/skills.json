@@ -49,7 +49,12 @@
       "docs",
       "network"
     ],
-    "readAt": "2026-09-25"
+    "readAt": "2026-09-25",
+    "tasks": [
+      "plan-feature",
+      "design-system"
+    ],
+    "stack": []
   },
   {
     "slug": "lean-engineering",
@@ -101,7 +106,12 @@
       "commands",
       "subagents"
     ],
-    "readAt": "2026-09-25"
+    "readAt": "2026-09-25",
+    "tasks": [
+      "implement",
+      "fix-bug"
+    ],
+    "stack": []
   },
   {
     "slug": "secure-launch",
@@ -152,7 +162,12 @@
       "edits",
       "commands"
     ],
-    "readAt": "2026-09-27"
+    "readAt": "2026-09-27",
+    "tasks": [
+      "secure-app",
+      "ship-release"
+    ],
+    "stack": []
   },
   {
     "slug": "efficiency-skill",
@@ -203,6 +218,10 @@
     "access": [
       "subagents"
     ],
-    "readAt": "2026-09-25"
+    "readAt": "2026-09-25",
+    "tasks": [
+      "agents"
+    ],
+    "stack": []
   }
 ]

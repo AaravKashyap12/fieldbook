@@ -1,0 +1,314 @@
+{
+  "tasks": [
+    {
+      "slug": "plan-feature",
+      "name": "Plan a feature"
+    },
+    {
+      "slug": "design-system",
+      "name": "Design architecture or APIs"
+    },
+    {
+      "slug": "implement",
+      "name": "Implement a feature"
+    },
+    {
+      "slug": "write-tests",
+      "name": "Write tests"
+    },
+    {
+      "slug": "fix-bug",
+      "name": "Fix a bug"
+    },
+    {
+      "slug": "review-code",
+      "name": "Review code"
+    },
+    {
+      "slug": "refactor",
+      "name": "Refactor or simplify"
+    },
+    {
+      "slug": "secure-app",
+      "name": "Secure an app"
+    },
+    {
+      "slug": "speed-up",
+      "name": "Improve performance"
+    },
+    {
+      "slug": "ci-cd",
+      "name": "Set up CI/CD"
+    },
+    {
+      "slug": "git",
+      "name": "Work with git"
+    },
+    {
+      "slug": "ship-release",
+      "name": "Ship a release"
+    },
+    {
+      "slug": "database",
+      "name": "Design or change a database"
+    },
+    {
+      "slug": "infrastructure",
+      "name": "Deploy and run infrastructure"
+    },
+    {
+      "slug": "operate",
+      "name": "Monitor and handle incidents"
+    },
+    {
+      "slug": "docs",
+      "name": "Write docs and decisions"
+    },
+    {
+      "slug": "frontend",
+      "name": "Build a frontend or app"
+    },
+    {
+      "slug": "backend",
+      "name": "Build a backend or API"
+    },
+    {
+      "slug": "upgrade",
+      "name": "Upgrade or migrate"
+    },
+    {
+      "slug": "agents",
+      "name": "Work with agents"
+    }
+  ],
+  "stackGroups": [
+    {
+      "slug": "languages",
+      "name": "Languages"
+    },
+    {
+      "slug": "frameworks",
+      "name": "Frameworks"
+    },
+    {
+      "slug": "data",
+      "name": "Data"
+    },
+    {
+      "slug": "cloud",
+      "name": "Cloud and tooling"
+    }
+  ],
+  "stacks": [
+    {
+      "slug": "typescript",
+      "name": "TypeScript",
+      "group": "languages"
+    },
+    {
+      "slug": "javascript",
+      "name": "JavaScript and Node",
+      "group": "languages"
+    },
+    {
+      "slug": "python",
+      "name": "Python",
+      "group": "languages"
+    },
+    {
+      "slug": "go",
+      "name": "Go",
+      "group": "languages"
+    },
+    {
+      "slug": "rust",
+      "name": "Rust",
+      "group": "languages"
+    },
+    {
+      "slug": "java-kotlin",
+      "name": "Java and Kotlin",
+      "group": "languages"
+    },
+    {
+      "slug": "dotnet",
+      "name": ".NET and C#",
+      "group": "languages"
+    },
+    {
+      "slug": "swift",
+      "name": "Swift and iOS",
+      "group": "languages"
+    },
+    {
+      "slug": "ruby",
+      "name": "Ruby",
+      "group": "languages"
+    },
+    {
+      "slug": "dart",
+      "name": "Dart",
+      "group": "languages"
+    },
+    {
+      "slug": "react",
+      "name": "React",
+      "group": "frameworks"
+    },
+    {
+      "slug": "nextjs",
+      "name": "Next.js",
+      "group": "frameworks"
+    },
+    {
+      "slug": "vue",
+      "name": "Vue and Nuxt",
+      "group": "frameworks"
+    },
+    {
+      "slug": "svelte",
+      "name": "Svelte",
+      "group": "frameworks"
+    },
+    {
+      "slug": "react-native",
+      "name": "React Native and Expo",
+      "group": "frameworks"
+    },
+    {
+      "slug": "flutter",
+      "name": "Flutter",
+      "group": "frameworks"
+    },
+    {
+      "slug": "django",
+      "name": "Django",
+      "group": "frameworks"
+    },
+    {
+      "slug": "fastapi",
+      "name": "FastAPI",
+      "group": "frameworks"
+    },
+    {
+      "slug": "rails",
+      "name": "Rails",
+      "group": "frameworks"
+    },
+    {
+      "slug": "spring",
+      "name": "Spring",
+      "group": "frameworks"
+    },
+    {
+      "slug": "postgres",
+      "name": "Postgres",
+      "group": "data"
+    },
+    {
+      "slug": "mysql",
+      "name": "MySQL",
+      "group": "data"
+    },
+    {
+      "slug": "sqlite",
+      "name": "SQLite",
+      "group": "data"
+    },
+    {
+      "slug": "mongodb",
+      "name": "MongoDB",
+      "group": "data"
+    },
+    {
+      "slug": "redis",
+      "name": "Redis",
+      "group": "data"
+    },
+    {
+      "slug": "supabase",
+      "name": "Supabase",
+      "group": "data"
+    },
+    {
+      "slug": "firebase",
+      "name": "Firebase",
+      "group": "data"
+    },
+    {
+      "slug": "neon",
+      "name": "Neon",
+      "group": "data"
+    },
+    {
+      "slug": "planetscale",
+      "name": "PlanetScale",
+      "group": "data"
+    },
+    {
+      "slug": "convex",
+      "name": "Convex",
+      "group": "data"
+    },
+    {
+      "slug": "prisma",
+      "name": "Prisma",
+      "group": "data"
+    },
+    {
+      "slug": "drizzle",
+      "name": "Drizzle",
+      "group": "data"
+    },
+    {
+      "slug": "aws",
+      "name": "AWS",
+      "group": "cloud"
+    },
+    {
+      "slug": "azure",
+      "name": "Azure",
+      "group": "cloud"
+    },
+    {
+      "slug": "gcp",
+      "name": "Google Cloud",
+      "group": "cloud"
+    },
+    {
+      "slug": "cloudflare",
+      "name": "Cloudflare",
+      "group": "cloud"
+    },
+    {
+      "slug": "vercel",
+      "name": "Vercel",
+      "group": "cloud"
+    },
+    {
+      "slug": "terraform",
+      "name": "Terraform",
+      "group": "cloud"
+    },
+    {
+      "slug": "docker",
+      "name": "Docker",
+      "group": "cloud"
+    },
+    {
+      "slug": "kubernetes",
+      "name": "Kubernetes",
+      "group": "cloud"
+    },
+    {
+      "slug": "github",
+      "name": "GitHub and Actions",
+      "group": "cloud"
+    },
+    {
+      "slug": "browser",
+      "name": "Browser and DevTools",
+      "group": "cloud"
+    }
+  ]
+}

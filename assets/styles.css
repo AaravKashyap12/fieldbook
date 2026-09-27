@@ -767,6 +767,7 @@ html:not(.js) .finder-layout { grid-template-columns: 1fr; }
 .feed-subscribe > p { margin-top: 8px; color: var(--ink-2); }
 .feed-subscribe .code-block { margin-top: 20px; }
 .feed-subscribe > .link { margin-top: 16px; }
+.feed-subscribe + .section { margin-top: 48px; }
 .feed-list { margin-top: 24px; }
 .feed-entry { padding-block: 24px; border-top: 1px solid var(--line); }
 .feed-entry:last-child { border-bottom: 1px solid var(--line); }

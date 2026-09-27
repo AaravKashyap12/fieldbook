@@ -9,13 +9,14 @@ import { loadContent, ACCESS } from './lib/data.mjs';
 import { esc, pad, rise, plural, humanDate, compact, exact } from './lib/util.mjs';
 import { icon, favicon } from './lib/icons.mjs';
 import { SITE, page, external, inlineLink, headScript } from './lib/shell.mjs';
-import { codeBlock, copyLabel, catIcon, accessText, installs, delta, boardRow, dirList, categoryNav, reviewedBadge } from './lib/parts.mjs';
+import { codeBlock, copyLabel, catIcon, accessText, installs, delta, dirList, categoryNav, reviewedBadge } from './lib/parts.mjs';
 import { diagram } from './lib/diagrams.mjs';
 import { installFor } from './lib/security.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const out = path.join(root, 'dist');
-const { entries, originals, categories, kits: kitDefs, snapshots } = await loadContent(root);
+const { entries, originals, categories, kits: kitDefs, snapshots, taxonomy } = await loadContent(root);
+const agents = JSON.parse(await readFile(path.join(root, 'content/agents.json'), 'utf8'));
 
 // SKILL.md copies are shown only for Fieldbook originals; community skills link to their source.
 const skillmd = {};
@@ -45,7 +46,6 @@ const updateLog = [
   { date: '2026-09-27', kind: 'New skill', title: 'Ready for launch day.', text: 'Secure Launch joins the collection. It checks what a project exposes before it goes live, applies the fixes you approve, and verifies each one locally. It ships as 0.1.3 with recorded Codex trials and plainly stated limits.', ids: ['AaravKashyap12/secure-launch/secure-launch'] },
   { date: '2026-09-25', kind: 'First edition', title: 'Three workflows. One home.', text: 'The collection opens with three engineering skills: project planning with evidence, focused one-owner engineering, and routing agent effort to where it counts. Lean Engineering and Efficiency Skill ship as 0.2.0 with recorded Codex trials.', ids: ['AaravKashyap12/advise-project-approach/advise-project-approach', 'AaravKashyap12/lean-engineering/lean-engineering', 'AaravKashyap12/efficiency-skill/efficiency-skill'] }
 ];
-const latestUpdate = updateLog[0];
 
 // ---------------------------------------------------------------- home
 // The notebook shows today's pages: the skills rising fastest, or the most
@@ -55,28 +55,6 @@ const deckPicks = varied(deckMode === 'today' ? [...listed].filter(e => e.stats.
 const sheetStat = e => deckMode === 'today' ? `+${compact(e.stats.today)} today` : `${compact(e.stats.installs)} installs`;
 const deck = `<div class="deck" data-deck aria-hidden="true" ${rise(3)}><span class="deck-caption">${deckMode === 'today' ? 'Rising today' : 'Most installed'}</span>${deckPicks.map((e, i) => `<div class="sheet" data-pos="${i}" data-name="${esc(`${e.name} by ${e.author.name}`)}"><span class="sheet-cat">${esc(e.categoryInfo.name)}${catIcon(e.category)}</span><strong>${esc(e.name)}</strong><span class="sheet-by">${esc(e.author.name)}</span><span class="sheet-lines"><i></i><i></i><i></i></span><code>${esc(sheetStat(e))}</code><span class="sheet-rules"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div>`).join('')}<span class="deck-hint">Turn the page ${icon('chevron')}</span></div>`;
 
-const BOARD_TABS = [['today', 'Today'], ['week', 'This week'], ['all', 'All time'], ['new', 'New']];
-// At most two skills per maintainer, so one prolific author cannot fill the board.
-function capped(list, n = 10, per = 2) {
-  const seen = {}, out = [];
-  for (const e of list) { seen[e.owner] = (seen[e.owner] || 0) + 1; if (seen[e.owner] <= per) out.push(e); if (out.length === n) break; }
-  return out;
-}
-function boardPanel(mode) {
-  let list, note = '';
-  if (mode === 'today' || mode === 'week') {
-    const ok = mode === 'today' ? snapshots.hasDay : snapshots.hasWeek;
-    const key = mode;
-    list = ok ? capped([...listed].filter(e => e.stats[key] != null).sort((a, b) => b.stats[key] - a.stats[key] || byInstalls(a, b))) : null;
-    if (!list) { note = `<p class="board-wait">${mode === 'today' ? 'Daily' : 'Weekly'} movement appears once Fieldbook has ${mode === 'today' ? 'two days' : 'a week'} of snapshots to compare. Until then, this shows all-time installs.</p>`; list = capped(ranked); mode = 'all'; }
-  } else if (mode === 'all') list = capped(ranked);
-  else list = capped([...listed].sort((a, b) => b.addedAt.localeCompare(a.addedAt) || byInstalls(a, b)));
-  const change = mode === 'today' || mode === 'week';
-  const head = `<div class="brow-head" aria-hidden="true"><span>#</span><span>Skill</span><span>${mode === 'new' ? 'Added' : 'Installs'}</span>${change ? `<span>${mode === 'today' ? 'Today' : 'Week'}</span>` : ''}</div>`;
-  return `${note}<div class="${change ? 'has-change' : 'no-change'}">${head}<ol class="brows">${list.map((e, i) => boardRow(e, i, mode)).join('')}</ol></div>`;
-}
-const board = `<div class="board" data-tabs><div class="board-tabs" role="radiogroup" aria-label="Rank the board by">${BOARD_TABS.map(([v, l], i) => `<label class="pick"><input type="radio" name="board" value="${v}"${i === 0 ? ' checked' : ''}><span>${l}</span></label>`).join('')}</div>${BOARD_TABS.map(([v, l]) => `<div class="board-panel" data-for="${v}"><h3 class="sr-only">${l}</h3>${boardPanel(v)}</div>`).join('')}<p class="board-foot">At most two skills per maintainer, so the board stays varied. The full ranking is in the directory.</p></div>`;
-
 function originalRow(e, i) {
   const s = e.data;
   return `<li class="skill"><span class="skill-num" aria-hidden="true">${pad(i + 1)}</span><div class="skill-body"><p class="skill-meta"><span class="cat">${esc(e.categoryInfo.name)}</span>${s.version ? `<span>v${esc(s.version)}</span>` : ''}<span>${esc(s.license)}</span></p><h3><a href="${e.url}">${esc(e.name)}</a></h3><p class="skill-summary">${esc(e.summary)}</p><div class="skill-actions"><a class="link" href="${e.url}" aria-label="Explore ${esc(e.name)}">Explore skill ${icon('chevron')}</a><button type="button" class="copy-button" data-copy="orig-install-${i}" aria-label="Copy ${esc(e.name)} install command">${copyLabel('Copy install')}</button><code id="orig-install-${i}" tabindex="-1" class="sr-only">${esc(e.install)}</code></div></div>${diagram(s)}</li>`;
@@ -84,29 +62,51 @@ function originalRow(e, i) {
 
 const kitList = `<ul class="kit-list">${kits.map(k => `<li><a class="kit" href="/kits/${k.slug}/"><span class="kit-count">${plural(k.entries.length)}</span><h3>${esc(k.name)}</h3><p>${esc(k.blurb)}</p><span class="kit-names">${k.entries.map(e => esc(e.name)).join('<span aria-hidden="true"> · </span><span class="sr-only">, </span>')}</span><span class="flow-more">Open the kit ${icon('chevron')}</span></a></li>`).join('')}</ul>`;
 
-const notes = `<aside class="wrap notes" aria-labelledby="notes-title"><div class="notes-body"><h2 id="notes-title" class="notes-title">${esc(latestUpdate.title)}</h2><p class="notes-meta">Field notes · <time datetime="${latestUpdate.date}">${esc(humanDate(latestUpdate.date))}</time></p><p class="notes-text">${esc(latestUpdate.text)}</p></div><a class="link" href="/updates/">All updates ${icon('chevron')}</a></aside>`;
+// Tasks with at least one listed skill, in taxonomy order.
+const taskCounts = Object.fromEntries(taxonomy.tasks.map(t => [t.slug, listed.filter(e => e.tasks.includes(t.slug)).length]));
+const liveTasks = taxonomy.tasks.filter(t => taskCounts[t.slug] > 0);
+const QUICK_TASKS = [['fix-bug', 'bug'], ['write-tests', 'flask'], ['review-code', 'review'], ['secure-app', 'shield']].filter(([slug]) => taskCounts[slug] > 0);
+const taskName = slug => taxonomy.tasks.find(t => t.slug === slug).name;
 
-const boardCss = `<style>${BOARD_TABS.map(([v]) => `.board:has(input[value="${v}"]:checked) .board-panel[data-for="${v}"]`).join(',')}{display:block}</style>`;
+// The agents row: monochrome marks from Simple Icons (CC0; see content/agents.json
+// for versions). Two copies make a seamless loop.
+const agentMark = a => `<li class="agent">${a.path ? `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="${esc(a.path)}"/></svg>` : ''}<span>${esc(a.name)}</span></li>`;
+const agentList = agents.agents;
+const works = `<section class="wrap works" aria-label="Works with your agent"><div class="works-band"><p class="works-label">Install once.<br><span>Use it in 70+ agents.</span></p><div class="marquee" title="Skills install with the open Skills CLI"><ul class="marquee-track">${agentList.map(agentMark).join('')}</ul><ul class="marquee-track" aria-hidden="true">${agentList.map(agentMark).join('')}</ul></div></div></section>`;
 
 const home = `<main id="main" class="home">
-<section class="wrap hero" aria-labelledby="hero-title"><div class="hero-copy"><h1 id="hero-title" ${rise(0)}>Engineering skills,<br><em>reviewed.</em></h1><p class="lede" ${rise(1)}>A strict directory of agent skills for real engineering work. Every listing is licence-checked, scanned and labelled before it goes up, then ranked by real installs.</p><form class="hero-search" action="/skills/" method="get" role="search" ${rise(2)}><label class="search search-lg">${icon('search')}<input type="search" name="q" placeholder="Search ${entries.length} reviewed skills" aria-label="Search the directory" autocomplete="off" spellcheck="false" data-slash><kbd aria-hidden="true">/</kbd></label><button class="button" type="submit">Search</button></form><p class="hero-stats" ${rise(3)}><span><b>${entries.length}</b> skills</span><span><b>${maintainers}</b> maintainers</span><span><b>${stages.length}</b> stages</span><span>Refreshed daily</span></p></div>${deck}</section>
-<section id="board" class="wrap board-section" aria-labelledby="board-title"><div class="section-intro"><h2 id="board-title" class="section-title">What engineers are<br><em>installing.</em></h2><p>Ranked by install counts from ${inlineLink(SITE.skillsSh, 'skills.sh')}, refreshed every day. Only reviewed skills appear here.</p></div>${board}<p class="section-more"><a class="link" href="/skills/">Browse all ${entries.length} skills ${icon('chevron')}</a></p></section>
-<section class="wrap cats-section" aria-labelledby="cats-title"><div class="section-intro"><h2 id="cats-title" class="section-title">Find a skill by<br><em>stage of the work.</em></h2><p>From the first question about a feature to the rollback plan on launch day.</p></div><ul class="cat-list">${stages.map(c => `<li><a href="/c/${c.slug}/">${catIcon(c.slug)}<span class="cat-text"><span class="cat-name">${esc(c.name)}</span><span class="cat-blurb">${esc(c.blurb)}</span></span><span class="cat-n">${counts[c.slug]}</span></a></li>`).join('')}</ul></section>
-<section class="wrap kits-section" aria-labelledby="kits-title"><div class="section-intro"><h2 id="kits-title" class="section-title">Kits worth<br><em>saving.</em></h2><p>Skills that work well together on one kind of task, with a single block of install commands.</p></div>${kitList}</section>
+<section class="wrap hero" aria-labelledby="hero-title"><div class="hero-copy"><h1 id="hero-title" ${rise(0)}>Engineering skills,<br><em>reviewed.</em></h1><p class="lede" ${rise(1)}>A strict directory of agent skills for real engineering work. Find one for the task in front of you, see what it can touch, and install it in one line.</p><form class="hero-search" action="/skills/" method="get" role="search" ${rise(2)}>${icon('search')}<input type="search" name="q" placeholder="Search ${entries.length} reviewed skills" aria-label="Search the directory" autocomplete="off" spellcheck="false" data-slash><kbd aria-hidden="true">/</kbd><button class="search-go" type="submit">Search</button></form><p class="quick-tasks" ${rise(3)}>${QUICK_TASKS.map(([slug, ic]) => `<a href="/skills/?task=${slug}">${icon(ic)}${esc(taskName(slug))}</a>`).join('')}<a class="quick-more" href="/skills/">All tasks ${icon('chevron')}</a></p></div>${deck}</section>
+${works}
+<section class="wrap tasks-section" aria-labelledby="tasks-title"><div class="section-intro"><h2 id="tasks-title" class="section-title">Start with<br><em>the task.</em></h2><p>Pick what you are doing. The directory narrows it down by stack and by what a skill is allowed to touch.</p></div><ul class="task-list">${liveTasks.map(t => `<li><a href="/skills/?task=${t.slug}"><span class="task-name">${esc(t.name)}</span><span class="task-n">${taskCounts[t.slug]}</span>${icon('chevron', 'task-chevron')}</a></li>`).join('')}</ul><p class="section-more"><a class="link" href="/skills/">Browse all ${entries.length} skills ${icon('chevron')}</a></p></section>
 <section class="wrap originals" aria-labelledby="orig-title"><div class="section-intro"><h2 id="orig-title" class="section-title">Made at<br><em>Fieldbook.</em></h2><p>Written here, held to the same review as everything else, and published with recorded evaluations.</p></div><ul class="skill-list">${originals.filter(e => !e.paused).map(originalRow).join('')}</ul></section>
 <section class="wrap promise" aria-labelledby="promise-title"><div class="promise-copy"><h2 id="promise-title" class="section-title">Checked before<br><em>it is listed.</em></h2><ol class="promise-steps"><li><span>01</span><div><h3>Licence checked</h3><p>Only skills published under a licence you can use.</p></div></li><li><span>02</span><div><h3>Scanned daily</h3><p>Checked for remote code, destructive commands, secret handling and hidden instructions. A new flag pauses the listing.</p></div></li><li><span>03</span><div><h3>Labelled and noted</h3><p>Every page says what the skill can touch, with a Fieldbook note on what it is good for.</p></div></li><li><span>04</span><div><h3>Read in full</h3><p>Skills a person has read end to end carry the mark, with the date. The list grows every week.</p></div></li></ol><a class="link" href="/review/">How we review ${icon('chevron')}</a></div><div class="submit-cta"><h2 class="submit-title">Built a skill that makes agents <em>engineer better?</em></h2><p>Send it in, or send one you rely on. We read every submission and reply on GitHub either way.</p><a class="button" href="/submit/">Submit a skill ${icon('plus')}</a></div></section>
-${notes}
 </main>`;
 
 // ---------------------------------------------------------------- directory, categories
 const dirTools = (label, n) => `<div class="dir-tools" data-dir-tools><label class="search">${icon('search')}<input type="search" name="q" placeholder="Search ${esc(label)}" aria-label="Search ${esc(label)}" autocomplete="off" spellcheck="false" data-dir-search data-slash><kbd aria-hidden="true">/</kbd></label><label class="sort"><span>Sort</span><select data-dir-sort aria-label="Sort skills"><option value="installs">Most installed</option><option value="today">Rising today</option><option value="added">Newest</option><option value="name">A to Z</option></select></label><span class="count" data-dir-count aria-live="polite">${plural(n)}</span></div>`;
-const emptyState = `<p class="empty" data-dir-empty hidden>No skill matches “<span data-dir-query></span>”. Try a stage such as review or debugging, or <a class="inline-link" href="/submit/">submit a skill</a>.</p>`;
+const emptyState = `<p class="empty" data-dir-empty hidden>No skill matches these filters<span data-dir-query-wrap> and “<span data-dir-query></span>”</span>. Remove a filter, or <a class="inline-link" href="/submit/">submit a skill</a> that fits.</p>`;
 
-const directory = `<main id="main" class="wrap directory" data-directory><header class="page-head compact"><h1 ${rise(0)}>The <em>directory.</em></h1><p class="lede" ${rise(1)}>Every reviewed skill, with what it can touch and how often it is installed. ${entries.length} skills from ${maintainers} maintainers.</p></header>${categoryNav(stages, counts)}${dirTools('all skills', entries.length)}${dirList([...listed].sort(byInstalls), 'dir')}${emptyState}</main>`;
+// The finder. Facets combine as OR within a group and AND across groups;
+// "Only skills that" limits all apply together. app.js does the filtering and
+// keeps the state in the URL; without script the full list shows.
+const facetOption = (name, value, label, extra = '') => `<label class="facet-option"><input type="checkbox" name="${name}" value="${esc(value)}"${extra}><span class="facet-label">${esc(label)}</span><span class="facet-n" data-n></span></label>`;
+const facet = (key, legend, body, open = true) => `<details class="facet" data-facet="${key}"${open ? ' open' : ''}><summary>${legend}<span class="facet-picked" data-picked></span></summary><div class="facet-body">${body}</div></details>`;
+const stackUsed = new Set(listed.flatMap(e => e.stack));
+const LIMITS = [['guidance', 'Give guidance only'], ['no-commands', 'Don\u2019t run commands'], ['no-edits', 'Don\u2019t edit code'], ['no-network', 'Don\u2019t use the network'], ['no-mcp', 'Need no MCP server']];
+const SOURCES = [['official', 'Official maintainer'], ['original', 'Fieldbook original'], ['read', 'Read in full']];
+const filters = `<form class="filters" data-filters aria-label="Filter skills"><details class="filters-panel" data-filters-panel open><summary class="filters-toggle">Filters<span class="filters-count" data-filters-count></span></summary><div class="filters-body">
+${facet('task', 'Task', liveTasks.map(t => facetOption('task', t.slug, t.name)).join(''))}
+${facet('stack', 'Stack', `<p class="facet-hint">Includes general skills that work with any stack; skills made for your stack come first.</p>${facetOption('stack', 'any', 'General skills only')}` + taxonomy.stackGroups.map(g => { const opts = taxonomy.stacks.filter(x => x.group === g.slug && stackUsed.has(x.slug)); return opts.length ? `<p class="facet-group">${esc(g.name)}</p>${opts.map(x => facetOption('stack', x.slug, x.name)).join('')}` : ''; }).join(''))}
+${facet('limit', 'Only skills that', LIMITS.map(([v, l]) => facetOption('limit', v, l)).join(''))}
+${facet('stage', 'Stage', stages.map(c => facetOption('stage', c.slug, c.name)).join(''), false)}
+${facet('source', 'Source', SOURCES.map(([v, l]) => facetOption('source', v, l)).join(''), false)}
+<button type="button" class="clear-all" data-clear-all hidden>Clear all filters</button></div></details></form>`;
+const finderTools = `<div class="dir-tools" data-dir-tools><label class="search">${icon('search')}<input type="search" name="q" placeholder="Search skills, authors, tools" aria-label="Search skills" autocomplete="off" spellcheck="false" data-dir-search data-slash><kbd aria-hidden="true">/</kbd></label><label class="sort"><span>Sort</span><select data-dir-sort aria-label="Sort skills"><option value="match">Best match</option><option value="installs" selected>Most installed</option><option value="today">Rising today</option><option value="added">Newest</option><option value="name">A to Z</option></select></label><span class="count" data-dir-count aria-live="polite">${plural(listed.length)}</span></div><div class="active-filters" data-active hidden></div>`;
+const directory = `<main id="main" class="wrap directory finder" data-directory data-finder><header class="page-head compact"><h1 ${rise(0)}>Find the right <em>skill.</em></h1><p class="lede" ${rise(1)}>Filter by the task in front of you, your stack, and what you are comfortable letting an agent touch. ${entries.length} reviewed skills from ${maintainers} maintainers.</p></header><div class="finder-layout">${filters}<section class="results" aria-label="Results">${finderTools}${dirList([...listed].sort(byInstalls), 'dir')}${emptyState}</section></div></main>`;
 
 const categoryPage = c => {
   const list = listed.filter(e => e.category === c.slug).sort(byInstalls);
-  return `<main id="main" class="wrap directory is-stage" data-directory><nav class="crumbs" aria-label="Breadcrumb"><a href="/skills/">Directory</a>${icon('chevron')}<span aria-current="page">${esc(c.name)}</span></nav><header class="page-head compact"><h1 ${rise(0)}>${esc(c.name)}</h1><p class="lede" ${rise(1)}>${esc(c.blurb)}</p></header>${categoryNav(stages, counts, c.slug)}${dirTools(c.name.toLowerCase(), list.length)}${dirList(list, `cat-${c.slug}`)}${emptyState}</main>`;
+  return `<main id="main" class="wrap directory is-stage" data-directory><nav class="crumbs" aria-label="Breadcrumb"><a href="/skills/">Directory</a>${icon('chevron')}<span aria-current="page">${esc(c.name)}</span></nav><header class="page-head compact"><h1 ${rise(0)}>${esc(c.name)}</h1><p class="lede" ${rise(1)}>${esc(c.blurb)}</p></header>${categoryNav(stages, counts, c.slug)}<p class="refine"><a class="link" href="/skills/?stage=${c.slug}">Refine ${esc(c.name.toLowerCase())} by task, stack and access ${icon('chevron')}</a></p>${dirTools(c.name.toLowerCase(), list.length)}${dirList(list, `cat-${c.slug}`)}${emptyState}</main>`;
 };
 
 // ---------------------------------------------------------------- kits
@@ -122,12 +122,14 @@ function facts(e) {
     st.stars ? ['GitHub stars', `<span class="stars">${icon('star')}${compact(st.stars)}</span><small>${esc(e.repo)}</small>`] : null,
     st.pushed ? ['Repository updated', humanDate(st.pushed)] : null,
     e.original && e.data.version ? ['Version', `<code>${esc(e.data.version)}</code>`] : null,
+    ['Good for', e.taskInfo.map(t => `<a class="inline-link" href="/skills/?task=${t.slug}">${esc(t.name)}</a>`).join('<br>')],
+    ['Stack', e.stackInfo.length ? e.stackInfo.map(t => `<a class="inline-link" href="/skills/?stack=${t.slug}">${esc(t.name)}</a>`).join(', ') : 'Any stack'],
     ['Licence', esc(e.license)],
     ['Author', `<a class="inline-link" href="${esc(e.author.url)}" target="_blank" rel="noopener noreferrer">${esc(e.author.name)}<span class="sr-only"> (opens in a new tab)</span></a>`],
     ['Added', humanDate(e.addedAt)]
   ].filter(Boolean);
   const links = [
-    external(e.source, 'SKILL.md on GitHub', 'link'),
+    external(e.sourceUrl, 'SKILL.md on GitHub', 'link'),
     external(e.repoUrl, 'Repository', 'link'),
     st.installs != null ? external(`${SITE.skillsSh}/${e.id.toLowerCase()}`, 'On skills.sh', 'link') : '',
     e.original && e.data.evidence ? external(e.data.evidence, 'Evaluation notes', 'link') : ''
@@ -156,7 +158,7 @@ function reviewSection(e) {
       : e.clearedFlags.length ? ['ok', 'Risky patterns', `${plural(e.clearedFlags.length, 'match')} cleared on reading: ${e.clearedFlags.map(f => esc(f.reason)).join(' ')}`]
       : ['ok', 'Risky patterns', 'None found']) : null,
     r ? ['info', 'Size', `${r.lines} lines`] : null,
-    r?.checkedAt ? ['info', 'Last checked', `${humanDate(r.checkedAt)} · <code>${esc(r.sha256)}</code>`] : null
+    r?.checkedAt ? ['info', 'Last checked', `${humanDate(r.checkedAt)} · <code title="SHA-256 ${esc(r.sha256)}">${esc(String(r.sha256).slice(0, 12))}</code>`] : null
   ].filter(Boolean);
   const touch = e.access.length
     ? `<ul class="touch">${e.access.map(a => `<li><span>${ACCESS[a].label}</span><p>${ACCESS[a].hint}</p></li>`).join('')}</ul>`
@@ -178,7 +180,7 @@ function detail(e) {
   const more = related.length ? related : ranked.filter(x => x.id !== e.id).slice(0, 5);
   const body = e.original
     ? `${installation(e)}<section class="section" aria-labelledby="when-title"><h2 id="when-title">When to reach for it</h2><ul class="bullets">${s.bestFor.map(t => `<li>${esc(t)}</li>`).join('')}</ul></section><section class="section" aria-labelledby="how-title"><h2 id="how-title">How it approaches the work</h2><ol class="steps">${s.workflow.map((t, i) => `<li><span>${pad(i + 1)}</span><p>${esc(t)}</p></li>`).join('')}</ol></section>${reviewSection(e)}${skillSource(e)}<section class="section" aria-labelledby="know-title"><h2 id="know-title">Good to know</h2><p class="prose">${esc(s.note)}</p></section>`
-    : `${installation(e)}${reviewSection(e)}<section class="section" aria-labelledby="source-title"><h2 id="source-title">Read the source</h2><p class="prose">Fieldbook links to the original instead of copying it, so you always read the version you install.</p>${external(e.source, `${esc(e.path)} on GitHub`, 'link')}</section>`;
+    : `${installation(e)}${reviewSection(e)}<section class="section" aria-labelledby="source-title"><h2 id="source-title">Read the source</h2><p class="prose">Fieldbook links to the original instead of copying it, so you always read the version you install.</p>${external(e.sourceUrl, `${esc(e.path)} on GitHub`, 'link')}</section>`;
   return `<main id="main" class="wrap detail"><nav class="crumbs" aria-label="Breadcrumb"><a href="/skills/">Directory</a>${icon('chevron')}<a href="/c/${e.category}/">${esc(e.categoryInfo.name)}</a>${icon('chevron')}<span aria-current="page">${esc(e.name)}</span></nav><header class="detail-head"><p class="detail-meta" ${rise(0)}><span class="detail-glyph">${catIcon(e.category)}</span><a class="cat" href="/c/${e.category}/">${esc(e.categoryInfo.name)}</a>${e.original ? `${s.version ? `<span>v${esc(s.version)}</span>` : ''}<span class="tag-original">Fieldbook original</span>` : ''}<span>${esc(e.license)}</span></p><h1 ${rise(1)}>${esc(e.name)}</h1><p class="detail-by" ${rise(1)}>by <a class="inline-link" href="${esc(e.author.url)}" target="_blank" rel="noopener noreferrer">${esc(e.author.name)}<span class="sr-only"> (opens in a new tab)</span></a> <span aria-hidden="true">·</span> <code>${esc(e.repo)}</code></p><p class="lede" ${rise(2)}>${esc(e.original ? s.description : e.summary)}</p></header><div class="detail-layout"><article class="detail-article">${body}</article>${facts(e)}</div><section class="related" aria-labelledby="related-title"><h2 id="related-title">${related.length ? `More in ${esc(e.categoryInfo.name)}` : 'Elsewhere in Fieldbook'}</h2><ul class="related-list">${more.map(x => `<li><a href="${x.url}">${catIcon(x.category)}<span class="related-name">${esc(x.name)}</span><span class="related-cat">${esc(x.author.name)}</span>${icon('chevron', 'related-chevron')}</a></li>`).join('')}</ul></section></main>`;
 }
 
@@ -209,7 +211,7 @@ const dataExport = {
   name: SITE.name, url: SITE.origin, description: SITE.description,
   generatedAt: new Date().toISOString(), statsFetchedAt: snapshots.latest?.fetchedAt || null,
   notes: 'Install counts from skills.sh (public counts from the Skills CLI); stars from GitHub. Reviews by Fieldbook; see /review/.',
-  skills: entries.map(e => ({ id: e.id, name: e.name, url: SITE.origin + e.url, author: e.author.name, repository: e.repoUrl, path: e.path, category: e.categoryInfo.name, summary: e.summary, license: e.license, access: e.access.map(a => ACCESS[a].label), install: installFor(e), original: e.original, installs: e.stats.installs, today: e.stats.today, week: e.stats.week, stars: e.stats.stars, addedAt: e.addedAt, reviewedAt: e.review?.checkedAt || null, reviewRetained: e.retained, reviewStatus: e.paused ? 'paused' : e.retained ? 'last-good' : 'current', paused: e.paused }))
+  skills: entries.map(e => ({ id: e.id, name: e.name, url: SITE.origin + e.url, author: e.author.name, repository: e.repoUrl, path: e.path, tasks: e.tasks, stack: e.stack, source: e.source, category: e.categoryInfo.name, summary: e.summary, license: e.license, access: e.access.map(a => ACCESS[a].label), install: installFor(e), original: e.original, installs: e.stats.installs, today: e.stats.today, week: e.stats.week, stars: e.stats.stars, addedAt: e.addedAt, reviewedAt: e.review?.checkedAt || null, reviewRetained: e.retained, reviewStatus: e.paused ? 'paused' : e.retained ? 'last-good' : 'current', paused: e.paused }))
 };
 
 // Hosting config for Vercel. The inline theme script is allowed by hash; check.mjs
@@ -253,7 +255,7 @@ await cp(path.join(root, 'assets/fonts'), path.join(out, 'fonts'), { recursive: 
 for (const file of ['styles.css', 'app.js', 'sound.js', 'social-preview.png']) await copyFile(path.join(root, 'assets', file), path.join(out, file)).catch(err => { if (file !== 'social-preview.png') throw err; });
 const write = async (route, html) => { const dir = path.join(out, route); await mkdir(dir, { recursive: true }); await writeFile(path.join(dir, 'index.html'), html); };
 
-await write('/', page({ title: `${SITE.name}: ${SITE.tagline}`, description: SITE.description, route: '/', content: home, current: 'home', headExtra: boardCss }));
+await write('/', page({ title: `${SITE.name}: ${SITE.tagline}`, description: SITE.description, route: '/', content: home, current: 'home' }));
 await write('/skills/', page({ title: `Directory · ${SITE.name}`, description: `All ${entries.length} reviewed engineering skills for coding agents, with what each can touch and how often it is installed.`, route: '/skills/', content: directory, current: 'directory' }));
 for (const c of stages) await write(`/c/${c.slug}/`, page({ title: `${c.name} skills · ${SITE.name}`, description: `${c.blurb} ${plural(counts[c.slug])}, each reviewed by Fieldbook.`, route: `/c/${c.slug}/`, content: categoryPage(c), current: 'directory' }));
 await write('/kits/', page({ title: `Kits · ${SITE.name}`, description: 'Small sets of reviewed agent skills that work well together, with one block of install commands.', route: '/kits/', content: kitsIndex, current: 'kits' }));

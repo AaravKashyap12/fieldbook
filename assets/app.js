@@ -54,7 +54,7 @@ if (soundToggle) {
 
 // A dry tick when pressing navigation, played on press so it finishes
 // before the browser leaves the page.
-const tickTargets = '.nav-links a, .gh-pill, .skill h3 a, .skill-actions .link, .related-list a, .button, .link, .brow, .cat-list a, .kit, .cat-nav a, .dir-row h3 a, .crumbs a';
+const tickTargets = '.nav-links a, .gh-pill, .skill h3 a, .skill-actions .link, .related-list a, .button, .link, .task-list a, .quick-tasks a, .kit, .cat-nav a, .dir-row h3 a, .crumbs a, .chip, .clear-all';
 document.addEventListener('pointerdown', event => {
   if (event.button === 0 && event.target.closest(tickTargets)) play('tick');
 });
@@ -266,9 +266,11 @@ if (slashTarget) {
 }
 
 // ---------------------------------------------------------------------------
-// Directory: search every word across name, author, stage and labels, and
-// sort by installs, today's movement, date or name. The query and sort live
-// in the URL so a filtered view can be shared; the home page search lands here.
+// Directory and finder. Search matches every word across name, author, stage,
+// tasks, stack and labels. On the finder, facets narrow the list: options in
+// one group combine with OR, groups combine with AND, and every "Only skills
+// that" limit must hold. Each option shows how many skills it would leave.
+// The whole state lives in the URL, so a filtered view can be saved or shared.
 const dir = document.querySelector('[data-directory]');
 const dirList = dir?.querySelector('[data-dir-list]');
 const dirSearch = dir?.querySelector('[data-dir-search]');
@@ -278,37 +280,137 @@ if (dir && dirList && dirSearch) {
   const count = dir.querySelector('[data-dir-count]');
   const empty = dir.querySelector('[data-dir-empty]');
   const queryEcho = dir.querySelector('[data-dir-query]');
+  const queryWrap = dir.querySelector('[data-dir-query-wrap]');
+  const form = dir.querySelector('[data-filters]');
+  const active = dir.querySelector('[data-active]');
+  const clearAll = dir.querySelector('[data-clear-all]');
+  const panel = dir.querySelector('[data-filters-panel]');
+  const panelCount = dir.querySelector('[data-filters-count]');
+  const GROUPS = ['task', 'stack', 'limit', 'stage', 'source'];
   const label = n => `${n} ${n === 1 ? 'skill' : 'skills'}`;
+  const words = () => dirSearch.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+
+  // Precompute what each row offers, once.
+  const facts = new Map(rows.map(row => [row, {
+    task: new Set(row.dataset.tasks?.split(' ').filter(Boolean)),
+    stack: new Set(row.dataset.stack?.split(' ').filter(Boolean)),
+    access: new Set(row.dataset.access?.split(' ').filter(Boolean)),
+    stage: row.dataset.cat,
+    source: row.dataset.source,
+    read: row.dataset.read === '1',
+    name: row.querySelector('h3')?.textContent.toLowerCase() || ''
+  }]));
+  const LIMIT_TESTS = {
+    guidance: f => f.access.size === 0,
+    'no-commands': f => !f.access.has('commands'),
+    'no-edits': f => !f.access.has('edits'),
+    'no-network': f => !f.access.has('network'),
+    'no-mcp': f => !f.access.has('mcp')
+  };
+  const matchesGroup = (f, group, values) => {
+    if (!values.length) return true;
+    if (group === 'task') return values.some(v => f.task.has(v));
+    // A stack pick means "works with my stack": general skills qualify too, and
+    // stack-specific ones are ranked first (see `how` below).
+    if (group === 'stack') return values.some(v => (v === 'any' ? f.stack.size === 0 : f.stack.has(v) || f.stack.size === 0));
+    if (group === 'limit') return values.every(v => LIMIT_TESTS[v]?.(f) ?? true);
+    if (group === 'stage') return values.includes(f.stage);
+    if (group === 'source') return values.some(v => (v === 'read' ? f.read : f.source === v));
+    return true;
+  };
+  const selected = () => Object.fromEntries(GROUPS.map(g => [g, form ? [...form.querySelectorAll(`input[name="${g}"]:checked`)].map(i => i.value) : []]));
+  const passes = (row, state, q, skip) => {
+    const f = facts.get(row);
+    if (q.length && !q.every(w => row.dataset.search.includes(w))) return false;
+    return GROUPS.every(g => g === skip || matchesGroup(f, g, state[g]));
+  };
+  const score = (row, q) => {
+    const f = facts.get(row);
+    return q.reduce((sum, w) => sum + (f.name.includes(w) ? 3 : 0) + (row.dataset.search.includes(w) ? 1 : 0), 0);
+  };
   const keys = {
     installs: (a, b) => b.dataset.installs - a.dataset.installs,
     today: (a, b) => b.dataset.today - a.dataset.today || b.dataset.installs - a.dataset.installs,
     added: (a, b) => b.dataset.added.localeCompare(a.dataset.added) || b.dataset.installs - a.dataset.installs,
     name: (a, b) => a.dataset.name.localeCompare(b.dataset.name)
   };
+
+  // Restore state from the URL: ?q=&task=a,b&stack=&limit=&stage=&source=&sort=
   const params = new URLSearchParams(location.search);
   dirSearch.value = params.get('q') || '';
-  if (sort && keys[params.get('sort')]) sort.value = params.get('sort');
+  if (form) for (const g of GROUPS) for (const v of (params.get(g) || '').split(',').filter(Boolean)) {
+    const input = form.querySelector(`input[name="${g}"][value="${CSS.escape(v)}"]`);
+    if (input) { input.checked = true; input.closest('details.facet')?.setAttribute('open', ''); }
+  }
+  if (sort) sort.value = keys[params.get('sort')] || params.get('sort') === 'match' ? params.get('sort') : (params.get('q') ? 'match' : 'installs');
+  let sortTouched = Boolean(params.get('sort'));
+  if (panel && matchMedia('(max-width: 880px)').matches && !GROUPS.some(g => params.get(g))) panel.removeAttribute('open');
+
   const apply = ({ remember = true } = {}) => {
-    const words = dirSearch.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    const q = words();
+    const state = selected();
     let shown = 0;
-    for (const row of rows) {
-      const hit = words.every(w => row.dataset.search.includes(w));
-      row.hidden = !hit;
-      if (hit) shown += 1;
+    for (const row of rows) { const hit = passes(row, state, q); row.hidden = !hit; if (hit) shown += 1; }
+    const base = sort?.value === 'match' && q.length ? (a, b) => score(b, q) - score(a, q) || keys.installs(a, b) : keys[sort?.value] || keys.installs;
+    const stacks = state.stack.filter(v => v !== 'any');
+    const specific = row => (stacks.some(v => facts.get(row).stack.has(v)) ? 1 : 0);
+    const how = stacks.length ? (a, b) => specific(b) - specific(a) || base(a, b) : base;
+    dirList.append(...[...rows].sort(how));
+
+    const picked = GROUPS.reduce((n, g) => n + state[g].length, 0);
+    const filtered = q.length || picked;
+    if (count) count.textContent = filtered ? `${shown} of ${label(rows.length)}` : label(rows.length);
+    if (empty) { empty.hidden = shown > 0; if (queryEcho) queryEcho.textContent = dirSearch.value.trim(); if (queryWrap) queryWrap.hidden = !q.length; }
+
+    if (form) {
+      // Counts: how many skills each option would leave, given everything else.
+      for (const input of form.querySelectorAll('input[type="checkbox"]')) {
+        const g = input.name;
+        const trial = { ...state, [g]: g === 'limit' ? [...new Set([...state.limit, input.value])] : [input.value] };
+        const n = rows.reduce((sum, row) => sum + (passes(row, trial, q) ? 1 : 0), 0);
+        const out = input.closest('.facet-option');
+        out.querySelector('[data-n]').textContent = n;
+        out.classList.toggle('is-empty', n === 0 && !input.checked);
+      }
+      for (const box of form.querySelectorAll('details.facet')) {
+        const k = state[box.dataset.facet].length;
+        box.querySelector('[data-picked]').textContent = k ? ` ${k}` : '';
+      }
+      if (panelCount) panelCount.textContent = picked ? ` ${picked}` : '';
+      if (clearAll) clearAll.hidden = !picked;
+      if (active) {
+        active.hidden = !picked;
+        active.replaceChildren(...GROUPS.flatMap(g => state[g].map(v => {
+          const input = form.querySelector(`input[name="${g}"][value="${CSS.escape(v)}"]`);
+          const chip = document.createElement('button');
+          chip.type = 'button';
+          chip.className = 'chip';
+          chip.textContent = input.closest('.facet-option').querySelector('.facet-label').textContent;
+          chip.setAttribute('aria-label', `Remove filter: ${chip.textContent}`);
+          chip.addEventListener('click', () => { input.checked = false; apply(); play('toggle'); dirSearch.focus({ preventScroll: true }); });
+          return chip;
+        })));
+      }
     }
-    if (sort) dirList.append(...[...rows].sort(keys[sort.value] || keys.installs));
-    if (count) count.textContent = words.length ? `${shown} of ${label(rows.length)}` : label(rows.length);
-    if (empty) { empty.hidden = shown > 0; if (queryEcho) queryEcho.textContent = dirSearch.value.trim(); }
+
     if (remember) {
       const next = new URLSearchParams();
       if (dirSearch.value.trim()) next.set('q', dirSearch.value.trim());
-      if (sort && sort.value !== 'installs') next.set('sort', sort.value);
+      for (const g of GROUPS) if (state[g].length) next.set(g, state[g].join(','));
+      if (sort && sortTouched && !(sort.value === 'installs' && !q.length)) next.set('sort', sort.value);
       history.replaceState(null, '', `${location.pathname}${next.size ? `?${next}` : ''}`);
     }
   };
-  dirSearch.addEventListener('input', () => apply());
-  dirSearch.addEventListener('keydown', event => { if (event.key === 'Escape') { dirSearch.value = ''; apply(); } });
-  sort?.addEventListener('change', () => { apply(); play('toggle'); });
+
+  dirSearch.addEventListener('input', () => {
+    if (sort && !sortTouched) sort.value = dirSearch.value.trim() ? 'match' : 'installs';
+    apply();
+  });
+  dirSearch.addEventListener('keydown', event => { if (event.key === 'Escape') { dirSearch.value = ''; if (sort && !sortTouched) sort.value = 'installs'; apply(); } });
+  sort?.addEventListener('change', () => { sortTouched = true; apply(); play('toggle'); });
+  form?.addEventListener('change', () => { apply(); play('tick'); });
+  form?.addEventListener('submit', event => event.preventDefault());
+  clearAll?.addEventListener('click', () => { form.querySelectorAll('input:checked').forEach(i => { i.checked = false; }); apply(); play('toggle'); });
   apply({ remember: false });
 }
 

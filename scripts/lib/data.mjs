@@ -40,10 +40,12 @@ function baseline(snapshots, hours) {
 
 export async function loadContent(root) {
   const c = p => path.join(root, 'content', p);
-  const [originals, community, categories, authors, review, kits, snapshots] = await Promise.all([
+  const [originals, community, categories, authors, review, kits, snapshots, taxonomy] = await Promise.all([
     json(c('skills.json')), json(c('directory.json')), json(c('categories.json')), json(c('authors.json')),
-    optional(c('review.json'), {}), optional(c('kits.json'), []), loadSnapshots(c('stats'))
+    optional(c('review.json'), {}), optional(c('kits.json'), []), loadSnapshots(c('stats')), json(c('taxonomy.json'))
   ]);
+  const taskBy = Object.fromEntries(taxonomy.tasks.map(x => [x.slug, x]));
+  const stackBy = Object.fromEntries(taxonomy.stacks.map(x => [x.slug, x]));
   const latest = snapshots.at(-1) || null;
   const day = baseline(snapshots, 20);
   const week = baseline(snapshots, 6 * 24);
@@ -63,7 +65,7 @@ export async function loadContent(root) {
     const id = `${repo}/${s.slug}`;
     return {
       id, owner, repo, skill: s.slug, path: skillPath, name: s.name, category: s.group, summary: s.summary,
-      note: s.note, access: s.access || [], cleared: s.cleared || {}, clearedSha256: s.clearedSha256, license: s.license, addedAt: s.addedAt, readAt: s.readAt || null, original: true, data: s,
+      note: s.note, access: s.access || [], cleared: s.cleared || {}, clearedSha256: s.clearedSha256, license: s.license, addedAt: s.addedAt, readAt: s.readAt || null, tasks: s.tasks || [], stack: s.stack || [], original: true, data: s,
       install: s.install?.[0]?.command || installCommand(repo, s.slug)
     };
   };
@@ -77,9 +79,13 @@ export async function loadContent(root) {
     const author = authors[e.owner] || { name: e.owner, url: `https://github.com/${e.owner}` };
     const category = catBy[e.category];
     if (!category) throw new Error(`${e.id}: unknown category "${e.category}"`);
+    const tasks = (e.tasks || []).map(t => taskBy[t] || (() => { throw new Error(`${e.id}: unknown task "${t}"`); })());
+    const stack = (e.stack || []).map(t => stackBy[t] || (() => { throw new Error(`${e.id}: unknown stack "${t}"`); })());
+    if (!tasks.length) throw new Error(`${e.id}: at least one task is required`);
     return {
-      ...e, author, categoryInfo: category, url: entryUrl(e.owner, e.skill),
-      repoUrl: `https://github.com/${e.repo}`, source: `https://github.com/${e.repo}/blob/HEAD/${e.path}`,
+      ...e, author, categoryInfo: category, url: entryUrl(e.owner, e.skill), taskInfo: tasks, stackInfo: stack,
+      source: e.original ? 'original' : author.official ? 'official' : 'community',
+      repoUrl: `https://github.com/${e.repo}`, sourceUrl: `https://github.com/${e.repo}/blob/HEAD/${e.path}`,
       stats: stat(e.id, e.repo), review: review[e.id.toLowerCase()] || null,
       ...reviewState(review[e.id.toLowerCase()], e)
     };
@@ -93,7 +99,7 @@ export async function loadContent(root) {
   }
 
   return {
-    entries, originals: entries.filter(e => e.original), categories, authors, kits,
+    entries, originals: entries.filter(e => e.original), categories, authors, kits, taxonomy,
     snapshots: { count: snapshots.length, latest, hasDay: Boolean(day), hasWeek: Boolean(week) }
   };
 }

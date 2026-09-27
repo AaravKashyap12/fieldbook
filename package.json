@@ -1,0 +1,13 @@
+{
+  "name": "fieldbook",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/security-check.mjs && node scripts/check.mjs",
+    "start": "node scripts/serve.mjs",
+    "sync": "node scripts/sync-stats.mjs",
+    "review": "node scripts/review.mjs",
+    "daily": "node scripts/sync-stats.mjs && node scripts/review.mjs && node scripts/build.mjs && node scripts/check.mjs"
+  }
+}

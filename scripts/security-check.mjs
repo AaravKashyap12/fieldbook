@@ -50,4 +50,6 @@ for(const status of [404,429,500,503]) await assert.rejects(()=>fetchSkill('owne
 await assert.rejects(()=>fetchSkill('owner/repo','SKILL.md',{fetchImpl:async()=>{throw new TypeError('offline');}}),e=>e.retryable);assertions++;
 const workflow=await readFile(new URL('../.github/workflows/daily.yml',import.meta.url),'utf8');
 ok(workflow.includes("if: github.ref == 'refs/heads/main'"));ok(workflow.includes("SYNC_GAP_MS: '2100'"));ok(workflow.includes('git add content/stats content/review.json vercel.json'));ok(!workflow.includes('always()'),'A failed review cannot run the commit step');
+const manifest=JSON.parse(await readFile(new URL('../package.json',import.meta.url),'utf8'));
+ok(manifest.scripts.daily.endsWith('npm run check'),'Daily publishing includes the complete security check command');
 console.log(`Passed ${assertions} focused security assertions (offline fixtures; no provider calls).`);

@@ -8,6 +8,6 @@
     "start": "node scripts/serve.mjs",
     "sync": "node scripts/sync-stats.mjs",
     "review": "node scripts/review.mjs",
-    "daily": "node scripts/sync-stats.mjs && node scripts/review.mjs && node scripts/build.mjs && node scripts/check.mjs"
+    "daily": "npm run sync && npm run review && npm run build && npm run check"
   }
 }

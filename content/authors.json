@@ -1,0 +1,156 @@
+{
+  "AaravKashyap12": {
+    "name": "Aarav Kashyap",
+    "url": "https://github.com/AaravKashyap12",
+    "original": true
+  },
+  "mattpocock": {
+    "name": "Matt Pocock",
+    "url": "https://github.com/mattpocock"
+  },
+  "obra": {
+    "name": "Jesse Vincent",
+    "url": "https://github.com/obra",
+    "project": "Superpowers"
+  },
+  "addyosmani": {
+    "name": "Addy Osmani",
+    "url": "https://github.com/addyosmani"
+  },
+  "anthropics": {
+    "name": "Anthropic",
+    "url": "https://github.com/anthropics"
+  },
+  "getsentry": {
+    "name": "Sentry",
+    "url": "https://github.com/getsentry"
+  },
+  "warpdotdev": {
+    "name": "Warp",
+    "url": "https://github.com/warpdotdev"
+  },
+  "openai": {
+    "name": "OpenAI",
+    "url": "https://github.com/openai"
+  },
+  "trailofbits": {
+    "name": "Trail of Bits",
+    "url": "https://github.com/trailofbits"
+  },
+  "cloudflare": {
+    "name": "Cloudflare",
+    "url": "https://github.com/cloudflare"
+  },
+  "supabase": {
+    "name": "Supabase",
+    "url": "https://github.com/supabase"
+  },
+  "AvdLee": {
+    "name": "Antoine van der Lee",
+    "url": "https://github.com/AvdLee"
+  },
+  "Kotlin": {
+    "name": "Kotlin",
+    "url": "https://github.com/Kotlin"
+  },
+  "affaan-m": {
+    "name": "Affaan Mustafa",
+    "url": "https://github.com/affaan-m"
+  },
+  "alirezarezvani": {
+    "name": "Alireza Rezvani",
+    "url": "https://github.com/alirezarezvani"
+  },
+  "antfu": {
+    "name": "Anthony Fu",
+    "url": "https://github.com/antfu"
+  },
+  "aws-samples": {
+    "name": "AWS Samples",
+    "url": "https://github.com/aws-samples"
+  },
+  "dotnet": {
+    "name": ".NET Platform",
+    "url": "https://github.com/dotnet"
+  },
+  "evanca": {
+    "name": "Ivanna",
+    "url": "https://github.com/evanca"
+  },
+  "expo": {
+    "name": "Expo",
+    "url": "https://github.com/expo"
+  },
+  "fastapi": {
+    "name": "FastAPI",
+    "url": "https://github.com/fastapi"
+  },
+  "firebase": {
+    "name": "Firebase",
+    "url": "https://github.com/firebase"
+  },
+  "get-convex": {
+    "name": "Convex",
+    "url": "https://github.com/get-convex"
+  },
+  "google": {
+    "name": "Google",
+    "url": "https://github.com/google"
+  },
+  "hashicorp": {
+    "name": "HashiCorp",
+    "url": "https://github.com/hashicorp"
+  },
+  "jeffallan": {
+    "name": "Jeff Smolinski",
+    "url": "https://github.com/Jeffallan"
+  },
+  "jezweb": {
+    "name": "Jeremy Dawes",
+    "url": "https://github.com/jezweb"
+  },
+  "mblode": {
+    "name": "Matthew Blode",
+    "url": "https://github.com/mblode"
+  },
+  "microsoft": {
+    "name": "Microsoft",
+    "url": "https://github.com/microsoft"
+  },
+  "mongodb": {
+    "name": "MongoDB",
+    "url": "https://github.com/mongodb"
+  },
+  "neondatabase": {
+    "name": "Neon",
+    "url": "https://github.com/neondatabase"
+  },
+  "planetscale": {
+    "name": "PlanetScale",
+    "url": "https://github.com/planetscale"
+  },
+  "prisma": {
+    "name": "Prisma",
+    "url": "https://github.com/prisma"
+  },
+  "redis": {
+    "name": "Redis",
+    "url": "https://github.com/redis"
+  },
+  "st0012": {
+    "name": "Stan Lo",
+    "url": "https://github.com/st0012"
+  },
+  "sveltejs": {
+    "name": "Svelte",
+    "url": "https://github.com/sveltejs"
+  },
+  "vercel": {
+    "name": "Vercel",
+    "url": "https://github.com/vercel"
+  },
+  "wshobson": {
+    "name": "Seth Hobson",
+    "url": "https://github.com/wshobson"
+  }
+}

@@ -1,0 +1,90 @@
+[
+  {
+    "slug": "plan-before-you-build",
+    "name": "Plan before you build",
+    "blurb": "Pressure-test the idea, choose an approach with evidence, then turn it into a plan an agent can follow.",
+    "ids": [
+      "mattpocock/skills/grilling",
+      "AaravKashyap12/advise-project-approach/advise-project-approach",
+      "obra/superpowers/writing-plans",
+      "addyosmani/agent-skills/planning-and-task-breakdown"
+    ]
+  },
+  {
+    "slug": "bug-hunt",
+    "name": "Bug hunt",
+    "blurb": "Reproduce first, find the real cause, and do not call it fixed until the checks say so.",
+    "ids": [
+      "mattpocock/skills/diagnosing-bugs",
+      "obra/superpowers/systematic-debugging",
+      "addyosmani/agent-skills/debugging-and-error-recovery",
+      "obra/superpowers/verification-before-completion"
+    ]
+  },
+  {
+    "slug": "the-review-loop",
+    "name": "The review loop",
+    "blurb": "Ask for review before merging, review against standards and intent, and take the feedback with rigour.",
+    "ids": [
+      "obra/superpowers/requesting-code-review",
+      "mattpocock/skills/code-review",
+      "obra/superpowers/receiving-code-review",
+      "addyosmani/agent-skills/code-review-and-quality"
+    ]
+  },
+  {
+    "slug": "repo-guardrails",
+    "name": "Repo guardrails",
+    "blurb": "Hooks that stop bad commits and destructive git commands, and a clean way to work in parallel.",
+    "ids": [
+      "mattpocock/skills/setup-pre-commit",
+      "mattpocock/skills/git-guardrails-claude-code",
+      "addyosmani/agent-skills/git-workflow-and-versioning",
+      "obra/superpowers/using-git-worktrees"
+    ]
+  },
+  {
+    "slug": "launch-week",
+    "name": "Launch week",
+    "blurb": "Security, performance and a rollback plan before real users arrive.",
+    "ids": [
+      "AaravKashyap12/secure-launch/secure-launch",
+      "addyosmani/agent-skills/shipping-and-launch",
+      "cloudflare/skills/web-perf",
+      "addyosmani/agent-skills/ci-cd-and-automation"
+    ]
+  },
+  {
+    "slug": "run-agents-well",
+    "name": "Run agents well",
+    "blurb": "Give agents the right context, spend effort where it counts, and split independent work safely.",
+    "ids": [
+      "addyosmani/agent-skills/context-engineering",
+      "AaravKashyap12/efficiency-skill/efficiency-skill",
+      "obra/superpowers/dispatching-parallel-agents",
+      "anthropics/skills/skill-creator"
+    ]
+  },
+  {
+    "slug": "cloudflare-app",
+    "name": "Build on Cloudflare",
+    "blurb": "Connect Worker deployment, durable state, production conventions and a typed D1 data layer.",
+    "ids": [
+      "cloudflare/skills/wrangler",
+      "cloudflare/skills/durable-objects",
+      "cloudflare/skills/workers-best-practices",
+      "jezweb/claude-skills/d1-drizzle-schema"
+    ]
+  },
+  {
+    "slug": "postgres-changes",
+    "name": "Change Postgres carefully",
+    "blurb": "Start with database fundamentals, configure the connection, then use isolated Neon branches for changes.",
+    "ids": [
+      "supabase/agent-skills/supabase-postgres-best-practices",
+      "prisma/skills/prisma-database-setup",
+      "neondatabase/agent-skills/neon-postgres",
+      "neondatabase/agent-skills/neon-postgres-branches"
+    ]
+  }
+]

@@ -1,0 +1,208 @@
+[
+  {
+    "slug": "advise-project-approach",
+    "name": "Advise Project Approach",
+    "category": "Planning",
+    "icon": "compass",
+    "summary": "Make project decisions with evidence, clear tradeoffs, and a plan you can act on.",
+    "description": "A research-driven workflow for deciding what to build, choosing an approach, or finding your next move in an existing project.",
+    "repo": "https://github.com/AaravKashyap12/advise-project-approach",
+    "source": "https://github.com/AaravKashyap12/advise-project-approach/blob/main/skills/advise-project-approach/SKILL.md",
+    "license": "MIT",
+    "stars": 314,
+    "starsCheckedAt": "2026-09-25",
+    "available": true,
+    "addedAt": "2026-09-25",
+    "bestFor": [
+      "Choosing a stack or architecture before you build.",
+      "Checking the direction of a project already in progress.",
+      "Comparing vendors, operating costs, and what to defer."
+    ],
+    "workflow": [
+      "Understand your goals, constraints, and existing code.",
+      "Research comparable projects and relevant primary sources.",
+      "Compare credible approaches, including their tradeoffs.",
+      "Recommend a direction, next steps, and conditions that would change the decision."
+    ],
+    "prompt": "Use advise-project-approach to help me plan a self-hosted bookmark manager. I'm a solo developer familiar with Python. Research comparable projects, compare practical approaches, and explain what I should build first.",
+    "install": [
+      {
+        "label": "Skills CLI",
+        "command": "npx skills@latest add AaravKashyap12/advise-project-approach --skill advise-project-approach",
+        "note": "Requires Node.js and npm. Follow the installer prompts to select your agent."
+      }
+    ],
+    "note": "This skill supports project judgment. Its published evaluations include limitations and mixed results; it does not promise universally better recommendations.",
+    "evidence": "https://github.com/AaravKashyap12/advise-project-approach/tree/main/evals",
+    "skillmd": "advise-project-approach.md",
+    "skillmdCheckedAt": "2026-09-25",
+    "version": null,
+    "stage": "Before you build",
+    "tagline": "Start with evidence.",
+    "role": "Research comparable projects, weigh the tradeoffs, and choose a direction you can defend.",
+    "steps": [
+      "Evidence",
+      "Direction"
+    ],
+    "group": "plan",
+    "access": [
+      "docs",
+      "network"
+    ],
+    "readAt": "2026-09-25"
+  },
+  {
+    "slug": "lean-engineering",
+    "name": "Lean Engineering",
+    "category": "Engineering",
+    "icon": "terminal",
+    "summary": "Small changes, bounded workers, and real evidence. Give every edit a clear owner.",
+    "description": "A workflow for delivering small, reliable software changes with one accountable owner, TDD-backed evidence, and no recursive review loops.",
+    "repo": "https://github.com/AaravKashyap12/lean-engineering",
+    "source": "https://github.com/AaravKashyap12/lean-engineering/blob/main/lean-engineering/SKILL.md",
+    "license": "MIT",
+    "available": true,
+    "addedAt": "2026-09-25",
+    "bestFor": [
+      "Fixing a reproducible bug with a focused change.",
+      "Implementing a bounded feature in an existing codebase.",
+      "Keeping checks and reporting proportional to the work."
+    ],
+    "workflow": [
+      "Define a bounded outcome and inspect the relevant code.",
+      "Reproduce the problem or establish a useful acceptance check.",
+      "Implement the smallest reliable change; the owner makes the edits, bounded workers only gather evidence.",
+      "Run relevant checks and report what passed, failed, or remains unverified."
+    ],
+    "prompt": "Use lean-engineering to fix this bug. Reproduce it, make the smallest reliable change, run the relevant checks, and report what passed and what remains unverified.",
+    "install": [
+      {
+        "label": "Skills CLI",
+        "command": "npx skills@latest add AaravKashyap12/lean-engineering --skill lean-engineering",
+        "note": "Requires Node.js 22.20.0 or newer and npm. Choose your agent in the installer; add -g for global installation."
+      }
+    ],
+    "note": "Pairs with Efficiency Skill: Lean governs ownership, verification and completion; Efficiency governs whether and where to dispatch. Eight Codex trials passed their acceptance checks in September 2026. No comparative benchmark against other workflows is claimed.",
+    "skillmd": "lean-engineering.md",
+    "skillmdCheckedAt": "2026-09-25",
+    "version": "0.2.0",
+    "evidence": "https://github.com/AaravKashyap12/lean-engineering/tree/main/evals",
+    "stage": "While you build",
+    "tagline": "Build with focus.",
+    "role": "Make the smallest reliable change, prove it with tests, and keep one owner accountable.",
+    "steps": [
+      "Red",
+      "Green",
+      "Verified"
+    ],
+    "group": "build",
+    "access": [
+      "edits",
+      "commands",
+      "subagents"
+    ],
+    "readAt": "2026-09-25"
+  },
+  {
+    "slug": "secure-launch",
+    "name": "Secure Launch",
+    "category": "Security",
+    "icon": "shield",
+    "summary": "A security checklist shaped to your project before it goes live, with approved fixes checked one by one.",
+    "description": "A launch-readiness workflow that scans for exposed secrets first, builds a short prioritized checklist, applies only the local fixes you approve, and verifies each one. DNS and provider settings stay with you.",
+    "repo": "https://github.com/AaravKashyap12/secure-launch",
+    "source": "https://github.com/AaravKashyap12/secure-launch/blob/main/secure-launch/SKILL.md",
+    "license": "MIT",
+    "available": true,
+    "addedAt": "2026-09-27",
+    "bestFor": [
+      "Preparing a SaaS, API or internal tool for its first real users.",
+      "Catching exposed keys, open database rules, unverified webhooks and missing rate limits before launch.",
+      "Reviewing an agent skill or MCP server before you share it."
+    ],
+    "workflow": [
+      "Scan for exposed secrets first, then read the project with any flagged lines masked.",
+      "Classify the project and build a short checklist: before launch, first week, and as you grow.",
+      "Ask for approval, then apply only the approved local fixes. Sensitive changes are approved one at a time.",
+      "Verify each change locally, then hand over the steps only you can take, such as DNS and provider settings."
+    ],
+    "prompt": "Use secure-launch before I launch this project. Read the repo, tailor a short security checklist and a local verification plan, then ask for approval before changing anything.",
+    "install": [
+      {
+        "label": "Skills CLI",
+        "command": "npx skills@latest add AaravKashyap12/secure-launch --skill secure-launch",
+        "note": "Requires Node.js and npm. Choose your agent in the installer; add -g for global installation. The bundled scanner needs Python 3, or an installed gitleaks."
+      }
+    ],
+    "note": "A launch-readiness pass, not a penetration test or a compliance certificate. It never deploys, changes DNS or scans live hosts. In September 2026 Codex trials, the multi-tenant API case passed. The Next.js and npm package cases were partial because the Windows sandbox blocked builds and tests, and the Express case has discovery-only evidence. Mobile coverage is a starter set.",
+    "skillmd": "secure-launch.md",
+    "skillmdCheckedAt": "2026-09-27",
+    "version": "0.1.3",
+    "evidence": "https://github.com/AaravKashyap12/secure-launch/tree/main/evals",
+    "stage": "Before you launch",
+    "tagline": "Launch with care.",
+    "role": "Check what the project exposes on day one, fix what you approve, and verify each change.",
+    "steps": [
+      "Scan",
+      "Prioritize",
+      "Verify"
+    ],
+    "group": "security",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "readAt": "2026-09-27"
+  },
+  {
+    "slug": "efficiency-skill",
+    "name": "Efficiency Skill",
+    "category": "Efficiency",
+    "icon": "sliders",
+    "summary": "Keep the main model in charge. Delegate bounded work when the handoff is worth it.",
+    "description": "A routing workflow that keeps the session model in charge, weighs delegation overhead, and distinguishes model tier from reasoning effort.",
+    "repo": "https://github.com/AaravKashyap12/efficiency-skill",
+    "source": "https://github.com/AaravKashyap12/efficiency-skill/blob/main/efficiency-skill/SKILL.md",
+    "license": "MIT",
+    "available": true,
+    "addedAt": "2026-09-25",
+    "bestFor": [
+      "Choosing an appropriate reasoning effort for a task.",
+      "Deciding whether a bounded subtask is worth delegating.",
+      "Keeping difficult judgment with the main agent."
+    ],
+    "workflow": [
+      "Read the dated guidance for the current agent environment.",
+      "Classify the task and establish the minimum suitable model tier.",
+      "Compare delegation overhead with the work it would save.",
+      "Keep consequential decisions with the main agent and verify delegated evidence."
+    ],
+    "prompt": "Use efficiency-skill for this task. Decide whether any bounded work is worth delegating, choose appropriate reasoning effort, and keep hard judgment and final review with the main agent.",
+    "install": [
+      {
+        "label": "Skills CLI",
+        "command": "npx skills@latest add AaravKashyap12/efficiency-skill --skill efficiency-skill",
+        "note": "Requires Node.js 22.20.0 or newer and npm. Choose your agent in the installer; add -g for global installation."
+      }
+    ],
+    "download": "https://github.com/AaravKashyap12/efficiency-skill/blob/main/dist/efficiency-skill.skill",
+    "note": "Routing guidance is sourced from official documentation. In September 2026, twenty Codex trials passed their acceptance checks; six could not confirm the runtime worker model, and per-run costs were not captured, so cost savings remain unmeasured.",
+    "skillmd": "efficiency-skill.md",
+    "skillmdCheckedAt": "2026-09-25",
+    "version": "0.2.0",
+    "evidence": "https://github.com/AaravKashyap12/efficiency-skill/tree/main/evals",
+    "stage": "Across every task",
+    "tagline": "Spend effort wisely.",
+    "role": "Send each piece of work to the right model and effort, and keep hard judgment in charge.",
+    "steps": [
+      "Owner",
+      "Workers",
+      "Result"
+    ],
+    "group": "agents",
+    "access": [
+      "subagents"
+    ],
+    "readAt": "2026-09-25"
+  }
+]

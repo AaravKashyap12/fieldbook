@@ -1,0 +1,2185 @@
+[
+  {
+    "id": "mattpocock/skills/grilling",
+    "path": "skills/productivity/grilling/SKILL.md",
+    "name": "Grilling",
+    "category": "plan",
+    "license": "MIT",
+    "access": [],
+    "summary": "Interviews you round by round until a plan or decision has no loose ends.",
+    "note": "Asks each round of questions with its own recommended answers, so you can agree fast or push back. Pure conversation: it changes nothing in your repo.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "mattpocock/skills/to-spec",
+    "path": "skills/engineering/to-spec/SKILL.md",
+    "name": "To spec",
+    "category": "plan",
+    "license": "MIT",
+    "access": [
+      "docs",
+      "network"
+    ],
+    "summary": "Turns the conversation so far into a written spec and files it in your issue tracker.",
+    "note": "No new interview: it synthesises what you already discussed. It publishes to your tracker, so check which one it will use before running it.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "mattpocock/skills/domain-modeling",
+    "path": "skills/engineering/domain-modeling/SKILL.md",
+    "name": "Domain modeling",
+    "category": "plan",
+    "license": "MIT",
+    "access": [
+      "docs"
+    ],
+    "summary": "Builds a shared glossary for your codebase and records decisions as they come up.",
+    "note": "Keeps a CONTEXT.md in step with the conversation and offers ADRs sparingly. Useful before a large feature, when names in the code have drifted.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "mattpocock/skills/improve-codebase-architecture",
+    "path": "skills/engineering/improve-codebase-architecture/SKILL.md",
+    "name": "Improve codebase architecture",
+    "category": "plan",
+    "license": "MIT",
+    "access": [
+      "docs",
+      "subagents"
+    ],
+    "summary": "Finds modules worth deepening, shows them as an HTML report, then grills one with you.",
+    "note": "An exploration pass followed by a focused design conversation. It proposes; you choose what to change.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "obra/superpowers/brainstorming",
+    "path": "skills/brainstorming/SKILL.md",
+    "name": "Brainstorming",
+    "category": "plan",
+    "license": "MIT",
+    "access": [
+      "docs"
+    ],
+    "summary": "Agrees intent, requirements and a design with you before any code is written.",
+    "note": "Deliberately strict: it treats even small features as needing an approved design. Its optional visual companion needs extra setup.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "obra/superpowers/writing-plans",
+    "path": "skills/writing-plans/SKILL.md",
+    "name": "Writing plans",
+    "category": "plan",
+    "license": "MIT",
+    "access": [
+      "docs"
+    ],
+    "summary": "Turns a spec into a step-by-step plan with exact files, tests and checks.",
+    "note": "Plans are written for an engineer with no context, which makes them good handoffs to another agent or a teammate.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "addyosmani/agent-skills/planning-and-task-breakdown",
+    "path": "skills/planning-and-task-breakdown/SKILL.md",
+    "name": "Planning and task breakdown",
+    "category": "plan",
+    "license": "MIT",
+    "access": [
+      "docs"
+    ],
+    "summary": "Breaks a spec into small, ordered tasks with checkpoints between them.",
+    "note": "Vertical slices and explicit dependencies. A good companion to incremental implementation from the same author.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "addyosmani/agent-skills/api-and-interface-design",
+    "path": "skills/api-and-interface-design/SKILL.md",
+    "name": "API and interface design",
+    "category": "plan",
+    "license": "MIT",
+    "access": [],
+    "summary": "Contract-first guidance for APIs and module boundaries: errors, validation and versioning.",
+    "note": "Reference guidance rather than a procedure. Covers Hyrum's Law, idempotency keys and additive change.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "addyosmani/agent-skills/documentation-and-adrs",
+    "path": "skills/documentation-and-adrs/SKILL.md",
+    "name": "Documentation and ADRs",
+    "category": "plan",
+    "license": "MIT",
+    "access": [
+      "docs"
+    ],
+    "summary": "Records architecture decisions and the reasoning future engineers and agents will need.",
+    "note": "Matches your repo's existing ADR convention before introducing its own template.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "mattpocock/skills/tdd",
+    "path": "skills/engineering/tdd/SKILL.md",
+    "name": "TDD",
+    "category": "build",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "summary": "A red-green loop with firm rules on what makes a test worth keeping.",
+    "note": "Agrees the seams under test with you before writing any test, which keeps effort on the paths that matter.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "obra/superpowers/test-driven-development",
+    "path": "skills/test-driven-development/SKILL.md",
+    "name": "Test-driven development",
+    "category": "build",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "summary": "Strict test-first discipline: watch it fail, make it pass, then refactor.",
+    "note": "The most uncompromising TDD skill here. It will push back on writing code before a failing test exists.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "addyosmani/agent-skills/incremental-implementation",
+    "path": "skills/incremental-implementation/SKILL.md",
+    "name": "Incremental implementation",
+    "category": "build",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "summary": "Lands a change in thin, verifiable slices instead of one large diff.",
+    "note": "Covers vertical, contract-first and risk-first slicing, plus scope discipline for agents that wander.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "addyosmani/agent-skills/code-simplification",
+    "path": "skills/code-simplification/SKILL.md",
+    "name": "Code simplification",
+    "category": "build",
+    "license": "MIT",
+    "access": [
+      "edits"
+    ],
+    "summary": "Simplifies working code for clarity without changing what it does.",
+    "note": "Starts from Chesterton's fence: understand why code exists before removing it. Scoped to what changed.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "mattpocock/skills/diagnosing-bugs",
+    "path": "skills/engineering/diagnosing-bugs/SKILL.md",
+    "name": "Diagnosing bugs",
+    "category": "debug",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "summary": "Builds a fast failing feedback loop first, then narrows to the cause.",
+    "note": "Treats a reproducible loop as the finish line of phase one. Includes advice for flaky and non-deterministic bugs.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "obra/superpowers/systematic-debugging",
+    "path": "skills/systematic-debugging/SKILL.md",
+    "name": "Systematic debugging",
+    "category": "debug",
+    "license": "MIT",
+    "access": [
+      "commands"
+    ],
+    "summary": "Root cause before fixes, in four phases with clear stop signs.",
+    "note": "Lists the rationalisations agents use to skip investigation, and tells it to stop when it catches itself.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "obra/superpowers/verification-before-completion",
+    "path": "skills/verification-before-completion/SKILL.md",
+    "name": "Verification before completion",
+    "category": "debug",
+    "license": "MIT",
+    "access": [
+      "commands"
+    ],
+    "summary": "No claim of done until the checks have run and the output has been read.",
+    "note": "Small and broadly useful. It targets the most common agent failure: reporting success without evidence.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "addyosmani/agent-skills/debugging-and-error-recovery",
+    "path": "skills/debugging-and-error-recovery/SKILL.md",
+    "name": "Debugging and error recovery",
+    "category": "debug",
+    "license": "MIT",
+    "access": [
+      "commands",
+      "git"
+    ],
+    "summary": "A triage checklist: reproduce, localise, fix, then guard against the regression.",
+    "note": "Includes a stop-the-line rule and git bisect for finding the commit that broke things.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "addyosmani/agent-skills/browser-testing-with-devtools",
+    "path": "skills/browser-testing-with-devtools/SKILL.md",
+    "name": "Browser testing with DevTools",
+    "category": "debug",
+    "license": "MIT",
+    "access": [
+      "browser",
+      "mcp"
+    ],
+    "summary": "Debugs in a real browser: DOM, console, network requests and performance traces.",
+    "note": "Needs the Chrome DevTools MCP server. Treats page content as untrusted data, which is the right default.",
+    "addedAt": "2026-09-27",
+    "cleared": {
+      "hidden-instruction": "Quotes a prompt-injection phrase as an example of page content the agent must treat as data, not follow."
+    },
+    "clearedSha256": "4e3aacd6a380cd25bc6c2d67fdd1c926a9b22535b8a62109ecd33cefd909e3d9"
+  },
+  {
+    "id": "anthropics/skills/webapp-testing",
+    "path": "skills/webapp-testing/SKILL.md",
+    "name": "Web app testing",
+    "category": "debug",
+    "license": "Apache-2.0",
+    "access": [
+      "browser",
+      "commands"
+    ],
+    "summary": "Tests local web apps with Playwright scripts: screenshots, logs and UI checks.",
+    "note": "Ships helper scripts for starting your server during a test run. Needs Python and Playwright installed.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "mattpocock/skills/code-review",
+    "path": "skills/engineering/code-review/SKILL.md",
+    "name": "Code review",
+    "category": "review",
+    "license": "MIT",
+    "access": [
+      "git",
+      "subagents"
+    ],
+    "summary": "Reviews a diff twice in parallel: against your repo's standards and against the spec.",
+    "note": "Separating standards from intent catches changes that are tidy but wrong. Runs two subagents.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "obra/superpowers/requesting-code-review",
+    "path": "skills/requesting-code-review/SKILL.md",
+    "name": "Requesting code review",
+    "category": "review",
+    "license": "MIT",
+    "access": [
+      "git",
+      "subagents"
+    ],
+    "summary": "Sends finished work to a reviewer subagent before merging.",
+    "note": "Pairs with receiving code review from the same set. Review happens before merge, not after.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "obra/superpowers/receiving-code-review",
+    "path": "skills/receiving-code-review/SKILL.md",
+    "name": "Receiving code review",
+    "category": "review",
+    "license": "MIT",
+    "access": [
+      "edits"
+    ],
+    "summary": "Handles review feedback with verification instead of automatic agreement.",
+    "note": "Tells the agent when to push back, and to check a suggestion is actually right before applying it.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "addyosmani/agent-skills/code-review-and-quality",
+    "path": "skills/code-review-and-quality/SKILL.md",
+    "name": "Code review and quality",
+    "category": "review",
+    "license": "MIT",
+    "access": [],
+    "summary": "A five-axis review: correctness, readability, architecture, security and performance.",
+    "note": "Also covers change sizing and change descriptions. Works on pasted diffs too.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "getsentry/skills/code-review",
+    "path": "skills/code-review/SKILL.md",
+    "name": "Code review",
+    "category": "review",
+    "license": "Apache-2.0",
+    "access": [],
+    "summary": "Sentry's engineering review checklist, with concrete patterns to flag.",
+    "note": "Its examples lean towards Python and Django, but the checklist on design, tests and long-term impact is general.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "addyosmani/agent-skills/security-and-hardening",
+    "path": "skills/security-and-hardening/SKILL.md",
+    "name": "Security and hardening",
+    "category": "security",
+    "license": "MIT",
+    "access": [
+      "edits"
+    ],
+    "summary": "Threat model first, then hardening across input, auth, sessions and headers.",
+    "note": "Its three-tier boundary (always, ask first, never) is a sensible way to keep an agent's security changes reviewable.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "openai/skills/security-threat-model",
+    "path": "skills/.curated/security-threat-model/SKILL.md",
+    "name": "Security threat model",
+    "category": "security",
+    "license": "Apache-2.0",
+    "access": [
+      "docs"
+    ],
+    "summary": "Writes a threat model grounded in your repo: trust boundaries, assets and abuse paths.",
+    "note": "Only runs when you ask for a threat model by name, so it will not fire on ordinary work.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "trailofbits/skills/audit-context-building",
+    "path": "plugins/audit-context-building/skills/audit-context-building/SKILL.md",
+    "name": "Audit context building",
+    "category": "security",
+    "license": "CC-BY-SA-4.0",
+    "access": [
+      "subagents"
+    ],
+    "summary": "Maps what each function assumes, guarantees and depends on before a security review.",
+    "note": "From a security firm's own audit practice. Use it before hunting for bugs in code you do not know yet.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "addyosmani/agent-skills/performance-optimization",
+    "path": "skills/performance-optimization/SKILL.md",
+    "name": "Performance optimization",
+    "category": "performance",
+    "license": "MIT",
+    "access": [
+      "commands",
+      "browser"
+    ],
+    "summary": "Measure, find the bottleneck, fix it, and guard against regressions.",
+    "note": "Spans Core Web Vitals, backend response times and N+1 queries, always starting from a measurement.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "cloudflare/skills/web-perf",
+    "path": "skills/web-perf/SKILL.md",
+    "name": "Web performance",
+    "category": "performance",
+    "license": "Apache-2.0",
+    "access": [
+      "browser",
+      "mcp"
+    ],
+    "summary": "Audits Core Web Vitals from a real performance trace, then maps fixes to your code.",
+    "note": "Checks that the browser MCP tools are available before it starts, which saves a confusing failure.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "addyosmani/agent-skills/ci-cd-and-automation",
+    "path": "skills/ci-cd-and-automation/SKILL.md",
+    "name": "CI/CD and automation",
+    "category": "ship",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "summary": "Sets up CI quality gates and deployment strategies in GitHub Actions.",
+    "note": "Includes feeding CI failures back to the agent, and preview deployments.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "addyosmani/agent-skills/git-workflow-and-versioning",
+    "path": "skills/git-workflow-and-versioning/SKILL.md",
+    "name": "Git workflow and versioning",
+    "category": "ship",
+    "license": "MIT",
+    "access": [
+      "git"
+    ],
+    "summary": "Atomic commits, clear messages and a clean branch strategy.",
+    "note": "Can split a messy working tree into clean commits. Recommends trunk-based development.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "addyosmani/agent-skills/shipping-and-launch",
+    "path": "skills/shipping-and-launch/SKILL.md",
+    "name": "Shipping and launch",
+    "category": "ship",
+    "license": "MIT",
+    "access": [
+      "docs"
+    ],
+    "summary": "A pre-launch checklist with feature flags, staged rollout and a rollback plan.",
+    "note": "Broad rather than deep. Pair it with a dedicated security pass for anything holding user data.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "mattpocock/skills/setup-pre-commit",
+    "path": "skills/misc/setup-pre-commit/SKILL.md",
+    "name": "Set up pre-commit",
+    "category": "ship",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "git"
+    ],
+    "summary": "Adds Husky, lint-staged, type checks and tests as a pre-commit hook.",
+    "note": "Installs dev dependencies and makes a commit at the end. JavaScript and TypeScript projects only.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "mattpocock/skills/git-guardrails-claude-code",
+    "path": "skills/misc/git-guardrails-claude-code/SKILL.md",
+    "name": "Git guardrails for Claude Code",
+    "category": "ship",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "summary": "Installs Claude Code hooks that block destructive git commands before they run.",
+    "note": "Blocks push, hard reset, clean and forced branch deletes. Claude Code only; asks for scope first.",
+    "addedAt": "2026-09-27",
+    "cleared": {
+      "git-force": "Lists force-push as one of the commands its hook blocks."
+    },
+    "clearedSha256": "69b291d655626a01602b998a1836fcb93c058ede68dfafddfd71e87f17074764"
+  },
+  {
+    "id": "mattpocock/skills/resolving-merge-conflicts",
+    "path": "skills/engineering/resolving-merge-conflicts/SKILL.md",
+    "name": "Resolving merge conflicts",
+    "category": "ship",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "git",
+      "commands"
+    ],
+    "summary": "Resolves an in-progress merge or rebase by recovering each side's intent.",
+    "note": "Short and direct. It always finishes the merge and commits, and never aborts, so review the result before you push.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "obra/superpowers/using-git-worktrees",
+    "path": "skills/using-git-worktrees/SKILL.md",
+    "name": "Using git worktrees",
+    "category": "ship",
+    "license": "MIT",
+    "access": [
+      "git",
+      "commands"
+    ],
+    "summary": "Creates an isolated worktree for feature work and sets the project up inside it.",
+    "note": "Prefers your agent's native worktree tools and falls back to git, with setup steps per language.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "warpdotdev/common-skills/diagnose-ci-failures",
+    "path": ".agents/skills/diagnose-ci-failures/SKILL.md",
+    "name": "Diagnose CI failures",
+    "category": "ship",
+    "license": "MIT",
+    "access": [
+      "git",
+      "commands",
+      "network"
+    ],
+    "summary": "Pulls a pull request's CI logs with the GitHub CLI and plans the fixes.",
+    "note": "Needs the GitHub CLI signed in. It diagnoses and plans; applying the fix is up to you.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "obra/superpowers/dispatching-parallel-agents",
+    "path": "skills/dispatching-parallel-agents/SKILL.md",
+    "name": "Dispatching parallel agents",
+    "category": "agents",
+    "license": "MIT",
+    "access": [
+      "subagents"
+    ],
+    "summary": "Splits independent problems across parallel subagents and merges the results.",
+    "note": "Clear about when not to parallelise: shared state and sequential work stay with one agent.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "addyosmani/agent-skills/context-engineering",
+    "path": "skills/context-engineering/SKILL.md",
+    "name": "Context engineering",
+    "category": "agents",
+    "license": "MIT",
+    "access": [
+      "docs"
+    ],
+    "summary": "Sets up rules files and project context so agent quality holds across sessions.",
+    "note": "A practical template for rules files, plus when to reach for specs and architecture docs.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "anthropics/skills/skill-creator",
+    "path": "skills/skill-creator/SKILL.md",
+    "name": "Skill creator",
+    "category": "agents",
+    "license": "Apache-2.0",
+    "access": [
+      "docs",
+      "commands",
+      "subagents"
+    ],
+    "summary": "Creates, tests and tunes skills, including evals and trigger checks.",
+    "note": "The most complete skill-authoring workflow available, with an eval viewer. Heavy for a quick skill.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "anthropics/skills/mcp-builder",
+    "path": "skills/mcp-builder/SKILL.md",
+    "name": "MCP builder",
+    "category": "agents",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "network"
+    ],
+    "summary": "A phased guide to building good MCP servers in Python or TypeScript, with evaluations.",
+    "note": "Research, build, review, then evaluate. Loads protocol docs from the web as it goes.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "supabase/agent-skills/supabase-postgres-best-practices",
+    "path": "skills/supabase-postgres-best-practices/SKILL.md",
+    "name": "Postgres best practices",
+    "category": "data",
+    "license": "MIT",
+    "access": [],
+    "summary": "Schema, index, migration and row-level security guidance for any Postgres, from Supabase.",
+    "note": "Useful even without Supabase. Load it before changing tables, policies or migrations.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "AvdLee/SwiftUI-Agent-Skill/swiftui-expert-skill",
+    "path": "skills/swiftui-expert-skill/SKILL.md",
+    "name": "SwiftUI Expert Skill",
+    "category": "languages",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "summary": "Write, review, refactor, and profile SwiftUI across data flow, layout, performance, and APIs.",
+    "note": "Can edit SwiftUI source and run bundled scripts plus Apple Instruments tooling to record or analyze `.trace` files. Trace capture requires Xcode tooling and a suitable Mac, simulator, or connected Apple device; code is changed only when requested.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "Kotlin/kotlin-agent-skills/kotlin-backend-jpa-entity-mapping",
+    "path": "skills/kotlin-backend-jpa-entity-mapping/SKILL.md",
+    "name": "Kotlin JPA Entity Mapping",
+    "category": "languages",
+    "license": "Apache-2.0",
+    "access": [
+      "edits"
+    ],
+    "summary": "Models Kotlin JPA entities with safe identity, relationships, indexes, and fetch plans.",
+    "note": "Creates or reviews Spring Data JPA and Hibernate mappings while avoiding data-class identity failures, lazy-loading traps, and race-prone uniqueness checks. Schema constraints and bulk persistence changes affect database behavior, so fetch and lifecycle choices are tied to observed query patterns.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "Kotlin/kotlin-agent-skills/kotlin-tooling-java-to-kotlin",
+    "path": "skills/kotlin-tooling-java-to-kotlin/SKILL.md",
+    "name": "Java to Kotlin Conversion",
+    "category": "languages",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "git"
+    ],
+    "summary": "Converts Java files to idiomatic Kotlin with framework-aware compatibility checks.",
+    "note": "Detects frameworks, writes matching .kt files, updates references, compiles, tests, and handles batches in dependency order. In Git repositories it mandates a two-commit git mv workflow to preserve blame history; otherwise it deletes the original .java file after conversion.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "Kotlin/kotlin-agent-skills/kotlin-tooling-kotlin-toolchain",
+    "path": "skills/kotlin-tooling-kotlin-toolchain/SKILL.md",
+    "name": "Kotlin Toolchain",
+    "category": "languages",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "network"
+    ],
+    "summary": "Build and configure Kotlin or Java projects with JetBrains' YAML-based Kotlin Toolchain.",
+    "note": "Scaffolds projects, edits Toolchain YAML and plugins, and runs the project wrapper for builds, tests, packaging, and lint checks; wrappers may download the CLI, JDK, and dependencies. This is a Claude Code-targeted skill for Toolchain projects, with companion migration skills required for Gradle-to-Toolchain conversions and plugin rewrites.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "Kotlin/kotlin-agent-skills/kotlin-tooling-native-build-performance",
+    "path": "skills/kotlin-tooling-native-build-performance/SKILL.md",
+    "name": "Kotlin/Native Build Performance",
+    "category": "languages",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "summary": "Measure and reduce slow Kotlin/Native iOS compilation, linking, generation, and CI setup.",
+    "note": "Runs a bundled audit plus Gradle builds or profiling, edits cache, target, export, or KSP configuration one change at a time, and compares equivalent warm builds. Full dynamic verification requires macOS and Xcode; otherwise it analyzes logs or scans statically.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "addyosmani/agent-skills/deprecation-and-migration",
+    "path": "skills/deprecation-and-migration/SKILL.md",
+    "name": "Deprecation and migration",
+    "category": "ship",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "docs",
+      "commands"
+    ],
+    "summary": "Plans staged deprecation and zero-downtime migrations from replacement through safe removal.",
+    "note": "Uses advisory or compulsory deprecation, then incremental consumer migration and expand/backfill/contract for schemas. It requires production usage evidence, migration tooling, and reversible database migrations, and guards destructive drops until no code references the old shape.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "affaan-m/everything-claude-code/security-review",
+    "path": ".agents/skills/security-review/SKILL.md",
+    "name": "Security review",
+    "category": "security",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "summary": "Checks application code against a practical security checklist before production work.",
+    "note": "Covers secrets, input validation, auth, injection and deployment checks. It includes ecosystem-specific examples, so findings need project context.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "affaan-m/everything-claude-code/tdd-workflow",
+    "path": ".agents/skills/tdd-workflow/SKILL.md",
+    "name": "TDD workflow",
+    "category": "build",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "browser"
+    ],
+    "summary": "Runs a test-first development loop across unit, integration, and browser coverage.",
+    "note": "Detects the package manager and actual test runner before writing user journeys and failing tests, then implements, refactors, and checks coverage. Examples center on JS/TS tooling, with separate Jest/Vitest, Bun, and Playwright patterns.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "affaan-m/everything-claude-code/verification-loop",
+    "path": ".agents/skills/verification-loop/SKILL.md",
+    "name": "Verification loop",
+    "category": "build",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "git"
+    ],
+    "summary": "Runs build, type, lint, test, security, and diff gates before a change is called complete.",
+    "note": "Checks build, types, lint, coverage, simple secret/debug patterns, and the Git diff in sequence, stopping on build failure. Its command examples assume common JavaScript or Python toolchains and an existing project test setup.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "affaan-m/everything-claude-code/e2e-testing",
+    "path": ".agents/skills/e2e-testing/SKILL.md",
+    "name": "End-to-end testing",
+    "category": "debug",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "browser"
+    ],
+    "summary": "Structures Playwright end-to-end suites with page objects, CI artifacts, and flake controls.",
+    "note": "Builds Playwright page objects, specs, configuration, and CI reporting, then diagnoses flakiness with repeated runs and condition-based waits. It expects a Node project and can cover Chromium, Firefox, WebKit, mobile profiles, wallet mocks, and guarded financial flows.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "affaan-m/everything-claude-code/ai-regression-testing",
+    "path": "skills/ai-regression-testing/SKILL.md",
+    "name": "AI regression testing",
+    "category": "debug",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "summary": "Adds targeted regression tests for recurring blind spots in AI-assisted code changes.",
+    "note": "Uses fast sandbox-mode API tests to lock response contracts and parity between mock and production paths after a bug is found. The worked setup targets Next.js App Router with Vitest and specifically catches omitted fields, stale error state, and failed optimistic rollbacks.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "affaan-m/everything-claude-code/mcp-server-patterns",
+    "path": ".agents/skills/mcp-server-patterns/SKILL.md",
+    "name": "MCP Server Patterns",
+    "category": "agents",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "docs"
+    ],
+    "summary": "Applies reusable design patterns for robust, secure MCP server implementations.",
+    "note": "It covers source changes and local validation; deployment and secrets remain environment-specific.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "alirezarezvani/claude-skills/spec-driven-workflow",
+    "path": "engineering/skills/spec-driven-workflow/SKILL.md",
+    "name": "Spec-driven workflow",
+    "category": "plan",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "docs",
+      "commands",
+      "git"
+    ],
+    "summary": "Turns requirements into an approved, traceable spec, tests, and scope-controlled implementation.",
+    "note": "Moves from requirements through a nine-section spec, validator, generated failing tests, incremental implementation, and a traceability review. It relies on bundled Python scripts and referenced templates, and treats breaking, security, performance, or cross-team ambiguity as an escalation point.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "alirezarezvani/claude-skills/spec-to-repo",
+    "path": "product-team/skills/spec-to-repo/SKILL.md",
+    "name": "Spec to repo",
+    "category": "plan",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "docs",
+      "commands"
+    ],
+    "summary": "Converts a natural-language app brief into a validated, runnable starter repository.",
+    "note": "Interprets the brief, infers or confirms the stack, designs the tree and contracts, generates real code plus tests and CI, then runs a project validator. It spans web, API, mobile, CLI, data, Go, Rust, and Python starters, but stack-specific SaaS scaffolding is routed elsewhere.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "alirezarezvani/claude-skills/api-test-suite-builder",
+    "path": "engineering/skills/api-test-suite-builder/SKILL.md",
+    "name": "API test suite builder",
+    "category": "build",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "summary": "Scans API routes and generates contract-focused tests for auth, validation, and failure paths.",
+    "note": "Maps handlers, reads their schemas and business rules, and writes one focused suite per route group with fixtures and response-shape assertions. Route discovery covers Next.js, Express, FastAPI, and Django REST, while generated tests target Vitest/Supertest or Pytest/httpx.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "alirezarezvani/claude-skills/pr-review-expert",
+    "path": "engineering/skills/pr-review-expert/SKILL.md",
+    "name": "PR review expert",
+    "category": "review",
+    "license": "MIT",
+    "access": [
+      "commands",
+      "git",
+      "network"
+    ],
+    "summary": "Reviews pull requests for blast radius, security, breaking changes, coverage, and performance.",
+    "note": "Fetches PR or MR metadata and diffs, traces dependents, scans risky patterns, compares test coverage, and emits prioritized findings. It expects authenticated gh or glab plus shell tools such as grep and jq; ticket verification may also require Jira or Linear credentials.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "alirezarezvani/claude-skills/skill-tester",
+    "path": "engineering/skills/skill-tester/SKILL.md",
+    "name": "Skill tester",
+    "category": "build",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "summary": "Validates skill structure, exercises Python helpers, and scores quality against a target gate.",
+    "note": "Runs four stdlib-only Python tools from the repository root, then applies the highest-priority scoring feedback and repeats all gates. Its tier line-count rubric is for legacy skills; new skills follow the separate write-a-skill standard.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "antfu/skills/antfu",
+    "path": "skills/antfu/SKILL.md",
+    "name": "Antfu",
+    "category": "languages",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "network"
+    ],
+    "summary": "Apply Anthony Fu's TypeScript conventions, pnpm tooling, linting, monorepos, and publishing setup.",
+    "note": "Edits project structure, TypeScript and ESLint configuration, workspace catalogs, hooks, and related tooling, then runs lint fixes. Its `ni` command family and `fast-npm-meta` lookup can install, remove, upgrade, or query packages through external registries.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "antfu/skills/vue",
+    "path": "skills/vue/SKILL.md",
+    "name": "Vue",
+    "category": "languages",
+    "license": "MIT",
+    "access": [],
+    "summary": "Write Vue 3.5 components with typed script setup, reactivity, lifecycle, and built-ins.",
+    "note": "Reference guidance favors the Composition API, TypeScript, shallow reactivity where suitable, and Vue's current macros and built-in components. It has no required companion tool or external service.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "antfu/skills/vite",
+    "path": "skills/vite/SKILL.md",
+    "name": "Vite",
+    "category": "languages",
+    "license": "MIT",
+    "access": [],
+    "summary": "Configure Vite builds, plugins, SSR, multi-environment APIs, and Vite 8 Rolldown migration.",
+    "note": "Reference guidance covers TypeScript ESM configuration, the plugin API, library and SSR builds, and CLI usage. Its versioned guidance is based on the Vite 8 beta and should be matched to the project's installed Vite release.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "antfu/skills/nuxt",
+    "path": "skills/nuxt/SKILL.md",
+    "name": "Nuxt",
+    "category": "languages",
+    "license": "MIT",
+    "access": [],
+    "summary": "Reference guide for Nuxt 4 structure, routing, rendering, data, modules, and deployment.",
+    "note": "Routes Nuxt questions to focused references for the app directory, configuration, CLI, SSR, server routes, composables, layers, hooks, and module authoring. It is guidance based on Nuxt 4.x and does not itself require a companion tool or external service.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "anthropics/skills/claude-api",
+    "path": "skills/claude-api/SKILL.md",
+    "name": "Claude API",
+    "category": "agents",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "docs",
+      "commands",
+      "subagents",
+      "browser",
+      "mcp",
+      "network"
+    ],
+    "summary": "Builds Claude API and Managed Agent integrations with current SDK and tool-use patterns.",
+    "note": "Routes work by language and chooses a single Messages API call, a tool loop, or Anthropic-hosted Managed Agents. It depends on official Anthropic SDKs and API credentials and can invoke paid model calls, hosted web or code tools, MCP, files, and managed sessions; migrations confirm scope before edits.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "aws-samples/sample-apex-skills/ecs-build",
+    "path": "skills/ecs-build/SKILL.md",
+    "name": "ECS Build",
+    "category": "cloud",
+    "license": "MIT-0",
+    "access": [
+      "edits",
+      "docs",
+      "commands",
+      "network"
+    ],
+    "summary": "Builds apply-ready Terraform for ECS clusters, services, networking, and scaling.",
+    "note": "Generates and validates production ECS Terraform across Fargate, EC2, and Managed Instances, with deployment, IAM, networking, and autoscaling rules. It requires the companion terraform-skill, Terraform and AWS access, and live version research; applying the output can create, change, or remove AWS resources.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "aws-samples/sample-apex-skills/ecs-modernize",
+    "path": "skills/ecs-modernize/SKILL.md",
+    "name": "ECS Modernize",
+    "category": "cloud",
+    "license": "MIT-0",
+    "access": [
+      "edits",
+      "docs",
+      "commands",
+      "git",
+      "network"
+    ],
+    "summary": "Assess legacy apps and carry an approved replatform or rearchitecture onto Amazon ECS.",
+    "note": "Scores source-only container fit, writes one external modernization report, and gates every migration action behind explicit approval. Execution can create branches, transform code, build and push images to ECR, generate or apply Terraform, and change AWS resources; rearchitecture IaC requires the companion `ecs-build` skill.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "aws-samples/sample-apex-skills/ecs-observability",
+    "path": "skills/ecs-observability/SKILL.md",
+    "name": "ECS Observability",
+    "category": "cloud",
+    "license": "MIT-0",
+    "access": [],
+    "summary": "Design ECS logging, metrics, tracing, alerting, and live-debug access by launch type.",
+    "note": "Selects among CloudWatch, Container Insights, ADOT, Prometheus/Grafana, FireLens, and third-party stacks while surfacing log-loss and cost tradeoffs. It is a reference-driven advisory skill and does not run deployment or audit workflows.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "aws-samples/sample-apex-skills/eks-best-practices",
+    "path": "skills/eks-best-practices/SKILL.md",
+    "name": "EKS Best Practices",
+    "category": "cloud",
+    "license": "MIT-0",
+    "access": [],
+    "summary": "Choose EKS compute, networking, security, scaling, resilience, and hybrid deployment patterns.",
+    "note": "Provides architecture guidance and Terraform-module examples across Standard, Auto Mode, Fargate, Hybrid Nodes, Anywhere, and Outposts. It is advisory; design documents and production Terraform are delegated to companion EKS skills.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "aws-samples/sample-apex-skills/eks-build",
+    "path": "skills/eks-build/SKILL.md",
+    "name": "EKS Build",
+    "category": "cloud",
+    "license": "MIT-0",
+    "access": [
+      "edits",
+      "docs",
+      "commands",
+      "network"
+    ],
+    "summary": "Generate deployable EKS Terraform projects with optional ArgoCD and Kubernetes-native AWS control.",
+    "note": "Scaffolds cluster modules, configuration, GitOps artifacts, validation checklists, and apply commands, with mandatory web research for current versions. It requires the companion `terraform-skill`; applying the output provisions AWS and Kubernetes resources and may include destructive cleanup commands.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "aws-samples/sample-apex-skills/terraform-skill",
+    "path": "skills/terraform-skill/SKILL.md",
+    "name": "Terraform Skill",
+    "category": "cloud",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "mcp"
+    ],
+    "summary": "Diagnose and improve Terraform or OpenTofu modules, tests, CI, state, and migrations.",
+    "note": "Generates HCL and CI changes, validates them with Terraform/OpenTofu and scanners, and may use Terraform MCP for schemas. State-changing or destructive work requires reviewed plans and approval; `terraform-ls` is optional, with a separate code-intelligence companion recommended.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "cloudflare/skills/durable-objects",
+    "path": "skills/durable-objects/SKILL.md",
+    "name": "Durable Objects",
+    "category": "cloud",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "network"
+    ],
+    "summary": "Build and review Cloudflare Durable Objects for persistent state, coordination, and WebSockets.",
+    "note": "Edits Worker code, bindings, migrations, storage schemas, alarms, and tests after fetching current Cloudflare documentation. Durable Object storage and alarms persist remotely when deployed, and access inherits the implementing Worker's Cloudflare permissions.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "cloudflare/skills/workers-best-practices",
+    "path": "skills/workers-best-practices/SKILL.md",
+    "name": "Workers Best Practices",
+    "category": "cloud",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "network"
+    ],
+    "summary": "Write and review production Cloudflare Workers against current runtime and configuration behavior.",
+    "note": "Retrieves current Cloudflare docs, edits Worker code or configuration, and runs existing type checks or runtime tests for affected behavior. Durable Objects and Wrangler command work require their dedicated companion skills.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "cloudflare/skills/wrangler",
+    "path": "skills/wrangler/SKILL.md",
+    "name": "Wrangler",
+    "category": "cloud",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "mcp",
+      "network"
+    ],
+    "summary": "Configure and run Wrangler for local Workers development, previews, deployment, and resources.",
+    "note": "Reads the project-local Wrangler version, edits source configuration, consults Cloudflare docs through MCP or the web, and runs build, type, preview, deploy, secret, or resource commands. Remote operations can deploy code, provision or alter Cloudflare resources, expose public previews, and delete named previews.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "dotnet/skills/csharp-refactoring",
+    "path": "plugins/dotnet/skills/csharp-refactoring/SKILL.md",
+    "name": "C# Refactoring",
+    "category": "languages",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "git"
+    ],
+    "summary": "Performs binding-aware C# refactors while preserving behavior and public contracts.",
+    "note": "Classifies requests before editing, uses semantic tooling where available, and verifies the narrowest relevant builds, tests, analyzers, and target frameworks. It works only in the current Git repository and may retain compatibility shims rather than remove shipped APIs.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "dotnet/skills/dotnet-webapi",
+    "path": "plugins/dotnet-aspnetcore/skills/dotnet-webapi/SKILL.md",
+    "name": "ASP.NET Core Web API",
+    "category": "languages",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "docs",
+      "commands"
+    ],
+    "summary": "Builds ASP.NET Core API endpoints with typed DTOs, OpenAPI, and Problem Details.",
+    "note": "Edits controller or minimal-API projects, adds service layers and .http examples, and verifies builds plus running endpoint behavior. It requires the .NET CLI and a runnable ASP.NET Core app; local verification starts the server and exercises its OpenAPI and HTTP routes.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "dotnet/skills/maui-data-binding",
+    "path": "plugins/dotnet-maui/skills/maui-data-binding/SKILL.md",
+    "name": ".NET MAUI Data Binding",
+    "category": "languages",
+    "license": "MIT",
+    "access": [
+      "edits"
+    ],
+    "summary": "Implement type-safe .NET MAUI bindings, change notification, converters, and MVVM data flow.",
+    "note": "Edits XAML, view models, converters, and project warning settings for compiled, AOT-safe bindings. Collection views, Shell navigation, and dependency injection are routed to dedicated companion skills.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "evanca/flutter-ai-rules/bloc",
+    "path": "skills/bloc/SKILL.md",
+    "name": "Bloc",
+    "category": "languages",
+    "license": "MIT",
+    "access": [
+      "edits"
+    ],
+    "summary": "Implement and test Flutter state management with Cubit, Bloc, repositories, and bloc widgets.",
+    "note": "Creates or refactors Dart state, events, UI wiring, repository boundaries, and `bloc_test` coverage. It expects the `bloc`, `flutter_bloc`, `bloc_test`, and `mocktail` packages where their respective patterns are used.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "expo/skills/expo-router",
+    "path": "plugins/expo/skills/expo-router/SKILL.md",
+    "name": "Expo Router",
+    "category": "languages",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "network"
+    ],
+    "summary": "Build file-based Expo navigation with routes, native stacks, tabs, sheets, headers, and search.",
+    "note": "Creates and restructures route files, removing obsolete routes when navigation moves, and can submit specific upstream feedback with an npx command. Visual UI and motion are delegated to the `expo-native-ui` and `expo-animation` companion skills.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "expo/skills/expo-ui",
+    "path": "plugins/expo/skills/expo-ui/SKILL.md",
+    "name": "Expo UI",
+    "category": "languages",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "network"
+    ],
+    "summary": "Build native Expo interfaces with universal or platform-specific SwiftUI and Compose components.",
+    "note": "Edits React Native component trees, installs `@expo/ui`, and may run the bundled component inventory or submit actionable feedback. Universal components require Expo SDK 56+, while platform-specific trees must be split or guarded to avoid cross-platform runtime crashes.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "expo/skills/expo-module",
+    "path": "plugins/expo/skills/expo-module/SKILL.md",
+    "name": "Expo Module",
+    "category": "languages",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "network"
+    ],
+    "summary": "Scaffolds and implements Expo native modules and views for Apple, Android, and web.",
+    "note": "Uses create-expo-module, then replaces examples with Swift, Kotlin, TypeScript, config-plugin, lifecycle, and autolinking code. Native build tooling and Expo packages are required; migrations to Expo Modules API 2.0 macros must use the companion expo-migrate-module skill instead.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "fastapi/fastapi/fastapi",
+    "path": "fastapi/.agents/skills/fastapi/SKILL.md",
+    "name": "FastAPI",
+    "category": "languages",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "summary": "Writes current FastAPI routes, models, dependencies, streaming, and frontend serving code.",
+    "note": "Applies official patterns for Annotated parameters, Pydantic validation, router organization, response filtering, async boundaries, SSE, and static frontends. It uses the FastAPI CLI for local development or production serving and may add supporting Python packages described by the relevant reference.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "firebase/agent-skills/firebase-firestore",
+    "path": "skills/firebase-firestore/SKILL.md",
+    "name": "Firebase Firestore",
+    "category": "data",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "subagents",
+      "network"
+    ],
+    "summary": "Provision and integrate Cloud Firestore databases, models, indexes, queries, and SDKs.",
+    "note": "Uses Firebase CLI to inspect or create remote databases and edits application, index, and configuration files after selecting Standard or Enterprise guidance. Firestore rules must be authored by the named `firestore-rules-author` subagent when available, otherwise by the `firestore-rules-creation` companion skill.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "firebase/agent-skills/firestore-rules-creation",
+    "path": "skills/firestore-rules-creation/SKILL.md",
+    "name": "Firestore Security Rules Creation",
+    "category": "security",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "docs",
+      "commands",
+      "subagents",
+      "network"
+    ],
+    "summary": "Authors and hardens Firestore rules from the app's data model and query patterns.",
+    "note": "Scans the codebase, writes firestore.rules, documents its assumed schema, attacks the rules mentally, and validates them with the Firebase CLI. When delegation and the named firestore-rules-author subagent are available, that subagent must author the file; Firebase dry-run validation contacts the project service.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "firebase/agent-skills/firebase-remote-config-basics",
+    "path": "skills/firebase-remote-config-basics/SKILL.md",
+    "name": "Firebase Remote Config Basics",
+    "category": "data",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "network"
+    ],
+    "summary": "Manage Firebase Remote Config templates, flags, SDK loading, versions, and deployments.",
+    "note": "Uses Firebase CLI commands to download, edit, deploy, and verify remote templates, plus Android or iOS SDK guidance. The `firebase-basics` companion supplies project setup, and every live deployment must wait for user review of the local JSON template.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "get-convex/templates/convex",
+    "path": "template-bare/.agents/skills/convex/SKILL.md",
+    "name": "Convex",
+    "category": "data",
+    "license": "Apache-2.0",
+    "access": [
+      "commands",
+      "network"
+    ],
+    "summary": "Routes Convex backend work to current capability-specific skills and served procedures.",
+    "note": "Directs code, setup, review, migration, monitoring, and operations requests to the matching bundled Convex skill, preferring its live capability catalog when available. Convex service access and companion convex-* skills are required for execution, and tiered procedures that spend money require explicit confirmation.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "getsentry/skills/gha-security-review",
+    "path": "skills/gha-security-review/SKILL.md",
+    "name": "GitHub Actions security review",
+    "category": "security",
+    "license": "Apache-2.0",
+    "access": [
+      "commands",
+      "subagents"
+    ],
+    "summary": "Traces exploitable GitHub Actions workflow paths instead of flagging generic CI patterns.",
+    "note": "Limits findings to externally exploitable paths and requires a concrete attack scenario. It loads focused references for the workflow triggers it finds.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "getsentry/skills/security-review",
+    "path": "skills/security-review/SKILL.md",
+    "name": "Security review",
+    "category": "security",
+    "license": "CC-BY-SA-4.0",
+    "access": [
+      "commands",
+      "subagents"
+    ],
+    "summary": "Reviews code for confirmed security weaknesses with data-flow and framework context.",
+    "note": "Reports high-confidence vulnerabilities only after checking input control and framework safeguards. It selectively loads language and infrastructure reference guides.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "getsentry/skills/iterate-pr",
+    "path": "skills/iterate-pr/SKILL.md",
+    "name": "Iterate pull request",
+    "category": "review",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "git",
+      "network"
+    ],
+    "summary": "Repairs an open pull request until actionable CI and high- or medium-priority feedback clear.",
+    "note": "Uses bundled uv scripts and authenticated gh to classify feedback and checks, fix root causes, verify locally, commit, push, and monitor again. It stops for repeated failures, rebase needs, infrastructure problems, absent checks, drafts without checks, and human review gates.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "getsentry/skills/django-perf-review",
+    "path": "skills/django-perf-review/SKILL.md",
+    "name": "Django Performance Review",
+    "category": "performance",
+    "license": "Apache-2.0",
+    "access": [
+      "commands",
+      "subagents"
+    ],
+    "summary": "Finds only validated Django ORM and request-path performance problems.",
+    "note": "It requires tracing real data flow, volume, and hot paths before reporting an issue; zero findings are acceptable.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "getsentry/skills/commit",
+    "path": "skills/commit/SKILL.md",
+    "name": "Commit",
+    "category": "ship",
+    "license": "Apache-2.0",
+    "access": [
+      "commands",
+      "git"
+    ],
+    "summary": "Prepares focused commits with staged-diff checks and meaningful messages.",
+    "note": "It runs Git commands and creates commits, so the selected changes must be reviewed before committing.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "getsentry/skills/create-branch",
+    "path": "skills/create-branch/SKILL.md",
+    "name": "Create Branch",
+    "category": "ship",
+    "license": "Apache-2.0",
+    "access": [
+      "commands",
+      "git"
+    ],
+    "summary": "Creates a conventionally named Git branch for a scoped change.",
+    "note": "It changes local Git state and checks existing branches before choosing the branch name.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "google/skills/gcloud",
+    "path": "skills/cloud/gcloud/SKILL.md",
+    "name": "gcloud CLI",
+    "category": "cloud",
+    "license": "Apache-2.0",
+    "access": [
+      "commands",
+      "mcp",
+      "network"
+    ],
+    "summary": "Validates and executes tightly scoped gcloud commands with destructive-action guardrails.",
+    "note": "Uses leaf-command help as the sole syntax authority, reduces list output, and runs one project- and location-scoped command at a time through gcloud or the Cloud CLI MCP server. Live GCP access is required; IAM, billing, KMS, API enablement, delete, and infrastructure-apply operations need explicit authorization because they can change access, cost, or data.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "google/skills/gke-basics",
+    "path": "skills/cloud/gke-basics/SKILL.md",
+    "name": "GKE Basics",
+    "category": "cloud",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "mcp",
+      "network"
+    ],
+    "summary": "Choose, provision, authenticate, and deploy workloads to GKE Autopilot or Standard clusters.",
+    "note": "Uses GKE MCP, gcloud, kubectl, client libraries, or infrastructure-as-code to create clusters, fetch credentials, configure identity, and deploy workloads. These actions create or modify Google Cloud and Kubernetes resources; advanced networking, security, upgrades, and cluster architecture use separate companions.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "hashicorp/agent-skills/azure-verified-modules",
+    "path": "plugins/terraform/skills/azure-verified-modules/SKILL.md",
+    "name": "Azure Verified Modules",
+    "category": "cloud",
+    "license": "MPL-2.0",
+    "access": [
+      "edits",
+      "docs",
+      "commands",
+      "git",
+      "network"
+    ],
+    "summary": "Develops and reviews Azure Terraform modules against AVM certification rules.",
+    "note": "Applies AVM structure, provider, testing, documentation, compatibility, and contribution requirements to module code. It depends on Terraform, terrafmt, Checkov, tflint, terraform-docs, and repository branch protection; changing module resources or defaults can create breaking infrastructure behavior.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "hashicorp/agent-skills/terraform-policy",
+    "path": "plugins/terraform/skills/terraform-policy/SKILL.md",
+    "name": "Terraform Policy",
+    "category": "cloud",
+    "license": "MPL-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "network"
+    ],
+    "summary": "Routes Terraform Policy authoring, Sentinel conversion, and policy-test debugging.",
+    "note": "Checks the installed tfpolicy version, then delegates policy work to the companion tfpolicy-author or tfpolicy-test instructions with version-specific schema behavior. The tfpolicy CLI is required, and missing companion skills may be installed with npx before files are written or tested.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "hashicorp/agent-skills/terraform-stacks",
+    "path": "plugins/terraform/skills/terraform-stacks/SKILL.md",
+    "name": "Terraform Stacks",
+    "category": "cloud",
+    "license": "MPL-2.0",
+    "access": [
+      "edits",
+      "docs",
+      "commands",
+      "git",
+      "network"
+    ],
+    "summary": "Creates and operates Terraform Stacks across environments, regions, and accounts.",
+    "note": "Authors Stack component and deployment HCL, validates it with the Terraform Stacks CLI, commits provider locks, and uploads configurations to HCP Terraform. Terraform 1.13+ and HCP Terraform are required; uploads trigger runs, Premium-only features can cost extra, and destroy-marked deployments remove infrastructure after approval.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "jeffallan/claude-skills/debugging-wizard",
+    "path": "skills/debugging-wizard/SKILL.md",
+    "name": "Debugging wizard",
+    "category": "debug",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "docs",
+      "commands",
+      "git"
+    ],
+    "summary": "Reproduces, isolates, and proves a bug's root cause before fixing and preventing recurrence.",
+    "note": "Works one hypothesis at a time from complete errors and traces, verifies the fix, adds a regression test, and records the evidence. Tool guidance spans Python, Node, Go, and Git bisect, with deeper references loaded for the language or failure pattern.",
+    "addedAt": "2026-09-27",
+    "cleared": {
+      "hidden-instruction": "The matched HTML comment attributes a debugging reference to its MIT-licensed source; it gives no instruction."
+    },
+    "clearedSha256": "82c442c0a4f87785adc0a5ad9f9968d7ceb83e03f937151f19f362c76267e2e7"
+  },
+  {
+    "id": "jeffallan/claude-skills/code-reviewer",
+    "path": "skills/code-reviewer/SKILL.md",
+    "name": "Code reviewer",
+    "category": "review",
+    "license": "MIT",
+    "access": [],
+    "summary": "Produces a prioritized review of correctness, security, performance, architecture, and tests.",
+    "note": "First establishes the change's intent, then inspects structure, implementation details, and tests before returning a verdict with actionable examples. It is read-only and routes detailed checks through references for the review context.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "jeffallan/claude-skills/chaos-engineer",
+    "path": "skills/chaos-engineer/SKILL.md",
+    "name": "Chaos Engineer",
+    "category": "performance",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "docs",
+      "network"
+    ],
+    "summary": "Designs controlled resilience experiments and recovery checks for distributed systems.",
+    "note": "It can exercise infrastructure and service behavior, so experiments require a defined environment and blast-radius controls.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "jeffallan/claude-skills/devops-engineer",
+    "path": "skills/devops-engineer/SKILL.md",
+    "name": "DevOps Engineer",
+    "category": "ship",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "docs",
+      "network"
+    ],
+    "summary": "Builds and maintains CI, deployment, infrastructure, and operational automation.",
+    "note": "It can modify pipeline and infrastructure files and may invoke provider or command-line tooling.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "jeffallan/claude-skills/mcp-developer",
+    "path": "skills/mcp-developer/SKILL.md",
+    "name": "MCP Developer",
+    "category": "agents",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "docs",
+      "network"
+    ],
+    "summary": "Builds Model Context Protocol servers with tool, resource, and transport design guidance.",
+    "note": "It writes server code and can run local development tooling; external service integration needs its own credentials.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "jeffallan/claude-skills/secure-code-guardian",
+    "path": "skills/secure-code-guardian/SKILL.md",
+    "name": "Secure Code Guardian",
+    "category": "security",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "docs"
+    ],
+    "summary": "Reviews and strengthens application code against common security weaknesses.",
+    "note": "It can change source and run validation commands; remediation still needs the repository's actual threat model.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "jezweb/claude-skills/d1-drizzle-schema",
+    "path": "plugins/cloudflare/skills/d1-drizzle-schema/SKILL.md",
+    "name": "D1 Drizzle Schema",
+    "category": "data",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "docs",
+      "commands",
+      "network"
+    ],
+    "summary": "Generates D1-safe Drizzle schemas, migrations, types, and schema documentation.",
+    "note": "This Claude Code-only skill writes schema and config files, package scripts, and DATABASE_SCHEMA.md around D1's enforced foreign keys, SQLite types, and 100-parameter limit. Wrangler and a Cloudflare D1 database are required, and it mandates applying migrations to both local and remote databases before testing, which changes hosted data structures.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "jezweb/claude-skills/react-patterns",
+    "path": "plugins/frontend/skills/react-patterns/SKILL.md",
+    "name": "React Patterns",
+    "category": "languages",
+    "license": "MIT",
+    "access": [],
+    "summary": "Review React 19, Vite, and Cloudflare code for performance and composition problems.",
+    "note": "Provides a prioritized read-only checklist for waterfalls, bundle size, component APIs, rerenders, and React 19 behavior. It is explicitly Claude Code-only and permits only file reading, globbing, and text search.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "mblode/agent-skills/agent-ready",
+    "path": "skills/agent-ready/SKILL.md",
+    "name": "Agent ready",
+    "category": "build",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "docs",
+      "commands",
+      "network"
+    ],
+    "summary": "Implements machine-readable discovery and documentation fixes from agent-readiness evidence.",
+    "note": "Turns scorecards or server-side 404 traces into repository changes, tests, and verified HTTP responses across every public knowledge surface. Verification needs Bash and curl, scanners need Node and registry access, and DNS, deployment, or product-surface expansion stays outside the local repair loop.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "mblode/agent-skills/scaffold-cli",
+    "path": "skills/scaffold-cli/SKILL.md",
+    "name": "Scaffold CLI",
+    "category": "build",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "docs",
+      "commands",
+      "git",
+      "network"
+    ],
+    "summary": "Scaffolds a publishable TypeScript CLI with pinned build, test, lint, CI, and release contracts.",
+    "note": "Generates the package, source, docs, skill, changesets, and workflows from bundled templates, then installs and validates the full toolchain. It assumes Node 24, TypeScript 7, Git, npm access, and specific tsdown, Vitest, Ultracite, and Changesets conventions; remote bootstrap needs account authorization.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "mblode/agent-skills/tidy",
+    "path": "skills/tidy/SKILL.md",
+    "name": "Tidy",
+    "category": "build",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "git",
+      "network"
+    ],
+    "summary": "Reviews a diff with evidence-ranked findings and can apply bounded fixes and simplifications.",
+    "note": "Report mode leaves the tree untouched; apply mode fixes confirmed issues, simplifies only where repository evidence supports it, and runs affected checks. It scopes work through Git diffs or an authenticated PR, and deliberately avoids commits, pushes, dependency changes, migrations, and broad rewrites.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "mblode/agent-skills/ci-speedup",
+    "path": "skills/ci-speedup/SKILL.md",
+    "name": "CI Speedup",
+    "category": "performance",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "docs",
+      "mcp",
+      "network"
+    ],
+    "summary": "Measures CI critical paths and shortens them with evidence-backed pipeline changes.",
+    "note": "Requires GitHub CLI or MCP timing data and records before-and-after results in a repository ledger.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "microsoft/skills/azure-diagnostics",
+    "path": ".github/plugins/azure-skills/skills/azure-diagnostics/SKILL.md",
+    "name": "Azure Diagnostics",
+    "category": "cloud",
+    "license": "MIT",
+    "access": [
+      "docs",
+      "commands",
+      "mcp",
+      "network"
+    ],
+    "summary": "Triages Azure production failures with health, logs, metrics, AppLens, and KQL.",
+    "note": "Routes service incidents to focused guides and gathers evidence through Azure CLI, AppLens, Azure Monitor, and Resource Health MCP tools before documenting findings and remediation. It requires authenticated Azure telemetry access; service-specific remediation can change live resources, credentials, networking, or workloads.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "microsoft/skills/azure-kubernetes",
+    "path": ".github/plugins/azure-skills/skills/azure-kubernetes/SKILL.md",
+    "name": "Azure Kubernetes Service",
+    "category": "cloud",
+    "license": "MIT",
+    "access": [
+      "docs",
+      "commands",
+      "mcp",
+      "network"
+    ],
+    "summary": "Plans, provisions, and configures production-ready Azure Kubernetes Service clusters.",
+    "note": "Uses the Azure AKS MCP surface first and Azure CLI or kubectl as fallback to choose and configure networking, identity, observability, upgrades, scaling, and cost controls. It requires authenticated Azure access; cluster creation and Day-0 choices incur cloud cost, while some networking corrections require cluster recreation.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "microsoft/skills/azure-reliability",
+    "path": ".github/plugins/azure-skills/skills/azure-reliability/SKILL.md",
+    "name": "Azure Reliability",
+    "category": "cloud",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "docs",
+      "commands",
+      "mcp",
+      "network"
+    ],
+    "summary": "Assesses and remediates reliability gaps in Azure Functions and App Service.",
+    "note": "Uses Azure Resource Graph, Azure MCP, and Azure CLI to assess zone redundancy, storage, probes, and failover, then patches IaC or live resources in staged deployments. Storage migration, app restarts, secondary-region compute, and Front Door can affect availability and cost, and each gated deployment changes Azure resources.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "microsoft/skills/azure-storage",
+    "path": ".github/plugins/azure-skills/skills/azure-storage/SKILL.md",
+    "name": "Azure Storage Services",
+    "category": "cloud",
+    "license": "MIT",
+    "access": [
+      "commands",
+      "mcp",
+      "network"
+    ],
+    "summary": "Works with Azure blobs, files, queues, tables, Data Lake, tiers, and redundancy.",
+    "note": "Prefers Azure Storage MCP and falls back to Azure CLI for listing accounts, containers, and blobs or uploading and downloading content. Azure authentication and a storage account are required; uploads change remote content, while downloaded blobs write to local paths.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "microsoft/skills/azure-quotas",
+    "path": ".github/plugins/azure-skills/skills/azure-quotas/SKILL.md",
+    "name": "Azure quotas",
+    "category": "cloud",
+    "license": "MIT",
+    "access": [
+      "commands",
+      "network"
+    ],
+    "summary": "Checks Azure quota usage, compares regional capacity, and requests limit increases.",
+    "note": "Discovers quota names with az quota, compares limits with current usage across regions, and can submit increase requests. It requires the Azure CLI quota extension and Azure permissions; quota updates change subscription limits, while the source states the allocation itself is free.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "mongodb/agent-skills/mongodb-query-optimizer",
+    "path": "skills/mongodb-query-optimizer/SKILL.md",
+    "name": "MongoDB Query Optimizer",
+    "category": "data",
+    "license": "Apache-2.0",
+    "access": [
+      "mcp",
+      "network"
+    ],
+    "summary": "Diagnoses slow MongoDB queries and recommends high-impact index and query changes.",
+    "note": "Uses MongoDB MCP explain, index, sample-document, and Atlas Performance Advisor data when configured, then ranks evidence-backed improvements. Atlas analysis needs API credentials and cluster access; index creation is withheld until the user approves because it changes database state and write overhead.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "mongodb/agent-skills/mongodb-schema-design",
+    "path": "skills/mongodb-schema-design/SKILL.md",
+    "name": "MongoDB Schema Design",
+    "category": "data",
+    "license": "Apache-2.0",
+    "access": [
+      "commands",
+      "mcp",
+      "network"
+    ],
+    "summary": "Design and diagnose MongoDB schemas around real access patterns, growth, and index costs.",
+    "note": "Uses code, workload descriptions, Atlas telemetry, or the MongoDB MCP server to inspect schemas and performance before recommending changes. MCP writes and destructive database operations require an exact preview and explicit approval; read-only mode is recommended.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "neondatabase/agent-skills/neon-postgres",
+    "path": "skills/neon-postgres/SKILL.md",
+    "name": "Neon Postgres",
+    "category": "data",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "mcp",
+      "network"
+    ],
+    "summary": "Operate Neon Postgres connections, branches, migrations, diagnostics, scaling, and search.",
+    "note": "Uses the Neon CLI or MCP server to inspect projects and databases, manage branches, fetch connection strings, and run guarded SQL; it may update `.env` and schema code. The parent `neon` skill is required first, with branch and generic Postgres companions used for deeper workflows.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "neondatabase/agent-skills/neon-postgres-branches",
+    "path": "skills/neon-postgres-branches/SKILL.md",
+    "name": "Neon Postgres Branches",
+    "category": "data",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "mcp",
+      "network"
+    ],
+    "summary": "Creates normal or schema-only Neon branches for safe development and migration tests.",
+    "note": "Defaults to Neon CLI, falls back to Neon MCP or REST, and can update local DATABASE_URL after creating a branch. The parent neon skill and Neon service authentication are required; reset-from-parent replaces child data, interrupts connections, and branch deletion or expiry removes environments.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "neondatabase/agent-skills/neon-postgres-egress-optimizer",
+    "path": "skills/neon-postgres-egress-optimizer/SKILL.md",
+    "name": "Neon Postgres Egress Optimizer",
+    "category": "performance",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "network"
+    ],
+    "summary": "Find and fix query patterns that drive excessive Postgres network transfer and Neon cost.",
+    "note": "Runs Postgres diagnostics, traces expensive queries into application code, edits queries or caching and pagination behavior, then remeasures under representative traffic. It requires the parent `neon` skill first; optional `neon.ts` changes and `neon config apply` modify remote branch compute policy.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "neondatabase/agent-skills/neon-object-storage",
+    "path": "skills/neon-object-storage/SKILL.md",
+    "name": "Neon Object Storage",
+    "category": "data",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "network"
+    ],
+    "summary": "Provisions branch-aware S3-compatible storage and wires upload and download flows.",
+    "note": "Uses neon.ts, the Neon CLI, Files SDK, or AWS S3 clients to create buckets, pull credentials, and manage objects on Neon branches. The parent neon skill is required first, and Neon service access plus supported-region availability are required; bucket and object commands can expose public data or delete stored files.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "obra/superpowers/finishing-a-development-branch",
+    "path": "skills/finishing-a-development-branch/SKILL.md",
+    "name": "Finishing a development branch",
+    "category": "ship",
+    "license": "MIT",
+    "access": [
+      "commands",
+      "git",
+      "network"
+    ],
+    "summary": "Finishes a Git branch through verified tests, integration choice, and guarded cleanup.",
+    "note": "Runs the full test suite, detects worktree state, confirms the base, then offers local merge, pull request, or preservation. It requires Git and project tests; pushing or merging touches shared state, while discard and force branch deletion require exact confirmation.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "obra/superpowers/subagent-driven-development",
+    "path": "skills/subagent-driven-development/SKILL.md",
+    "name": "Subagent-driven development",
+    "category": "agents",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "docs",
+      "commands",
+      "git",
+      "subagents"
+    ],
+    "summary": "Executes implementation plans with fresh agents, per-task reviews, and a durable progress ledger.",
+    "note": "Uses one implementer at a time, task-level review and fix loops, a plan-specific ledger, then a whole-branch review. It depends on Git worktrees, shell scripts, commits, and subagent tooling; merge, push, and workspace deletion are deferred to a guarded finishing workflow.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "openai/skills/security-best-practices",
+    "path": "skills/.curated/security-best-practices/SKILL.md",
+    "name": "Security best practices",
+    "category": "security",
+    "license": "Apache-2.0",
+    "access": [
+      "docs",
+      "edits"
+    ],
+    "summary": "Applies language and framework security guidance when a security review is explicitly requested.",
+    "note": "Supports Python, JavaScript or TypeScript, and Go. It asks for a report review before beginning individual remediation work.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "openai/skills/playwright",
+    "path": "skills/.curated/playwright/SKILL.md",
+    "name": "Playwright",
+    "category": "debug",
+    "license": "Apache-2.0",
+    "access": [
+      "commands",
+      "browser",
+      "network"
+    ],
+    "summary": "Drives real browser flows from the terminal with snapshot-based Playwright CLI commands.",
+    "note": "Checks for npx, opens a page through the bundled wrapper, snapshots stable element references, interacts, and captures screenshots or traces. It is CLI-first rather than a test-authoring workflow, and browser references must be refreshed after navigation or major DOM changes.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "openai/skills/gh-address-comments",
+    "path": "skills/.curated/gh-address-comments/SKILL.md",
+    "name": "Address GitHub comments",
+    "category": "review",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "git",
+      "network"
+    ],
+    "summary": "Finds review threads on the current branch's pull request and applies the selected fixes.",
+    "note": "Verifies authenticated gh access, runs the bundled comment fetcher, numbers the requested changes, and edits only the threads the user selects. GitHub commands require network access and may pause for gh re-authentication if scopes or rate limits fail.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "openai/skills/gh-fix-ci",
+    "path": "skills/.curated/gh-fix-ci/SKILL.md",
+    "name": "GitHub CI Fix",
+    "category": "ship",
+    "license": "Apache-2.0",
+    "access": [
+      "edits",
+      "commands",
+      "git",
+      "network"
+    ],
+    "summary": "Investigates failed GitHub Actions checks and prepares a focused fix.",
+    "note": "Requires GitHub CLI authentication and repository CI access to inspect failure evidence and apply changes.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "openai/skills/yeet",
+    "path": "skills/.curated/yeet/SKILL.md",
+    "name": "Yeet",
+    "category": "ship",
+    "license": "Apache-2.0",
+    "access": [
+      "commands",
+      "git",
+      "network"
+    ],
+    "summary": "Guides a controlled GitHub pull-request publishing workflow from a finished branch.",
+    "note": "It uses GitHub and Git commands to publish branch work, so it has external repository effects.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "openai/skills/security-ownership-map",
+    "path": "skills/.curated/security-ownership-map/SKILL.md",
+    "name": "Security Ownership Map",
+    "category": "security",
+    "license": "Apache-2.0",
+    "access": [
+      "commands",
+      "git"
+    ],
+    "summary": "Maps repository security ownership, sensitive-code concentration, and maintenance risk.",
+    "note": "It analyzes Git history and can emit CSV or JSON artifacts from the repository's commit data.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "planetscale/database-skills/mysql",
+    "path": "skills/mysql/SKILL.md",
+    "name": "MySQL",
+    "category": "data",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "summary": "Designs and tunes MySQL schemas, indexes, queries, transactions, and operations.",
+    "note": "Uses EXPLAIN, lock and connection metrics, rollout plans, and relevant references to make measurable InnoDB changes with rollback guidance. A MySQL environment is needed for validation; production DDL, index removal, drops, deletes, and truncates can lock tables or destroy data and require explicit approval.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "prisma/skills/prisma-cli",
+    "path": "prisma-cli/SKILL.md",
+    "name": "Prisma CLI",
+    "category": "data",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "mcp",
+      "network"
+    ],
+    "summary": "Guides Prisma ORM setup, generation, migrations, database operations, and MCP use.",
+    "note": "Runs the Prisma ORM CLI for schemas, clients, local databases, Studio, raw SQL, migration deployment, and its MCP server, distinct from the Prisma Platform CLI. Database access may be local or hosted; reset and forced data-loss commands erase data and require the user's exact fresh consent.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "prisma/skills/prisma-database-setup",
+    "path": "prisma-database-setup/SKILL.md",
+    "name": "Prisma Database Setup",
+    "category": "data",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "network"
+    ],
+    "summary": "Configure Prisma schemas, datasource URLs, driver adapters, and generated clients by database.",
+    "note": "Edits Prisma and TypeScript configuration, installs provider packages, and regenerates Prisma Client after schema changes. It requires Node.js 20.19+ and TypeScript 5.4+; MongoDB stays on Prisma 6.x and uses the dedicated MongoDB upgrade companion for version decisions.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "redis/agent-skills/redis-core",
+    "path": "skills/redis-core/SKILL.md",
+    "name": "Redis Core",
+    "category": "data",
+    "license": "MIT",
+    "access": [],
+    "summary": "Guides Redis data-structure selection and consistent colon-separated key design.",
+    "note": "Matches Strings, Hashes, Lists, Sets, Sorted Sets, JSON, Streams, or Vector Sets to actual access patterns and reviews key naming. It is modeling guidance and does not itself connect to Redis or mutate a datastore.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "redis/agent-skills/redis-search",
+    "path": "skills/redis-search/SKILL.md",
+    "name": "Redis Search",
+    "category": "data",
+    "license": "MIT",
+    "access": [],
+    "summary": "Design Redis Search indexes and lexical, vector, hybrid, aggregate, and RAG queries.",
+    "note": "Provides command and client patterns for schemas, query tuning, HNSW or FLAT selection, profiling, and alias-based index rollout. It is reference guidance and does not itself connect to Redis or execute the shown commands.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "st0012/ruby-skills/ruby-test-frameworks",
+    "path": "plugins/ruby-skills/skills/ruby-test-frameworks/SKILL.md",
+    "name": "Ruby test frameworks",
+    "category": "languages",
+    "license": "MIT",
+    "access": [
+      "commands"
+    ],
+    "summary": "Distinguishes Minitest and test-unit assertions, hooks, filters, skips, and Rails behavior.",
+    "note": "Provides framework-specific assertion, CLI, lifecycle, pending, and Rails compatibility rules. It depends on the project's Ruby test framework and runner and does not call an external service or prescribe destructive actions.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "sveltejs/ai-tools/svelte-code-writer",
+    "path": "tools/skills/svelte-code-writer/SKILL.md",
+    "name": "Svelte Code Writer",
+    "category": "languages",
+    "license": "MIT",
+    "access": [
+      "commands",
+      "network"
+    ],
+    "summary": "Looks up current Svelte docs and analyzes components with the official MCP CLI.",
+    "note": "Runs @sveltejs/mcp through npx to list documentation, fetch relevant sections, and autofix-check every Svelte component before finalizing it. The source recommends using the companion svelte-file-editor agent when available, and the CLI/package must be accessible.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "trailofbits/skills/supply-chain-risk-auditor",
+    "path": "plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md",
+    "name": "Supply-chain risk auditor",
+    "category": "security",
+    "license": "CC-BY-SA-4.0",
+    "access": [
+      "commands",
+      "network",
+      "docs"
+    ],
+    "summary": "Measures dependency and lockfile supply-chain risk for npm, PyPI and Go projects.",
+    "note": "Writes its report outside the audited repository and distinguishes unassessable data from a clean result. Yarn, pnpm and Poetry lockfiles are not parsed.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "trailofbits/skills/code-improver",
+    "path": "plugins/code-improver/skills/code-improver/SKILL.md",
+    "name": "Code improver",
+    "category": "build",
+    "license": "CC-BY-SA-4.0",
+    "access": [
+      "edits",
+      "commands",
+      "git",
+      "subagents"
+    ],
+    "summary": "Runs a scoped reviewer-and-fixer loop until blocking findings clear or convergence fails.",
+    "note": "Requires an existing target directory, a user-named installed reviewer, explicit writable globs, and the plugin's dynamic workflow. The workflow keeps a findings ledger, guards scope, uses reviewer and fixer agents, never commits, and stops on caps, repeated findings, unavailable reviewers, or finalization regressions.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "trailofbits/skills/mutation-testing",
+    "path": "plugins/mutation-testing/skills/mutation-testing/SKILL.md",
+    "name": "Mutation testing",
+    "category": "debug",
+    "license": "CC-BY-SA-4.0",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "summary": "Configures mewt or muton campaigns and interprets surviving mutations as test gaps or equivalents.",
+    "note": "Routes setup, optimization, bug hunting, and formal analysis to dedicated references, using the installed CLI's help as the authority. Examples target the mewt 4.x interface, muton is interchangeable by name, and severity ranks mutations rather than business risk.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "trailofbits/skills/post-patch-validation",
+    "path": "plugins/post-patch-validation/skills/post-patch-validation/SKILL.md",
+    "name": "Post-patch validation",
+    "category": "debug",
+    "license": "CC-BY-SA-4.0",
+    "access": [
+      "edits",
+      "docs",
+      "commands",
+      "git",
+      "subagents"
+    ],
+    "summary": "Validates a security patch with pinned baseline, exploit, variant, behavior, and regression evidence.",
+    "note": "Uses a uv-driven Python runner and isolated Git worktrees to validate a structured plan, preserve logs, and distinguish findings from evidence gaps. It runs local code with the caller's privileges, rejects remote or production targets, requires execution authorization, and still leaves acceptance to human review.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "trailofbits/skills/agentic-actions-auditor",
+    "path": "plugins/agentic-actions-auditor/skills/agentic-actions-auditor/SKILL.md",
+    "name": "Agentic Actions Auditor",
+    "category": "security",
+    "license": "CC-BY-SA-4.0",
+    "access": [
+      "commands",
+      "docs"
+    ],
+    "summary": "Audits action-taking agents for unsafe execution, authority, and data-flow risks.",
+    "note": "It is an audit workflow from Trail of Bits and examines agent configuration and action boundaries.",
+    "addedAt": "2026-09-27",
+    "cleared": {
+      "safety-bypass": "The matched sandbox modes are named as unsafe audit findings, not requested execution modes.",
+      "privilege": "The matched drop-sudo token is an audited safety-strategy option, not a request to execute sudo."
+    },
+    "clearedSha256": "b2bdb88d559bc37e6c2c8314e28e7a2eb47e7cdd9da51e77da347d3517326dc0"
+  },
+  {
+    "id": "trailofbits/skills/codeql",
+    "path": "plugins/static-analysis/skills/codeql/SKILL.md",
+    "name": "CodeQL",
+    "category": "security",
+    "license": "CC-BY-SA-4.0",
+    "access": [
+      "commands",
+      "docs",
+      "network"
+    ],
+    "summary": "Runs and interprets CodeQL static analysis for security-focused code review.",
+    "note": "Checks extraction quality and query-suite coverage before interpreting zero findings. Requires CodeQL, Bash/Python helpers and a suitable build toolchain for compiled languages.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "vercel/next.js/next-dev-loop",
+    "path": "skills/next-dev-loop/SKILL.md",
+    "name": "Next.js Development Loop",
+    "category": "languages",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "browser",
+      "mcp",
+      "network"
+    ],
+    "summary": "Verifies Next.js edits through framework diagnostics and a real browser session.",
+    "note": "Cross-checks the running app through /_next/mcp and agent-browser for compilation, runtime, UI, and React behavior after edits. It requires a running Turbopack dev server, Next.js 16.3+, and agent-browser 0.31.1+; the browser session persists cookies and local storage for the checkout.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "wshobson/agents/secrets-management",
+    "path": "plugins/cicd-automation/skills/secrets-management/SKILL.md",
+    "name": "Secrets management",
+    "category": "security",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands",
+      "network"
+    ],
+    "summary": "Guides secure credential storage, rotation and use in CI/CD environments.",
+    "note": "Covers Vault, cloud secret managers and CI variables, with examples for GitHub Actions and GitLab. It assumes access to the chosen secret-management platform.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "wshobson/agents/go-concurrency-patterns",
+    "path": "plugins/systems-programming/skills/go-concurrency-patterns/SKILL.md",
+    "name": "Go Concurrency Patterns",
+    "category": "languages",
+    "license": "MIT",
+    "access": [],
+    "summary": "Design safe Go concurrency with goroutines, channels, synchronization, context, and shutdown.",
+    "note": "Provides reference patterns for worker pools, pipelines, cancellation, channel ownership, and race avoidance. It does not prescribe an external tool or service requirement.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "wshobson/agents/rust-async-patterns",
+    "path": "plugins/systems-programming/skills/rust-async-patterns/SKILL.md",
+    "name": "Rust Async Patterns",
+    "category": "languages",
+    "license": "MIT",
+    "access": [],
+    "summary": "Reference patterns for reliable async Rust with Tokio, tasks, channels, and cancellation.",
+    "note": "Explains futures, runtimes, bounded concurrency, tracing, error propagation, lock safety, and task management, with deeper examples in its companion reference. It is implementation guidance and does not itself run Cargo or contact a service.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "wshobson/agents/sql-optimization-patterns",
+    "path": "plugins/developer-essentials/skills/sql-optimization-patterns/SKILL.md",
+    "name": "SQL Optimization Patterns",
+    "category": "performance",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "summary": "Improves SQL query shapes, indexes, execution plans, and database access patterns.",
+    "note": "It uses database inspection and query commands; confirm the target environment before gathering evidence or changing indexes.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "wshobson/agents/turborepo-caching",
+    "path": "plugins/developer-essentials/skills/turborepo-caching/SKILL.md",
+    "name": "Turborepo Caching",
+    "category": "performance",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "commands"
+    ],
+    "summary": "Configures Turborepo task caching and explains cache misses in monorepos.",
+    "note": "It changes build configuration and uses local task commands to validate cache behavior.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "wshobson/agents/task-coordination-strategies",
+    "path": "plugins/agent-teams/skills/task-coordination-strategies/SKILL.md",
+    "name": "Task Coordination Strategies",
+    "category": "agents",
+    "license": "MIT",
+    "access": [
+      "subagents"
+    ],
+    "summary": "Coordinates multiple agents through task decomposition, ownership, and communication patterns.",
+    "note": "It directs subagent work and is intended for tasks whose dependencies benefit from explicit coordination.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "alirezarezvani/claude-skills/senior-security",
+    "path": "engineering-team/skills/senior-security/SKILL.md",
+    "name": "STRIDE threat modelling",
+    "category": "security",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "docs",
+      "commands"
+    ],
+    "summary": "Builds STRIDE threat models, scores risk with DREAD, scans secrets, and routes specialist work.",
+    "note": "Scopes data-flow elements, generates scored threats, scans for secrets, and routes other security lanes to sibling skills. It depends on bundled Python scripts and sibling references; high findings call for credential rotation, while red-team or cloud actions stay in their specialist workflows.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "microsoft/skills/azure-cloud-migrate",
+    "path": ".github/plugins/azure-skills/skills/azure-cloud-migrate/SKILL.md",
+    "name": "Azure cloud migration",
+    "category": "cloud",
+    "license": "MIT",
+    "access": [
+      "edits",
+      "docs",
+      "mcp",
+      "network"
+    ],
+    "summary": "Assesses and converts supported AWS, Google Cloud, Heroku, Kubernetes, and Spring workloads for Azure.",
+    "note": "Generates a scenario-specific assessment before converting code and configuration into a separate Azure output directory. It depends on Azure documentation and best-practice MCP tools plus bundled migration references; deployment is handed to azure-prepare, and destructive actions require user approval.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "mblode/agent-skills/pr-creator",
+    "path": "skills/pr-creator/SKILL.md",
+    "name": "PR creator",
+    "category": "review",
+    "license": "MIT",
+    "access": [
+      "docs",
+      "commands",
+      "git",
+      "network"
+    ],
+    "summary": "Prepares GitHub pull requests using repository templates and reviewer-focused descriptions.",
+    "note": "Needs authenticated GitHub CLI and Git, and can push commits or update PR metadata. Code fixes and later CI monitoring are delegated to separate companion skills.",
+    "addedAt": "2026-09-27"
+  },
+  {
+    "id": "dotnet/skills/author-component",
+    "path": "plugins/dotnet-blazor/skills/author-component/SKILL.md",
+    "name": "Blazor components",
+    "category": "languages",
+    "license": "MIT",
+    "access": [
+      "edits"
+    ],
+    "summary": "Shapes Blazor parameters, callbacks, rendering and async cleanup without JavaScript interop.",
+    "note": "Focuses on component architecture and asynchronous lifetimes in Razor files. JavaScript interop, forms, data fetching and new projects are routed to separate companion skills.",
+    "addedAt": "2026-09-27"
+  }
+]

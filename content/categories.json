@@ -1,0 +1,68 @@
+[
+  {
+    "slug": "plan",
+    "name": "Plan & design",
+    "short": "Plan",
+    "blurb": "Shape the work before the code: interviews, specs, domain language, plans, API contracts and decision records."
+  },
+  {
+    "slug": "build",
+    "name": "Build",
+    "short": "Build",
+    "blurb": "Write the change well: test-first loops, thin verifiable slices and simpler code."
+  },
+  {
+    "slug": "debug",
+    "name": "Test & debug",
+    "short": "Debug",
+    "blurb": "Find the real cause, prove the fix with evidence, and test in a real browser."
+  },
+  {
+    "slug": "review",
+    "name": "Review",
+    "short": "Review",
+    "blurb": "Review changes against your standards and the original intent, and take feedback with rigour."
+  },
+  {
+    "slug": "security",
+    "name": "Security",
+    "short": "Security",
+    "blurb": "Threat models, hardening and the checks that matter before real users arrive."
+  },
+  {
+    "slug": "performance",
+    "name": "Performance",
+    "short": "Performance",
+    "blurb": "Measure first, then fix what the trace actually shows."
+  },
+  {
+    "slug": "ship",
+    "name": "Ship & operate",
+    "short": "Ship",
+    "blurb": "Git hygiene, guardrails, CI and launch readiness."
+  },
+  {
+    "slug": "cloud",
+    "name": "Cloud & infrastructure",
+    "short": "Cloud",
+    "blurb": "Provision, secure and run infrastructure: AWS, Azure, Google Cloud, Cloudflare, Terraform, containers and Kubernetes."
+  },
+  {
+    "slug": "data",
+    "name": "Databases & data",
+    "short": "Data",
+    "blurb": "Schemas, queries, migrations and access rules for the databases you actually run."
+  },
+  {
+    "slug": "languages",
+    "name": "Languages & frameworks",
+    "short": "Languages",
+    "blurb": "Current, idiomatic practice for a specific language or framework, from the people who maintain it."
+  },
+  {
+    "slug": "agents",
+    "name": "Agent workflow",
+    "short": "Agents",
+    "blurb": "Context, delegation, and building your own skills and tools."
+  }
+]

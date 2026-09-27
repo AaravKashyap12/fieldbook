@@ -528,6 +528,8 @@ html:not(.js) .dir-tools { display: none; }
 .marquee { display: flex; overflow: hidden; -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent); mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent); }
 .marquee-track { display: flex; flex: none; gap: 44px; min-width: max-content; padding-right: 44px; }
 .agent { display: inline-flex; align-items: center; gap: 10px; min-height: 28px; font-size: 15px; font-weight: 500; color: var(--ink-2); white-space: nowrap; }
+.agent { transition: color 150ms ease-out; }
+.agent:active { color: var(--agent-color, var(--ink)); }
 .agent svg { width: 20px; height: 20px; flex: none; fill: currentColor; }
 
 /* ------------------------------------------------------------ start with the task */
@@ -580,7 +582,7 @@ html:not(.js) .finder-layout { grid-template-columns: 1fr; }
   .task-list a:hover .task-chevron { color: var(--accent); }
   .facet-option:hover { background: var(--hover); color: var(--ink); }
   .facet > summary:hover { color: var(--accent); }
-  .agent:hover { color: var(--ink); }
+  .agent:hover { color: var(--agent-color, var(--ink)); }
   .chip:hover { background: color-mix(in srgb, var(--ink) 86%, var(--accent)); }
   .sort select:hover { box-shadow: inset 0 0 0 1px var(--ink-3); }
   .pick:hover input:checked + span { box-shadow: none; }
@@ -758,3 +760,20 @@ html:not(.js) .finder-layout { grid-template-columns: 1fr; }
   .code-block, .skillmd, .search, .segmented, .sheet, .island, .pick span, .gh-pill { border: 1px solid CanvasText; }
   .brand-mark, .status i, .dg { forced-color-adjust: none; }
 }
+
+/* Human-readable companion to the RSS feed. */
+.feed-subscribe { padding: 24px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
+.feed-subscribe h2, .feed-list-title { font-size: 24px; line-height: 1.2; }
+.feed-subscribe > p { margin-top: 8px; color: var(--ink-2); }
+.feed-subscribe .code-block { margin-top: 20px; }
+.feed-subscribe > .link { margin-top: 16px; }
+.feed-list { margin-top: 24px; }
+.feed-entry { padding-block: 24px; border-top: 1px solid var(--line); }
+.feed-entry:last-child { border-bottom: 1px solid var(--line); }
+.feed-meta { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 13px; color: var(--ink-3); }
+.feed-entry h3 { margin-top: 10px; font-family: var(--serif); font-size: 30px; font-weight: 400; line-height: 1.15; }
+.feed-entry h3 a { display: inline-flex; align-items: baseline; gap: 12px; }
+.feed-entry h3 .icon { width: 16px; height: 16px; flex: none; }
+.feed-by { margin-block: 6px 10px; font-size: 14px; color: var(--ink-3); }
+.feed-entry > p:last-child { color: var(--ink-2); }
+.feed-entry h3 a:hover { color: var(--accent); }

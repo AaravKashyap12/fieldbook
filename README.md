@@ -19,7 +19,9 @@ npm run daily     # sync + review + build + check (what CI runs)
 | --- | --- | --- |
 | `content/skills.json` | Fieldbook originals, with rich page content | By hand |
 | `content/directory.json` | Community listings: id, path, name, stage, licence, access labels, summary, review note | By hand, after a review |
-| `content/categories.json`, `content/kits.json`, `content/authors.json` | Stages of the work, kits, maintainer names | By hand |
+| `content/categories.json`, `content/kits.json`, `content/authors.json` | Stages of the work, kits, maintainer names (`official: true` marks vendor and organisation repositories) | By hand |
+| `content/taxonomy.json` | The finder's vocabulary: tasks, and stacks in four groups | By hand |
+| `content/agents.json` | The agents row on the home page: names and single-colour marks from Simple Icons (CC0), with versions | By hand |
 | `content/review.json` | Automated check results per skill (lines, frontmatter, scanner findings, hash) | `npm run review` |
 | `content/stats/YYYY-MM-DD.json` | Daily install counts (skills.sh) and repository stars and push dates (GitHub) | `npm run sync` |
 | `content/skillmd/*.md` | Copies of originals' `SKILL.md`, shown on their pages | By hand |

@@ -44,6 +44,8 @@ Add an entry to `content/directory.json`:
   "category": "plan | build | debug | review | security | performance | ship | agents | stack",
   "license": "MIT",
   "access": ["edits", "docs", "commands", "git", "subagents", "browser", "mcp", "network"],
+  "tasks": ["write-tests", "implement"],
+  "stack": ["python"],
   "summary": "One line on what it does, in your own words.",
   "note": "One or two sentences a user would want before installing: what stands out, and any catch.",
   "addedAt": "YYYY-MM-DD"
@@ -51,6 +53,8 @@ Add an entry to `content/directory.json`:
 ```
 
 - `name` is readable title case ("Azure cloud migration"), never the folder slug.
+- `tasks`: one to three slugs from `content/taxonomy.json` for the jobs a person would search for ("Write tests", "Secure an app"). Tag what the skill is for, not every word in its description.
+- `stack`: slugs from `content/taxonomy.json` only when the skill is specific to that language, framework, database or platform. Leave it empty for general skills; the finder shows them for every stack.
 - `access` lists only what the instructions ask the agent to do. Leave it empty for guidance-only skills.
 - Write the summary and note yourself. Do not copy the skill's description.
 - Add the maintainer to `content/authors.json` if they are new.

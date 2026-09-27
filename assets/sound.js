@@ -8,10 +8,13 @@
 // is also the only time these cues fire.
 
 const KEY = 'fieldbook:sound';
-const MASTER = 0.5;
+// Everything routes through one output stage: a gain and a limiter, so cues
+// are clearly audible on laptop speakers and overlaps never distort.
+const MASTER = 0.9;
 const reduced = matchMedia('(prefers-reduced-motion: reduce)');
 
 let ctx = null;
+let out = null;
 let enabled = readPreference();
 
 function readPreference() {
@@ -32,7 +35,17 @@ export function setEnabled(value) {
 function context() {
   const AC = window.AudioContext || window.webkitAudioContext;
   if (!AC) return null;
-  if (!ctx) ctx = new AC();
+  if (!ctx) {
+    ctx = new AC();
+    const limiter = ctx.createDynamicsCompressor();
+    limiter.threshold.value = -8;
+    limiter.knee.value = 6;
+    limiter.ratio.value = 12;
+    limiter.attack.value = 0.002;
+    limiter.release.value = 0.12;
+    limiter.connect(ctx.destination);
+    out = limiter;
+  }
   if (ctx.state === 'suspended') ctx.resume();
   return ctx;
 }
@@ -56,7 +69,7 @@ function tone(ac, { type = 'sine', from, to = from, at = 0, dur, gain, lowpass }
     osc.connect(filter);
     node = filter;
   }
-  node.connect(env).connect(ac.destination);
+  node.connect(env).connect(out);
   osc.start(t);
   osc.stop(t + dur + 0.03);
 }
@@ -79,32 +92,32 @@ function rustle(ac, { at = 0, dur = 0.11, gain = 0.14, freq = 2600, q = 0.9 }) {
   env.gain.setValueAtTime(0.0001, t);
   env.gain.exponentialRampToValueAtTime(gain * MASTER, t + 0.012);
   env.gain.exponentialRampToValueAtTime(0.0001, t + dur);
-  src.connect(band).connect(env).connect(ac.destination);
+  src.connect(band).connect(env).connect(out);
   src.start(t);
   src.stop(t + dur + 0.02);
 }
 
 const cues = {
-  // A dry tick for pressing a link or row.
-  tick: ac => tone(ac, { type: 'triangle', from: 1900, to: 1300, dur: 0.035, gain: 0.08, lowpass: 4200 }),
+  // A crisp tick for pressing a link, row, chip or button.
+  tick: ac => tone(ac, { type: 'triangle', from: 1750, to: 1150, dur: 0.05, gain: 0.34, lowpass: 5200 }),
   // Click then clack: something switched between states.
   toggle: ac => {
-    tone(ac, { type: 'square', from: 820, to: 640, dur: 0.026, gain: 0.045, lowpass: 2400 });
-    tone(ac, { from: 1450, dur: 0.05, at: 0.03, gain: 0.06 });
+    tone(ac, { type: 'square', from: 820, to: 640, dur: 0.035, gain: 0.16, lowpass: 2600 });
+    tone(ac, { from: 1450, dur: 0.07, at: 0.035, gain: 0.3 });
   },
-  // Two rising notes for a confirmed copy.
+  // Two rising notes for a confirmed copy or a sent submission.
   success: ac => {
-    tone(ac, { from: 880, dur: 0.11, gain: 0.1 });
-    tone(ac, { from: 1318, dur: 0.16, at: 0.07, gain: 0.08 });
+    tone(ac, { from: 880, dur: 0.14, gain: 0.38 });
+    tone(ac, { from: 1318, dur: 0.2, at: 0.08, gain: 0.32 });
   },
   // A page turning in the notebook.
   page: ac => {
-    rustle(ac, { dur: 0.13, gain: 0.16, freq: 3000 });
-    tone(ac, { from: 180, to: 120, dur: 0.07, at: 0.06, gain: 0.05, lowpass: 600 });
+    rustle(ac, { dur: 0.16, gain: 0.7, freq: 3000 });
+    tone(ac, { from: 180, to: 120, dur: 0.09, at: 0.07, gain: 0.3, lowpass: 700 });
   },
   // Sound switched on, and off.
-  on: ac => { tone(ac, { from: 660, dur: 0.08, gain: 0.07 }); tone(ac, { from: 990, dur: 0.12, at: 0.06, gain: 0.07 }); },
-  off: ac => tone(ac, { from: 660, to: 440, dur: 0.1, gain: 0.07 })
+  on: ac => { tone(ac, { from: 660, dur: 0.1, gain: 0.3 }); tone(ac, { from: 990, dur: 0.14, at: 0.07, gain: 0.3 }); },
+  off: ac => tone(ac, { from: 660, to: 440, dur: 0.12, gain: 0.3 })
 };
 
 export function play(name, { force = false } = {}) {

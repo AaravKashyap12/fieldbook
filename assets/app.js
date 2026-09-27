@@ -342,7 +342,9 @@ if (dir && dirList && dirSearch) {
     const input = form.querySelector(`input[name="${g}"][value="${CSS.escape(v)}"]`);
     if (input) { input.checked = true; input.closest('details.facet')?.setAttribute('open', ''); }
   }
-  if (sort) sort.value = keys[params.get('sort')] || params.get('sort') === 'match' ? params.get('sort') : (params.get('q') ? 'match' : 'installs');
+  const supportsSort = value => sort && [...sort.options].some(option => option.value === value);
+  const defaultSort = () => dirSearch.value.trim() && supportsSort('match') ? 'match' : 'installs';
+  if (sort) sort.value = supportsSort(params.get('sort')) ? params.get('sort') : defaultSort();
   let sortTouched = Boolean(params.get('sort'));
   if (panel && matchMedia('(max-width: 880px)').matches && !GROUPS.some(g => params.get(g))) panel.removeAttribute('open');
 
@@ -403,7 +405,7 @@ if (dir && dirList && dirSearch) {
   };
 
   dirSearch.addEventListener('input', () => {
-    if (sort && !sortTouched) sort.value = dirSearch.value.trim() ? 'match' : 'installs';
+    if (sort && !sortTouched) sort.value = defaultSort();
     apply();
   });
   dirSearch.addEventListener('keydown', event => { if (event.key === 'Escape') { dirSearch.value = ''; if (sort && !sortTouched) sort.value = 'installs'; apply(); } });

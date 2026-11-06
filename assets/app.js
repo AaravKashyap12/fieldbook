@@ -2,6 +2,7 @@
 // copy buttons degrade to selectable text, all install methods show, the
 // notebook is a still stack and SKILL.md is fully open.
 import { play, isEnabled, setEnabled } from './sound.js';
+import { compareMatches, defaultFinderSort } from './finder.js';
 
 const root = document.documentElement;
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -298,7 +299,8 @@ if (dir && dirList && dirSearch) {
     stage: row.dataset.cat,
     source: row.dataset.source,
     read: row.dataset.read === '1',
-    name: row.querySelector('h3')?.textContent.toLowerCase() || ''
+    name: row.querySelector('h3')?.textContent.toLowerCase() || '',
+    installs: Number(row.dataset.installs)
   }]));
   const LIMIT_TESTS = {
     guidance: f => f.access.size === 0,
@@ -311,7 +313,7 @@ if (dir && dirList && dirSearch) {
     if (!values.length) return true;
     if (group === 'task') return values.some(v => f.task.has(v));
     // A stack pick means "works with my stack": general skills qualify too, and
-    // stack-specific ones are ranked first (see `how` below).
+    // stack-specific ones rank first when using Best match.
     if (group === 'stack') return values.some(v => (v === 'any' ? f.stack.size === 0 : f.stack.has(v) || f.stack.size === 0));
     if (group === 'limit') return values.every(v => LIMIT_TESTS[v]?.(f) ?? true);
     if (group === 'stage') return values.includes(f.stage);
@@ -323,10 +325,6 @@ if (dir && dirList && dirSearch) {
     const f = facts.get(row);
     if (q.length && !q.every(w => row.dataset.search.includes(w))) return false;
     return GROUPS.every(g => g === skip || matchesGroup(f, g, state[g]));
-  };
-  const score = (row, q) => {
-    const f = facts.get(row);
-    return q.reduce((sum, w) => sum + (f.name.includes(w) ? 3 : 0) + (row.dataset.search.includes(w) ? 1 : 0), 0);
   };
   const keys = {
     installs: (a, b) => b.dataset.installs - a.dataset.installs,
@@ -343,20 +341,20 @@ if (dir && dirList && dirSearch) {
     if (input) { input.checked = true; input.closest('details.facet')?.setAttribute('open', ''); }
   }
   const supportsSort = value => sort && [...sort.options].some(option => option.value === value);
-  const defaultSort = () => dirSearch.value.trim() && supportsSort('match') ? 'match' : 'installs';
+  const defaultSort = () => defaultFinderSort(dirSearch.value, selected(), supportsSort('match'));
   if (sort) sort.value = supportsSort(params.get('sort')) ? params.get('sort') : defaultSort();
-  let sortTouched = Boolean(params.get('sort'));
+  let sortTouched = Boolean(supportsSort(params.get('sort')));
   if (panel && matchMedia('(max-width: 880px)').matches && !GROUPS.some(g => params.get(g))) panel.removeAttribute('open');
 
   const apply = ({ remember = true } = {}) => {
     const q = words();
     const state = selected();
+    if (sort && !sortTouched) sort.value = defaultSort();
     let shown = 0;
     for (const row of rows) { const hit = passes(row, state, q); row.hidden = !hit; if (hit) shown += 1; }
-    const base = sort?.value === 'match' && q.length ? (a, b) => score(b, q) - score(a, q) || keys.installs(a, b) : keys[sort?.value] || keys.installs;
-    const stacks = state.stack.filter(v => v !== 'any');
-    const specific = row => (stacks.some(v => facts.get(row).stack.has(v)) ? 1 : 0);
-    const how = stacks.length ? (a, b) => specific(b) - specific(a) || base(a, b) : base;
+    const how = sort?.value === 'match'
+      ? (a, b) => compareMatches(facts.get(a), facts.get(b), dirSearch.value, state)
+      : keys[sort?.value] || keys.installs;
     dirList.append(...[...rows].sort(how));
 
     const picked = GROUPS.reduce((n, g) => n + state[g].length, 0);
@@ -399,16 +397,13 @@ if (dir && dirList && dirSearch) {
       const next = new URLSearchParams();
       if (dirSearch.value.trim()) next.set('q', dirSearch.value.trim());
       for (const g of GROUPS) if (state[g].length) next.set(g, state[g].join(','));
-      if (sort && sortTouched && !(sort.value === 'installs' && !q.length)) next.set('sort', sort.value);
+      if (sort && sortTouched) next.set('sort', sort.value);
       history.replaceState(null, '', `${location.pathname}${next.size ? `?${next}` : ''}`);
     }
   };
 
-  dirSearch.addEventListener('input', () => {
-    if (sort && !sortTouched) sort.value = defaultSort();
-    apply();
-  });
-  dirSearch.addEventListener('keydown', event => { if (event.key === 'Escape') { dirSearch.value = ''; if (sort && !sortTouched) sort.value = 'installs'; apply(); } });
+  dirSearch.addEventListener('input', () => apply());
+  dirSearch.addEventListener('keydown', event => { if (event.key === 'Escape') { dirSearch.value = ''; apply(); } });
   sort?.addEventListener('change', () => { sortTouched = true; apply(); play('toggle'); });
   form?.addEventListener('change', () => { apply(); play('tick'); });
   form?.addEventListener('submit', event => event.preventDefault());

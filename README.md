@@ -19,10 +19,10 @@ Agent skills give your coding agent a repeatable way to work. Finding one means 
 ## Find a skill, then get back to work
 
 - **Search by the job.** Plan a feature, write tests, fix a bug, secure an app or ship a release.
-- **Match your stack.** Filter by language, framework, database or infrastructure. General-purpose skills remain available across stacks.
+- **Match your task and stack.** Best match is the default when searching or selecting tasks or stacks. It prioritizes matching names, stack fit and focused task coverage before install counts. General-purpose skills remain available across stacks; you can still choose an explicit popularity sort.
 - **See what it touches.** Access labels describe instructions involving edits, commands, git, network access, browsers, MCP or subagents.
 - **Read before installing.** Each page includes a summary, review notes, source link, licence and install command.
-- **Start with a kit.** Small collections cover workflows such as planning, bug hunting and code review.
+- **Start with a kit.** Small collections cover planning, bug hunting and code review, with available and paused members counted separately. The Bug hunt kit guides you from choosing one starter through reproducing a failure and verifying the fix.
 - **Follow what changes.** Daily snapshots track recorded installs and repository stars. Follow the [RSS feed](https://fieldbook.tech/feed.xml) for additions.
 
 ```mermaid
@@ -45,7 +45,7 @@ npx skills add owner/repository --skill skill-name
 
 Replace the placeholders with the values from the listing. The CLI asks which supported agents to install for, including Claude Code and Codex. Add `-g` if you want a global installation. Kit pages collect the individual commands in one place.
 
-Fieldbook is the directory; you install each skill from its author's repository.
+Fieldbook is the directory; you install each skill from its author's repository. Commands do not pin a reviewed revision. `skills@latest` selects the installer, not a skill version. Review hashes cover the scanned `SKILL.md`, not a repository commit or referenced files. Check the current source before installing. Human-reading dates and evaluation links describe separate recorded evidence, not a guarantee about the version you install.
 
 ## What “reviewed” means
 

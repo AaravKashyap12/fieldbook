@@ -1,0 +1,62 @@
+import assert from 'node:assert/strict';
+import { readFile } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import { loadContent } from './lib/data.mjs';
+import { reviewEvidence } from './lib/parts.mjs';
+import { bugHuntJourney, kitAvailability, kitPage } from './lib/kits.mjs';
+
+const root = fileURLToPath(new URL('../', import.meta.url));
+const { entries, kits } = await loadContent(root);
+const definition = kits.find(k => k.slug === 'bug-hunt');
+const actual = { ...definition, entries: definition.ids.map(id => entries.find(e => e.id === id)) };
+const allAvailable = { ...actual, entries: actual.entries.map(e => ({ ...e, paused: false, retained: false, readAt: null, original: false, review: { checkedAt: '2026-01-01' } })) };
+const allPaused = { ...actual, entries: actual.entries.map(e => ({ ...e, paused: true, reviewReason: 'Fixture: waiting for review.' })) };
+const mixed = { ...allAvailable, entries: allAvailable.entries.map((e, i) => ({ ...e, paused: i === 0, reviewReason: i === 0 ? 'Fixture: waiting for review.' : '' })) };
+assert.equal(kitAvailability(allAvailable), '4 of 4 available · 0 paused');
+assert.equal(kitAvailability(allPaused), '0 of 4 available · 4 paused');
+assert.equal(kitAvailability(mixed), '3 of 4 available · 1 paused');
+const mixedHtml = kitPage(mixed);
+assert.ok(!mixedHtml.includes(mixed.entries[0].install), 'Paused starter command must be omitted');
+assert.ok(mixedHtml.includes('Use the systematic-debugging skill'), 'Use the next available starter');
+assert.ok(!mixedHtml.includes('Use the diagnosing-bugs skill'), 'Do not prompt use of a paused starter');
+const pausedHtml = kitPage(allPaused);
+assert.ok(!pausedHtml.includes('data-copy='), 'All-paused kit has no install or activation copy controls');
+assert.ok(!pausedHtml.includes('npx skills'), 'All-paused kit has no install commands');
+assert.ok(pausedHtml.includes('All starting skills are paused'));
+assert.ok(pausedHtml.includes('All skills in this kit are paused'));
+assert.ok(pausedHtml.includes('verification skill') || pausedHtml.includes('Verification before completion'));
+const verifierPaused = { ...allAvailable, entries: allAvailable.entries.map(e => ({ ...e, paused: e.skill === 'verification-before-completion' })) };
+assert.ok(!kitPage(verifierPaused).includes('id="bug-verification-prompt"'));
+assert.equal(bugHuntJourney({ ...allAvailable, slug: 'other-kit' }), '');
+const noStarters = { ...allAvailable, entries: allAvailable.entries.filter(e => e.skill === 'verification-before-completion') };
+assert.ok(!bugHuntJourney(noStarters).includes('id="bug-starter-prompt"'));
+const retained = { ...allAvailable.entries[0], retained: true };
+assert.ok(reviewEvidence(retained).includes('Current upstream content is unverified'));
+assert.ok(reviewEvidence(retained).includes('Latest fetch failed'));
+const community = allAvailable.entries[0];
+assert.ok(reviewEvidence(community).includes('No full human-reading date recorded'));
+assert.ok(reviewEvidence(community).includes('No runtime-test evidence recorded here'));
+const original = { ...community, original: true, readAt: '2026-01-01', data: { evidence: 'https://example.com/evaluation' } };
+assert.ok(reviewEvidence(original).includes('Published evaluation notes'));
+assert.ok(reviewEvidence(original).includes('Evaluation date not recorded here'));
+assert.ok(reviewEvidence(original).includes('Not a test of every upstream revision'));
+assert.ok(reviewEvidence(original).includes('not bound to the current source revision'));
+assert.ok(reviewEvidence(community, { compact: true }).includes('not a pinned reviewed revision'));
+const escaped = reviewEvidence({ ...community, paused: true, reviewReason: '<script>probe</script>' });
+assert.ok(!escaped.includes('<script>'));
+
+const built = await readFile(new URL('../dist/kits/bug-hunt/index.html', import.meta.url), 'utf8');
+assert.ok(built.includes(kitAvailability(actual)), 'Built kit reflects actual review state');
+for (const e of actual.entries) assert.equal(built.includes(e.install), !e.paused, `${e.id}: command availability`);
+for (const heading of ['Choose your starting skill', 'Install one and confirm it loaded', 'Give the agent a useful starting prompt', 'Ask for evidence, not just a fix', 'Verify before calling it done']) assert.ok(built.includes(heading));
+const index = await readFile(new URL('../dist/kits/index.html', import.meta.url), 'utf8');
+assert.ok(index.includes(kitAvailability(actual)));
+const detail = await readFile(new URL(`../dist${community.url}index.html`, import.meta.url), 'utf8');
+const actualCommunity = actual.entries.find(e => e.id === community.id);
+if (actualCommunity.paused) {
+  assert.ok(!detail.includes('data-copy='), 'Paused detail offers no install or prompt copies');
+} else {
+  assert.ok(detail.indexOf('Automated scan:') < detail.indexOf('id="install-0"'), 'Evidence precedes install command');
+  assert.ok(detail.includes('not a pinned reviewed revision'));
+}
+console.log('Passed: guided journey, paused/fallback states, review evidence, install disclosure and generated kit availability.');

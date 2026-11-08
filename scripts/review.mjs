@@ -16,6 +16,8 @@ import { createHash } from 'node:crypto';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { loadContent } from './lib/data.mjs';
 import { reviewState } from './lib/security.mjs';
+import { isRevision, sourceUrl } from './lib/revisions.mjs';
+export { sourceUrl } from './lib/revisions.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const RULES = {
@@ -33,10 +35,9 @@ const RULES = {
 export class FetchFailure extends Error {
   constructor(kind, retryable = false) { super(kind); this.kind = kind; this.retryable = retryable; }
 }
-export const sourceUrl = e => `https://raw.githubusercontent.com/${e.repo}/HEAD/${e.path}`;
-export async function fetchSkill(repo, file, { fetchImpl = fetch } = {}) {
+async function fetchBody(url, { fetchImpl = fetch, headers = {} } = {}) {
   let res;
-  try { res = await fetchImpl(sourceUrl({ repo, path: file }), { headers: { 'User-Agent': 'fieldbook-review' }, signal: AbortSignal.timeout(20000) }); }
+  try { res = await fetchImpl(url, { headers: { 'User-Agent': 'fieldbook-review', ...headers }, signal: AbortSignal.timeout(20000), redirect: 'error' }); }
   catch { throw new FetchFailure('network', true); }
   if (!res.ok) throw new FetchFailure(`http-${res.status}`, res.status >= 500 && res.status <= 599);
   if (Number(res.headers.get('content-length')) > 1_000_000) throw new FetchFailure('response-too-large');
@@ -49,6 +50,28 @@ export async function fetchSkill(repo, file, { fetchImpl = fetch } = {}) {
     }
   } catch (error) { if (error instanceof FetchFailure) throw error; throw new FetchFailure('network', true); }
   return Buffer.concat(chunks).toString('utf8');
+}
+
+export async function fetchSkill(repo, file, { fetchImpl = fetch, revision = 'HEAD' } = {}) {
+  if (revision !== 'HEAD' && !isRevision(revision)) throw new FetchFailure('invalid-revision');
+  return fetchBody(sourceUrl({ repo, path: file }, revision), { fetchImpl });
+}
+
+// Resolve once per repository, then read only the immutable checkout. Failed
+// resolution is a failed review attempt, never a silent fallback to HEAD.
+export function createReviewFetcher({ fetchImpl = fetch, token = process.env.GITHUB_TOKEN } = {}) {
+  const revisions = new Map();
+  return async entry => {
+    if (!revisions.has(entry.repo)) revisions.set(entry.repo, (async () => {
+      const revision = (await fetchBody(`https://api.github.com/repos/${entry.repo}/commits/HEAD`, {
+        fetchImpl, headers: { Accept: 'application/vnd.github.sha', ...(token ? { Authorization: `Bearer ${token}` } : {}) }
+      })).trim();
+      if (!isRevision(revision)) throw new FetchFailure('invalid-revision');
+      return revision;
+    })());
+    const revision = await revisions.get(entry.repo);
+    return { text: await fetchSkill(entry.repo, entry.path, { fetchImpl, revision }), revision };
+  };
 }
 
 // A top-level YAML scalar: plain, quoted, or a block scalar (`>`, `|`, with
@@ -87,17 +110,19 @@ export function check(text, skill) {
   return { lines: lines.length, name, descriptionLength: description?.length || 0, findings, problems, sha256: createHash('sha256').update(text).digest('hex') };
 }
 
-export async function reviewEntries(entries, previous, { fetchText = e => fetchSkill(e.repo, e.path), checkedAt = new Date().toISOString().slice(0, 10) } = {}) {
+export async function reviewEntries(entries, previous, { fetchSource = createReviewFetcher(), checkedAt = new Date().toISOString().slice(0, 10) } = {}) {
   if (!entries.length) throw new Error('Refusing an empty review batch.');
   const out = {}; let failed = 0; let retained = 0;
   for (const e of entries) {
     const id = e.id.toLowerCase();
     try {
-      const text = await fetchText(e);
+      const { text, revision } = await fetchSource(e);
+      if (revision != null && !isRevision(revision)) throw new FetchFailure('invalid-revision');
       // A successful response always replaces the prior result, including changed
       // content, findings and invalid frontmatter. It never falls back to cache.
       const r = check(text, e.skill);
-      out[id] = { checkedAt, lastAttemptAt: checkedAt, source: sourceUrl(e), status: 'current', ...r };
+      out[id] = { checkedAt, lastAttemptAt: checkedAt, source: sourceUrl(e), status: 'current', ...r,
+        ...(revision ? { revision, pinnedSource: sourceUrl(e, revision) } : {}) };
     } catch (error) {
       if (!(error instanceof FetchFailure)) throw error;
       failed += 1;

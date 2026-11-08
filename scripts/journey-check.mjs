@@ -9,7 +9,7 @@ const root = fileURLToPath(new URL('../', import.meta.url));
 const { entries, kits } = await loadContent(root);
 const definition = kits.find(k => k.slug === 'bug-hunt');
 const actual = { ...definition, entries: definition.ids.map(id => entries.find(e => e.id === id)) };
-const allAvailable = { ...actual, entries: actual.entries.map(e => ({ ...e, paused: false, retained: false, readAt: null, original: false, review: { checkedAt: '2026-01-01' } })) };
+const allAvailable = { ...actual, entries: actual.entries.map(e => ({ ...e, paused: false, retained: false, revision: null, readAt: null, original: false, review: { checkedAt: '2026-01-01' } })) };
 const allPaused = { ...actual, entries: actual.entries.map(e => ({ ...e, paused: true, reviewReason: 'Fixture: waiting for review.' })) };
 const mixed = { ...allAvailable, entries: allAvailable.entries.map((e, i) => ({ ...e, paused: i === 0, reviewReason: i === 0 ? 'Fixture: waiting for review.' : '' })) };
 assert.equal(kitAvailability(allAvailable), '4 of 4 available · 0 paused');
@@ -57,6 +57,6 @@ if (actualCommunity.paused) {
   assert.ok(!detail.includes('data-copy='), 'Paused detail offers no install or prompt copies');
 } else {
   assert.ok(detail.indexOf('Automated scan:') < detail.indexOf('id="install-0"'), 'Evidence precedes install command');
-  assert.ok(detail.includes('not a pinned reviewed revision'));
+  assert.ok(detail.includes(actualCommunity.revision ? 'The install command targets this commit.' : 'not a pinned reviewed revision'));
 }
 console.log('Passed: guided journey, paused/fallback states, review evidence, install disclosure and generated kit availability.');

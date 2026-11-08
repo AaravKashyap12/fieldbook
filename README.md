@@ -45,7 +45,7 @@ npx skills add owner/repository --skill skill-name
 
 Replace the placeholders with the values from the listing. The CLI asks which supported agents to install for, including Claude Code and Codex. Add `-g` if you want a global installation. Kit pages collect the individual commands in one place.
 
-Fieldbook is the directory; you install each skill from its author's repository. Commands do not pin a reviewed revision. `skills@latest` selects the installer, not a skill version. Review hashes cover the scanned `SKILL.md`, not a repository commit or referenced files. Check the current source before installing. Human-reading dates and evaluation links describe separate recorded evidence, not a guarantee about the version you install.
+Fieldbook is the directory; you install each skill from its author's repository. When a source revision is recorded, commands target that full repository commit and source links open the scanned `SKILL.md` at the same commit. Older reviews without a commit remain labelled as unpinned. `skills@latest` selects the installer, not a skill version. The automated scan covers only `SKILL.md`, not referenced files or runtime behavior. Human-reading dates and evaluation links remain separate evidence. Pins can change after a successful daily scan, so save the full command to reproduce an installation.
 
 ## What “reviewed” means
 

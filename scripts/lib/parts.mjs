@@ -12,7 +12,15 @@ export function codeBlock(text, label, id, { command = false } = {}) {
 export const catIcon = (slug, cls = '') => icon(categoryIcon[slug] || 'book', cls);
 export const accessText = e => e.access.length ? e.access.map(a => ACCESS[a].label).join(' · ') : 'Guidance only';
 
-export const installCaution = '<p class="install-help install-caution">Installs the upstream repository’s current version, not a pinned reviewed revision. The source may have changed since the check. <a class="inline-link" href="/review/#versions">What the review covers</a>.</p>';
+export function installCaution(entries = []) {
+  const list = Array.isArray(entries) ? entries : [entries];
+  const pinned = list.filter(e => e.revision).length;
+  const message = pinned && pinned === list.length
+    ? 'Commands target the repository commits recorded with the automated scans. Scans cover only SKILL.md, not referenced files or runtime behavior.'
+    : pinned ? `${pinned} of ${list.length} commands target recorded commits. The others install the current upstream version and may differ from the scan. Check each listing’s source revision.`
+    : 'Installs the upstream repository’s current version, not a pinned reviewed revision. The source may have changed since the check.';
+  return `<p class="install-help install-caution">${message} <a class="inline-link" href="/review/#versions">What the review covers</a>.</p>`;
+}
 
 // Keep scan, human reading and runtime evidence separate. None establishes
 // that a moving upstream source still matches a previously checked file.
@@ -25,8 +33,9 @@ export function reviewEvidence(e, { compact = false } = {}) {
   const runtime = e.original && e.data?.evidence
     ? `<a class="inline-link" href="${esc(e.data.evidence)}" target="_blank" rel="noopener noreferrer">Published evaluation notes<span class="sr-only"> (opens in a new tab)</span></a>. Evaluation date not recorded here; see the notes for dates, scope and limitations. Not a test of every upstream revision.`
     : 'No runtime-test evidence recorded here.';
-  const content = `<ul class="evidence-list"><li><strong>Automated scan:</strong> ${scan}</li><li><strong>Human reading:</strong> ${esc(reading)}</li><li><strong>Runtime evidence:</strong> ${runtime}</li></ul><p class="install-help">A review is not a security audit or a guarantee.</p>`;
-  return compact ? `<details class="review-evidence"><summary>${status} · evidence and limits</summary>${content}${installCaution}</details>`
+  const revision = e.revision ? `<a class="inline-link" href="${esc(e.sourceUrl)}" target="_blank" rel="noopener noreferrer" title="${e.revision}">${e.revision.slice(0, 12)}<span class="sr-only"> (opens in a new tab)</span></a>. ${e.paused ? 'Installation is paused for this revision.' : e.retained ? 'Last successful scan; newer upstream changes are unverified.' : 'The install command targets this commit.'} Only SKILL.md was scanned.` : 'No repository commit recorded. Install command is unpinned.';
+  const content = `<ul class="evidence-list"><li><strong>Automated scan:</strong> ${scan}</li><li><strong>Source revision:</strong> ${revision}</li><li><strong>Human reading:</strong> ${esc(reading)}</li><li><strong>Runtime evidence:</strong> ${runtime}</li></ul><p class="install-help">A review is not a security audit or a guarantee.</p>`;
+  return compact ? `<details class="review-evidence"><summary>${status} · evidence and limits</summary>${content}${e.paused ? '' : installCaution(e)}</details>`
     : `<div class="review-evidence"><p class="evidence-status">${status}</p>${content}</div>`;
 }
 

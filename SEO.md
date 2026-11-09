@@ -13,6 +13,8 @@ The shared page shell renders unique titles, descriptions, clean canonical URLs,
 
 Filtered finder URLs canonicalize to `/skills/`; filters are a browsing aid, not hundreds of duplicate landing pages. Paused skill pages remain reachable with their explanation but are marked `noindex, follow` and omitted from the sitemap. The 404 page is also `noindex`. The sitemap omits `lastmod` because the build does not track reliable per-page modification dates.
 
+Four curated task destinations under `/tasks/` cover debugging, testing, code review and app security. Each has its own selection guidance, preparation steps, verification checklist and server-rendered list of available matching skills. The existing task links lead to these pages; other tasks still open the finder. Each guide links back to the finder with its task preselected so stack and access filters remain available. These pages have their own canonical URLs, breadcrumbs and sitemap entries. Add a new guide only when it has useful task-specific content, not to produce every combination of keywords and filters. `scripts/task-check.mjs` checks their listing coverage, links and paused states.
+
 Google Search Console uses the URL-prefix property `https://fieldbook.tech/`. Keep the public `google-site-verification` meta tag: Google can recheck it. The sitemap is `https://fieldbook.tech/sitemap.xml`. Verification and submission do not guarantee indexing or rankings; consult Search Console for actual status. No analytics or tracking scripts were added.
 
 ## Maintenance

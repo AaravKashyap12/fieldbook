@@ -1,3 +1,4 @@
+import { reviewedRevision } from './revisions.mjs';
 // Pure validation and review-state rules shared by ingestion, rendering and checks.
 export const count = value => Number.isSafeInteger(value) && value >= 0 ? value : null;
 export const deltaValue = value => Number.isSafeInteger(value) ? value : null;
@@ -11,6 +12,10 @@ export function reviewState(review, entry = {}) {
   if (!review || review.status === 'unavailable' || !Array.isArray(review.problems) || !Array.isArray(review.findings)
       || !/^(?:[a-f0-9]{16}|[a-f0-9]{64})$/.test(review.sha256 || '') || !day(review.checkedAt)
       || review.findings.some(f => !f || typeof f.rule !== 'string' || !Number.isSafeInteger(f.line) || f.line < 1)) return result;
+  if ((Object.hasOwn(review, 'revision') || Object.hasOwn(review, 'pinnedSource')) && !reviewedRevision(review, entry)) {
+    result.reviewReason = 'Recorded source revision could not be verified.';
+    return result;
+  }
   const bound = /^[a-f0-9]{64}$/.test(entry.clearedSha256 || '') && entry.clearedSha256 === review.sha256;
   const approved = f => bound && typeof entry.cleared?.[f.rule] === 'string' && entry.cleared[f.rule].trim().length > 0;
   result.openFlags = review.findings.filter(f => !approved(f));

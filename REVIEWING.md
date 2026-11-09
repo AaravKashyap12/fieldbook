@@ -9,7 +9,11 @@ npm run review -- owner/repo/skill
 npm run review -- owner/repo/skill path/to/SKILL.md   # if the folder is not in a standard place
 ```
 
-This fetches the published `SKILL.md` and reports frontmatter problems and scanner matches (rule and line only). It does not run the skill.
+The single-skill command fetches the current published `SKILL.md` and reports frontmatter problems and scanner matches (rule and line only). It does not run the skill or write a review record.
+
+The full refresh resolves each repository’s current commit once, fetches each `SKILL.md` at that exact revision, then records its full SHA-256, `revision` and immutable `pinnedSource`. It never assigns a new commit to an old scan. Failed resolution counts as a fetch failure; eligible retained reviews keep their original revision and scan date. Legacy records without a revision stay explicitly unpinned until a successful refresh. A commit pin does not mean referenced files were scanned, read by a human, or runtime-tested. Do not fill in revision fields by hand.
+
+Pinned install commands use a full GitHub tree URL followed by `--skill name`, supported by the Skills CLI. The CLI version selected by `skills@latest` is separate from the skill’s source revision.
 
 A match is a prompt to read, not a verdict:
 

@@ -4,6 +4,7 @@
 import { readFile, readdir } from 'node:fs/promises';
 import path from 'node:path';
 import { count, deltaValue, day as validDay, reviewState } from './security.mjs';
+import { isRevision, reviewedRevision } from './revisions.mjs';
 
 const json = async file => JSON.parse(await readFile(file, 'utf8'));
 const optional = async (file, fallback) => { try { return await json(file); } catch { return fallback; } };
@@ -19,7 +20,10 @@ export const ACCESS = {
   network: { label: 'Network', hint: 'Reaches external services or the web.' }
 };
 
-export const installCommand = (repo, skill) => `npx skills@latest add ${repo} --skill ${skill}`;
+export function installCommand(repo, skill, revision = null) {
+  if (revision != null && !isRevision(revision)) throw new Error('Install revision must be a full commit SHA.');
+  return `npx skills@latest add ${revision ? `https://github.com/${repo}/tree/${revision}` : repo} --skill ${skill}`;
+}
 export const entryUrl = (owner, skill) => `/skills/${owner.toLowerCase()}/${skill}/`;
 
 // Snapshots are dated JSON files written by scripts/sync-stats.mjs.
@@ -82,10 +86,12 @@ export async function loadContent(root) {
     const tasks = (e.tasks || []).map(t => taskBy[t] || (() => { throw new Error(`${e.id}: unknown task "${t}"`); })());
     const stack = (e.stack || []).map(t => stackBy[t] || (() => { throw new Error(`${e.id}: unknown stack "${t}"`); })());
     if (!tasks.length) throw new Error(`${e.id}: at least one task is required`);
+    const record = review[e.id.toLowerCase()] || null;
+    const revision = reviewedRevision(record, e);
     return {
-      ...e, author, categoryInfo: category, url: entryUrl(e.owner, e.skill), taskInfo: tasks, stackInfo: stack,
+      ...e, revision, install: revision ? installCommand(e.repo, e.skill, revision) : e.install, author, categoryInfo: category, url: entryUrl(e.owner, e.skill), taskInfo: tasks, stackInfo: stack,
       source: e.original ? 'original' : author.official ? 'official' : 'community',
-      repoUrl: `https://github.com/${e.repo}`, sourceUrl: `https://github.com/${e.repo}/blob/HEAD/${e.path}`,
+      repoUrl: `https://github.com/${e.repo}`, sourceUrl: `https://github.com/${e.repo}/blob/${revision || 'HEAD'}/${e.path}`,
       stats: stat(e.id, e.repo), review: review[e.id.toLowerCase()] || null,
       ...reviewState(review[e.id.toLowerCase()], e)
     };

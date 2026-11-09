@@ -9,7 +9,9 @@
   "descriptionLength": 634,
   "findings": [],
   "problems": [],
-  "sha256": "6e595b79431fd11c4c997eca31566c442b146ac392aa8a33d65425093e5f1f81"
+  "sha256": "6e595b79431fd11c4c997eca31566c442b146ac392aa8a33d65425093e5f1f81",
+  "revision": "abdde261c347f820b40f8105e105ee91c02ffaa4",
+  "pinnedSource": "https://raw.githubusercontent.com/AaravKashyap12/advise-project-approach/abdde261c347f820b40f8105e105ee91c02ffaa4/skills/advise-project-approach/SKILL.md"
  },
  "aaravkashyap12/lean-engineering/lean-engineering": {
   "checkedAt": "2026-11-08",
@@ -21,7 +23,9 @@
   "descriptionLength": 524,
   "findings": [],
   "problems": [],
-  "sha256": "bf94ff364a6030768fece13e287c3b0cb19b59c7e9b243f73de8ef0ae2138b3e"
+  "sha256": "bf94ff364a6030768fece13e287c3b0cb19b59c7e9b243f73de8ef0ae2138b3e",
+  "revision": "b2b8f4e7f9477f998ca3c1416706987cc9351f53",
+  "pinnedSource": "https://raw.githubusercontent.com/AaravKashyap12/lean-engineering/b2b8f4e7f9477f998ca3c1416706987cc9351f53/lean-engineering/SKILL.md"
  },
  "aaravkashyap12/secure-launch/secure-launch": {
   "checkedAt": "2026-11-08",
@@ -33,7 +37,9 @@
   "descriptionLength": 397,
   "findings": [],
   "problems": [],
-  "sha256": "49b8e00a2b2e4e58190b344613a1e02457f96151d9d484198874bcd12d3ee44b"
+  "sha256": "49b8e00a2b2e4e58190b344613a1e02457f96151d9d484198874bcd12d3ee44b",
+  "revision": "389610e3efc6be85a34555110c3ce69e9195a699",
+  "pinnedSource": "https://raw.githubusercontent.com/AaravKashyap12/secure-launch/389610e3efc6be85a34555110c3ce69e9195a699/secure-launch/SKILL.md"
  },
  "aaravkashyap12/efficiency-skill/efficiency-skill": {
   "checkedAt": "2026-11-08",
@@ -45,7 +51,9 @@
   "descriptionLength": 599,
   "findings": [],
   "problems": [],
-  "sha256": "71e57a7e7fedcbb3eb436c9a3eb1ed334ce9ba91be65e2e85ed74d4fa0e65795"
+  "sha256": "71e57a7e7fedcbb3eb436c9a3eb1ed334ce9ba91be65e2e85ed74d4fa0e65795",
+  "revision": "f32c6aba18d42ae6f2f757f6515cb5e32f61ae80",
+  "pinnedSource": "https://raw.githubusercontent.com/AaravKashyap12/efficiency-skill/f32c6aba18d42ae6f2f757f6515cb5e32f61ae80/efficiency-skill/SKILL.md"
  },
  "mattpocock/skills/grilling": {
   "checkedAt": "2026-11-08",
@@ -57,7 +65,9 @@
   "descriptionLength": 152,
   "findings": [],
   "problems": [],
-  "sha256": "a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2"
+  "sha256": "a146842ed93ca43d833550fa9adf02e58cb63c83fea9d4b4522995b82242d4e2",
+  "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+  "pinnedSource": "https://raw.githubusercontent.com/mattpocock/skills/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/productivity/grilling/SKILL.md"
  },
  "mattpocock/skills/to-spec": {
   "checkedAt": "2026-11-08",
@@ -69,7 +79,9 @@
   "descriptionLength": 149,
   "findings": [],
   "problems": [],
-  "sha256": "43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088"
+  "sha256": "43ad9cf318e5e7d3d1fa360253a37021796dc87a0c2e595ad262661a10f85088",
+  "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+  "pinnedSource": "https://raw.githubusercontent.com/mattpocock/skills/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/to-spec/SKILL.md"
  },
  "mattpocock/skills/domain-modeling": {
   "checkedAt": "2026-11-08",
@@ -81,7 +93,9 @@
   "descriptionLength": 151,
   "findings": [],
   "problems": [],
-  "sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3"
+  "sha256": "7b925d7b1e341a2eeae33ad68a8a8c0ab889a38ddd22a7598e4c240e5a7556a3",
+  "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+  "pinnedSource": "https://raw.githubusercontent.com/mattpocock/skills/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/domain-modeling/SKILL.md"
  },
  "mattpocock/skills/improve-codebase-architecture": {
   "checkedAt": "2026-11-08",
@@ -93,7 +107,9 @@
   "descriptionLength": 125,
   "findings": [],
   "problems": [],
-  "sha256": "35b03a3db61e0f5aa333ea59b54963e45a3d2ace6649b2ef4f9576603e2582a6"
+  "sha256": "35b03a3db61e0f5aa333ea59b54963e45a3d2ace6649b2ef4f9576603e2582a6",
+  "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+  "pinnedSource": "https://raw.githubusercontent.com/mattpocock/skills/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/improve-codebase-architecture/SKILL.md"
  },
  "obra/superpowers/brainstorming": {
   "checkedAt": "2026-11-08",
@@ -105,7 +121,9 @@
   "descriptionLength": 213,
   "findings": [],
   "problems": [],
-  "sha256": "2c9ca71f94886f9ca9f4aef055f7cafb3e1a9bdf3aeebf8f4cb547c69405d207"
+  "sha256": "2c9ca71f94886f9ca9f4aef055f7cafb3e1a9bdf3aeebf8f4cb547c69405d207",
+  "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+  "pinnedSource": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/skills/brainstorming/SKILL.md"
  },
  "obra/superpowers/writing-plans": {
   "checkedAt": "2026-11-08",
@@ -117,7 +135,9 @@
   "descriptionLength": 84,
   "findings": [],
   "problems": [],
-  "sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a"
+  "sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+  "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+  "pinnedSource": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/skills/writing-plans/SKILL.md"
  },
  "addyosmani/agent-skills/planning-and-task-breakdown": {
   "checkedAt": "2026-11-08",
@@ -129,7 +149,9 @@
   "descriptionLength": 237,
   "findings": [],
   "problems": [],
-  "sha256": "ed0f90cc5951ddd4bcab7f871f64efec93a49af9279ef93bc470da77ad8da3f7"
+  "sha256": "ed0f90cc5951ddd4bcab7f871f64efec93a49af9279ef93bc470da77ad8da3f7",
+  "revision": "301b02b12bff98e4688e6984af6556802322bbde",
+  "pinnedSource": "https://raw.githubusercontent.com/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde/skills/planning-and-task-breakdown/SKILL.md"
  },
  "addyosmani/agent-skills/api-and-interface-design": {
   "checkedAt": "2026-11-08",
@@ -141,7 +163,9 @@
   "descriptionLength": 251,
   "findings": [],
   "problems": [],
-  "sha256": "cc5e2166c484b2c297e8253f56e7525e5031f81d66101ca4e760ef378ea6bad0"
+  "sha256": "cc5e2166c484b2c297e8253f56e7525e5031f81d66101ca4e760ef378ea6bad0",
+  "revision": "301b02b12bff98e4688e6984af6556802322bbde",
+  "pinnedSource": "https://raw.githubusercontent.com/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde/skills/api-and-interface-design/SKILL.md"
  },
  "addyosmani/agent-skills/documentation-and-adrs": {
   "checkedAt": "2026-11-08",
@@ -153,7 +177,9 @@
   "descriptionLength": 290,
   "findings": [],
   "problems": [],
-  "sha256": "6fccf3088d5042a3c889faa25113ffa47b9f7f999f4fc9e527d5e5226888442f"
+  "sha256": "6fccf3088d5042a3c889faa25113ffa47b9f7f999f4fc9e527d5e5226888442f",
+  "revision": "301b02b12bff98e4688e6984af6556802322bbde",
+  "pinnedSource": "https://raw.githubusercontent.com/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde/skills/documentation-and-adrs/SKILL.md"
  },
  "mattpocock/skills/tdd": {
   "checkedAt": "2026-11-08",
@@ -165,7 +191,9 @@
   "descriptionLength": 149,
   "findings": [],
   "problems": [],
-  "sha256": "5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0"
+  "sha256": "5505d25bbaa8fc14a79e4d20163936958992a2995b7f1dd1d6197edc9ed722e0",
+  "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+  "pinnedSource": "https://raw.githubusercontent.com/mattpocock/skills/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/tdd/SKILL.md"
  },
  "obra/superpowers/test-driven-development": {
   "checkedAt": "2026-11-08",
@@ -177,7 +205,9 @@
   "descriptionLength": 79,
   "findings": [],
   "problems": [],
-  "sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d"
+  "sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d",
+  "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+  "pinnedSource": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/skills/test-driven-development/SKILL.md"
  },
  "addyosmani/agent-skills/incremental-implementation": {
   "checkedAt": "2026-11-08",
@@ -189,7 +219,9 @@
   "descriptionLength": 343,
   "findings": [],
   "problems": [],
-  "sha256": "df66536610071727feae1ca95f3c391c248ad828041750ccd3699cce763aa00b"
+  "sha256": "df66536610071727feae1ca95f3c391c248ad828041750ccd3699cce763aa00b",
+  "revision": "301b02b12bff98e4688e6984af6556802322bbde",
+  "pinnedSource": "https://raw.githubusercontent.com/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde/skills/incremental-implementation/SKILL.md"
  },
  "addyosmani/agent-skills/code-simplification": {
   "checkedAt": "2026-11-08",
@@ -201,7 +233,9 @@
   "descriptionLength": 418,
   "findings": [],
   "problems": [],
-  "sha256": "e13b433345e6bf425c3625442ac1b3507b371c18d7ea3e3db822da7a7f742a29"
+  "sha256": "e13b433345e6bf425c3625442ac1b3507b371c18d7ea3e3db822da7a7f742a29",
+  "revision": "301b02b12bff98e4688e6984af6556802322bbde",
+  "pinnedSource": "https://raw.githubusercontent.com/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde/skills/code-simplification/SKILL.md"
  },
  "mattpocock/skills/diagnosing-bugs": {
   "checkedAt": "2026-11-08",
@@ -213,7 +247,9 @@
   "descriptionLength": 156,
   "findings": [],
   "problems": [],
-  "sha256": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d"
+  "sha256": "849198df88cdb65fd0d97236604c1fca7ff2f22d2f705f9724a800d0266b118d",
+  "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+  "pinnedSource": "https://raw.githubusercontent.com/mattpocock/skills/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/diagnosing-bugs/SKILL.md"
  },
  "obra/superpowers/systematic-debugging": {
   "checkedAt": "2026-11-08",
@@ -230,7 +266,9 @@
    }
   ],
   "problems": [],
-  "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202"
+  "sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+  "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+  "pinnedSource": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/skills/systematic-debugging/SKILL.md"
  },
  "obra/superpowers/verification-before-completion": {
   "checkedAt": "2026-11-08",
@@ -242,7 +280,9 @@
   "descriptionLength": 225,
   "findings": [],
   "problems": [],
-  "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3"
+  "sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+  "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+  "pinnedSource": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/skills/verification-before-completion/SKILL.md"
  },
  "addyosmani/agent-skills/debugging-and-error-recovery": {
   "checkedAt": "2026-11-08",
@@ -254,7 +294,9 @@
   "descriptionLength": 323,
   "findings": [],
   "problems": [],
-  "sha256": "01cff31fbd8796b444225f8a8386219792c25cebb5d4d76df664afd1d13ed610"
+  "sha256": "01cff31fbd8796b444225f8a8386219792c25cebb5d4d76df664afd1d13ed610",
+  "revision": "301b02b12bff98e4688e6984af6556802322bbde",
+  "pinnedSource": "https://raw.githubusercontent.com/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde/skills/debugging-and-error-recovery/SKILL.md"
  },
  "addyosmani/agent-skills/browser-testing-with-devtools": {
   "checkedAt": "2026-11-08",
@@ -271,7 +313,9 @@
    }
   ],
   "problems": [],
-  "sha256": "e28dd45416e6df93f0db6fffeb3aa2477a0e48a22f8e05fd5bb1892484115bb6"
+  "sha256": "e28dd45416e6df93f0db6fffeb3aa2477a0e48a22f8e05fd5bb1892484115bb6",
+  "revision": "301b02b12bff98e4688e6984af6556802322bbde",
+  "pinnedSource": "https://raw.githubusercontent.com/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde/skills/browser-testing-with-devtools/SKILL.md"
  },
  "anthropics/skills/webapp-testing": {
   "checkedAt": "2026-11-08",
@@ -283,7 +327,9 @@
   "descriptionLength": 204,
   "findings": [],
   "problems": [],
-  "sha256": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2"
+  "sha256": "51b7349e77ec63b7744a6f63647e7566a0b4d2e301121cc10e8c2113af6556a2",
+  "revision": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+  "pinnedSource": "https://raw.githubusercontent.com/anthropics/skills/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/webapp-testing/SKILL.md"
  },
  "mattpocock/skills/code-review": {
   "checkedAt": "2026-11-08",
@@ -295,7 +341,9 @@
   "descriptionLength": 417,
   "findings": [],
   "problems": [],
-  "sha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd"
+  "sha256": "9c921a8d88138a41401d8897ca1bb852088ab1b7b605cdd04edc13e3e8aab6dd",
+  "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+  "pinnedSource": "https://raw.githubusercontent.com/mattpocock/skills/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/engineering/code-review/SKILL.md"
  },
  "obra/superpowers/requesting-code-review": {
   "checkedAt": "2026-11-08",
@@ -307,7 +355,9 @@
   "descriptionLength": 107,
   "findings": [],
   "problems": [],
-  "sha256": "2180e14a448e9410bec88e6646a2d1f0ce7fdd58de27388c1e052e929679d2bc"
+  "sha256": "2180e14a448e9410bec88e6646a2d1f0ce7fdd58de27388c1e052e929679d2bc",
+  "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+  "pinnedSource": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/skills/requesting-code-review/SKILL.md"
  },
  "obra/superpowers/receiving-code-review": {
   "checkedAt": "2026-11-08",
@@ -319,7 +369,9 @@
   "descriptionLength": 234,
   "findings": [],
   "problems": [],
-  "sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438"
+  "sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+  "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+  "pinnedSource": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/skills/receiving-code-review/SKILL.md"
  },
  "addyosmani/agent-skills/code-review-and-quality": {
   "checkedAt": "2026-11-08",
@@ -331,7 +383,9 @@
   "descriptionLength": 325,
   "findings": [],
   "problems": [],
-  "sha256": "a47551daf26e3cc5670f5286f9e4850c2fc662d5ba08b86eee895254f3851797"
+  "sha256": "a47551daf26e3cc5670f5286f9e4850c2fc662d5ba08b86eee895254f3851797",
+  "revision": "301b02b12bff98e4688e6984af6556802322bbde",
+  "pinnedSource": "https://raw.githubusercontent.com/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde/skills/code-review-and-quality/SKILL.md"
  },
  "getsentry/skills/code-review": {
   "checkedAt": "2026-11-08",
@@ -343,7 +397,9 @@
   "descriptionLength": 215,
   "findings": [],
   "problems": [],
-  "sha256": "ec5fc8855cb4648b4f2c79b608f8c8824a2da6a683330524c4d6283e4a3954c4"
+  "sha256": "ec5fc8855cb4648b4f2c79b608f8c8824a2da6a683330524c4d6283e4a3954c4",
+  "revision": "e94f22214528d69899d09c627b3315ddc3544816",
+  "pinnedSource": "https://raw.githubusercontent.com/getsentry/skills/e94f22214528d69899d09c627b3315ddc3544816/skills/code-review/SKILL.md"
  },
  "addyosmani/agent-skills/security-and-hardening": {
   "checkedAt": "2026-11-08",
@@ -355,7 +411,9 @@
   "descriptionLength": 600,
   "findings": [],
   "problems": [],
-  "sha256": "358566859a3d791c474eb9fa36939b45875c7480d7d4650eaa092dceae2c1c37"
+  "sha256": "358566859a3d791c474eb9fa36939b45875c7480d7d4650eaa092dceae2c1c37",
+  "revision": "301b02b12bff98e4688e6984af6556802322bbde",
+  "pinnedSource": "https://raw.githubusercontent.com/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde/skills/security-and-hardening/SKILL.md"
  },
  "openai/skills/security-threat-model": {
   "checkedAt": "2026-11-08",
@@ -367,7 +425,9 @@
   "descriptionLength": 412,
   "findings": [],
   "problems": [],
-  "sha256": "1283c0dd62a8104d9edda4583569b5d8510b4ddaa45120687c999250fd96bad2"
+  "sha256": "1283c0dd62a8104d9edda4583569b5d8510b4ddaa45120687c999250fd96bad2",
+  "revision": "49f948faa9258a0c61caceaf225e179651397431",
+  "pinnedSource": "https://raw.githubusercontent.com/openai/skills/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/security-threat-model/SKILL.md"
  },
  "trailofbits/skills/audit-context-building": {
   "checkedAt": "2026-11-08",
@@ -379,7 +439,9 @@
   "descriptionLength": 263,
   "findings": [],
   "problems": [],
-  "sha256": "33fa693dc6e166cfa4919e4373cb6578c009d296234c2ae7cb3cd4e79b443765"
+  "sha256": "33fa693dc6e166cfa4919e4373cb6578c009d296234c2ae7cb3cd4e79b443765",
+  "revision": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+  "pinnedSource": "https://raw.githubusercontent.com/trailofbits/skills/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/audit-context-building/skills/audit-context-building/SKILL.md"
  },
  "addyosmani/agent-skills/performance-optimization": {
   "checkedAt": "2026-11-08",
@@ -391,7 +453,9 @@
   "descriptionLength": 295,
   "findings": [],
   "problems": [],
-  "sha256": "82af71540457cf853893685211f64509cd1e781c0de09d0186f16960f2d6eeba"
+  "sha256": "82af71540457cf853893685211f64509cd1e781c0de09d0186f16960f2d6eeba",
+  "revision": "301b02b12bff98e4688e6984af6556802322bbde",
+  "pinnedSource": "https://raw.githubusercontent.com/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde/skills/performance-optimization/SKILL.md"
  },
  "cloudflare/skills/web-perf": {
   "checkedAt": "2026-11-08",
@@ -403,7 +467,9 @@
   "descriptionLength": 125,
   "findings": [],
   "problems": [],
-  "sha256": "0160c9e7f1b73eb80347efd899a6082219d43bb9de30424667c8017628a48469"
+  "sha256": "0160c9e7f1b73eb80347efd899a6082219d43bb9de30424667c8017628a48469",
+  "revision": "6eb6c781aa9b6438e0c7307bd102788a75fe1a6d",
+  "pinnedSource": "https://raw.githubusercontent.com/cloudflare/skills/6eb6c781aa9b6438e0c7307bd102788a75fe1a6d/skills/web-perf/SKILL.md"
  },
  "addyosmani/agent-skills/ci-cd-and-automation": {
   "checkedAt": "2026-11-08",
@@ -415,7 +481,9 @@
   "descriptionLength": 207,
   "findings": [],
   "problems": [],
-  "sha256": "5e0e55c059670a7838dc9d58dc20a3a645c0d43c974416490112af7de522df95"
+  "sha256": "5e0e55c059670a7838dc9d58dc20a3a645c0d43c974416490112af7de522df95",
+  "revision": "301b02b12bff98e4688e6984af6556802322bbde",
+  "pinnedSource": "https://raw.githubusercontent.com/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde/skills/ci-cd-and-automation/SKILL.md"
  },
  "addyosmani/agent-skills/git-workflow-and-versioning": {
   "checkedAt": "2026-11-08",
@@ -427,7 +495,9 @@
   "descriptionLength": 616,
   "findings": [],
   "problems": [],
-  "sha256": "d77c955f57cfafde73efb7641ed9a478ffaa0f61c0f31bd9fe87317702f1b60d"
+  "sha256": "d77c955f57cfafde73efb7641ed9a478ffaa0f61c0f31bd9fe87317702f1b60d",
+  "revision": "301b02b12bff98e4688e6984af6556802322bbde",
+  "pinnedSource": "https://raw.githubusercontent.com/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde/skills/git-workflow-and-versioning/SKILL.md"
  },
  "addyosmani/agent-skills/shipping-and-launch": {
   "checkedAt": "2026-11-08",
@@ -439,7 +509,9 @@
   "descriptionLength": 271,
   "findings": [],
   "problems": [],
-  "sha256": "92fec446ec4e947a7b8aac88b851aa5743ff8cb39d5987fb53df08ba8a160d64"
+  "sha256": "92fec446ec4e947a7b8aac88b851aa5743ff8cb39d5987fb53df08ba8a160d64",
+  "revision": "301b02b12bff98e4688e6984af6556802322bbde",
+  "pinnedSource": "https://raw.githubusercontent.com/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde/skills/shipping-and-launch/SKILL.md"
  },
  "mattpocock/skills/setup-pre-commit": {
   "checkedAt": "2026-11-08",
@@ -451,7 +523,9 @@
   "descriptionLength": 238,
   "findings": [],
   "problems": [],
-  "sha256": "c9819d7f1e3b198064edc1faa3154224ed67395e9f07f5d3cea4b67cf0a11a98"
+  "sha256": "c9819d7f1e3b198064edc1faa3154224ed67395e9f07f5d3cea4b67cf0a11a98",
+  "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+  "pinnedSource": "https://raw.githubusercontent.com/mattpocock/skills/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/misc/setup-pre-commit/SKILL.md"
  },
  "mattpocock/skills/git-guardrails-claude-code": {
   "checkedAt": "2026-11-08",
@@ -468,7 +542,9 @@
    }
   ],
   "problems": [],
-  "sha256": "69b291d655626a01602b998a1836fcb93c058ede68dfafddfd71e87f17074764"
+  "sha256": "69b291d655626a01602b998a1836fcb93c058ede68dfafddfd71e87f17074764",
+  "revision": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+  "pinnedSource": "https://raw.githubusercontent.com/mattpocock/skills/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d/skills/misc/git-guardrails-claude-code/SKILL.md"
  },
  "mattpocock/skills/resolving-merge-conflicts": {
   "status": "unavailable",
@@ -493,7 +569,9 @@
   "descriptionLength": 196,
   "findings": [],
   "problems": [],
-  "sha256": "8cfb86f121269e8f7f12361e6795c4f6738828340e28964c9229d365666c9edd"
+  "sha256": "8cfb86f121269e8f7f12361e6795c4f6738828340e28964c9229d365666c9edd",
+  "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+  "pinnedSource": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/skills/using-git-worktrees/SKILL.md"
  },
  "warpdotdev/common-skills/diagnose-ci-failures": {
   "checkedAt": "2026-11-08",
@@ -505,7 +583,9 @@
   "descriptionLength": 219,
   "findings": [],
   "problems": [],
-  "sha256": "eacf6cc68063d5c92e1d0a87051b4c5cdd0a18cf8931cb4def3ae541808ddfc8"
+  "sha256": "eacf6cc68063d5c92e1d0a87051b4c5cdd0a18cf8931cb4def3ae541808ddfc8",
+  "revision": "8792394ff1b655e0af451b8fabb68ef0cfcbd208",
+  "pinnedSource": "https://raw.githubusercontent.com/warpdotdev/common-skills/8792394ff1b655e0af451b8fabb68ef0cfcbd208/.agents/skills/diagnose-ci-failures/SKILL.md"
  },
  "obra/superpowers/dispatching-parallel-agents": {
   "checkedAt": "2026-11-08",
@@ -517,7 +597,9 @@
   "descriptionLength": 106,
   "findings": [],
   "problems": [],
-  "sha256": "1968923066f3b707eb01d1992cdf4c42284c3855f70253b9cd5000ff45fca13c"
+  "sha256": "1968923066f3b707eb01d1992cdf4c42284c3855f70253b9cd5000ff45fca13c",
+  "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+  "pinnedSource": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/skills/dispatching-parallel-agents/SKILL.md"
  },
  "addyosmani/agent-skills/context-engineering": {
   "checkedAt": "2026-11-08",
@@ -529,7 +611,9 @@
   "descriptionLength": 198,
   "findings": [],
   "problems": [],
-  "sha256": "5ee2929d3aded01587aa24fc9907693c8820f87f807ea0c52a263af718b62d0b"
+  "sha256": "5ee2929d3aded01587aa24fc9907693c8820f87f807ea0c52a263af718b62d0b",
+  "revision": "301b02b12bff98e4688e6984af6556802322bbde",
+  "pinnedSource": "https://raw.githubusercontent.com/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde/skills/context-engineering/SKILL.md"
  },
  "anthropics/skills/skill-creator": {
   "checkedAt": "2026-11-08",
@@ -541,7 +625,9 @@
   "descriptionLength": 319,
   "findings": [],
   "problems": [],
-  "sha256": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf"
+  "sha256": "dcd4803e61e913e6fc27294184cd3a71f09f5e924ff20c8a9a20173e7b3c2bcf",
+  "revision": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+  "pinnedSource": "https://raw.githubusercontent.com/anthropics/skills/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/skill-creator/SKILL.md"
  },
  "anthropics/skills/mcp-builder": {
   "checkedAt": "2026-11-08",
@@ -553,7 +639,9 @@
   "descriptionLength": 277,
   "findings": [],
   "problems": [],
-  "sha256": "b483b56d6673134497e45489c317f26ae0f1429c194db0297e43073e17e6748c"
+  "sha256": "b483b56d6673134497e45489c317f26ae0f1429c194db0297e43073e17e6748c",
+  "revision": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+  "pinnedSource": "https://raw.githubusercontent.com/anthropics/skills/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/mcp-builder/SKILL.md"
  },
  "supabase/agent-skills/supabase-postgres-best-practices": {
   "checkedAt": "2026-11-08",
@@ -565,7 +653,9 @@
   "descriptionLength": 834,
   "findings": [],
   "problems": [],
-  "sha256": "ad65e776f45e761bafc609d3f506c77c1032225aa65e0c4c02f241b8071e5855"
+  "sha256": "ad65e776f45e761bafc609d3f506c77c1032225aa65e0c4c02f241b8071e5855",
+  "revision": "c9be0e931b7930f7d02126d04774d904c381e7d7",
+  "pinnedSource": "https://raw.githubusercontent.com/supabase/agent-skills/c9be0e931b7930f7d02126d04774d904c381e7d7/skills/supabase-postgres-best-practices/SKILL.md"
  },
  "avdlee/swiftui-agent-skill/swiftui-expert-skill": {
   "checkedAt": "2026-11-08",
@@ -577,7 +667,9 @@
   "descriptionLength": 851,
   "findings": [],
   "problems": [],
-  "sha256": "6fa1d5188176628a00e7f032298e640f5191185904e305983cc8a2fa6e2c31d5"
+  "sha256": "6fa1d5188176628a00e7f032298e640f5191185904e305983cc8a2fa6e2c31d5",
+  "revision": "62bd760f005093d1e2e4de5db156e456a5f96400",
+  "pinnedSource": "https://raw.githubusercontent.com/AvdLee/SwiftUI-Agent-Skill/62bd760f005093d1e2e4de5db156e456a5f96400/skills/swiftui-expert-skill/SKILL.md"
  },
  "kotlin/kotlin-agent-skills/kotlin-backend-jpa-entity-mapping": {
   "checkedAt": "2026-11-08",
@@ -589,7 +681,9 @@
   "descriptionLength": 484,
   "findings": [],
   "problems": [],
-  "sha256": "5d9c864a55c5ad29f54a807820672a9b5e0360ee33006c63a396a31bef0d8f4e"
+  "sha256": "5d9c864a55c5ad29f54a807820672a9b5e0360ee33006c63a396a31bef0d8f4e",
+  "revision": "087f5689c1934135ed58718cdf524525e452b7e9",
+  "pinnedSource": "https://raw.githubusercontent.com/Kotlin/kotlin-agent-skills/087f5689c1934135ed58718cdf524525e452b7e9/skills/kotlin-backend-jpa-entity-mapping/SKILL.md"
  },
  "kotlin/kotlin-agent-skills/kotlin-tooling-java-to-kotlin": {
   "checkedAt": "2026-11-08",
@@ -601,7 +695,9 @@
   "descriptionLength": 361,
   "findings": [],
   "problems": [],
-  "sha256": "5b372715adac4df37e3261040ead2d0c937a5e06a55178fa5ff0fcc95adc1944"
+  "sha256": "5b372715adac4df37e3261040ead2d0c937a5e06a55178fa5ff0fcc95adc1944",
+  "revision": "087f5689c1934135ed58718cdf524525e452b7e9",
+  "pinnedSource": "https://raw.githubusercontent.com/Kotlin/kotlin-agent-skills/087f5689c1934135ed58718cdf524525e452b7e9/skills/kotlin-tooling-java-to-kotlin/SKILL.md"
  },
  "kotlin/kotlin-agent-skills/kotlin-tooling-kotlin-toolchain": {
   "checkedAt": "2026-11-08",
@@ -613,7 +709,9 @@
   "descriptionLength": 327,
   "findings": [],
   "problems": [],
-  "sha256": "2cec94b6eb346999c7d4d74079131ce12d1ae944c20cf95b8119fac604dd3dfe"
+  "sha256": "2cec94b6eb346999c7d4d74079131ce12d1ae944c20cf95b8119fac604dd3dfe",
+  "revision": "087f5689c1934135ed58718cdf524525e452b7e9",
+  "pinnedSource": "https://raw.githubusercontent.com/Kotlin/kotlin-agent-skills/087f5689c1934135ed58718cdf524525e452b7e9/skills/kotlin-tooling-kotlin-toolchain/SKILL.md"
  },
  "kotlin/kotlin-agent-skills/kotlin-tooling-native-build-performance": {
   "checkedAt": "2026-11-08",
@@ -625,7 +723,9 @@
   "descriptionLength": 425,
   "findings": [],
   "problems": [],
-  "sha256": "948fcecafa9fd0dcd447682e1fef7046b542be710ee27c2f25eade31c182455e"
+  "sha256": "948fcecafa9fd0dcd447682e1fef7046b542be710ee27c2f25eade31c182455e",
+  "revision": "087f5689c1934135ed58718cdf524525e452b7e9",
+  "pinnedSource": "https://raw.githubusercontent.com/Kotlin/kotlin-agent-skills/087f5689c1934135ed58718cdf524525e452b7e9/skills/kotlin-tooling-native-build-performance/SKILL.md"
  },
  "addyosmani/agent-skills/deprecation-and-migration": {
   "checkedAt": "2026-11-08",
@@ -637,7 +737,9 @@
   "descriptionLength": 334,
   "findings": [],
   "problems": [],
-  "sha256": "1896d7db836fc067e2856739664db9ff5bb642526fdff2126d08ec0d588da4b7"
+  "sha256": "1896d7db836fc067e2856739664db9ff5bb642526fdff2126d08ec0d588da4b7",
+  "revision": "301b02b12bff98e4688e6984af6556802322bbde",
+  "pinnedSource": "https://raw.githubusercontent.com/addyosmani/agent-skills/301b02b12bff98e4688e6984af6556802322bbde/skills/deprecation-and-migration/SKILL.md"
  },
  "affaan-m/everything-claude-code/security-review": {
   "checkedAt": "2026-11-08",
@@ -649,7 +751,9 @@
   "descriptionLength": 209,
   "findings": [],
   "problems": [],
-  "sha256": "81d7a4cbf8509963539cbe2e3d3ecbde33077d9fa63bc7c8f6d09e7eb7531743"
+  "sha256": "81d7a4cbf8509963539cbe2e3d3ecbde33077d9fa63bc7c8f6d09e7eb7531743",
+  "retained": true,
+  "fetchError": "network"
  },
  "affaan-m/everything-claude-code/tdd-workflow": {
   "checkedAt": "2026-11-08",
@@ -661,7 +765,9 @@
   "descriptionLength": 171,
   "findings": [],
   "problems": [],
-  "sha256": "e9507695657b05f26dd62127f1d6ff58e4015d624df65dd4d7e07f6470317393"
+  "sha256": "e9507695657b05f26dd62127f1d6ff58e4015d624df65dd4d7e07f6470317393",
+  "retained": true,
+  "fetchError": "network"
  },
  "affaan-m/everything-claude-code/verification-loop": {
   "checkedAt": "2026-11-08",
@@ -673,7 +779,9 @@
   "descriptionLength": 141,
   "findings": [],
   "problems": [],
-  "sha256": "f6e87522c6ca40473c005a87225344760be632ff363eb9343b675db11a584583"
+  "sha256": "f6e87522c6ca40473c005a87225344760be632ff363eb9343b675db11a584583",
+  "retained": true,
+  "fetchError": "network"
  },
  "affaan-m/everything-claude-code/e2e-testing": {
   "checkedAt": "2026-11-08",
@@ -685,7 +793,9 @@
   "descriptionLength": 226,
   "findings": [],
   "problems": [],
-  "sha256": "8cfa22c35e5370c1f85400921d27e259cc99ba67a890625412bf2fc650a1d038"
+  "sha256": "8cfa22c35e5370c1f85400921d27e259cc99ba67a890625412bf2fc650a1d038",
+  "retained": true,
+  "fetchError": "network"
  },
  "affaan-m/everything-claude-code/ai-regression-testing": {
   "checkedAt": "2026-11-08",
@@ -697,7 +807,9 @@
   "descriptionLength": 342,
   "findings": [],
   "problems": [],
-  "sha256": "83f2f5c4083af5762dd658f742d4a390eb3a6f969d835f69e8f47efba296c127"
+  "sha256": "83f2f5c4083af5762dd658f742d4a390eb3a6f969d835f69e8f47efba296c127",
+  "retained": true,
+  "fetchError": "network"
  },
  "affaan-m/everything-claude-code/mcp-server-patterns": {
   "checkedAt": "2026-11-08",
@@ -709,7 +821,9 @@
   "descriptionLength": 270,
   "findings": [],
   "problems": [],
-  "sha256": "a740cb21444aec71800aafb94beedc4045c0ad33f20dee1f5f3acd567a300a8d"
+  "sha256": "a740cb21444aec71800aafb94beedc4045c0ad33f20dee1f5f3acd567a300a8d",
+  "retained": true,
+  "fetchError": "network"
  },
  "alirezarezvani/claude-skills/spec-driven-workflow": {
   "checkedAt": "2026-11-08",
@@ -721,7 +835,9 @@
   "descriptionLength": 221,
   "findings": [],
   "problems": [],
-  "sha256": "06fa81984398d6a6d408a85bfb740b52e47558942ec88783b7bb4f11b72cf5fe"
+  "sha256": "06fa81984398d6a6d408a85bfb740b52e47558942ec88783b7bb4f11b72cf5fe",
+  "revision": "8f082544116fc0d014188e521ca40304cdfc86b0",
+  "pinnedSource": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/8f082544116fc0d014188e521ca40304cdfc86b0/engineering/skills/spec-driven-workflow/SKILL.md"
  },
  "alirezarezvani/claude-skills/spec-to-repo": {
   "checkedAt": "2026-11-08",
@@ -733,7 +849,9 @@
   "descriptionLength": 383,
   "findings": [],
   "problems": [],
-  "sha256": "0a4ef6bce29703fb13284e38851236dcdcf39f7a42047715eb393dbb39040e58"
+  "sha256": "0a4ef6bce29703fb13284e38851236dcdcf39f7a42047715eb393dbb39040e58",
+  "revision": "8f082544116fc0d014188e521ca40304cdfc86b0",
+  "pinnedSource": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/8f082544116fc0d014188e521ca40304cdfc86b0/product-team/skills/spec-to-repo/SKILL.md"
  },
  "alirezarezvani/claude-skills/api-test-suite-builder": {
   "checkedAt": "2026-11-08",
@@ -745,7 +863,9 @@
   "descriptionLength": 178,
   "findings": [],
   "problems": [],
-  "sha256": "0814dea4cb25c0237017763d9b3d5a971c2f98912c0137f8a179d1c15d6e7479"
+  "sha256": "0814dea4cb25c0237017763d9b3d5a971c2f98912c0137f8a179d1c15d6e7479",
+  "revision": "8f082544116fc0d014188e521ca40304cdfc86b0",
+  "pinnedSource": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/8f082544116fc0d014188e521ca40304cdfc86b0/engineering/skills/api-test-suite-builder/SKILL.md"
  },
  "alirezarezvani/claude-skills/pr-review-expert": {
   "checkedAt": "2026-11-08",
@@ -757,7 +877,9 @@
   "descriptionLength": 173,
   "findings": [],
   "problems": [],
-  "sha256": "63ece80eaea15033d0afcbff0857b6190a5703b2812f7c53f23103b5cc4abff1"
+  "sha256": "63ece80eaea15033d0afcbff0857b6190a5703b2812f7c53f23103b5cc4abff1",
+  "revision": "8f082544116fc0d014188e521ca40304cdfc86b0",
+  "pinnedSource": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/8f082544116fc0d014188e521ca40304cdfc86b0/engineering/skills/pr-review-expert/SKILL.md"
  },
  "alirezarezvani/claude-skills/skill-tester": {
   "checkedAt": "2026-11-08",
@@ -769,7 +891,9 @@
   "descriptionLength": 236,
   "findings": [],
   "problems": [],
-  "sha256": "26781603de5aa603213b3cd452fc52928caddec86fedee3640baf1089bde94d9"
+  "sha256": "26781603de5aa603213b3cd452fc52928caddec86fedee3640baf1089bde94d9",
+  "revision": "8f082544116fc0d014188e521ca40304cdfc86b0",
+  "pinnedSource": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/8f082544116fc0d014188e521ca40304cdfc86b0/engineering/skills/skill-tester/SKILL.md"
  },
  "antfu/skills/antfu": {
   "checkedAt": "2026-11-08",
@@ -781,7 +905,9 @@
   "descriptionLength": 243,
   "findings": [],
   "problems": [],
-  "sha256": "2d6e33d9d0437fa8c626d875e725bf39a495501d092fb7ab62faa50088ac7dbb"
+  "sha256": "2d6e33d9d0437fa8c626d875e725bf39a495501d092fb7ab62faa50088ac7dbb",
+  "revision": "f63e9ec7bc85f67364b6596c2d29da87e83ce445",
+  "pinnedSource": "https://raw.githubusercontent.com/antfu/skills/f63e9ec7bc85f67364b6596c2d29da87e83ce445/skills/antfu/SKILL.md"
  },
  "antfu/skills/vue": {
   "checkedAt": "2026-11-08",
@@ -793,7 +919,9 @@
   "descriptionLength": 210,
   "findings": [],
   "problems": [],
-  "sha256": "be148f51894085055710f424f7c8a6d5e6dade7045afcfa633b84629f19cc84f"
+  "sha256": "be148f51894085055710f424f7c8a6d5e6dade7045afcfa633b84629f19cc84f",
+  "revision": "f63e9ec7bc85f67364b6596c2d29da87e83ce445",
+  "pinnedSource": "https://raw.githubusercontent.com/antfu/skills/f63e9ec7bc85f67364b6596c2d29da87e83ce445/skills/vue/SKILL.md"
  },
  "antfu/skills/vite": {
   "checkedAt": "2026-11-08",
@@ -805,7 +933,9 @@
   "descriptionLength": 187,
   "findings": [],
   "problems": [],
-  "sha256": "311367ff6b95605d668bd6eb6a2914356d048fd66bd02699e5fedb4332e2a191"
+  "sha256": "311367ff6b95605d668bd6eb6a2914356d048fd66bd02699e5fedb4332e2a191",
+  "revision": "f63e9ec7bc85f67364b6596c2d29da87e83ce445",
+  "pinnedSource": "https://raw.githubusercontent.com/antfu/skills/f63e9ec7bc85f67364b6596c2d29da87e83ce445/skills/vite/SKILL.md"
  },
  "antfu/skills/nuxt": {
   "checkedAt": "2026-11-08",
@@ -817,7 +947,9 @@
   "descriptionLength": 168,
   "findings": [],
   "problems": [],
-  "sha256": "02d2bf98ac194ace290600e25fc6135bdb405dacf257f5a147312d90d16da8c2"
+  "sha256": "02d2bf98ac194ace290600e25fc6135bdb405dacf257f5a147312d90d16da8c2",
+  "revision": "f63e9ec7bc85f67364b6596c2d29da87e83ce445",
+  "pinnedSource": "https://raw.githubusercontent.com/antfu/skills/f63e9ec7bc85f67364b6596c2d29da87e83ce445/skills/nuxt/SKILL.md"
  },
  "anthropics/skills/claude-api": {
   "checkedAt": "2026-11-08",
@@ -829,7 +961,9 @@
   "descriptionLength": 1068,
   "findings": [],
   "problems": [],
-  "sha256": "40537cca17c4aa86e4ce83ced39efcbfb1204905e3cf4c4ff98f2eab011e4b7f"
+  "sha256": "40537cca17c4aa86e4ce83ced39efcbfb1204905e3cf4c4ff98f2eab011e4b7f",
+  "revision": "2c5958ecac7cee2b583967a2c4981d0f4a75c579",
+  "pinnedSource": "https://raw.githubusercontent.com/anthropics/skills/2c5958ecac7cee2b583967a2c4981d0f4a75c579/skills/claude-api/SKILL.md"
  },
  "aws-samples/sample-apex-skills/ecs-build": {
   "checkedAt": "2026-11-08",
@@ -838,22 +972,26 @@
   "status": "current",
   "lines": 268,
   "name": "ecs-build",
-  "descriptionLength": 1013,
+  "descriptionLength": 1023,
   "findings": [],
   "problems": [],
-  "sha256": "d463989342602edd444ce6298ad0b5d95eef4eb6a661297edbc2cab4404b3d01"
+  "sha256": "c59ab7cef5bf46729c8477d6adfa3c4f0740c9d282ac035e7895c0c1185d276e",
+  "revision": "6fb0e9765bb5980a8643eea157a09979ad8f194a",
+  "pinnedSource": "https://raw.githubusercontent.com/aws-samples/sample-apex-skills/6fb0e9765bb5980a8643eea157a09979ad8f194a/skills/ecs-build/SKILL.md"
  },
  "aws-samples/sample-apex-skills/ecs-modernize": {
   "checkedAt": "2026-11-08",
   "lastAttemptAt": "2026-11-08",
   "source": "https://raw.githubusercontent.com/aws-samples/sample-apex-skills/HEAD/skills/ecs-modernize/SKILL.md",
   "status": "current",
-  "lines": 263,
+  "lines": 270,
   "name": "ecs-modernize",
-  "descriptionLength": 1012,
+  "descriptionLength": 1013,
   "findings": [],
   "problems": [],
-  "sha256": "4ea251a28dcdaef6c997a433d312fa47ccec50649d6acd139d308b7652e1494a"
+  "sha256": "839d8dc63e161a825b29ab119599b5a983979794ad78932cbf6441c2b0a5d91a",
+  "revision": "6fb0e9765bb5980a8643eea157a09979ad8f194a",
+  "pinnedSource": "https://raw.githubusercontent.com/aws-samples/sample-apex-skills/6fb0e9765bb5980a8643eea157a09979ad8f194a/skills/ecs-modernize/SKILL.md"
  },
  "aws-samples/sample-apex-skills/ecs-observability": {
   "checkedAt": "2026-11-08",
@@ -865,7 +1003,9 @@
   "descriptionLength": 1021,
   "findings": [],
   "problems": [],
-  "sha256": "def25cc59d333ebf0b6450347b6a89e45f79313ed9df42d15e457bdb54f57541"
+  "sha256": "def25cc59d333ebf0b6450347b6a89e45f79313ed9df42d15e457bdb54f57541",
+  "revision": "6fb0e9765bb5980a8643eea157a09979ad8f194a",
+  "pinnedSource": "https://raw.githubusercontent.com/aws-samples/sample-apex-skills/6fb0e9765bb5980a8643eea157a09979ad8f194a/skills/ecs-observability/SKILL.md"
  },
  "aws-samples/sample-apex-skills/eks-best-practices": {
   "checkedAt": "2026-11-08",
@@ -877,19 +1017,23 @@
   "descriptionLength": 1016,
   "findings": [],
   "problems": [],
-  "sha256": "a73354dbb75bd760a664de57d7ae5e2837fdf18b6d3a73ca32d872c0ddc5ac36"
+  "sha256": "a73354dbb75bd760a664de57d7ae5e2837fdf18b6d3a73ca32d872c0ddc5ac36",
+  "revision": "6fb0e9765bb5980a8643eea157a09979ad8f194a",
+  "pinnedSource": "https://raw.githubusercontent.com/aws-samples/sample-apex-skills/6fb0e9765bb5980a8643eea157a09979ad8f194a/skills/eks-best-practices/SKILL.md"
  },
  "aws-samples/sample-apex-skills/eks-build": {
   "checkedAt": "2026-11-08",
   "lastAttemptAt": "2026-11-08",
   "source": "https://raw.githubusercontent.com/aws-samples/sample-apex-skills/HEAD/skills/eks-build/SKILL.md",
   "status": "current",
-  "lines": 321,
+  "lines": 323,
   "name": "eks-build",
   "descriptionLength": 971,
   "findings": [],
   "problems": [],
-  "sha256": "13c52c18b343ae068893ad2a9da518536660e1ed20c672e1756275291c8fcdbf"
+  "sha256": "a381d3a73e554cb28d866c32b80c50454fb0ad0d90b1843860a7c409a5855ec2",
+  "revision": "6fb0e9765bb5980a8643eea157a09979ad8f194a",
+  "pinnedSource": "https://raw.githubusercontent.com/aws-samples/sample-apex-skills/6fb0e9765bb5980a8643eea157a09979ad8f194a/skills/eks-build/SKILL.md"
  },
  "aws-samples/sample-apex-skills/terraform-skill": {
   "checkedAt": "2026-11-08",
@@ -901,7 +1045,9 @@
   "descriptionLength": 220,
   "findings": [],
   "problems": [],
-  "sha256": "70c0038375d3738b4ecfca1016add39ef48a206cbed653c9a1cb336026a5e384"
+  "sha256": "954a7999a4b756de3684eb3bca7985c1ada59a64b01d9381a9f7d484dfc371db",
+  "revision": "6fb0e9765bb5980a8643eea157a09979ad8f194a",
+  "pinnedSource": "https://raw.githubusercontent.com/aws-samples/sample-apex-skills/6fb0e9765bb5980a8643eea157a09979ad8f194a/skills/terraform-skill/SKILL.md"
  },
  "cloudflare/skills/durable-objects": {
   "checkedAt": "2026-11-08",
@@ -913,7 +1059,9 @@
   "descriptionLength": 94,
   "findings": [],
   "problems": [],
-  "sha256": "ef690603d7d998a25ba9748c79f399bb75d943fe1955ba258167116c101ef98c"
+  "sha256": "ef690603d7d998a25ba9748c79f399bb75d943fe1955ba258167116c101ef98c",
+  "revision": "6eb6c781aa9b6438e0c7307bd102788a75fe1a6d",
+  "pinnedSource": "https://raw.githubusercontent.com/cloudflare/skills/6eb6c781aa9b6438e0c7307bd102788a75fe1a6d/skills/durable-objects/SKILL.md"
  },
  "cloudflare/skills/workers-best-practices": {
   "checkedAt": "2026-11-08",
@@ -925,7 +1073,9 @@
   "descriptionLength": 115,
   "findings": [],
   "problems": [],
-  "sha256": "01c452fd0b6b3caeb4c3b06f87893e52d8e95e32f691911c1644060e00dafa0e"
+  "sha256": "01c452fd0b6b3caeb4c3b06f87893e52d8e95e32f691911c1644060e00dafa0e",
+  "revision": "6eb6c781aa9b6438e0c7307bd102788a75fe1a6d",
+  "pinnedSource": "https://raw.githubusercontent.com/cloudflare/skills/6eb6c781aa9b6438e0c7307bd102788a75fe1a6d/skills/workers-best-practices/SKILL.md"
  },
  "cloudflare/skills/wrangler": {
   "checkedAt": "2026-11-08",
@@ -937,7 +1087,9 @@
   "descriptionLength": 288,
   "findings": [],
   "problems": [],
-  "sha256": "a39de5c69f50e88759736a6ec7ad07f402c15f7a58a3224bcf979dce42013b13"
+  "sha256": "a39de5c69f50e88759736a6ec7ad07f402c15f7a58a3224bcf979dce42013b13",
+  "revision": "6eb6c781aa9b6438e0c7307bd102788a75fe1a6d",
+  "pinnedSource": "https://raw.githubusercontent.com/cloudflare/skills/6eb6c781aa9b6438e0c7307bd102788a75fe1a6d/skills/wrangler/SKILL.md"
  },
  "dotnet/skills/csharp-refactoring": {
   "checkedAt": "2026-11-08",
@@ -949,7 +1101,9 @@
   "descriptionLength": 889,
   "findings": [],
   "problems": [],
-  "sha256": "4d7ef3b0abc08f44940565ddc336041fbde95b116c1894ba93abd455a332488c"
+  "sha256": "4d7ef3b0abc08f44940565ddc336041fbde95b116c1894ba93abd455a332488c",
+  "revision": "96c3d68dad2855e3ab5178aa1a262789d86a1466",
+  "pinnedSource": "https://raw.githubusercontent.com/dotnet/skills/96c3d68dad2855e3ab5178aa1a262789d86a1466/plugins/dotnet/skills/csharp-refactoring/SKILL.md"
  },
  "dotnet/skills/dotnet-webapi": {
   "checkedAt": "2026-11-08",
@@ -961,7 +1115,9 @@
   "descriptionLength": 468,
   "findings": [],
   "problems": [],
-  "sha256": "70e10d74aa367ee63060b64edc397c5998c03da0fbdaf120f5aa8c94d373b77d"
+  "sha256": "70e10d74aa367ee63060b64edc397c5998c03da0fbdaf120f5aa8c94d373b77d",
+  "revision": "96c3d68dad2855e3ab5178aa1a262789d86a1466",
+  "pinnedSource": "https://raw.githubusercontent.com/dotnet/skills/96c3d68dad2855e3ab5178aa1a262789d86a1466/plugins/dotnet-aspnetcore/skills/dotnet-webapi/SKILL.md"
  },
  "dotnet/skills/maui-data-binding": {
   "checkedAt": "2026-11-08",
@@ -973,7 +1129,9 @@
   "descriptionLength": 846,
   "findings": [],
   "problems": [],
-  "sha256": "7fd85f91cf1e3b78eba196da60620db833dcfd9b007f0b143813875e30acd414"
+  "sha256": "7fd85f91cf1e3b78eba196da60620db833dcfd9b007f0b143813875e30acd414",
+  "revision": "96c3d68dad2855e3ab5178aa1a262789d86a1466",
+  "pinnedSource": "https://raw.githubusercontent.com/dotnet/skills/96c3d68dad2855e3ab5178aa1a262789d86a1466/plugins/dotnet-maui/skills/maui-data-binding/SKILL.md"
  },
  "evanca/flutter-ai-rules/bloc": {
   "checkedAt": "2026-11-08",
@@ -985,7 +1143,9 @@
   "descriptionLength": 188,
   "findings": [],
   "problems": [],
-  "sha256": "7a375996b7d4011819194c546277962abd4cd6b2b6920658044d5d6a4b256644"
+  "sha256": "7a375996b7d4011819194c546277962abd4cd6b2b6920658044d5d6a4b256644",
+  "revision": "ccbbb984f17cd59fecafeb49d9ac56d19a901731",
+  "pinnedSource": "https://raw.githubusercontent.com/evanca/flutter-ai-rules/ccbbb984f17cd59fecafeb49d9ac56d19a901731/skills/bloc/SKILL.md"
  },
  "expo/skills/expo-router": {
   "checkedAt": "2026-11-08",
@@ -997,7 +1157,9 @@
   "descriptionLength": 260,
   "findings": [],
   "problems": [],
-  "sha256": "8f8c08dfdf3149baebe354c1e22f7e54c407d3c19ebe5c1d8b4c782017817f1f"
+  "sha256": "8f8c08dfdf3149baebe354c1e22f7e54c407d3c19ebe5c1d8b4c782017817f1f",
+  "revision": "a9e5bd3fa00b4e61f632e43f85da73aee1942582",
+  "pinnedSource": "https://raw.githubusercontent.com/expo/skills/a9e5bd3fa00b4e61f632e43f85da73aee1942582/plugins/expo/skills/expo-router/SKILL.md"
  },
  "expo/skills/expo-ui": {
   "checkedAt": "2026-11-08",
@@ -1009,7 +1171,9 @@
   "descriptionLength": 815,
   "findings": [],
   "problems": [],
-  "sha256": "59c0a8c7469d380ddc8499f359a4de8dd53268d5f50dbab896c967f8359ec4d6"
+  "sha256": "59c0a8c7469d380ddc8499f359a4de8dd53268d5f50dbab896c967f8359ec4d6",
+  "revision": "a9e5bd3fa00b4e61f632e43f85da73aee1942582",
+  "pinnedSource": "https://raw.githubusercontent.com/expo/skills/a9e5bd3fa00b4e61f632e43f85da73aee1942582/plugins/expo/skills/expo-ui/SKILL.md"
  },
  "expo/skills/expo-module": {
   "checkedAt": "2026-11-08",
@@ -1021,7 +1185,9 @@
   "descriptionLength": 467,
   "findings": [],
   "problems": [],
-  "sha256": "2ec4a460b9c09045b35fc6f1e18fdd2f41b43e072d07b475d6c57440e21e1475"
+  "sha256": "2ec4a460b9c09045b35fc6f1e18fdd2f41b43e072d07b475d6c57440e21e1475",
+  "revision": "a9e5bd3fa00b4e61f632e43f85da73aee1942582",
+  "pinnedSource": "https://raw.githubusercontent.com/expo/skills/a9e5bd3fa00b4e61f632e43f85da73aee1942582/plugins/expo/skills/expo-module/SKILL.md"
  },
  "fastapi/fastapi/fastapi": {
   "checkedAt": "2026-11-08",
@@ -1033,7 +1199,9 @@
   "descriptionLength": 268,
   "findings": [],
   "problems": [],
-  "sha256": "21849afb5d399e3305fe776a65649e5e6337ae41d2bd85a948afc661eaa55773"
+  "sha256": "21849afb5d399e3305fe776a65649e5e6337ae41d2bd85a948afc661eaa55773",
+  "revision": "ba47d6d71b3e806900c8471f2f661781b8c43ec4",
+  "pinnedSource": "https://raw.githubusercontent.com/fastapi/fastapi/ba47d6d71b3e806900c8471f2f661781b8c43ec4/fastapi/.agents/skills/fastapi/SKILL.md"
  },
  "firebase/agent-skills/firebase-firestore": {
   "checkedAt": "2026-11-08",
@@ -1045,7 +1213,9 @@
   "descriptionLength": 690,
   "findings": [],
   "problems": [],
-  "sha256": "6bf329d38bc9aea8b9103ff06e2d1df43e8bad8b23434ac7db801fcafea98d1d"
+  "sha256": "6bf329d38bc9aea8b9103ff06e2d1df43e8bad8b23434ac7db801fcafea98d1d",
+  "revision": "b76be96aaf5f152a5fb3112dde85c723c45539e7",
+  "pinnedSource": "https://raw.githubusercontent.com/firebase/agent-skills/b76be96aaf5f152a5fb3112dde85c723c45539e7/skills/firebase-firestore/SKILL.md"
  },
  "firebase/agent-skills/firestore-rules-creation": {
   "checkedAt": "2026-11-08",
@@ -1057,7 +1227,9 @@
   "descriptionLength": 479,
   "findings": [],
   "problems": [],
-  "sha256": "26056872489c535ac58e35de52bf76b14a13607fa57d57f0e6e85f1b0be7e583"
+  "sha256": "26056872489c535ac58e35de52bf76b14a13607fa57d57f0e6e85f1b0be7e583",
+  "revision": "b76be96aaf5f152a5fb3112dde85c723c45539e7",
+  "pinnedSource": "https://raw.githubusercontent.com/firebase/agent-skills/b76be96aaf5f152a5fb3112dde85c723c45539e7/skills/firestore-rules-creation/SKILL.md"
  },
  "firebase/agent-skills/firebase-remote-config-basics": {
   "checkedAt": "2026-11-08",
@@ -1069,7 +1241,9 @@
   "descriptionLength": 373,
   "findings": [],
   "problems": [],
-  "sha256": "9768294ce83681a4a0361831a50b6d6341d98155145384626b148179cf936c8b"
+  "sha256": "9768294ce83681a4a0361831a50b6d6341d98155145384626b148179cf936c8b",
+  "revision": "b76be96aaf5f152a5fb3112dde85c723c45539e7",
+  "pinnedSource": "https://raw.githubusercontent.com/firebase/agent-skills/b76be96aaf5f152a5fb3112dde85c723c45539e7/skills/firebase-remote-config-basics/SKILL.md"
  },
  "get-convex/templates/convex": {
   "checkedAt": "2026-11-08",
@@ -1081,7 +1255,9 @@
   "descriptionLength": 945,
   "findings": [],
   "problems": [],
-  "sha256": "35608f235686f602c8aee455a168c16b8df4e857fbfee634e14deaa72dee15eb"
+  "sha256": "35608f235686f602c8aee455a168c16b8df4e857fbfee634e14deaa72dee15eb",
+  "retained": true,
+  "fetchError": "network"
  },
  "getsentry/skills/gha-security-review": {
   "checkedAt": "2026-11-08",
@@ -1093,7 +1269,9 @@
   "descriptionLength": 363,
   "findings": [],
   "problems": [],
-  "sha256": "b75c6c43ff99c82b3cf44519bd30723917de97064f225e392ecfd6fdcd7455bd"
+  "sha256": "b75c6c43ff99c82b3cf44519bd30723917de97064f225e392ecfd6fdcd7455bd",
+  "revision": "e94f22214528d69899d09c627b3315ddc3544816",
+  "pinnedSource": "https://raw.githubusercontent.com/getsentry/skills/e94f22214528d69899d09c627b3315ddc3544816/skills/gha-security-review/SKILL.md"
  },
  "getsentry/skills/security-review": {
   "checkedAt": "2026-11-08",
@@ -1105,7 +1283,9 @@
   "descriptionLength": 312,
   "findings": [],
   "problems": [],
-  "sha256": "26db9a5b1999adc19c4bf6eb7fbe37b56f0135b79f3054f33fd03baefa8e93ed"
+  "sha256": "26db9a5b1999adc19c4bf6eb7fbe37b56f0135b79f3054f33fd03baefa8e93ed",
+  "revision": "e94f22214528d69899d09c627b3315ddc3544816",
+  "pinnedSource": "https://raw.githubusercontent.com/getsentry/skills/e94f22214528d69899d09c627b3315ddc3544816/skills/security-review/SKILL.md"
  },
  "getsentry/skills/iterate-pr": {
   "checkedAt": "2026-11-08",
@@ -1117,7 +1297,9 @@
   "descriptionLength": 213,
   "findings": [],
   "problems": [],
-  "sha256": "d57ecb10e3f0619796a2b71045fbe6725b4ba6cf60aaf63d4c8860a83a83279e"
+  "sha256": "d57ecb10e3f0619796a2b71045fbe6725b4ba6cf60aaf63d4c8860a83a83279e",
+  "revision": "e94f22214528d69899d09c627b3315ddc3544816",
+  "pinnedSource": "https://raw.githubusercontent.com/getsentry/skills/e94f22214528d69899d09c627b3315ddc3544816/skills/iterate-pr/SKILL.md"
  },
  "getsentry/skills/django-perf-review": {
   "checkedAt": "2026-11-08",
@@ -1129,7 +1311,9 @@
   "descriptionLength": 239,
   "findings": [],
   "problems": [],
-  "sha256": "52283bff7b23f06f94bbb413d174fd1cbcf497f8e8a63d4f0d569ba6bfd949d4"
+  "sha256": "52283bff7b23f06f94bbb413d174fd1cbcf497f8e8a63d4f0d569ba6bfd949d4",
+  "revision": "e94f22214528d69899d09c627b3315ddc3544816",
+  "pinnedSource": "https://raw.githubusercontent.com/getsentry/skills/e94f22214528d69899d09c627b3315ddc3544816/skills/django-perf-review/SKILL.md"
  },
  "getsentry/skills/commit": {
   "checkedAt": "2026-11-08",
@@ -1141,7 +1325,9 @@
   "descriptionLength": 131,
   "findings": [],
   "problems": [],
-  "sha256": "0307d3ecfe3b3e70246cbd88b19dc5853340b624b6ee3cd935c7bffc45b64279"
+  "sha256": "0307d3ecfe3b3e70246cbd88b19dc5853340b624b6ee3cd935c7bffc45b64279",
+  "revision": "e94f22214528d69899d09c627b3315ddc3544816",
+  "pinnedSource": "https://raw.githubusercontent.com/getsentry/skills/e94f22214528d69899d09c627b3315ddc3544816/skills/commit/SKILL.md"
  },
  "getsentry/skills/create-branch": {
   "checkedAt": "2026-11-08",
@@ -1153,7 +1339,9 @@
   "descriptionLength": 217,
   "findings": [],
   "problems": [],
-  "sha256": "0e017d30c6031477fe147a39e7f40603acb6588ed2a00145c5cd46980a43c6cf"
+  "sha256": "0e017d30c6031477fe147a39e7f40603acb6588ed2a00145c5cd46980a43c6cf",
+  "revision": "e94f22214528d69899d09c627b3315ddc3544816",
+  "pinnedSource": "https://raw.githubusercontent.com/getsentry/skills/e94f22214528d69899d09c627b3315ddc3544816/skills/create-branch/SKILL.md"
  },
  "google/skills/gcloud": {
   "checkedAt": "2026-11-08",
@@ -1165,7 +1353,9 @@
   "descriptionLength": 428,
   "findings": [],
   "problems": [],
-  "sha256": "4e8c58e24c71a42803ac211e8c03c5f6f22279960e66819c1ee14f984a4668be"
+  "sha256": "4e8c58e24c71a42803ac211e8c03c5f6f22279960e66819c1ee14f984a4668be",
+  "revision": "2194d3b8b1f31975fef2f1a0ae6b9ab55bd7ceee",
+  "pinnedSource": "https://raw.githubusercontent.com/google/skills/2194d3b8b1f31975fef2f1a0ae6b9ab55bd7ceee/skills/cloud/gcloud/SKILL.md"
  },
  "google/skills/gke-basics": {
   "checkedAt": "2026-11-08",
@@ -1177,7 +1367,9 @@
   "descriptionLength": 432,
   "findings": [],
   "problems": [],
-  "sha256": "dcfa897d9fdd11a0a53bacef8ce6fca3c9de7431f3bc99d0fd9156ce6dc4c2c1"
+  "sha256": "dcfa897d9fdd11a0a53bacef8ce6fca3c9de7431f3bc99d0fd9156ce6dc4c2c1",
+  "revision": "2194d3b8b1f31975fef2f1a0ae6b9ab55bd7ceee",
+  "pinnedSource": "https://raw.githubusercontent.com/google/skills/2194d3b8b1f31975fef2f1a0ae6b9ab55bd7ceee/skills/cloud/gke-basics/SKILL.md"
  },
  "hashicorp/agent-skills/azure-verified-modules": {
   "checkedAt": "2026-11-08",
@@ -1189,7 +1381,9 @@
   "descriptionLength": 184,
   "findings": [],
   "problems": [],
-  "sha256": "4c129022c5b8e784780bfd61e00dd11a5fb73157267d2a0b114fec7a0e09369d"
+  "sha256": "4c129022c5b8e784780bfd61e00dd11a5fb73157267d2a0b114fec7a0e09369d",
+  "revision": "5e30fa5c867ba6777c37e4206babfd08049c396f",
+  "pinnedSource": "https://raw.githubusercontent.com/hashicorp/agent-skills/5e30fa5c867ba6777c37e4206babfd08049c396f/plugins/terraform/skills/azure-verified-modules/SKILL.md"
  },
  "hashicorp/agent-skills/terraform-policy": {
   "checkedAt": "2026-11-08",
@@ -1201,7 +1395,9 @@
   "descriptionLength": 175,
   "findings": [],
   "problems": [],
-  "sha256": "4453d30dac3bd15829b73246e2464b6bfa92dd0601a11843bc2269c6f9cc7090"
+  "sha256": "4453d30dac3bd15829b73246e2464b6bfa92dd0601a11843bc2269c6f9cc7090",
+  "revision": "5e30fa5c867ba6777c37e4206babfd08049c396f",
+  "pinnedSource": "https://raw.githubusercontent.com/hashicorp/agent-skills/5e30fa5c867ba6777c37e4206babfd08049c396f/plugins/terraform/skills/terraform-policy/SKILL.md"
  },
  "hashicorp/agent-skills/terraform-stacks": {
   "checkedAt": "2026-11-08",
@@ -1213,7 +1409,9 @@
   "descriptionLength": 409,
   "findings": [],
   "problems": [],
-  "sha256": "2ccf67ec434439133b83b7905c8846e4f7b1fd99c360b35f884f189ffcb8e091"
+  "sha256": "2ccf67ec434439133b83b7905c8846e4f7b1fd99c360b35f884f189ffcb8e091",
+  "revision": "5e30fa5c867ba6777c37e4206babfd08049c396f",
+  "pinnedSource": "https://raw.githubusercontent.com/hashicorp/agent-skills/5e30fa5c867ba6777c37e4206babfd08049c396f/plugins/terraform/skills/terraform-stacks/SKILL.md"
  },
  "jeffallan/claude-skills/debugging-wizard": {
   "checkedAt": "2026-11-08",
@@ -1230,7 +1428,9 @@
    }
   ],
   "problems": [],
-  "sha256": "9dc712996f743d1b48e6f57aec344872fd81f6af547d753e5348d91c5b60c56c"
+  "sha256": "9dc712996f743d1b48e6f57aec344872fd81f6af547d753e5348d91c5b60c56c",
+  "revision": "078a25cc5bfd8011459be7b91d004e900c1d02d3",
+  "pinnedSource": "https://raw.githubusercontent.com/jeffallan/claude-skills/078a25cc5bfd8011459be7b91d004e900c1d02d3/skills/debugging-wizard/SKILL.md"
  },
  "jeffallan/claude-skills/code-reviewer": {
   "checkedAt": "2026-11-08",
@@ -1242,7 +1442,9 @@
   "descriptionLength": 685,
   "findings": [],
   "problems": [],
-  "sha256": "80ccd79a840d40ac8332de9e7705ef4751fea4fbb1cfa3190d94224eacaad2b9"
+  "sha256": "80ccd79a840d40ac8332de9e7705ef4751fea4fbb1cfa3190d94224eacaad2b9",
+  "revision": "078a25cc5bfd8011459be7b91d004e900c1d02d3",
+  "pinnedSource": "https://raw.githubusercontent.com/jeffallan/claude-skills/078a25cc5bfd8011459be7b91d004e900c1d02d3/skills/code-reviewer/SKILL.md"
  },
  "jeffallan/claude-skills/chaos-engineer": {
   "checkedAt": "2026-11-08",
@@ -1254,7 +1456,9 @@
   "descriptionLength": 479,
   "findings": [],
   "problems": [],
-  "sha256": "97b9db30c0b8a94ec09c8fc8e06ebee6192d9b3845997d841fca8c35b8f454a3"
+  "sha256": "97b9db30c0b8a94ec09c8fc8e06ebee6192d9b3845997d841fca8c35b8f454a3",
+  "revision": "078a25cc5bfd8011459be7b91d004e900c1d02d3",
+  "pinnedSource": "https://raw.githubusercontent.com/jeffallan/claude-skills/078a25cc5bfd8011459be7b91d004e900c1d02d3/skills/chaos-engineer/SKILL.md"
  },
  "jeffallan/claude-skills/devops-engineer": {
   "checkedAt": "2026-11-08",
@@ -1266,7 +1470,9 @@
   "descriptionLength": 589,
   "findings": [],
   "problems": [],
-  "sha256": "552f6b0f31bc5d6cad3c692034407f22319424d2cdb94ade99ec108f760e4285"
+  "sha256": "552f6b0f31bc5d6cad3c692034407f22319424d2cdb94ade99ec108f760e4285",
+  "revision": "078a25cc5bfd8011459be7b91d004e900c1d02d3",
+  "pinnedSource": "https://raw.githubusercontent.com/jeffallan/claude-skills/078a25cc5bfd8011459be7b91d004e900c1d02d3/skills/devops-engineer/SKILL.md"
  },
  "jeffallan/claude-skills/mcp-developer": {
   "checkedAt": "2026-11-08",
@@ -1278,7 +1484,9 @@
   "descriptionLength": 386,
   "findings": [],
   "problems": [],
-  "sha256": "d2f1ddf1ce82567c04468d041745b3c3a33d3b39ddad21de9612000c09932f3e"
+  "sha256": "d2f1ddf1ce82567c04468d041745b3c3a33d3b39ddad21de9612000c09932f3e",
+  "revision": "078a25cc5bfd8011459be7b91d004e900c1d02d3",
+  "pinnedSource": "https://raw.githubusercontent.com/jeffallan/claude-skills/078a25cc5bfd8011459be7b91d004e900c1d02d3/skills/mcp-developer/SKILL.md"
  },
  "jeffallan/claude-skills/secure-code-guardian": {
   "checkedAt": "2026-11-08",
@@ -1290,7 +1498,9 @@
   "descriptionLength": 594,
   "findings": [],
   "problems": [],
-  "sha256": "47715fd6db1e0507041a6674a3096f1fd65b086e23453cb7d77a202bbe15fb56"
+  "sha256": "47715fd6db1e0507041a6674a3096f1fd65b086e23453cb7d77a202bbe15fb56",
+  "revision": "078a25cc5bfd8011459be7b91d004e900c1d02d3",
+  "pinnedSource": "https://raw.githubusercontent.com/jeffallan/claude-skills/078a25cc5bfd8011459be7b91d004e900c1d02d3/skills/secure-code-guardian/SKILL.md"
  },
  "jezweb/claude-skills/d1-drizzle-schema": {
   "status": "unavailable",
@@ -1315,7 +1525,9 @@
   "descriptionLength": 517,
   "findings": [],
   "problems": [],
-  "sha256": "248d46037c16fecf13ab780278da3a1ff08f66a3aaee76dd45dc4784d0c8e787"
+  "sha256": "248d46037c16fecf13ab780278da3a1ff08f66a3aaee76dd45dc4784d0c8e787",
+  "revision": "1260fa7439b36b18dbf16648ccc7fb44783f6c23",
+  "pinnedSource": "https://raw.githubusercontent.com/jezweb/claude-skills/1260fa7439b36b18dbf16648ccc7fb44783f6c23/plugins/frontend/skills/react-patterns/SKILL.md"
  },
  "mblode/agent-skills/agent-ready": {
   "checkedAt": "2026-11-08",
@@ -1327,7 +1539,9 @@
   "descriptionLength": 373,
   "findings": [],
   "problems": [],
-  "sha256": "ca148049392764259671d491a246499b1c772d10627391a27db13596eee01075"
+  "sha256": "ca148049392764259671d491a246499b1c772d10627391a27db13596eee01075",
+  "revision": "5eeba20fa3b9b142be7705ee9e6c7401e7ee6f08",
+  "pinnedSource": "https://raw.githubusercontent.com/mblode/agent-skills/5eeba20fa3b9b142be7705ee9e6c7401e7ee6f08/skills/agent-ready/SKILL.md"
  },
  "mblode/agent-skills/scaffold-cli": {
   "checkedAt": "2026-11-08",
@@ -1339,7 +1553,9 @@
   "descriptionLength": 204,
   "findings": [],
   "problems": [],
-  "sha256": "98d7fad936fa8910d8dfdc33f2cefc3ba8d04b94d07b6b7c33033bd252d8f2d0"
+  "sha256": "98d7fad936fa8910d8dfdc33f2cefc3ba8d04b94d07b6b7c33033bd252d8f2d0",
+  "revision": "5eeba20fa3b9b142be7705ee9e6c7401e7ee6f08",
+  "pinnedSource": "https://raw.githubusercontent.com/mblode/agent-skills/5eeba20fa3b9b142be7705ee9e6c7401e7ee6f08/skills/scaffold-cli/SKILL.md"
  },
  "mblode/agent-skills/tidy": {
   "checkedAt": "2026-11-08",
@@ -1351,7 +1567,9 @@
   "descriptionLength": 594,
   "findings": [],
   "problems": [],
-  "sha256": "1fd6c54b0aaba6dd66e00fe3df2bf0173e4f61dae903d91443d7e3b42b289be0"
+  "sha256": "1fd6c54b0aaba6dd66e00fe3df2bf0173e4f61dae903d91443d7e3b42b289be0",
+  "revision": "5eeba20fa3b9b142be7705ee9e6c7401e7ee6f08",
+  "pinnedSource": "https://raw.githubusercontent.com/mblode/agent-skills/5eeba20fa3b9b142be7705ee9e6c7401e7ee6f08/skills/tidy/SKILL.md"
  },
  "mblode/agent-skills/ci-speedup": {
   "checkedAt": "2026-11-08",
@@ -1363,7 +1581,9 @@
   "descriptionLength": 407,
   "findings": [],
   "problems": [],
-  "sha256": "70a7b7047f3f98790b582f875ad1cb509d0e6b237edc1870093de05238b5ee66"
+  "sha256": "70a7b7047f3f98790b582f875ad1cb509d0e6b237edc1870093de05238b5ee66",
+  "revision": "5eeba20fa3b9b142be7705ee9e6c7401e7ee6f08",
+  "pinnedSource": "https://raw.githubusercontent.com/mblode/agent-skills/5eeba20fa3b9b142be7705ee9e6c7401e7ee6f08/skills/ci-speedup/SKILL.md"
  },
  "microsoft/skills/azure-diagnostics": {
   "checkedAt": "2026-11-08",
@@ -1375,7 +1595,9 @@
   "descriptionLength": 983,
   "findings": [],
   "problems": [],
-  "sha256": "98539bd472258ec80a1b2718a197df2f1f85b27d43a5c96a980424e5fac6894c"
+  "sha256": "98539bd472258ec80a1b2718a197df2f1f85b27d43a5c96a980424e5fac6894c",
+  "revision": "0696600436a9669184ce47e8d8b2ceac62e4bfac",
+  "pinnedSource": "https://raw.githubusercontent.com/microsoft/skills/0696600436a9669184ce47e8d8b2ceac62e4bfac/.github/plugins/azure-skills/skills/azure-diagnostics/SKILL.md"
  },
  "microsoft/skills/azure-kubernetes": {
   "checkedAt": "2026-11-08",
@@ -1387,7 +1609,9 @@
   "descriptionLength": 621,
   "findings": [],
   "problems": [],
-  "sha256": "e3c45752a59fd9257df4e9766c37993df06aca8657f44da063dcab4f65a719b8"
+  "sha256": "e3c45752a59fd9257df4e9766c37993df06aca8657f44da063dcab4f65a719b8",
+  "revision": "0696600436a9669184ce47e8d8b2ceac62e4bfac",
+  "pinnedSource": "https://raw.githubusercontent.com/microsoft/skills/0696600436a9669184ce47e8d8b2ceac62e4bfac/.github/plugins/azure-skills/skills/azure-kubernetes/SKILL.md"
  },
  "microsoft/skills/azure-reliability": {
   "checkedAt": "2026-11-08",
@@ -1399,7 +1623,9 @@
   "descriptionLength": 529,
   "findings": [],
   "problems": [],
-  "sha256": "a70f0a799c8f3cf805ada741e82af31a149b57cb1e2388d7805036492cdceb71"
+  "sha256": "a70f0a799c8f3cf805ada741e82af31a149b57cb1e2388d7805036492cdceb71",
+  "revision": "0696600436a9669184ce47e8d8b2ceac62e4bfac",
+  "pinnedSource": "https://raw.githubusercontent.com/microsoft/skills/0696600436a9669184ce47e8d8b2ceac62e4bfac/.github/plugins/azure-skills/skills/azure-reliability/SKILL.md"
  },
  "microsoft/skills/azure-storage": {
   "checkedAt": "2026-11-08",
@@ -1411,7 +1637,9 @@
   "descriptionLength": 753,
   "findings": [],
   "problems": [],
-  "sha256": "cf527b7c89b54194a9e2475dfaa25a454ef8f8417d7674b3a714d34368f613f9"
+  "sha256": "cf527b7c89b54194a9e2475dfaa25a454ef8f8417d7674b3a714d34368f613f9",
+  "revision": "0696600436a9669184ce47e8d8b2ceac62e4bfac",
+  "pinnedSource": "https://raw.githubusercontent.com/microsoft/skills/0696600436a9669184ce47e8d8b2ceac62e4bfac/.github/plugins/azure-skills/skills/azure-storage/SKILL.md"
  },
  "microsoft/skills/azure-quotas": {
   "checkedAt": "2026-11-08",
@@ -1423,7 +1651,9 @@
   "descriptionLength": 348,
   "findings": [],
   "problems": [],
-  "sha256": "82ac42524b655f947bdd6bbd6b86a670145d296a3447555f510e37ea2d377733"
+  "sha256": "82ac42524b655f947bdd6bbd6b86a670145d296a3447555f510e37ea2d377733",
+  "revision": "0696600436a9669184ce47e8d8b2ceac62e4bfac",
+  "pinnedSource": "https://raw.githubusercontent.com/microsoft/skills/0696600436a9669184ce47e8d8b2ceac62e4bfac/.github/plugins/azure-skills/skills/azure-quotas/SKILL.md"
  },
  "mongodb/agent-skills/mongodb-query-optimizer": {
   "checkedAt": "2026-11-08",
@@ -1435,7 +1665,9 @@
   "descriptionLength": 446,
   "findings": [],
   "problems": [],
-  "sha256": "62a5bff5f4050596baf63a60856d8df52dddcce3e7ba21461885476a88be4873"
+  "sha256": "62a5bff5f4050596baf63a60856d8df52dddcce3e7ba21461885476a88be4873",
+  "revision": "59c4a4ebed23666834c8c698a76afa91cd689365",
+  "pinnedSource": "https://raw.githubusercontent.com/mongodb/agent-skills/59c4a4ebed23666834c8c698a76afa91cd689365/skills/mongodb-query-optimizer/SKILL.md"
  },
  "mongodb/agent-skills/mongodb-schema-design": {
   "checkedAt": "2026-11-08",
@@ -1447,7 +1679,9 @@
   "descriptionLength": 554,
   "findings": [],
   "problems": [],
-  "sha256": "2a19fcd1a85b957301898c7c26f691bdf5da65d94c6ab0c6fc3609dc8205eb08"
+  "sha256": "2a19fcd1a85b957301898c7c26f691bdf5da65d94c6ab0c6fc3609dc8205eb08",
+  "revision": "59c4a4ebed23666834c8c698a76afa91cd689365",
+  "pinnedSource": "https://raw.githubusercontent.com/mongodb/agent-skills/59c4a4ebed23666834c8c698a76afa91cd689365/skills/mongodb-schema-design/SKILL.md"
  },
  "neondatabase/agent-skills/neon-postgres": {
   "checkedAt": "2026-11-08",
@@ -1459,7 +1693,9 @@
   "descriptionLength": 922,
   "findings": [],
   "problems": [],
-  "sha256": "e208be6fd3db0ee5e943e607241fb58e808566b0ecae55d97088244af39d86a4"
+  "sha256": "e208be6fd3db0ee5e943e607241fb58e808566b0ecae55d97088244af39d86a4",
+  "revision": "2b0e2b6f56d2b41c5363049e30e6ab72aa260cce",
+  "pinnedSource": "https://raw.githubusercontent.com/neondatabase/agent-skills/2b0e2b6f56d2b41c5363049e30e6ab72aa260cce/skills/neon-postgres/SKILL.md"
  },
  "neondatabase/agent-skills/neon-postgres-branches": {
   "status": "unavailable",
@@ -1497,7 +1733,9 @@
   "descriptionLength": 807,
   "findings": [],
   "problems": [],
-  "sha256": "45da029d33f4dd3e2775232d44f831e433fb641e27e9f00c9091a86cd1410d6f"
+  "sha256": "45da029d33f4dd3e2775232d44f831e433fb641e27e9f00c9091a86cd1410d6f",
+  "revision": "2b0e2b6f56d2b41c5363049e30e6ab72aa260cce",
+  "pinnedSource": "https://raw.githubusercontent.com/neondatabase/agent-skills/2b0e2b6f56d2b41c5363049e30e6ab72aa260cce/skills/neon-object-storage/SKILL.md"
  },
  "obra/superpowers/finishing-a-development-branch": {
   "checkedAt": "2026-11-08",
@@ -1509,7 +1747,9 @@
   "descriptionLength": 101,
   "findings": [],
   "problems": [],
-  "sha256": "8db5a922b242dd4e1bf824cb91c13b3e8d8e8a86d6ceaf7f0774eb9cce909d65"
+  "sha256": "8db5a922b242dd4e1bf824cb91c13b3e8d8e8a86d6ceaf7f0774eb9cce909d65",
+  "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+  "pinnedSource": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/skills/finishing-a-development-branch/SKILL.md"
  },
  "obra/superpowers/subagent-driven-development": {
   "checkedAt": "2026-11-08",
@@ -1521,7 +1761,9 @@
   "descriptionLength": 85,
   "findings": [],
   "problems": [],
-  "sha256": "1baf70e307bde682c462513c86116333f1f066168c6710f45145bf5f0b00828d"
+  "sha256": "1baf70e307bde682c462513c86116333f1f066168c6710f45145bf5f0b00828d",
+  "revision": "22f0b463e7a5e579904dd6211a520321035526f7",
+  "pinnedSource": "https://raw.githubusercontent.com/obra/superpowers/22f0b463e7a5e579904dd6211a520321035526f7/skills/subagent-driven-development/SKILL.md"
  },
  "openai/skills/security-best-practices": {
   "checkedAt": "2026-11-08",
@@ -1533,7 +1775,9 @@
   "descriptionLength": 385,
   "findings": [],
   "problems": [],
-  "sha256": "7b3dae1ffc5434d890f3c65c8f552af52d0307fab3b35dec13013c9ca3844c4f"
+  "sha256": "7b3dae1ffc5434d890f3c65c8f552af52d0307fab3b35dec13013c9ca3844c4f",
+  "revision": "49f948faa9258a0c61caceaf225e179651397431",
+  "pinnedSource": "https://raw.githubusercontent.com/openai/skills/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/security-best-practices/SKILL.md"
  },
  "openai/skills/playwright": {
   "checkedAt": "2026-11-08",
@@ -1545,7 +1789,9 @@
   "descriptionLength": 209,
   "findings": [],
   "problems": [],
-  "sha256": "0ffaabcc8e0990627c4725f18bf1c7955534a796c1c199e872909de2013ce6a8"
+  "sha256": "0ffaabcc8e0990627c4725f18bf1c7955534a796c1c199e872909de2013ce6a8",
+  "revision": "49f948faa9258a0c61caceaf225e179651397431",
+  "pinnedSource": "https://raw.githubusercontent.com/openai/skills/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/playwright/SKILL.md"
  },
  "openai/skills/gh-address-comments": {
   "checkedAt": "2026-11-08",
@@ -1557,7 +1803,9 @@
   "descriptionLength": 168,
   "findings": [],
   "problems": [],
-  "sha256": "77389eefd3fb6584210668ca8e43f4b8de87e7722ddd953474bc9e24cdfaaedd"
+  "sha256": "77389eefd3fb6584210668ca8e43f4b8de87e7722ddd953474bc9e24cdfaaedd",
+  "revision": "49f948faa9258a0c61caceaf225e179651397431",
+  "pinnedSource": "https://raw.githubusercontent.com/openai/skills/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-address-comments/SKILL.md"
  },
  "openai/skills/gh-fix-ci": {
   "checkedAt": "2026-11-08",
@@ -1569,7 +1817,9 @@
   "descriptionLength": 313,
   "findings": [],
   "problems": [],
-  "sha256": "7b326b4a2f0f5f85122144628ec02077e48841e0e0e82efce88b3415bcfb7c26"
+  "sha256": "7b326b4a2f0f5f85122144628ec02077e48841e0e0e82efce88b3415bcfb7c26",
+  "revision": "49f948faa9258a0c61caceaf225e179651397431",
+  "pinnedSource": "https://raw.githubusercontent.com/openai/skills/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/gh-fix-ci/SKILL.md"
  },
  "openai/skills/yeet": {
   "checkedAt": "2026-11-08",
@@ -1581,7 +1831,9 @@
   "descriptionLength": 134,
   "findings": [],
   "problems": [],
-  "sha256": "4829d4909081e1abf91507fb581e6f566ce7064001892414f32191895b08a595"
+  "sha256": "4829d4909081e1abf91507fb581e6f566ce7064001892414f32191895b08a595",
+  "revision": "49f948faa9258a0c61caceaf225e179651397431",
+  "pinnedSource": "https://raw.githubusercontent.com/openai/skills/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/yeet/SKILL.md"
  },
  "openai/skills/security-ownership-map": {
   "checkedAt": "2026-11-08",
@@ -1593,7 +1845,9 @@
   "descriptionLength": 532,
   "findings": [],
   "problems": [],
-  "sha256": "f06c1a59247569326702c945f397af163ea96cf2ecfdf2dde280605bf89a3ec8"
+  "sha256": "f06c1a59247569326702c945f397af163ea96cf2ecfdf2dde280605bf89a3ec8",
+  "revision": "49f948faa9258a0c61caceaf225e179651397431",
+  "pinnedSource": "https://raw.githubusercontent.com/openai/skills/49f948faa9258a0c61caceaf225e179651397431/skills/.curated/security-ownership-map/SKILL.md"
  },
  "planetscale/database-skills/mysql": {
   "checkedAt": "2026-11-08",
@@ -1605,7 +1859,9 @@
   "descriptionLength": 299,
   "findings": [],
   "problems": [],
-  "sha256": "e4ea38add289809904805cc9e078a9b84a8fd8184da277466717aee8c51dc110"
+  "sha256": "e4ea38add289809904805cc9e078a9b84a8fd8184da277466717aee8c51dc110",
+  "revision": "f6ed002d03084cb39c01d1d58904d47a36f5322a",
+  "pinnedSource": "https://raw.githubusercontent.com/planetscale/database-skills/f6ed002d03084cb39c01d1d58904d47a36f5322a/skills/mysql/SKILL.md"
  },
  "prisma/skills/prisma-cli": {
   "checkedAt": "2026-11-08",
@@ -1617,7 +1873,9 @@
   "descriptionLength": 263,
   "findings": [],
   "problems": [],
-  "sha256": "e20d1a307dd836ede8c3ac5f8cdd4f91d77cc6f09ee9b0621bd2efde295ae229"
+  "sha256": "e20d1a307dd836ede8c3ac5f8cdd4f91d77cc6f09ee9b0621bd2efde295ae229",
+  "revision": "8ea289b730c2e89f7ff1f518af128b113d842a92",
+  "pinnedSource": "https://raw.githubusercontent.com/prisma/skills/8ea289b730c2e89f7ff1f518af128b113d842a92/prisma-cli/SKILL.md"
  },
  "prisma/skills/prisma-database-setup": {
   "checkedAt": "2026-11-08",
@@ -1629,7 +1887,9 @@
   "descriptionLength": 173,
   "findings": [],
   "problems": [],
-  "sha256": "f1f95a5f596ad4260649a20e56cf77f1d24222b56ba6f7b12b24ec6e5ac39477"
+  "sha256": "f1f95a5f596ad4260649a20e56cf77f1d24222b56ba6f7b12b24ec6e5ac39477",
+  "revision": "8ea289b730c2e89f7ff1f518af128b113d842a92",
+  "pinnedSource": "https://raw.githubusercontent.com/prisma/skills/8ea289b730c2e89f7ff1f518af128b113d842a92/prisma-database-setup/SKILL.md"
  },
  "redis/agent-skills/redis-core": {
   "checkedAt": "2026-11-08",
@@ -1641,7 +1901,9 @@
   "descriptionLength": 377,
   "findings": [],
   "problems": [],
-  "sha256": "7ab1000e7a1548c4f82179ea1d5a57ced43851e6a924ac647cecd822015b81a7"
+  "sha256": "7ab1000e7a1548c4f82179ea1d5a57ced43851e6a924ac647cecd822015b81a7",
+  "revision": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+  "pinnedSource": "https://raw.githubusercontent.com/redis/agent-skills/74708dab4b3f81a9845803c3f642a4f7d443af69/skills/redis-core/SKILL.md"
  },
  "redis/agent-skills/redis-search": {
   "checkedAt": "2026-11-08",
@@ -1653,7 +1915,9 @@
   "descriptionLength": 651,
   "findings": [],
   "problems": [],
-  "sha256": "1df77121b528f0f91194af6c8466cef8288b78c8300be9cbe0e08ffd33d03494"
+  "sha256": "1df77121b528f0f91194af6c8466cef8288b78c8300be9cbe0e08ffd33d03494",
+  "revision": "74708dab4b3f81a9845803c3f642a4f7d443af69",
+  "pinnedSource": "https://raw.githubusercontent.com/redis/agent-skills/74708dab4b3f81a9845803c3f642a4f7d443af69/skills/redis-search/SKILL.md"
  },
  "st0012/ruby-skills/ruby-test-frameworks": {
   "checkedAt": "2026-11-08",
@@ -1665,7 +1929,9 @@
   "descriptionLength": 308,
   "findings": [],
   "problems": [],
-  "sha256": "b2b9d7af7606de810e24c2a798ecaa15ac60d92925244315bb109d7b4cfa7848"
+  "sha256": "b2b9d7af7606de810e24c2a798ecaa15ac60d92925244315bb109d7b4cfa7848",
+  "revision": "b1ea8b59bbd15bf808c46e66f08c04a8620b7470",
+  "pinnedSource": "https://raw.githubusercontent.com/st0012/ruby-skills/b1ea8b59bbd15bf808c46e66f08c04a8620b7470/plugins/ruby-skills/skills/ruby-test-frameworks/SKILL.md"
  },
  "sveltejs/ai-tools/svelte-code-writer": {
   "checkedAt": "2026-11-08",
@@ -1677,7 +1943,9 @@
   "descriptionLength": 299,
   "findings": [],
   "problems": [],
-  "sha256": "aaa5ef9293b156133fedaf1287a914817eda488e9e4b15e5bb20a56b1d348cb4"
+  "sha256": "aaa5ef9293b156133fedaf1287a914817eda488e9e4b15e5bb20a56b1d348cb4",
+  "revision": "d3e755be770277d8c75fe61109b103b801b12775",
+  "pinnedSource": "https://raw.githubusercontent.com/sveltejs/ai-tools/d3e755be770277d8c75fe61109b103b801b12775/tools/skills/svelte-code-writer/SKILL.md"
  },
  "trailofbits/skills/supply-chain-risk-auditor": {
   "checkedAt": "2026-11-08",
@@ -1689,7 +1957,9 @@
   "descriptionLength": 367,
   "findings": [],
   "problems": [],
-  "sha256": "a1254b7f8d3a1731a9a7e1f9cd6c67b59cf84ed6ef7c7fb455db9a14c528ceb4"
+  "sha256": "a1254b7f8d3a1731a9a7e1f9cd6c67b59cf84ed6ef7c7fb455db9a14c528ceb4",
+  "revision": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+  "pinnedSource": "https://raw.githubusercontent.com/trailofbits/skills/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md"
  },
  "trailofbits/skills/code-improver": {
   "checkedAt": "2026-11-08",
@@ -1701,7 +1971,9 @@
   "descriptionLength": 516,
   "findings": [],
   "problems": [],
-  "sha256": "6941027f2fb0b643d7e6be9a8a4dbec7acc10a30966212c6c7a3a8c3fa843719"
+  "sha256": "6941027f2fb0b643d7e6be9a8a4dbec7acc10a30966212c6c7a3a8c3fa843719",
+  "revision": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+  "pinnedSource": "https://raw.githubusercontent.com/trailofbits/skills/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/code-improver/skills/code-improver/SKILL.md"
  },
  "trailofbits/skills/mutation-testing": {
   "checkedAt": "2026-11-08",
@@ -1713,7 +1985,9 @@
   "descriptionLength": 250,
   "findings": [],
   "problems": [],
-  "sha256": "20e6ee2b6cec91bad7572dea966b5fce1e50f9ef8d4bf2e4ba69ac9b679792ff"
+  "sha256": "20e6ee2b6cec91bad7572dea966b5fce1e50f9ef8d4bf2e4ba69ac9b679792ff",
+  "revision": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+  "pinnedSource": "https://raw.githubusercontent.com/trailofbits/skills/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/mutation-testing/skills/mutation-testing/SKILL.md"
  },
  "trailofbits/skills/post-patch-validation": {
   "checkedAt": "2026-11-08",
@@ -1725,7 +1999,9 @@
   "descriptionLength": 443,
   "findings": [],
   "problems": [],
-  "sha256": "33b604f4d7d62eab393d710edb98b18505fcbe079c07c9428daa018f29439b54"
+  "sha256": "33b604f4d7d62eab393d710edb98b18505fcbe079c07c9428daa018f29439b54",
+  "revision": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+  "pinnedSource": "https://raw.githubusercontent.com/trailofbits/skills/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/post-patch-validation/skills/post-patch-validation/SKILL.md"
  },
  "trailofbits/skills/agentic-actions-auditor": {
   "checkedAt": "2026-11-08",
@@ -1754,7 +2030,9 @@
    }
   ],
   "problems": [],
-  "sha256": "b2bdb88d559bc37e6c2c8314e28e7a2eb47e7cdd9da51e77da347d3517326dc0"
+  "sha256": "b2bdb88d559bc37e6c2c8314e28e7a2eb47e7cdd9da51e77da347d3517326dc0",
+  "revision": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+  "pinnedSource": "https://raw.githubusercontent.com/trailofbits/skills/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/agentic-actions-auditor/skills/agentic-actions-auditor/SKILL.md"
  },
  "trailofbits/skills/codeql": {
   "checkedAt": "2026-11-08",
@@ -1766,7 +2044,9 @@
   "descriptionLength": 751,
   "findings": [],
   "problems": [],
-  "sha256": "1a6d919ff80f83b262daf650552af6eb6d2c32b19d0c529b70efe0c116b675cf"
+  "sha256": "1a6d919ff80f83b262daf650552af6eb6d2c32b19d0c529b70efe0c116b675cf",
+  "revision": "e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff",
+  "pinnedSource": "https://raw.githubusercontent.com/trailofbits/skills/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff/plugins/static-analysis/skills/codeql/SKILL.md"
  },
  "vercel/next.js/next-dev-loop": {
   "checkedAt": "2026-11-08",
@@ -1778,7 +2058,9 @@
   "descriptionLength": 275,
   "findings": [],
   "problems": [],
-  "sha256": "a5406518dbf30c63bea2860b4e4043cc89efe1286a411d9a7717909183f60a66"
+  "sha256": "a5406518dbf30c63bea2860b4e4043cc89efe1286a411d9a7717909183f60a66",
+  "revision": "b303bdccce328c3803e1c573fa735dcbee2b977d",
+  "pinnedSource": "https://raw.githubusercontent.com/vercel/next.js/b303bdccce328c3803e1c573fa735dcbee2b977d/skills/next-dev-loop/SKILL.md"
  },
  "wshobson/agents/secrets-management": {
   "checkedAt": "2026-11-08",
@@ -1790,7 +2072,9 @@
   "descriptionLength": 210,
   "findings": [],
   "problems": [],
-  "sha256": "293527164f627d889cebdf78a2b45455952cc402797236461644b376af8dfe53"
+  "sha256": "293527164f627d889cebdf78a2b45455952cc402797236461644b376af8dfe53",
+  "revision": "9c61ab243def98f72da12abd41cfcf5bcd91af9d",
+  "pinnedSource": "https://raw.githubusercontent.com/wshobson/agents/9c61ab243def98f72da12abd41cfcf5bcd91af9d/plugins/cicd-automation/skills/secrets-management/SKILL.md"
  },
  "wshobson/agents/go-concurrency-patterns": {
   "checkedAt": "2026-11-08",
@@ -1802,7 +2086,9 @@
   "descriptionLength": 181,
   "findings": [],
   "problems": [],
-  "sha256": "a66d04f2c616aecc3dd53c23d08cb06903f30a2c190c99e6ba82b3e5315b36b2"
+  "sha256": "a66d04f2c616aecc3dd53c23d08cb06903f30a2c190c99e6ba82b3e5315b36b2",
+  "revision": "9c61ab243def98f72da12abd41cfcf5bcd91af9d",
+  "pinnedSource": "https://raw.githubusercontent.com/wshobson/agents/9c61ab243def98f72da12abd41cfcf5bcd91af9d/plugins/systems-programming/skills/go-concurrency-patterns/SKILL.md"
  },
  "wshobson/agents/rust-async-patterns": {
   "checkedAt": "2026-11-08",
@@ -1814,7 +2100,9 @@
   "descriptionLength": 197,
   "findings": [],
   "problems": [],
-  "sha256": "8e9a951c21bb1ee671dd2e7391b193e8e3d362b95ef29c470915837d73bf87df"
+  "sha256": "8e9a951c21bb1ee671dd2e7391b193e8e3d362b95ef29c470915837d73bf87df",
+  "revision": "9c61ab243def98f72da12abd41cfcf5bcd91af9d",
+  "pinnedSource": "https://raw.githubusercontent.com/wshobson/agents/9c61ab243def98f72da12abd41cfcf5bcd91af9d/plugins/systems-programming/skills/rust-async-patterns/SKILL.md"
  },
  "wshobson/agents/sql-optimization-patterns": {
   "checkedAt": "2026-11-08",
@@ -1826,7 +2114,9 @@
   "descriptionLength": 245,
   "findings": [],
   "problems": [],
-  "sha256": "cfe8234323daaeb47577261c96933f519004fad2f45f1460f340b883af5d7354"
+  "sha256": "cfe8234323daaeb47577261c96933f519004fad2f45f1460f340b883af5d7354",
+  "revision": "9c61ab243def98f72da12abd41cfcf5bcd91af9d",
+  "pinnedSource": "https://raw.githubusercontent.com/wshobson/agents/9c61ab243def98f72da12abd41cfcf5bcd91af9d/plugins/developer-essentials/skills/sql-optimization-patterns/SKILL.md"
  },
  "wshobson/agents/turborepo-caching": {
   "checkedAt": "2026-11-08",
@@ -1838,7 +2128,9 @@
   "descriptionLength": 176,
   "findings": [],
   "problems": [],
-  "sha256": "07477fcd27f880e0f55fdec25c44e7454aedec81cbe2eba95c3749cc79e53afa"
+  "sha256": "07477fcd27f880e0f55fdec25c44e7454aedec81cbe2eba95c3749cc79e53afa",
+  "revision": "9c61ab243def98f72da12abd41cfcf5bcd91af9d",
+  "pinnedSource": "https://raw.githubusercontent.com/wshobson/agents/9c61ab243def98f72da12abd41cfcf5bcd91af9d/plugins/developer-essentials/skills/turborepo-caching/SKILL.md"
  },
  "wshobson/agents/task-coordination-strategies": {
   "checkedAt": "2026-11-08",
@@ -1850,7 +2142,9 @@
   "descriptionLength": 249,
   "findings": [],
   "problems": [],
-  "sha256": "e6e0c3f64b01f50d549a04d89c9a94128c5f0d24969c6e412952ff8cd9de36d7"
+  "sha256": "e6e0c3f64b01f50d549a04d89c9a94128c5f0d24969c6e412952ff8cd9de36d7",
+  "revision": "9c61ab243def98f72da12abd41cfcf5bcd91af9d",
+  "pinnedSource": "https://raw.githubusercontent.com/wshobson/agents/9c61ab243def98f72da12abd41cfcf5bcd91af9d/plugins/agent-teams/skills/task-coordination-strategies/SKILL.md"
  },
  "alirezarezvani/claude-skills/senior-security": {
   "checkedAt": "2026-11-08",
@@ -1862,7 +2156,9 @@
   "descriptionLength": 196,
   "findings": [],
   "problems": [],
-  "sha256": "2f0164ea2ecdc25b9ad7392260c1f2baeeb746463da974c03f13e97c8c35e622"
+  "sha256": "2f0164ea2ecdc25b9ad7392260c1f2baeeb746463da974c03f13e97c8c35e622",
+  "revision": "8f082544116fc0d014188e521ca40304cdfc86b0",
+  "pinnedSource": "https://raw.githubusercontent.com/alirezarezvani/claude-skills/8f082544116fc0d014188e521ca40304cdfc86b0/engineering-team/skills/senior-security/SKILL.md"
  },
  "microsoft/skills/azure-cloud-migrate": {
   "checkedAt": "2026-11-08",
@@ -1874,7 +2170,9 @@
   "descriptionLength": 445,
   "findings": [],
   "problems": [],
-  "sha256": "92766b8047f8f31eae9e4168d2bb903515d211146a97d00c795b535f77677ca7"
+  "sha256": "92766b8047f8f31eae9e4168d2bb903515d211146a97d00c795b535f77677ca7",
+  "revision": "0696600436a9669184ce47e8d8b2ceac62e4bfac",
+  "pinnedSource": "https://raw.githubusercontent.com/microsoft/skills/0696600436a9669184ce47e8d8b2ceac62e4bfac/.github/plugins/azure-skills/skills/azure-cloud-migrate/SKILL.md"
  },
  "mblode/agent-skills/pr-creator": {
   "checkedAt": "2026-11-08",
@@ -1886,7 +2184,9 @@
   "descriptionLength": 216,
   "findings": [],
   "problems": [],
-  "sha256": "23b05abaae2596bd5978c6c454cbcbeabfd01a64a2e28f246a55b34dcd910edf"
+  "sha256": "23b05abaae2596bd5978c6c454cbcbeabfd01a64a2e28f246a55b34dcd910edf",
+  "revision": "5eeba20fa3b9b142be7705ee9e6c7401e7ee6f08",
+  "pinnedSource": "https://raw.githubusercontent.com/mblode/agent-skills/5eeba20fa3b9b142be7705ee9e6c7401e7ee6f08/skills/pr-creator/SKILL.md"
  },
  "dotnet/skills/author-component": {
   "checkedAt": "2026-11-08",
@@ -1898,6 +2198,8 @@
   "descriptionLength": 731,
   "findings": [],
   "problems": [],
-  "sha256": "dd019cae755aac5064ff75cfd6ed6a4a098ab3c9c36c6817432ce70c61ffd279"
+  "sha256": "dd019cae755aac5064ff75cfd6ed6a4a098ab3c9c36c6817432ce70c61ffd279",
+  "revision": "96c3d68dad2855e3ab5178aa1a262789d86a1466",
+  "pinnedSource": "https://raw.githubusercontent.com/dotnet/skills/96c3d68dad2855e3ab5178aa1a262789d86a1466/plugins/dotnet-blazor/skills/author-component/SKILL.md"
  }
 }

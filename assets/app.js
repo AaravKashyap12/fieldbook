@@ -439,3 +439,20 @@ for (const button of document.querySelectorAll('[data-expand]')) {
     if (!open) box.scrollIntoView({ block: 'start', behavior: reduceMotion.matches ? 'auto' : 'smooth' });
   });
 }
+
+// Compatibility names are optional ambient motion, never required to read.
+// Give keyboard and touch users the same pause option as pointer hover.
+const marquee = document.querySelector('[data-marquee]');
+const marqueeToggle = document.querySelector('[data-marquee-toggle]');
+if (marquee && marqueeToggle) {
+  const motion = matchMedia('(prefers-reduced-motion: reduce)');
+  const syncMotion = () => { marqueeToggle.hidden = motion.matches; };
+  syncMotion();
+  motion.addEventListener('change', syncMotion);
+  marqueeToggle.addEventListener('click', () => {
+    const paused = !marquee.hasAttribute('data-paused');
+    marquee.toggleAttribute('data-paused', paused);
+    marqueeToggle.setAttribute('aria-label', `${paused ? 'Resume' : 'Pause'} agent names`);
+    marqueeToggle.querySelector('[data-marquee-label]').textContent = paused ? 'Resume' : 'Pause';
+  });
+}

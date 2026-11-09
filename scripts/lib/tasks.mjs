@@ -1,6 +1,7 @@
 import { esc, pad } from './util.mjs';
 import { icon } from './icons.mjs';
 import { dirList } from './parts.mjs';
+import { taskArt } from './task-art.mjs';
 
 // Deliberately curated destinations, not a page for every filter combination.
 export const taskGuides = [
@@ -46,9 +47,10 @@ export const skillsForTask = (entries, slug) => entries.filter(e => !e.paused &&
 
 export function taskPage(task, entries) {
   const list = skillsForTask(entries, task.slug);
-  return `<main id="main" class="wrap directory">
+  return `<main id="main" class="wrap directory task-guide-page">
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/skills/">Directory</a>${icon('chevron')}<span aria-current="page">${esc(task.name)}</span></nav>
-<header class="page-head compact"><h1>${esc(task.name)}<br><em>with agent skills.</em></h1><p class="lede">${esc(task.intro)}</p></header>
+<header class="page-head compact guide-cover"><div><h1>${esc(task.name)}<br><em>with agent skills.</em></h1><p class="lede">${esc(task.intro)}</p></div>${taskArt(task.slug)}</header>
+<nav class="guide-contents" aria-label="In this guide"><span>In this guide</span><a href="#choose-title">Choose a skill</a><a href="#prepare-title">Prepare</a><a href="#results-title">Compare skills</a><a href="#verify-title">Verify the result</a></nav>
 <p class="refine"><a class="link" href="/skills/?task=${esc(task.slug)}">Filter these skills by stack and access ${icon('chevron')}</a></p>
 <section class="section" aria-labelledby="choose-title"><h2 id="choose-title">Choose a skill</h2><p class="prose">${esc(task.choose)}</p>${task.kit ? `<a class="link" href="/kits/${esc(task.kit[0])}/">${esc(task.kit[1])} ${icon('chevron')}</a>` : ''}</section>
 <section class="section" aria-labelledby="prepare-title"><h2 id="prepare-title">Before you install</h2><p class="prose">${esc(task.prepare)}</p><p class="prose">Open a listing to read its source, access labels and review evidence before copying its install command. The automated scan covers SKILL.md, not referenced files or runtime behavior. <a class="inline-link" href="/review/">Read the review limits</a>.</p></section>

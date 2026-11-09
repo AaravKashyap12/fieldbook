@@ -48,3 +48,9 @@ Impeccable's detector flags Geist and Instrument Serif as common faces. Geist is
 ## Maintenance
 
 Markup in `scripts/build.mjs` and `scripts/lib/`; styles, script and sound in `assets/`; data in `content/`. Run `npm run daily` (or `build` then `check`) from `site/`. Preview at 127.0.0.1:4173. The pre-directory source is backed up under `../.handoff-work/*.before-directory-2026-09-27`. No deployment, push or release has been performed.
+
+## Paper-and-ink edition, 9 November 2026
+
+The cover now uses blue italic display type and bound, ruled paper leaves with folios. The search action uses the existing blue; the catalog footnote keeps counts separate from the review guarantee. Four original task diagrams share an open editorial grid, with a short ink trace only on deliberate hover/focus. Guide pages reuse the diagrams and expose ordinary contents anchors, with 112px scroll padding for the sticky header. Mobile guides prioritize the text and wrap the contents.
+
+The compatibility strip has an explicit Pause/Resume button. It stays static without JavaScript or with reduced motion; new task tracing and press displacement also respect reduced motion. No new library, font or image dependency. See `DESIGN-RESEARCH.md` for concrete sources and `EDITORIAL-VERIFICATION.md` for tested behavior and limitations.

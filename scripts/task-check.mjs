@@ -48,3 +48,17 @@ const escaped = taskPage({ ...task, intro: '<script>probe</script>' }, []);
 assert.ok(!escaped.includes('<script>probe'));
 assert.ok(escaped.includes('&lt;script&gt;probe'));
 console.log('Passed: four crawlable task guides, useful content, exact available listings, finder refinement and reciprocal links.');
+
+const directoryHtml = await read('/skills/');
+assert.ok(directoryHtml.includes('id="directory-guide-title"'), 'Directory serves selection guidance without JavaScript');
+for (const slug of ['review-code', 'fix-bug', 'write-tests', 'secure-app']) {
+  assert.ok(directoryHtml.includes(`href="/tasks/${slug}/"`), 'Directory links to each curated guide');
+}
+const reviewCategoryHtml = await read('/c/review/');
+assert.ok(reviewCategoryHtml.includes('id="review-choice-title"'), 'Review category distinguishes review jobs');
+assert.ok(reviewCategoryHtml.includes('href="/tasks/review-code/#review-brief-title"'), 'Review category links to concrete review brief');
+const reviewTaskHtml = await read('/tasks/review-code/');
+assert.ok(reviewTaskHtml.includes('id="review-brief-title"'), 'Review example is in generated HTML');
+assert.ok(reviewTaskHtml.includes('not a report from a tested project'), 'Example does not imply first-hand evidence');
+assert.ok(!(await read('/tasks/fix-bug/')).includes('id="review-brief-title"'), 'Review example is not duplicated across unrelated task pages');
+console.log('Passed: directory decision guidance, contextual review category link, and clearly illustrative review brief.');

@@ -60,3 +60,24 @@ if (actualCommunity.paused) {
   assert.ok(detail.includes(actualCommunity.revision ? 'The install command targets this commit.' : 'not a pinned reviewed revision'));
 }
 console.log('Passed: guided journey, paused/fallback states, review evidence, install disclosure and generated kit availability.');
+
+const launchDefinition = kits.find(k => k.slug === 'launch-week');
+const launch = { ...launchDefinition, entries: launchDefinition.ids.map(id => entries.find(e => e.id === id)) };
+const launchBuilt = await readFile(new URL('../dist/kits/launch-week/index.html', import.meta.url), 'utf8');
+for (const heading of ['A pre-launch checklist for an AI-built app', 'Choose the check you need', 'Write a bounded launch brief', 'Collect evidence before deciding to ship', 'When to stop the launch']) {
+  assert.ok(launchBuilt.includes(heading), `Launch guide serves ${heading} without JavaScript`);
+}
+for (const route of ['/tasks/secure-app/', '/tasks/write-tests/', '/tasks/review-code/']) {
+  assert.ok(launchBuilt.includes(`href="${route}"`), 'Launch guide links to task-specific preparation');
+}
+assert.ok(launchBuilt.includes('illustrative brief, not evidence of a completed audit'));
+assert.ok(launchBuilt.includes('Do not deploy, run migrations, change production settings, or contact third-party systems.'));
+assert.ok(!built.includes('id="launch-guide-title"'), 'Launch guidance stays on its own kit');
+for (const e of launch.entries) assert.equal(launchBuilt.includes(e.install), !e.paused, `${e.id}: launch command availability`);
+const launchPaused = kitPage({ ...launch, entries: launch.entries.map(e => ({ ...e, paused: true, reviewReason: 'Waiting for review' })) });
+assert.ok(launchPaused.includes('All skills in this kit are paused'));
+assert.ok(!launchPaused.includes('npx skills'));
+assert.ok(!launchPaused.includes('data-copy='), 'Generic editorial brief adds no activation control for paused skills');
+const launchEscaped = kitPage({ ...launch, entries: launch.entries.map(e => ({ ...e, paused: true, name: '<script>probe</script>', reviewReason: '<script>probe</script>' })) });
+assert.ok(!launchEscaped.includes('<script>probe</script>'), 'Launch skill names and review reasons stay escaped');
+console.log('Passed: original launch decision guide, cross-links, bounded brief and paused-state safety.');

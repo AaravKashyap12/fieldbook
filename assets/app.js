@@ -456,3 +456,50 @@ if (marquee && marqueeToggle) {
     marqueeToggle.querySelector('[data-marquee-label]').textContent = paused ? 'Resume' : 'Pause';
   });
 }
+
+// ---------------------------------------------------------------------------
+// Home directory preview. Stage tabs are links to the stage pages; a plain
+// click filters the ranked rows in place instead. Modified clicks still open
+// the page, and without script the overall top rows show.
+const browseTabs = document.querySelector('[data-browse-tabs]');
+const browseList = document.querySelector('[data-browse-list]');
+if (browseTabs && browseList) {
+  const rows = [...browseList.children];
+  const status = document.querySelector('[data-browse-status]');
+  const more = document.querySelector('[data-browse-more]');
+  const PER_STAGE = 5;
+  const select = tab => {
+    const stage = tab.dataset.browseTab;
+    browseTabs.querySelectorAll('[data-browse-tab]').forEach(link => {
+      if (link === tab) link.setAttribute('aria-current', 'true'); else link.removeAttribute('aria-current');
+    });
+    let n = 0;
+    for (const row of rows) {
+      const on = stage === 'all' ? row.hasAttribute('data-top') : row.dataset.stage === stage && n < PER_STAGE;
+      row.hidden = !on;
+      if (!on) continue;
+      n += 1;
+      row.style.setProperty('--n', n);
+      row.querySelector('.browse-rank').textContent = String(n).padStart(2, '0');
+    }
+    const total = tab.dataset.count;
+    if (status) status.textContent = stage === 'all' ? `Top ${n} of ${total} available skills` : `Top ${n} of ${total} in ${tab.dataset.label}`;
+    if (more) {
+      more.href = tab.getAttribute('href');
+      more.firstChild.nodeValue = stage === 'all' ? 'Open the full directory ' : `See all ${total} in ${tab.dataset.label} `;
+    }
+    if (!reduceMotion.matches) {
+      browseList.classList.remove('is-switching');
+      void browseList.offsetWidth;
+      browseList.classList.add('is-switching');
+    }
+  };
+  browseTabs.addEventListener('click', event => {
+    const tab = event.target.closest('[data-browse-tab]');
+    if (!tab || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+    event.preventDefault();
+    if (tab.getAttribute('aria-current') === 'true') return;
+    select(tab);
+    play('toggle');
+  });
+}

@@ -6,7 +6,7 @@
 
 A reviewed directory of agent skills for planning, building, debugging and shipping software.
 
-[Browse the directory](https://fieldbook.tech/skills/) · [Explore kits](https://fieldbook.tech/kits/) · [How review works](https://fieldbook.tech/review/) · [Submit a skill](https://fieldbook.tech/submit/)
+[Browse the directory](https://fieldbook.tech/skills/) · [Explore kits](https://fieldbook.tech/kits/) · [For agents](https://fieldbook.tech/agents/) · [How review works](https://fieldbook.tech/review/) · [Submit a skill](https://fieldbook.tech/submit/)
 
 </div>
 
@@ -23,6 +23,8 @@ Agent skills give your coding agent a repeatable way to work. Finding one means 
 - **See what it touches.** Access labels describe instructions involving edits, commands, git, network access, browsers, MCP or subagents.
 - **Read before installing.** Each page includes a summary, review notes, source link, licence and install command.
 - **Start with a kit.** Small collections cover planning, bug hunting and code review, with available and paused members counted separately. The Bug hunt kit guides you from choosing one starter through reproducing a failure and verifying the fix.
+- **Browse from the home page.** A short ranked list sits under the cover, with tabs for each stage of the work and a copy action on every row.
+- **Let your agent look things up.** A local, read-only MCP server and plain `llms.txt` and JSON files describe the catalog for coding agents.
 - **Follow what changes.** Daily snapshots track recorded installs and repository stars. Follow the [RSS feed](https://fieldbook.tech/feed.xml) for additions.
 
 ```mermaid
@@ -46,6 +48,30 @@ npx skills add owner/repository --skill skill-name
 Replace the placeholders with the values from the listing. The CLI asks which supported agents to install for, including Claude Code and Codex. Add `-g` if you want a global installation. Kit pages collect the individual commands in one place.
 
 Fieldbook is the directory; you install each skill from its author's repository. When a source revision is recorded, commands target that full repository commit and source links open the scanned `SKILL.md` at the same commit. Older reviews without a commit remain labelled as unpinned. `skills@latest` selects the installer, not a skill version. The automated scan covers only `SKILL.md`, not referenced files or runtime behavior. Human-reading dates and evaluation links remain separate evidence. Pins can change after a successful daily scan, so save the full command to reproduce an installation.
+
+## For agents
+
+Fieldbook publishes plain files for coding agents and ships a small MCP server you run yourself. Setup, tools and limits are on [fieldbook.tech/agents](https://fieldbook.tech/agents/).
+
+| File | Contents |
+| --- | --- |
+| [`/llms.txt`](https://fieldbook.tech/llms.txt) | A short index of the site with its limitations stated up front. |
+| [`/llms-full.txt`](https://fieldbook.tech/llms-full.txt) | Every available listing in Markdown, grouped by stage. Paused listings are named without install commands. |
+| [`/index.json`](https://fieldbook.tech/index.json) | The full catalog. Existing fields are unchanged; `categorySlug` was added. `install` is `null` for paused listings. |
+| [`/agents.json`](https://fieldbook.tech/agents.json) | A Fieldbook-specific description of these files and the local MCP server. It is not a standard discovery format. |
+
+**Fieldbook does not host an MCP endpoint.** `scripts/mcp.mjs` is a dependency-free stdio server that reads `dist/index.json` from your build, located relative to the script rather than the working directory. Build first, then point your client at the absolute path:
+
+```sh
+npm run build
+claude mcp add fieldbook -- node /absolute/path/to/fieldbook/scripts/mcp.mjs
+```
+
+For Codex, add `[mcp_servers.fieldbook]` with `command = "node"` and `args = ["/absolute/path/to/fieldbook/scripts/mcp.mjs"]` to `~/.codex/config.toml`. Start the server with `node`, not `npm run`, because npm prints to stdout.
+
+- **Tools:** `search_skills` (words, task, stack, stage, `limit` up to 25, `includePaused`) and `get_skill` (by `owner/repo/skill` id). Both are annotated read-only. One resource, `fieldbook://catalog`, returns the catalog JSON.
+- **Protocol:** the `initialize` handshake for 2025-11-25 and 2025-06-18, and stateless 2026-07-28 requests with per-request `_meta` and `server/discover`. stdio only; no HTTP transport, prompts, subscriptions, tasks or pagination.
+- **Boundaries:** it never installs a skill, runs a command, writes a file, opens another path or uses the network. Paused listings always return `install: null`. Results are only as fresh as your last build, and a review is still not a security audit or a guarantee.
 
 ## What “reviewed” means
 
@@ -85,8 +111,8 @@ Open [localhost:4173](http://127.0.0.1:4173). Generated files go into `dist/`, w
 
 | Command | Purpose |
 | --- | --- |
-| `npm run build` | Generate the site, feed, search index, sitemap and security contact file. |
-| `npm run check` | Run security assertions and validate content and generated pages. |
+| `npm run build` | Generate the site, feed, search index, `llms.txt`, `llms-full.txt`, `agents.json`, sitemap and security contact file. |
+| `npm run check` | Run security assertions, validate content and generated pages, and exercise the MCP server as a child process. |
 | `npm start` | Serve the built site locally. |
 | `npm run sync` | Fetch today's install counts and repository statistics. |
 | `npm run review` | Refresh automated checks for listed skills. |
@@ -103,6 +129,8 @@ Open [localhost:4173](http://127.0.0.1:4173). Generated files go into `dist/`, w
 | `content/review.json`, `content/stats/` | Automated review results and dated statistics. |
 | `scripts/build.mjs`, `scripts/lib/` | Page generation, shared components and data handling. |
 | `scripts/sync-stats.mjs`, `scripts/review.mjs`, `scripts/check.mjs` | Data refresh, review and validation. |
+| `scripts/mcp.mjs`, `scripts/lib/mcp-core.mjs` | The read-only stdio MCP server; `scripts/mcp-check.mjs` tests it over real stdio. |
+| `scripts/lib/browse.mjs`, `scripts/lib/agents.mjs` | The home directory preview, the `/agents/` page and the agent discovery files; `scripts/agents-check.mjs` validates them. |
 | `assets/` | Styles, progressive interactions, optional interface sounds, fonts and social preview. |
 | `.github/` | Submission template and daily update workflow. |
 

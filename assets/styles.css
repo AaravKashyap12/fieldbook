@@ -959,3 +959,89 @@ html:not(.js) .marquee-track[aria-hidden="true"] { display: none; }
 .feed-by { margin-block: 6px 10px; font-size: 14px; color: var(--ink-3); }
 .feed-entry > p:last-child { color: var(--ink-2); }
 .feed-entry h3 a:hover { color: var(--accent); }
+
+/* ------------------------------------------------------------ home directory preview
+   A compact ranked list under stage tabs, so the catalog is one scroll from the
+   cover. Hairline rows, serif names, one copy action per row. Tabs are links to
+   the stage pages; app.js filters in place. */
+.browse { padding-top: clamp(28px, 3.5vw, 44px); }
+.browse .section-intro { padding-top: 24px; border-top: 1px solid var(--ink); }
+.browse .section-intro > p { max-width: 42ch; }
+.browse-tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 28px; padding-bottom: 2px; }
+.browse-tabs::-webkit-scrollbar { display: none; }
+.browse-tabs a { display: inline-flex; flex: none; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--line-strong); font-size: 14px; font-weight: 500; color: var(--ink-2); white-space: nowrap; transition-property: scale, color, background-color, box-shadow; transition-duration: 150ms, var(--dur-1), var(--dur-1), var(--dur-1); }
+.browse-tabs [aria-current="true"] { background: var(--ink); color: var(--bg); box-shadow: none; }
+.browse-tabs [aria-current="true"] .cat-count { color: color-mix(in srgb, var(--bg) 70%, transparent); }
+.browse-list { margin-top: 14px; border-top: 1px solid var(--line); }
+.browse-row { display: grid; grid-template-columns: 32px minmax(0, 1fr) 92px 150px; grid-template-areas: "rank main stat action"; align-items: center; gap: 4px 24px; padding-block: 14px; border-bottom: 1px solid var(--line); }
+.browse-rank { grid-area: rank; align-self: start; padding-top: 9px; font: 500 13px var(--mono); color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.browse-main { grid-area: main; min-width: 0; }
+.browse-main h3 { font: 400 25px/1.15 var(--serif); letter-spacing: -.01em; font-synthesis: none; }
+.browse-main h3 a { display: inline-block; padding-block: 2px; transition: color var(--dur-1) ease; }
+.browse-meta { display: flex; flex-wrap: wrap; gap: 2px 12px; margin-top: 2px; font-size: 13px; color: var(--ink-3); }
+.browse-flag { color: var(--ink); font-weight: 500; }
+.browse-summary { max-width: 70ch; margin-top: 2px; overflow: hidden; font-size: 14px; color: var(--ink-2); text-overflow: ellipsis; white-space: nowrap; }
+.browse-stat { grid-area: stat; display: flex; flex-direction: column; align-items: flex-end; text-align: right; }
+.browse-stat .num { font: 400 26px/1 var(--serif); font-synthesis: none; }
+.browse-stat .num.is-none { font-size: 20px; }
+.browse-stat small { margin-top: 3px; font-size: 12px; color: var(--ink-3); }
+.browse-action { grid-area: action; justify-self: end; }
+.browse-action .copy-button { margin-right: -10px; }
+.browse-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 24px; margin-top: 8px; }
+.browse-status { font-size: 14px; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.browse .install-caution { max-width: 82ch; margin-top: 4px; }
+
+/* For agents: a ruled line under the compatibility band. */
+.agents-band-inner { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 8px 28px; padding-block: 16px; border-bottom: 1px solid var(--line); }
+.agents-band-title { font-size: 14px; font-weight: 600; line-height: 1.35; white-space: nowrap; }
+.agents-band-inner p { max-width: 72ch; font-size: 14px; color: var(--ink-2); }
+
+/* /agents/ */
+.agents-page .guide-contents { margin-bottom: 56px; }
+.agent-files { margin-top: 20px; }
+.agent-files li { padding-block: 10px 14px; border-top: 1px solid var(--line); }
+.agent-files li:last-child { border-bottom: 1px solid var(--line); }
+.agent-files .link code { font-size: 15px; }
+.agent-files p { font-size: 14px; color: var(--ink-2); }
+.agent-steps { margin-top: 24px; }
+.agent-steps .code-block { margin-top: 12px; }
+.agent-client { margin-top: 24px; font: 600 15px/1.4 var(--sans); color: var(--ink); }
+.agent-client span { margin-left: 6px; font-weight: 400; font-size: 14px; color: var(--ink-3); }
+.agent-tools { margin-top: 20px; }
+.agent-tools > li { padding-block: 18px; border-top: 1px solid var(--line); }
+.agent-tools > li:last-child { border-bottom: 1px solid var(--line); }
+.agent-tools h3 code { font-size: 16px; color: var(--ink); }
+.agent-tools p { max-width: 68ch; margin-top: 6px; color: var(--ink-2); }
+.agent-params { display: grid; gap: 6px; margin-top: 12px; font-size: 14px; color: var(--ink-2); }
+.agent-req { font-size: 12px; font-weight: 500; color: var(--accent); }
+.agents-page .section .bullets + .prose { margin-top: 16px; }
+
+@media (hover: hover) and (pointer: fine) {
+  .browse-tabs a:not([aria-current="true"]):hover { color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink-3); }
+  .browse-main h3 a:hover { color: var(--accent); }
+}
+.browse-tabs a:active { scale: .96; }
+@media (prefers-reduced-motion: no-preference) {
+  .browse-list.is-switching .browse-row:not([hidden]) { animation: browse-in 320ms var(--ease) both; animation-delay: calc(var(--n, 0) * 28ms); }
+  @keyframes browse-in { from { opacity: 0; transform: translateY(6px); } }
+}
+@media (prefers-reduced-motion: reduce) {
+  .browse-tabs a:active { scale: 1; }
+}
+@media (max-width: 880px) {
+  .nav-agents { display: none !important; }
+  .browse-row { grid-template-columns: 28px minmax(0, 1fr) auto; grid-template-areas: "rank main action" "rank stat action"; gap: 4px 16px; }
+  .browse-stat { flex-direction: row; align-items: baseline; gap: 6px; text-align: left; }
+  .browse-stat .num { font-size: 20px; }
+}
+@media (max-width: 640px) {
+  .browse-row { grid-template-columns: 24px minmax(0, 1fr) auto; grid-template-areas: "rank main main" ". stat action"; gap: 6px 12px; }
+  .browse-tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
+  .browse-main h3 { font-size: 23px; }
+  .browse-summary { display: -webkit-box; white-space: normal; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+  .agents-band-inner { grid-template-columns: 1fr; }
+  .agent-client span { display: block; margin-left: 0; }
+}
+@media (forced-colors: active) {
+  .browse-tabs a { border: 1px solid CanvasText; }
+}

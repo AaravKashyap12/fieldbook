@@ -55,7 +55,7 @@ if (soundToggle) {
 
 // A dry tick when pressing navigation, played on press so it finishes
 // before the browser leaves the page.
-const tickTargets = '.nav-links a, .gh-pill, .skill h3 a, .skill-actions .link, .related-list a, .button, .link, .task-list a, .quick-tasks a, .kit, .cat-nav a, .dir-row h3 a, .crumbs a, .chip, .clear-all';
+const tickTargets = '.nav-links a, .gh-pill, .orig h3 a, .related-list a, .button, .link, .task-list a, .task-guides a, .quick-tasks a, .kit, .cat-nav a, .dir-row h3 a, .browse-row h3 a, .crumbs a, .chip, .clear-all';
 document.addEventListener('pointerdown', event => {
   if (event.button === 0 && event.target.closest(tickTargets)) play('tick');
 });
@@ -459,15 +459,15 @@ if (marquee && marqueeToggle) {
 
 // ---------------------------------------------------------------------------
 // Home directory preview. Stage tabs are links to the stage pages; a plain
-// click filters the ranked rows in place instead. Modified clicks still open
-// the page, and without script the overall top rows show.
+// click filters the ranked entries in place instead. Modified clicks still
+// open the page, and without script the overall top entries show.
 const browseTabs = document.querySelector('[data-browse-tabs]');
 const browseList = document.querySelector('[data-browse-list]');
 if (browseTabs && browseList) {
   const rows = [...browseList.children];
   const status = document.querySelector('[data-browse-status]');
   const more = document.querySelector('[data-browse-more]');
-  const PER_STAGE = 5;
+  const PER_STAGE = Number(browseList.dataset.perStage) || 6;
   const select = tab => {
     const stage = tab.dataset.browseTab;
     browseTabs.querySelectorAll('[data-browse-tab]').forEach(link => {
@@ -480,7 +480,6 @@ if (browseTabs && browseList) {
       if (!on) continue;
       n += 1;
       row.style.setProperty('--n', n);
-      row.querySelector('.browse-rank').textContent = String(n).padStart(2, '0');
     }
     const total = tab.dataset.count;
     if (status) status.textContent = stage === 'all' ? `Top ${n} of ${total} available skills` : `Top ${n} of ${total} in ${tab.dataset.label}`;

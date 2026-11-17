@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { loadContent } from './lib/data.mjs';
-import { reviewEvidence } from './lib/parts.mjs';
+import { reviewEvidence, installCaution } from './lib/parts.mjs';
 import { bugHuntJourney, kitAvailability, kitPage } from './lib/kits.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
@@ -41,7 +41,9 @@ assert.ok(reviewEvidence(original).includes('Published evaluation notes'));
 assert.ok(reviewEvidence(original).includes('Evaluation date not recorded here'));
 assert.ok(reviewEvidence(original).includes('Not a test of every upstream revision'));
 assert.ok(reviewEvidence(original).includes('not bound to the current source revision'));
-assert.ok(reviewEvidence(community, { compact: true }).includes('not a pinned reviewed revision'));
+const folded = reviewEvidence(community, { compact: true });
+assert.ok(folded.startsWith('<details') && folded.includes('Automated scan:') && folded.includes('not a security audit'), 'Compact evidence is a native disclosure holding the full evidence');
+assert.ok(installCaution(community).includes('not a pinned reviewed revision'), 'Unpinned caution text');
 const escaped = reviewEvidence({ ...community, paused: true, reviewReason: '<script>probe</script>' });
 assert.ok(!escaped.includes('<script>'));
 
@@ -58,6 +60,8 @@ if (actualCommunity.paused) {
 } else {
   assert.ok(detail.indexOf('Automated scan:') < detail.indexOf('id="install-0"'), 'Evidence precedes install command');
   assert.ok(detail.includes(actualCommunity.revision ? 'The install command targets this commit.' : 'not a pinned reviewed revision'));
+  const install = detail.slice(detail.indexOf('id="install-title"'), detail.indexOf('id="review-title"'));
+  assert.ok(install.indexOf(installCaution(actualCommunity)) > install.indexOf('id="install-0"'), 'Pin caution stays visible at the install command');
 }
 console.log('Passed: guided journey, paused/fallback states, review evidence, install disclosure and generated kit availability.');
 

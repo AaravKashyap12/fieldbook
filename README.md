@@ -23,7 +23,7 @@ Agent skills give your coding agent a repeatable way to work. Finding one means 
 - **See what it touches.** Access labels describe instructions involving edits, commands, git, network access, browsers, MCP or subagents.
 - **Read before installing.** Each page includes a summary, review notes, source link, licence and install command.
 - **Start with a kit.** Small collections cover planning, bug hunting and code review, with available and paused members counted separately. The Bug hunt kit guides you from choosing one starter through reproducing a failure and verifying the fix.
-- **Browse from the home page.** A short ranked list sits under the cover, with tabs for each stage of the work and a copy action on every row.
+- **Browse from the home page.** The most-installed skills sit under the cover in two open columns, with tabs for each stage of the work and a copy action on every entry. Full review evidence lives on each skill page.
 - **Let your agent look things up.** A local, read-only MCP server and plain `llms.txt` and JSON files describe the catalog for coding agents.
 - **Follow what changes.** Daily snapshots track recorded installs and repository stars. Follow the [RSS feed](https://fieldbook.tech/feed.xml) for additions.
 

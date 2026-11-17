@@ -100,6 +100,8 @@ for (const c of categories) {
   assert.equal(rows.filter(m => m[1] === c.slug).length >= Math.min(BROWSE.stage, n), true, `${c.slug}: enough rows for its tab`);
 }
 assert.ok(section.includes('not a security audit or a guarantee') && section.includes('Copying a command does not run it'), 'Preview keeps the install disclaimers');
+assert.ok(section.includes(`data-browse-list data-per-stage="${BROWSE.stage}"`), 'Served per-stage limit matches the build');
+assert.ok(!section.includes('browse-rank'), 'Preview entries carry no rank column');
 for (const route of ['index.html', 'skills/index.html', `${available[0].url.slice(1)}index.html`]) assert.ok((await read(route)).includes('<a href="/agents/">For agents</a>'), `${route}: footer link`);
 const serve = await readFile(path.join(root, 'scripts/serve.mjs'), 'utf8');
 assert.ok(serve.includes("'.json':'application/json") && serve.includes("'.md':'text/markdown"), 'Local server sends JSON and Markdown types');
@@ -109,17 +111,17 @@ const app = await readFile(path.join(root, 'assets/app.js'), 'utf8');
 const code = app.slice(app.indexOf('// Home directory preview.'));
 const makeRow = (stage, top) => {
   const attrs = top ? { 'data-top': '1' } : {};
-  const rank = { textContent: '' };
-  return { dataset: { stage }, hidden: !top, rank, style: { setProperty() {} }, hasAttribute: k => k in attrs, querySelector: () => rank };
+  const order = { n: null };
+  return { dataset: { stage }, hidden: !top, order, style: { setProperty(k, v) { if (k === '--n') order.n = v; } }, hasAttribute: k => k in attrs };
 };
-const fakeRows = [makeRow('review', true), makeRow('build', true), makeRow('review', false), makeRow('review', false), makeRow('plan', false)];
+const fakeRows = [makeRow('review', true), makeRow('build', true), makeRow('review', false), makeRow('review', false), makeRow('review', false), makeRow('plan', false)];
 const tab = (slug, count, label) => { const a = { dataset: { browseTab: slug, count: String(count), label }, attrs: {}, getAttribute(k) { return k === 'href' ? `/c/${slug}/` : this.attrs[k] ?? null; }, setAttribute(k, v) { this.attrs[k] = v; }, removeAttribute(k) { delete this.attrs[k]; }, closest() { return this; } }; return a; };
 const tabs = [tab('all', 5, 'All'), tab('review', 3, 'Review')];
 tabs[0].attrs['aria-current'] = 'true';
 let onClick;
 const status = { textContent: '' };
 const more = { href: '/skills/', firstChild: { nodeValue: 'Open the full directory ' } };
-const list = { children: fakeRows, classList: { add() {}, remove() {} }, offsetWidth: 0 };
+const list = { children: fakeRows, dataset: { perStage: '3' }, classList: { add() {}, remove() {} }, offsetWidth: 0 };
 let sound = 0;
 runInNewContext(code, {
   document: { querySelector: s => ({ '[data-browse-tabs]': { querySelectorAll: () => tabs, addEventListener: (type, fn) => { onClick = fn; } }, '[data-browse-list]': list, '[data-browse-status]': status, '[data-browse-more]': more })[s] },
@@ -128,8 +130,8 @@ runInNewContext(code, {
 let prevented = false;
 onClick({ target: tabs[1], button: 0, preventDefault: () => { prevented = true; } });
 assert.ok(prevented, 'Plain click filters in place');
-assert.deepEqual(fakeRows.map(r => r.hidden), [false, true, false, false, true], 'Stage tab shows only that stage');
-assert.deepEqual(fakeRows.filter(r => !r.hidden).map(r => r.rank.textContent), ['01', '02', '03'], 'Ranks renumber within the stage');
+assert.deepEqual(fakeRows.map(r => r.hidden), [false, true, false, false, true, true], 'Stage tab shows only that stage, up to the per-stage limit');
+assert.deepEqual(fakeRows.filter(r => !r.hidden).map(r => r.order.n), [1, 2, 3], 'Entrance stagger restarts within the stage');
 assert.equal(status.textContent, 'Top 3 of 3 in Review');
 assert.equal(more.href, '/c/review/');
 assert.equal(tabs[1].attrs['aria-current'], 'true'); assert.equal(tabs[0].attrs['aria-current'], undefined);
@@ -138,6 +140,6 @@ prevented = false;
 onClick({ target: tabs[0], button: 0, metaKey: true, preventDefault: () => { prevented = true; } });
 assert.ok(!prevented, 'Modified clicks keep normal link behaviour');
 onClick({ target: tabs[0], button: 0, preventDefault() {} });
-assert.deepEqual(fakeRows.map(r => r.hidden), [false, false, true, true, true], 'All returns to the overall top rows');
+assert.deepEqual(fakeRows.map(r => r.hidden), [false, false, true, true, true, true], 'All returns to the overall top rows');
 assert.equal(more.firstChild.nodeValue, 'Open the full directory ');
 console.log(`Passed: llms.txt and llms-full.txt (${available.length} available, ${paused.length} paused without commands), agents.json, index.json compatibility, /agents/ setup, home directory preview and stage tab wiring.`);
